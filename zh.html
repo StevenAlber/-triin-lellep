@@ -49,8 +49,8 @@
   .lang-switch a { font-size: 12px; letter-spacing: 0.18em; }
   .lang-switch a.active { color: var(--gold); opacity: 1; }
 
-  .hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 140px 48px 80px; position: relative; background: radial-gradient(ellipse at 50% 70%, var(--burgundy-deep) 0%, var(--black) 65%); }
-  .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 20% 30%, rgba(201, 169, 97, 0.06) 0%, transparent 50%), radial-gradient(circle at 80% 70%, rgba(92, 46, 46, 0.18) 0%, transparent 50%); pointer-events: none; }
+  .hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 140px 48px 80px; position: relative; background: radial-gradient(ellipse at 50% 78%, rgba(92, 46, 46, 0.58) 0%, rgba(28, 22, 18, 0.55) 42%, rgba(15, 11, 9, 1) 78%), linear-gradient(180deg, #120E0C 0%, #1A1110 52%, #120E0C 100%); }
+  .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 50% 58%, rgba(201, 169, 97, 0.035) 0%, transparent 42%), radial-gradient(circle at 50% 82%, rgba(92, 46, 46, 0.12) 0%, transparent 48%); pointer-events: none; }
   .hero-inner { max-width: 980px; text-align: center; position: relative; z-index: 2; }
   .hero-eyebrow { font-family: var(--body); font-size: 12px; letter-spacing: 0.32em; color: var(--gold); margin-bottom: 32px; opacity: 0.95; }
   .hero-eyebrow::before, .hero-eyebrow::after { content: '—'; margin: 0 16px; color: var(--gold); opacity: 0.65; }
@@ -165,18 +165,24 @@
   .footer-bottom { max-width: 1200px; margin: 64px auto 0; padding-top: 32px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; font-family: var(--body); font-size: 11px; letter-spacing: 0.16em; color: var(--grey); }
 
   @media (max-width: 900px) {
-    nav { padding: 18px 24px; }
-    nav.scrolled { padding: 14px 24px; }
-    .nav-links { gap: 18px; }
+    nav { padding: 14px 22px; min-height: 78px; background: rgba(15, 11, 9, 0.98); backdrop-filter: none; -webkit-backdrop-filter: none; }
+    nav.scrolled { padding: 14px 22px; }
+    .logo { font-size: 14px; letter-spacing: 0.28em; }
+    .nav-links { gap: 14px; }
     .nav-links li:not(.lang-switch):not(:last-child):not(.always-show) { display: none; }
-    .lang-switch { padding-left: 14px; gap: 10px; }
-    .nav-cta { border: none; padding: 6px 0; }
-    .nav-cta:hover { background: transparent; color: var(--gold) !important; }
-    .hero { padding: 96px 24px 56px; }
-    .hero-eyebrow { margin-bottom: 22px; }
-    .hero-title { margin-bottom: 22px; }
-    .hero-subtitle { margin-bottom: 34px; }
-    .hero-lede { margin: 0 auto 44px; }
+    .nav-cta { display: none; }
+    .lang-switch { border-left: none; padding-left: 0; margin-left: 0; gap: 9px; }
+    .lang-switch a { font-size: 11px; letter-spacing: 0.16em; }
+    .hero { min-height: 100svh; align-items: flex-start; justify-content: flex-start; padding: 150px 24px 48px; }
+    .hero-inner { max-width: 100%; }
+    .hero-eyebrow { margin-bottom: 20px; font-size: 11px; letter-spacing: 0.28em; }
+    .hero-eyebrow::before, .hero-eyebrow::after { display: none; }
+    .hero-title { font-size: clamp(48px, 14vw, 58px); line-height: 0.94; letter-spacing: 0.045em; margin-bottom: 18px; }
+    .hero-title-cn { font-size: 18px; letter-spacing: 0.24em; margin-bottom: 22px; }
+    .hero-subtitle { font-size: 17px; letter-spacing: 0.16em; margin-bottom: 30px; }
+    .hero-lede { font-size: 16px; line-height: 1.85; margin: 0 auto 38px; max-width: 340px; }
+    .hero-actions { gap: 18px; }
+    .scroll-indicator { display: none; }
     .hero-eyebrow::before, .hero-eyebrow::after { display: none; }
     .negation, .pull-quote, .work, .formats, .architecture, .artist, .hosts, .invitation { padding: 80px 24px; }
     .work-grid { grid-template-columns: 1fr; gap: 32px; }
@@ -221,7 +227,7 @@
     <div class="hero-title-cn animate-fadeUp delay-2">特林 · 勒勒普</div>
     <div class="hero-subtitle animate-fadeUp delay-2">作曲家兼女高音 · 私密声乐作品</div>
     <p class="hero-lede animate-fadeUp delay-3">
-      由作曲家本人创作并演绎的少量原创电影声乐作品，于私密室内呈献，专为亚洲、欧洲与海湾地区的大使馆、基金会、家族办公室及精选文化空间而创。
+      原创电影声乐作品，由 Triin Lellep 亲自创作并演绎，于私密室内为亚洲、欧洲与海湾地区的精选文化主人呈献。
     </p>
     <div class="hero-actions animate-fadeUp delay-4">
       <a href="#invitation" class="hero-cta"><span>申请入场</span></a>

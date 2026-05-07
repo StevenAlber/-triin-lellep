@@ -173,7 +173,9 @@
     justify-content: center;
     padding: 140px 48px 80px;
     position: relative;
-    background: radial-gradient(ellipse at 50% 70%, var(--burgundy-deep) 0%, var(--black) 65%);
+    background:
+      radial-gradient(ellipse at 50% 78%, rgba(92, 46, 46, 0.58) 0%, rgba(28, 22, 18, 0.55) 42%, rgba(15, 11, 9, 1) 78%),
+      linear-gradient(180deg, #120E0C 0%, #1A1110 52%, #120E0C 100%);
   }
 
   .hero::before {
@@ -181,8 +183,8 @@
     position: absolute;
     inset: 0;
     background:
-      radial-gradient(circle at 20% 30%, rgba(201, 169, 97, 0.06) 0%, transparent 50%),
-      radial-gradient(circle at 80% 70%, rgba(92, 46, 46, 0.18) 0%, transparent 50%);
+      radial-gradient(circle at 50% 58%, rgba(201, 169, 97, 0.035) 0%, transparent 42%),
+      radial-gradient(circle at 50% 82%, rgba(92, 46, 46, 0.12) 0%, transparent 48%);
     pointer-events: none;
   }
 
@@ -941,19 +943,35 @@
 
   /* ============== RESPONSIVE ============== */
   @media (max-width: 900px) {
-    nav { padding: 18px 24px; }
-    nav.scrolled { padding: 14px 24px; }
-    .nav-links { gap: 20px; }
+    nav {
+      padding: 14px 22px;
+      min-height: 78px;
+      background: rgba(15, 11, 9, 0.98);
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+    }
+    nav.scrolled { padding: 14px 22px; }
+    .logo { font-size: 14px; letter-spacing: 0.28em; }
+    .nav-links { gap: 16px; }
     .nav-links li:not(.lang-switch):not(:last-child):not(.always-show) { display: none; }
-    .lang-switch { padding-left: 16px; gap: 10px; }
-    .nav-cta { border: none; padding: 6px 0; }
-    .nav-cta:hover { background: transparent; color: var(--gold) !important; }
+    .nav-cta { display: none; }
+    .lang-switch { border-left: none; padding-left: 0; margin-left: 0; gap: 9px; }
+    .lang-switch a { font-size: 11px; letter-spacing: 0.16em; }
 
-    .hero { padding: 96px 24px 56px; }
-    .hero-eyebrow { margin-bottom: 22px; }
-    .hero-title { margin-bottom: 22px; }
-    .hero-subtitle { margin-bottom: 34px; }
-    .hero-lede { margin: 0 auto 44px; }
+    .hero {
+      min-height: 100svh;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding: 150px 24px 48px;
+    }
+    .hero-inner { max-width: 100%; }
+    .hero-eyebrow { margin-bottom: 20px; font-size: 10px; letter-spacing: 0.34em; }
+    .hero-eyebrow::before, .hero-eyebrow::after { display: none; }
+    .hero-title { font-size: clamp(48px, 14vw, 58px); line-height: 0.94; letter-spacing: 0.045em; margin-bottom: 22px; }
+    .hero-subtitle { font-size: 20px; margin-bottom: 30px; }
+    .hero-lede { font-size: 18px; line-height: 1.58; margin: 0 auto 38px; max-width: 340px; }
+    .hero-actions { gap: 18px; }
+    .scroll-indicator { display: none; }
     .hero-eyebrow::before, .hero-eyebrow::after { display: none; }
 
     .negation, .pull-quote, .work, .formats, .architecture,
@@ -1010,9 +1028,8 @@
     <h1 class="hero-title animate-fadeUp delay-1">TRIIN LELLEP</h1>
     <div class="hero-subtitle animate-fadeUp delay-2">Composer-Soprano · Private Vocal Works</div>
     <p class="hero-lede animate-fadeUp delay-3">
-      A small body of original cinematic vocal works, composed and performed
-      by their composer in private interiors for embassies, foundations,
-      family offices and signature cultural rooms across Asia, Europe and the Gulf.
+      Original cinematic vocal works, composed and performed by Triin Lellep
+      in private rooms for selected cultural hosts across Asia, Europe and the Gulf.
     </p>
     <div class="hero-actions animate-fadeUp delay-4">
       <a href="#invitation" class="hero-cta"><span>Request Access</span></a>
