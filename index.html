@@ -11,7 +11,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Marcellus&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&amp;family=Marcellus&amp;family=EB+Garamond:ital,wght@0,400;0,500;1,400&amp;display=swap" rel="stylesheet">
 
 <style>
   /* ============== TOKENS ============== */
@@ -333,17 +333,14 @@
     opacity: 0.5;
     position: relative;
     display: inline-block;
+    max-width: 100%;
   }
 
-  .negation-line.strike::after {
-    content: '';
-    position: absolute;
-    left: -8%;
-    right: -8%;
-    top: 50%;
-    height: 1px;
-    background: var(--gold);
-    opacity: 0.65;
+  .negation-line.strike {
+    text-decoration: line-through;
+    text-decoration-color: rgba(201, 169, 97, 0.65);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0;
   }
 
   .negation-rule {
@@ -962,33 +959,31 @@
 
     .hero {
       min-height: 100svh;
-      align-items: flex-start;
-      justify-content: flex-start;
-      padding: 150px 24px 48px;
+      align-items: center;
+      justify-content: center;
+      padding: 130px 24px 60px;
     }
-    .hero-inner { max-width: 100%; }
-    .hero-eyebrow { margin-bottom: 20px; font-size: 10px; letter-spacing: 0.34em; }
+    .hero-inner { max-width: 100%; width: 100%; text-align: center; }
+    .hero-eyebrow { margin-bottom: 20px; font-size: 10px; letter-spacing: 0.34em; text-align: center; }
     .hero-eyebrow::before, .hero-eyebrow::after { display: none; }
     .hero-title {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      gap: 0.01em;
-      font-size: clamp(54px, 17vw, 72px);
-      line-height: 0.86;
-      letter-spacing: 0.052em;
-      margin-bottom: 22px;
+      display: block;
       width: 100%;
+      text-align: center;
+      font-size: clamp(54px, 17vw, 72px);
+      line-height: 0.92;
+      letter-spacing: 0.04em;
+      margin-bottom: 22px;
+      padding-left: 0.04em;
     }
     .hero-title-line {
       display: block;
-      width: fit-content;
-      max-width: 100%;
-      margin: 0 auto;
+      width: 100%;
       text-align: center;
-      transform: translateX(0.06em);
+      letter-spacing: 0.04em;
     }
+    .hero-title-line:first-child { transform: none; }
+    .hero-title-line:last-child { transform: none; }
     .hero-subtitle { font-size: 20px; margin-bottom: 30px; }
     .hero-lede { font-size: 18px; line-height: 1.58; margin: 0 auto 38px; max-width: 340px; }
     .hero-actions { gap: 18px; }
@@ -997,6 +992,11 @@
 
     .negation, .pull-quote, .work, .formats, .architecture,
     .artist, .hosts, .invitation { padding: 80px 24px; }
+
+    .negation-line { font-size: 22px; line-height: 1.35; }
+    .negation-affirm { font-size: 24px; line-height: 1.4; }
+    .pull-quote-inner { font-size: 22px; line-height: 1.4; }
+    .pull-quote-inner span { margin-top: 16px; }
 
     .work-grid { grid-template-columns: 1fr; gap: 32px; }
     .formats-grid { grid-template-columns: 1fr; gap: 24px; }
