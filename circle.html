@@ -91,8 +91,8 @@
   .tier-list li { font-family: var(--serif); font-size: 15px; line-height: 1.6; color: var(--pearl); opacity: 0.88; padding-left: 18px; padding-bottom: 12px; position: relative; }
   .tier-list li::before { content: '·'; position: absolute; left: 6px; top: 0; color: var(--gold); font-size: 18px; }
 
-  .tier-cta { display: block; width: 100%; padding: 16px 24px; background: var(--gold); color: var(--black); font-family: var(--body); font-size: 12px; letter-spacing: 0.28em; text-transform: uppercase; text-align: center; transition: all 0.4s ease; border: 1px solid var(--gold); cursor: pointer; }
-  .tier-cta:hover { background: transparent; color: var(--gold); }
+  .tier-cta { display: block; width: 100%; padding: 14px 24px; background: rgba(201, 169, 97, 0.06); color: var(--gold); font-family: var(--body); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; text-align: center; transition: all 0.4s ease; border: 1px solid rgba(201, 169, 97, 0.45); cursor: pointer; }
+  .tier-cta:hover { background: rgba(201, 169, 97, 0.14); color: var(--pearl); border-color: rgba(201, 169, 97, 0.75); }
 
   /* PAYMENT METHODS */
   .payment-methods { padding: 120px 48px; background: var(--black-warm); border-top: 1px solid var(--line); }
@@ -137,8 +137,8 @@
   .cta-final-eyebrow { font-family: var(--body); font-size: 11px; letter-spacing: 0.42em; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; }
   .cta-final h2 { font-family: var(--display); font-size: clamp(32px, 4.5vw, 52px); line-height: 1.2; color: var(--pearl); margin-bottom: 32px; }
   .cta-final p { font-family: var(--serif); font-size: 18px; line-height: 1.75; color: var(--pearl); opacity: 0.9; margin-bottom: 40px; }
-  .cta-final-button { display: inline-block; padding: 18px 48px; background: var(--gold); color: var(--black); font-family: var(--body); font-size: 13px; letter-spacing: 0.28em; text-transform: uppercase; transition: all 0.4s; border: 1px solid var(--gold); }
-  .cta-final-button:hover { background: transparent; color: var(--gold); }
+  .cta-final-button { display: inline-block; padding: 14px 32px; background: rgba(201, 169, 97, 0.06); color: var(--gold); font-family: var(--body); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; transition: all 0.4s; border: 1px solid rgba(201, 169, 97, 0.45); }
+  .cta-final-button:hover { background: rgba(201, 169, 97, 0.14); color: var(--pearl); border-color: rgba(201, 169, 97, 0.75); }
   .cta-deadline { font-family: var(--body); font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--pearl); opacity: 0.6; margin-top: 32px; }
 
   /* FOOTER */
@@ -277,7 +277,7 @@
         <li>Early notice on the first European return event in 2027</li>
       </ul>
 
-      <button class="tier-cta" onclick="openModal('friend', '€250', 'Founding Friend')">Become a Friend</button>
+      <button class="tier-cta" onclick="openModal('friend', '€250', 'Founding Friend')">Join as Friend</button>
     </div>
 
     <div class="tier">
@@ -297,7 +297,7 @@
         <li>Name listed in the private Écoute Circle document</li>
       </ul>
 
-      <button class="tier-cta" onclick="openModal('member', '€1,000', 'Founding Member')">Become a Member</button>
+      <button class="tier-cta" onclick="openModal('member', '€1,000', 'Founding Member')">Join as Member</button>
     </div>
 
     <div class="tier featured">
@@ -318,7 +318,7 @@
         <li>Name listed in the private Écoute Circle document</li>
       </ul>
 
-      <button class="tier-cta" onclick="openModal('patron', '€3,000', 'Founding Patron')">Become a Patron</button>
+      <button class="tier-cta" onclick="openModal('patron', '€3,000', 'Founding Patron')">Join as Patron</button>
     </div>
 
   </div>
