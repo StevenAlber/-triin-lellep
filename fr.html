@@ -55,6 +55,7 @@
   .hero-eyebrow { font-family: var(--body); font-size: 11px; letter-spacing: 0.42em; text-transform: uppercase; color: var(--gold); margin-bottom: 32px; opacity: 0.95; }
   .hero-eyebrow::before, .hero-eyebrow::after { content: '—'; margin: 0 16px; color: var(--gold); opacity: 0.65; }
   .hero-title { font-family: 'Cormorant Garamond', 'EB Garamond', Garamond, serif; font-size: clamp(54px, 9vw, 120px); line-height: 0.96; font-weight: 500; color: var(--pearl); letter-spacing: 0.055em; margin-bottom: 32px; }
+  .hero-title-line { display: inline; }
   .hero-subtitle { font-family: var(--serif); font-size: clamp(20px, 2.4vw, 28px); font-style: italic; color: var(--gold); margin-bottom: 48px; letter-spacing: 0.02em; }
   .hero-lede { font-family: var(--serif); font-size: clamp(17px, 1.6vw, 21px); line-height: 1.65; color: var(--pearl); max-width: 700px; margin: 0 auto 56px; opacity: 0.92; }
   .hero-actions { display: flex; flex-direction: column; align-items: center; gap: 20px; }
@@ -176,7 +177,8 @@
     .hero-inner { max-width: 100%; }
     .hero-eyebrow { margin-bottom: 20px; font-size: 10px; letter-spacing: 0.34em; }
     .hero-eyebrow::before, .hero-eyebrow::after { display: none; }
-    .hero-title { font-size: clamp(48px, 14vw, 58px); line-height: 0.94; letter-spacing: 0.045em; margin-bottom: 22px; }
+    .hero-title { display: flex; flex-direction: column; align-items: center; gap: 0.02em; font-size: clamp(54px, 17vw, 72px); line-height: 0.86; letter-spacing: 0.055em; margin-bottom: 22px; }
+    .hero-title-line { display: block; }
     .hero-subtitle { font-size: 20px; margin-bottom: 30px; }
     .hero-lede { font-size: 18px; line-height: 1.58; margin: 0 auto 38px; max-width: 340px; }
     .hero-actions { gap: 18px; }
@@ -221,7 +223,7 @@
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-eyebrow animate-fadeUp">Sur Invitation Privée</div>
-    <h1 class="hero-title animate-fadeUp delay-1">TRIIN LELLEP</h1>
+    <h1 class="hero-title animate-fadeUp delay-1"><span class="hero-title-line">TRIIN</span> <span class="hero-title-line">LELLEP</span></h1>
     <div class="hero-subtitle animate-fadeUp delay-2">Compositrice-Soprano · Œuvres Vocales Privées</div>
     <p class="hero-lede animate-fadeUp delay-3">
       Œuvres vocales cinématographiques originales, composées et interprétées par Triin Lellep

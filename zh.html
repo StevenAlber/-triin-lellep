@@ -55,6 +55,7 @@
   .hero-eyebrow { font-family: var(--body); font-size: 12px; letter-spacing: 0.32em; color: var(--gold); margin-bottom: 32px; opacity: 0.95; }
   .hero-eyebrow::before, .hero-eyebrow::after { content: '—'; margin: 0 16px; color: var(--gold); opacity: 0.65; }
   .hero-title { font-family: 'Cormorant Garamond', 'EB Garamond', Garamond, serif; font-size: clamp(54px, 9vw, 120px); line-height: 0.96; font-weight: 500; color: var(--pearl); letter-spacing: 0.055em; margin-bottom: 24px; }
+  .hero-title-line { display: inline; }
   .hero-title-cn { font-family: var(--display-cn); font-size: clamp(20px, 2.4vw, 28px); color: var(--gold); margin-bottom: 32px; letter-spacing: 0.32em; font-weight: 400; }
   .hero-subtitle { font-family: var(--display-cn); font-size: clamp(18px, 2.2vw, 24px); color: var(--gold); margin-bottom: 48px; letter-spacing: 0.18em; }
   .hero-lede { font-family: var(--serif); font-size: clamp(16px, 1.5vw, 19px); line-height: 1.95; color: var(--pearl); max-width: 720px; margin: 0 auto 56px; opacity: 0.92; }
@@ -177,7 +178,8 @@
     .hero-inner { max-width: 100%; }
     .hero-eyebrow { margin-bottom: 20px; font-size: 11px; letter-spacing: 0.28em; }
     .hero-eyebrow::before, .hero-eyebrow::after { display: none; }
-    .hero-title { font-size: clamp(48px, 14vw, 58px); line-height: 0.94; letter-spacing: 0.045em; margin-bottom: 18px; }
+    .hero-title { display: flex; flex-direction: column; align-items: center; gap: 0.02em; font-size: clamp(54px, 17vw, 72px); line-height: 0.86; letter-spacing: 0.055em; margin-bottom: 18px; }
+    .hero-title-line { display: block; }
     .hero-title-cn { font-size: 18px; letter-spacing: 0.24em; margin-bottom: 22px; }
     .hero-subtitle { font-size: 17px; letter-spacing: 0.16em; margin-bottom: 30px; }
     .hero-lede { font-size: 16px; line-height: 1.85; margin: 0 auto 38px; max-width: 340px; }
@@ -223,7 +225,7 @@
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-eyebrow animate-fadeUp">凭私密邀请</div>
-    <h1 class="hero-title animate-fadeUp delay-1">TRIIN LELLEP</h1>
+    <h1 class="hero-title animate-fadeUp delay-1"><span class="hero-title-line">TRIIN</span> <span class="hero-title-line">LELLEP</span></h1>
     <div class="hero-title-cn animate-fadeUp delay-2">特林 · 勒勒普</div>
     <div class="hero-subtitle animate-fadeUp delay-2">作曲家兼女高音 · 私密声乐作品</div>
     <p class="hero-lede animate-fadeUp delay-3">
