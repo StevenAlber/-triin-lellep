@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Écoute Circle — Patrons of Triin Lellep's First Body of Cinematic Vocal Work</title>
+<meta name="description" content="A small private circle of patrons supporting Triin Lellep — composer-soprano — as she launches her first body of cinematic vocal work. By trust and alignment, not by transaction." />
+<meta property="og:title" content="The Écoute Circle — Triin Lellep" />
+<meta property="og:description" content="A small private circle of thirty-one patrons. By invitation, by trust, by alignment." />
+<meta property="og:type" content="website" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Marcellus&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --burgundy: #5C2E2E; --burgundy-deep: #3D1E1E;
+    --gold: #C9A961; --gold-soft: #B89651; --gold-deep: #8C7338;
+    --pearl: #EDE5D5; --pearl-warm: #F5EFE3;
+    --black: #1C1612; --black-warm: #2A1F1A; --black-deep: #0F0B09;
+    --grey: #8B7E72;
+    --line: rgba(201, 169, 97, 0.18); --line-strong: rgba(201, 169, 97, 0.42);
+    --display: 'Marcellus', 'Cormorant Garamond', serif;
+    --serif: 'Cormorant Garamond', 'EB Garamond', serif;
+    --body: 'EB Garamond', 'Cormorant Garamond', Georgia, serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  *::selection { background: var(--gold); color: var(--black); }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--body); font-size: 17px; line-height: 1.7; color: var(--pearl); background: var(--black); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  a { color: inherit; text-decoration: none; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+  .animate-fadeUp { animation: fadeUp 1s cubic-bezier(0.2, 0.6, 0.2, 1) both; }
+  .delay-1 { animation-delay: 0.1s; } .delay-2 { animation-delay: 0.25s; }
+  .delay-3 { animation-delay: 0.4s; } .delay-4 { animation-delay: 0.55s; }
+
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 24px 48px; background: linear-gradient(180deg, rgba(15, 11, 9, 0.92) 0%, rgba(15, 11, 9, 0) 100%); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); display: flex; justify-content: space-between; align-items: center; transition: all 0.4s ease; border-bottom: 1px solid transparent; }
+  nav.scrolled { background: rgba(15, 11, 9, 0.96); border-bottom-color: var(--line); padding: 18px 48px; }
+  .logo { font-family: var(--display); font-size: 16px; letter-spacing: 0.32em; color: var(--pearl); display: flex; flex-direction: column; gap: 2px; }
+  .logo span { font-size: 9px; letter-spacing: 0.36em; color: var(--gold); }
+  .nav-back { font-family: var(--body); font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--pearl); opacity: 0.78; transition: all 0.3s; }
+  .nav-back:hover { opacity: 1; color: var(--gold); }
+
+  /* HERO */
+  .hero { min-height: 90vh; display: flex; align-items: center; justify-content: center; padding: 140px 48px 80px; position: relative; background: radial-gradient(ellipse at 50% 70%, var(--burgundy-deep) 0%, var(--black) 65%); }
+  .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 20% 30%, rgba(201, 169, 97, 0.06) 0%, transparent 50%), radial-gradient(circle at 80% 70%, rgba(92, 46, 46, 0.18) 0%, transparent 50%); pointer-events: none; }
+  .hero-inner { max-width: 980px; text-align: center; position: relative; z-index: 2; }
+  .hero-eyebrow { font-family: var(--body); font-size: 11px; letter-spacing: 0.42em; text-transform: uppercase; color: var(--gold); margin-bottom: 32px; }
+  .hero-eyebrow::before, .hero-eyebrow::after { content: '—'; margin: 0 16px; color: var(--gold); opacity: 0.65; }
+  .hero-title { font-family: var(--display); font-size: clamp(44px, 7vw, 88px); line-height: 1.1; color: var(--pearl); letter-spacing: 0.02em; margin-bottom: 24px; }
+  .hero-title em { font-style: italic; color: var(--gold); }
+  .hero-numbers { display: flex; justify-content: center; gap: 56px; margin-top: 56px; padding-top: 48px; border-top: 1px solid var(--line); }
+  .hero-number { text-align: center; }
+  .hero-number-value { font-family: var(--display); font-size: clamp(28px, 3.5vw, 42px); line-height: 1; color: var(--gold); margin-bottom: 8px; }
+  .hero-number-label { font-family: var(--body); font-size: 10px; letter-spacing: 0.36em; text-transform: uppercase; color: var(--pearl); opacity: 0.7; }
+  .hero-lede { font-family: var(--serif); font-size: clamp(17px, 1.6vw, 21px); line-height: 1.7; color: var(--pearl); max-width: 720px; margin: 32px auto 0; opacity: 0.92; }
+
+  /* INVITATION */
+  .invitation-letter { padding: 140px 48px; background: var(--black-warm); }
+  .invitation-inner { max-width: 800px; margin: 0 auto; }
+  .invitation-eyebrow { font-family: var(--body); font-size: 11px; letter-spacing: 0.42em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; display: flex; align-items: center; gap: 16px; }
+  .invitation-eyebrow::before { content: ''; width: 32px; height: 1px; background: var(--gold); opacity: 0.65; }
+  .invitation-letter h2 { font-family: var(--display); font-size: clamp(32px, 4.2vw, 48px); line-height: 1.2; color: var(--pearl); margin-bottom: 48px; letter-spacing: 0.01em; }
+  .invitation-letter h2 em { font-style: italic; color: var(--gold); }
+  .invitation-letter p { font-family: var(--serif); font-size: 18px; line-height: 1.85; color: var(--pearl); margin-bottom: 24px; opacity: 0.92; }
+  .invitation-letter p em { color: var(--gold); font-style: italic; }
+
+  /* TIERS */
+  .tiers-section { padding: 140px 48px; background: var(--black); }
+  .tiers-section .section-eyebrow { font-family: var(--body); font-size: 11px; letter-spacing: 0.42em; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; display: flex; align-items: center; gap: 16px; max-width: 1200px; margin-left: auto; margin-right: auto; }
+  .tiers-section .section-eyebrow::before { content: ''; width: 32px; height: 1px; background: var(--gold); opacity: 0.65; }
+  .tiers-section h2 { font-family: var(--display); font-size: clamp(32px, 4.2vw, 48px); line-height: 1.2; color: var(--pearl); margin-bottom: 48px; max-width: 1200px; margin-left: auto; margin-right: auto; }
+  .tiers-section h2 em { font-style: italic; color: var(--gold); }
+
+  .tiers { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .tier { background: linear-gradient(180deg, var(--black-warm) 0%, var(--black-deep) 100%); border: 1px solid var(--line); padding: 48px 36px; display: flex; flex-direction: column; position: relative; transition: all 0.5s cubic-bezier(0.2, 0.6, 0.2, 1); }
+  .tier:hover { border-color: var(--line-strong); transform: translateY(-4px); }
+  .tier.featured { background: linear-gradient(180deg, var(--burgundy-deep) 0%, var(--black-deep) 100%); border-color: var(--line-strong); }
+  .tier.featured::before { content: 'PATRON'; position: absolute; top: -10px; left: 36px; background: var(--gold); color: var(--black); font-family: var(--body); font-size: 9px; letter-spacing: 0.32em; padding: 4px 12px; }
+
+  .tier-eyebrow { font-family: var(--body); font-size: 11px; letter-spacing: 0.36em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+  .tier-name { font-family: var(--display); font-size: 26px; line-height: 1.2; color: var(--pearl); margin-bottom: 4px; }
+  .tier-tagline { font-family: var(--serif); font-style: italic; font-size: 16px; color: var(--pearl); opacity: 0.78; margin-bottom: 24px; }
+
+  .tier-price { font-family: var(--display); font-size: 56px; line-height: 1; color: var(--gold); margin-bottom: 8px; letter-spacing: 0.02em; }
+  .tier-availability { font-family: var(--body); font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--pearl); opacity: 0.6; margin-bottom: 32px; padding-bottom: 24px; border-bottom: 1px solid var(--line); }
+
+  .tier-includes-label { font-family: var(--body); font-size: 10px; letter-spacing: 0.36em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+  .tier-list { list-style: none; flex: 1; margin-bottom: 32px; }
+  .tier-list li { font-family: var(--serif); font-size: 15px; line-height: 1.6; color: var(--pearl); opacity: 0.88; padding-left: 18px; padding-bottom: 12px; position: relative; }
+  .tier-list li::before { content: '·'; position: absolute; left: 6px; top: 0; color: var(--gold); font-size: 18px; }
+
+  .tier-cta { display: block; width: 100%; padding: 16px 24px; background: var(--gold); color: var(--black); font-family: var(--body); font-size: 12px; letter-spacing: 0.28em; text-transform: uppercase; text-align: center; transition: all 0.4s ease; border: 1px solid var(--gold); cursor: pointer; }
+  .tier-cta:hover { background: transparent; color: var(--gold); }
+
+  /* PAYMENT METHODS */
+  .payment-methods { padding: 120px 48px; background: var(--black-warm); border-top: 1px solid var(--line); }
+  .pm-inner { max-width: 1100px; margin: 0 auto; }
+  .pm-eyebrow { font-family: var(--body); font-size: 11px; letter-spacing: 0.42em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; display: flex; align-items: center; gap: 16px; }
+  .pm-eyebrow::before { content: ''; width: 32px; height: 1px; background: var(--gold); opacity: 0.65; }
+  .pm-title { font-family: var(--display); font-size: clamp(28px, 3.8vw, 42px); line-height: 1.2; color: var(--pearl); margin-bottom: 48px; max-width: 800px; }
+  .pm-title em { font-style: italic; color: var(--gold); }
+
+  .pm-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .pm-card { background: var(--black); border: 1px solid var(--line); padding: 36px 28px; transition: all 0.4s ease; }
+  .pm-card:hover { border-color: var(--line-strong); }
+
+  .pm-card-icon { font-family: var(--display); font-size: 36px; color: var(--gold); margin-bottom: 16px; line-height: 1; }
+  .pm-card h3 { font-family: var(--display); font-size: 22px; color: var(--pearl); margin-bottom: 8px; }
+  .pm-card-tag { font-family: var(--body); font-size: 10px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
+  .pm-card p { font-family: var(--serif); font-size: 14px; line-height: 1.65; color: var(--pearl); opacity: 0.85; margin-bottom: 18px; }
+
+  .pm-detail { font-family: var(--body); font-size: 12px; line-height: 1.65; color: var(--pearl); opacity: 0.78; margin-bottom: 8px; word-break: break-all; }
+  .pm-detail strong { color: var(--gold); font-weight: normal; letter-spacing: 0.06em; display: block; font-size: 10px; text-transform: uppercase; letter-spacing: 0.24em; margin-bottom: 4px; opacity: 0.85; }
+
+  .pm-copy { display: inline-flex; align-items: center; gap: 6px; font-family: var(--body); font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold); margin-top: 12px; padding: 8px 14px; border: 1px solid var(--line-strong); background: transparent; cursor: pointer; transition: all 0.3s; }
+  .pm-copy:hover { background: var(--gold); color: var(--black); }
+  .pm-copy.copied { background: var(--burgundy); color: var(--pearl); border-color: var(--burgundy); }
+
+  /* INTEGRITY */
+  .integrity { padding: 140px 48px; background: var(--black); }
+  .integrity-inner { max-width: 1100px; margin: 0 auto; }
+  .integrity-eyebrow { font-family: var(--body); font-size: 11px; letter-spacing: 0.42em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; display: flex; align-items: center; gap: 16px; }
+  .integrity-eyebrow::before { content: ''; width: 32px; height: 1px; background: var(--gold); opacity: 0.65; }
+  .integrity h2 { font-family: var(--display); font-size: clamp(32px, 4.2vw, 48px); line-height: 1.2; color: var(--pearl); margin-bottom: 56px; }
+  .integrity h2 em { font-style: italic; color: var(--gold); }
+
+  .integrity-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 48px; }
+  .integrity-block h3 { font-family: var(--display); font-size: 24px; line-height: 1.3; color: var(--gold); margin-bottom: 16px; }
+  .integrity-block p { font-family: var(--serif); font-size: 16px; line-height: 1.75; color: var(--pearl); opacity: 0.88; }
+  .integrity-block p em { color: var(--gold); font-style: italic; }
+
+  /* CTA FINAL */
+  .cta-final { padding: 140px 48px; background: linear-gradient(180deg, var(--black) 0%, var(--burgundy-deep) 100%); text-align: center; }
+  .cta-final-inner { max-width: 720px; margin: 0 auto; }
+  .cta-final-eyebrow { font-family: var(--body); font-size: 11px; letter-spacing: 0.42em; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; }
+  .cta-final h2 { font-family: var(--display); font-size: clamp(32px, 4.5vw, 52px); line-height: 1.2; color: var(--pearl); margin-bottom: 32px; }
+  .cta-final p { font-family: var(--serif); font-size: 18px; line-height: 1.75; color: var(--pearl); opacity: 0.9; margin-bottom: 40px; }
+  .cta-final-button { display: inline-block; padding: 18px 48px; background: var(--gold); color: var(--black); font-family: var(--body); font-size: 13px; letter-spacing: 0.28em; text-transform: uppercase; transition: all 0.4s; border: 1px solid var(--gold); }
+  .cta-final-button:hover { background: transparent; color: var(--gold); }
+  .cta-deadline { font-family: var(--body); font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--pearl); opacity: 0.6; margin-top: 32px; }
+
+  /* FOOTER */
+  footer { padding: 80px 48px 40px; background: var(--black-deep); border-top: 1px solid var(--line); }
+  .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; }
+  .footer-left { font-family: var(--body); font-size: 12px; letter-spacing: 0.16em; color: var(--grey); }
+  .footer-right { display: flex; gap: 24px; }
+  .footer-right a { font-family: var(--body); font-size: 12px; letter-spacing: 0.18em; color: var(--pearl); opacity: 0.7; transition: all 0.3s; }
+  .footer-right a:hover { opacity: 1; color: var(--gold); }
+
+  /* MODAL */
+  .modal { display: none; position: fixed; inset: 0; z-index: 1000; background: rgba(15, 11, 9, 0.92); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); align-items: center; justify-content: center; padding: 24px; }
+  .modal.open { display: flex; animation: fadeUp 0.3s ease; }
+  .modal-inner { max-width: 520px; width: 100%; background: var(--black-warm); border: 1px solid var(--line-strong); padding: 48px 40px; position: relative; }
+  .modal-close { position: absolute; top: 16px; right: 20px; background: none; border: none; color: var(--pearl); font-size: 24px; cursor: pointer; opacity: 0.6; transition: opacity 0.3s; }
+  .modal-close:hover { opacity: 1; color: var(--gold); }
+  .modal h3 { font-family: var(--display); font-size: 28px; color: var(--gold); margin-bottom: 8px; }
+  .modal-tier { font-family: var(--body); font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--pearl); opacity: 0.7; margin-bottom: 24px; }
+  .modal p { font-family: var(--serif); font-size: 15px; line-height: 1.7; color: var(--pearl); margin-bottom: 24px; opacity: 0.9; }
+  .modal-options { display: flex; flex-direction: column; gap: 12px; }
+  .modal-option { display: flex; justify-content: space-between; align-items: center; padding: 18px 24px; background: var(--black); border: 1px solid var(--line); color: var(--pearl); font-family: var(--body); font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; transition: all 0.3s; cursor: pointer; }
+  .modal-option:hover { border-color: var(--gold); color: var(--gold); transform: translateX(4px); }
+  .modal-option-icon { font-family: var(--display); color: var(--gold); font-size: 18px; }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    nav { padding: 18px 24px; }
+    nav.scrolled { padding: 14px 24px; }
+    .hero { padding: 120px 24px 60px; }
+    .hero-eyebrow::before, .hero-eyebrow::after { display: none; }
+    .hero-numbers { flex-direction: column; gap: 24px; }
+    .invitation-letter, .tiers-section, .payment-methods, .integrity, .cta-final { padding: 80px 24px; }
+    .tiers { grid-template-columns: 1fr; gap: 20px; }
+    .tier { padding: 36px 28px; }
+    .pm-grid { grid-template-columns: 1fr; gap: 16px; }
+    .integrity-grid { grid-template-columns: 1fr; gap: 32px; }
+    .modal-inner { padding: 32px 24px; }
+  }
+</style>
+</head>
+
+<body>
+
+<nav id="nav">
+  <div class="logo">
+    TRIIN LELLEP
+    <span>The Écoute Circle</span>
+  </div>
+  <a href="index.html" class="nav-back">← The Work</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow animate-fadeUp">By Private Invitation</div>
+    <h1 class="hero-title animate-fadeUp delay-1">A small circle of <em>patrons</em> for a new body of cinematic vocal work.</h1>
+
+    <p class="hero-lede animate-fadeUp delay-2">
+      <em>The Écoute Circle</em> is a small private circle forming around the first chapter of Triin Lellep's
+      original cinematic vocal work — beginning in Asia in June 2026. Thirty-one places. Closed when full.
+    </p>
+
+    <div class="hero-numbers animate-fadeUp delay-3">
+      <div class="hero-number">
+        <div class="hero-number-value">€29,000</div>
+        <div class="hero-number-label">Project</div>
+      </div>
+      <div class="hero-number">
+        <div class="hero-number-value">31</div>
+        <div class="hero-number-label">Places</div>
+      </div>
+      <div class="hero-number">
+        <div class="hero-number-value">31 May 2026</div>
+        <div class="hero-number-label">Closing</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INVITATION LETTER -->
+<section class="invitation-letter">
+  <div class="invitation-inner">
+    <div class="invitation-eyebrow">The Invitation</div>
+    <h2>A category does not <em>begin</em> alone.</h2>
+
+    <p>
+      Every art form that becomes a category — from chamber music in private salons to the
+      modern intimate retreat — was first held in being by a small circle of people who
+      believed in it before the world did. Triin Lellep's work is at this moment.
+    </p>
+
+    <p>
+      She is a <em>composer-soprano</em> — she writes the music she sings. She is also an
+      author, a stage artist, and the architect of <em>Private Écoute</em> itself: a ninety-minute
+      cinematic vocal work, performed acoustically in private interiors, structured as a
+      single arc that builds from near silence to a final illuminated fullness. It is not
+      a recital. It is not a concert. It is a complete cinematic composition for voice,
+      instrument, light and room.
+    </p>
+
+    <p>
+      The first private écoute will take place in Asia in June 2026. The room, the host,
+      the guests, the camera, the documentation, the photography — these together establish
+      what the work is, both as a vocal practice and as a category that did not exist before.
+    </p>
+
+    <p>
+      We are inviting <em>thirty-one patrons</em> to make this first chapter possible.
+      The number is intentional. The relationship is personal. Each patron receives
+      something real in return — not gratitude, but objects, films, and presence
+      that no public market will sell.
+    </p>
+  </div>
+</section>
+
+<!-- TIERS -->
+<section class="tiers-section">
+  <div class="section-eyebrow">The Circle</div>
+  <h2>Three tiers. Thirty-one places. <em>Closed when full.</em></h2>
+
+  <div class="tiers">
+
+    <div class="tier">
+      <div class="tier-eyebrow">i. Founding Friend</div>
+      <div class="tier-name">Witness the beginning</div>
+      <div class="tier-tagline">For those who want to be present at the start.</div>
+
+      <div class="tier-price">€250</div>
+      <div class="tier-availability">16 places · 4 confirmed</div>
+
+      <div class="tier-includes-label">Each Friend receives</div>
+      <ul class="tier-list">
+        <li>The 3-minute cinematic film of the first Asian écoute</li>
+        <li>Annual private letter from Triin</li>
+        <li>Name listed in the private Écoute Circle document</li>
+        <li>Early notice on the first European return event in 2027</li>
+      </ul>
+
+      <button class="tier-cta" onclick="openModal('friend', '€250', 'Founding Friend')">Become a Friend</button>
+    </div>
+
+    <div class="tier">
+      <div class="tier-eyebrow">ii. Founding Member</div>
+      <div class="tier-name">Hold the room with us</div>
+      <div class="tier-tagline">For those who want to be part of the architecture.</div>
+
+      <div class="tier-price">€1,000</div>
+      <div class="tier-availability">10 places · 2 confirmed</div>
+
+      <div class="tier-includes-label">Each Member receives</div>
+      <ul class="tier-list">
+        <li>The full 12-minute documentary film, before public release</li>
+        <li>Quarterly private letter from Triin (4 per year)</li>
+        <li>Signed copy of the cosmological book in English when published</li>
+        <li>Priority for tickets at the first European return event 2027</li>
+        <li>Name listed in the private Écoute Circle document</li>
+      </ul>
+
+      <button class="tier-cta" onclick="openModal('member', '€1,000', 'Founding Member')">Become a Member</button>
+    </div>
+
+    <div class="tier featured">
+      <div class="tier-eyebrow">iii. Founding Patron</div>
+      <div class="tier-name">Bring a private écoute to your room</div>
+      <div class="tier-tagline">For those who want to host.</div>
+
+      <div class="tier-price">€3,000</div>
+      <div class="tier-availability">5 places · 1 confirmed</div>
+
+      <div class="tier-includes-label">Each Patron receives</div>
+      <ul class="tier-list">
+        <li>Private salon evening with Triin in Tallinn or Helsinki, summer 2026 — for Patrons only</li>
+        <li>Full 12-minute documentary film before public release</li>
+        <li>Personal 10-minute vocal phrase, recorded for you and sent privately</li>
+        <li>First right to commission a private écoute at preferred terms in 2027–2028</li>
+        <li>Signed copy of the cosmological book in English</li>
+        <li>Name listed in the private Écoute Circle document</li>
+      </ul>
+
+      <button class="tier-cta" onclick="openModal('patron', '€3,000', 'Founding Patron')">Become a Patron</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- PAYMENT METHODS -->
+<section class="payment-methods">
+  <div class="pm-inner">
+    <div class="pm-eyebrow">Methods of Contribution</div>
+    <h2 class="pm-title">Three ways to <em>hold the beginning.</em></h2>
+
+    <div class="pm-grid">
+
+      <!-- CARD 1: STRIPE -->
+      <div class="pm-card">
+        <div class="pm-card-icon">i.</div>
+        <h3>Card Payment</h3>
+        <div class="pm-card-tag">Stripe · International</div>
+        <p>
+          Direct card payment in EUR via Stripe. Visa, Mastercard, American Express
+          and most international cards accepted. Confirmation arrives within minutes.
+        </p>
+        <p style="font-size: 13px; opacity: 0.7;">
+          Click <em>Become a Friend / Member / Patron</em> on any tier above to be taken
+          to the secure Stripe checkout for that tier.
+        </p>
+      </div>
+
+      <!-- CARD 2: BANK TRANSFER -->
+      <div class="pm-card">
+        <div class="pm-card-icon">ii.</div>
+        <h3>Bank Transfer</h3>
+        <div class="pm-card-tag">SEPA / SWIFT</div>
+        <p>
+          For European and international wire transfers. Suited to Founding Member
+          and Founding Patron contributions where a personal relationship matters.
+        </p>
+        <div class="pm-detail" id="bank-details">
+          <strong>Beneficiary</strong>
+          Triin Lellep<br/><br/>
+          <strong>IBAN</strong>
+          EE__ ____ ____ ____ ____<br/>
+          <em style="opacity: 0.6; font-size: 11px;">Provided upon request — please write to triinlellep@gmail.com</em>
+        </div>
+        <a href="mailto:triinlellep@gmail.com?subject=The%20%C3%89coute%20Circle%20%E2%80%94%20Bank%20Transfer%20Details" class="pm-copy">Request Details</a>
+      </div>
+
+      <!-- CARD 3: CRYPTO -->
+      <div class="pm-card">
+        <div class="pm-card-icon">iii.</div>
+        <h3>Cryptocurrency</h3>
+        <div class="pm-card-tag">BTC · ETH · USDC</div>
+        <p>
+          We accept Bitcoin, Ether and USDC for patrons who prefer to contribute
+          in digital assets. Please write first so we can confirm receipt and
+          attach your contribution to the patron record.
+        </p>
+        <div class="pm-detail">
+          <strong>BTC</strong>
+          <span id="btc-addr">bc1q__provided_on_request__</span>
+        </div>
+        <div class="pm-detail">
+          <strong>ETH / USDC (ERC-20)</strong>
+          <span id="eth-addr">0x__provided_on_request__</span>
+        </div>
+        <a href="mailto:triinlellep@gmail.com?subject=The%20%C3%89coute%20Circle%20%E2%80%94%20Crypto%20Contribution" class="pm-copy">Request Addresses</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- INTEGRITY -->
+<section class="integrity">
+  <div class="integrity-inner">
+    <div class="integrity-eyebrow">On Integrity</div>
+    <h2>A few things you should <em>know.</em></h2>
+
+    <div class="integrity-grid">
+      <div class="integrity-block">
+        <h3>This is not crowdfunding</h3>
+        <p>
+          <em>Private Écoute</em> is positioned in the international luxury cultural
+          market. The Écoute Circle is not a public donation campaign. It is a closed
+          circle whose members will be remembered in the artist's career as those who
+          held the beginning. There is no progress bar, no public pledge counter, no
+          comments section.
+        </p>
+      </div>
+
+      <div class="integrity-block">
+        <h3>If we cannot fill the circle</h3>
+        <p>
+          If by 31 May 2026 the full €29,000 is not committed, the work will still launch
+          — at a smaller scale, with what is gathered. Every patron will still receive
+          their full benefits. Nothing is held hostage to a fundraising target.
+        </p>
+      </div>
+
+      <div class="integrity-block">
+        <h3>Documentation and accounting</h3>
+        <p>
+          Every patron receives, after the first Asian écoute, a private financial
+          summary of how the funds were used. This is not investor reporting in the
+          venture-capital sense — it is courtesy between the artist and the people
+          who made the work possible.
+        </p>
+      </div>
+
+      <div class="integrity-block">
+        <h3>Why thirty-one</h3>
+        <p>
+          The number is small enough that every patron is known to the artist personally,
+          and large enough that the chapter is held by a circle, not by a single benefactor.
+          This is the architecture, not a marketing decision.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final">
+  <div class="cta-final-inner">
+    <div class="cta-final-eyebrow">Begin the Conversation</div>
+    <h2>If this is yours, write directly.</h2>
+    <p>
+      Every patron who joins The Écoute Circle is welcomed personally. Whether you wish
+      to begin with the Stripe checkout, a bank transfer, or a conversation first —
+      the door is the same.
+    </p>
+    <a href="mailto:triinlellep@gmail.com?subject=The%20%C3%89coute%20Circle%20%E2%80%94%20Inquiry" class="cta-final-button">Write to Triin</a>
+    <div class="cta-deadline">The Circle closes on 31 May 2026 — or when full</div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-left">© 2026 Triin Lellep · The Écoute Circle · All rights reserved</div>
+    <div class="footer-right">
+      <a href="index.html">The Work</a>
+      <a href="mailto:triinlellep@gmail.com">Contact</a>
+      <a href="https://wa.me/37255575590">WhatsApp</a>
+    </div>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+  <div class="modal-inner">
+    <button class="modal-close" onclick="closeModal()">×</button>
+    <h3 id="modal-title">Founding Patron</h3>
+    <div class="modal-tier" id="modal-amount">€3,000</div>
+    <p>Choose how you would like to contribute. Each method is secure and confirmation will follow within 24 hours.</p>
+    <div class="modal-options">
+      <a href="#" class="modal-option" id="modal-stripe">
+        <span>Pay by Card · Stripe</span>
+        <span class="modal-option-icon">→</span>
+      </a>
+      <a href="mailto:triinlellep@gmail.com" class="modal-option" id="modal-bank">
+        <span>Bank Transfer (SEPA/SWIFT)</span>
+        <span class="modal-option-icon">→</span>
+      </a>
+      <a href="mailto:triinlellep@gmail.com" class="modal-option" id="modal-crypto">
+        <span>Cryptocurrency · BTC / ETH / USDC</span>
+        <span class="modal-option-icon">→</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Stripe Payment Links — REPLACE THESE WITH ACTUAL LINKS WHEN STRIPE ACCOUNT IS LIVE
+  // Generate at: https://dashboard.stripe.com/payment-links
+  const STRIPE_LINKS = {
+    friend:  'https://buy.stripe.com/REPLACE_WITH_FRIEND_LINK',   // €250 · Founding Friend
+    member:  'https://buy.stripe.com/REPLACE_WITH_MEMBER_LINK',   // €1,000 · Founding Member
+    patron:  'https://buy.stripe.com/REPLACE_WITH_PATRON_LINK'    // €3,000 · Founding Patron
+  };
+
+  const TIER_DATA = {
+    friend: { name: 'Founding Friend', amount: '€250',
+              bankSubject: 'The%20%C3%89coute%20Circle%20%E2%80%94%20Founding%20Friend%20%E2%80%94%20Bank%20Transfer',
+              cryptoSubject: 'The%20%C3%89coute%20Circle%20%E2%80%94%20Founding%20Friend%20%E2%80%94%20Crypto' },
+    member: { name: 'Founding Member', amount: '€1,000',
+              bankSubject: 'The%20%C3%89coute%20Circle%20%E2%80%94%20Founding%20Member%20%E2%80%94%20Bank%20Transfer',
+              cryptoSubject: 'The%20%C3%89coute%20Circle%20%E2%80%94%20Founding%20Member%20%E2%80%94%20Crypto' },
+    patron: { name: 'Founding Patron', amount: '€3,000',
+              bankSubject: 'The%20%C3%89coute%20Circle%20%E2%80%94%20Founding%20Patron%20%E2%80%94%20Bank%20Transfer',
+              cryptoSubject: 'The%20%C3%89coute%20Circle%20%E2%80%94%20Founding%20Patron%20%E2%80%94%20Crypto' }
+  };
+
+  function openModal(tier) {
+    const data = TIER_DATA[tier];
+    document.getElementById('modal-title').textContent = data.name;
+    document.getElementById('modal-amount').textContent = data.amount;
+    document.getElementById('modal-stripe').href = STRIPE_LINKS[tier];
+    document.getElementById('modal-bank').href = `mailto:triinlellep@gmail.com?subject=${data.bankSubject}`;
+    document.getElementById('modal-crypto').href = `mailto:triinlellep@gmail.com?subject=${data.cryptoSubject}`;
+    document.getElementById('modal').classList.add('open');
+  }
+
+  function closeModal() {
+    document.getElementById('modal').classList.remove('open');
+  }
+
+  // Close on backdrop click
+  document.getElementById('modal').addEventListener('click', (e) => {
+    if (e.target.id === 'modal') closeModal();
+  });
+
+  // Close on ESC
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeModal();
+  });
+
+  // Nav scroll effect
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 40) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  });
+</script>
+
+</body>
+</html>

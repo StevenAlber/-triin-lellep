@@ -1,0 +1,1391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Triin Lellep — Composer-Soprano · Private Vocal Works</title>
+<meta name="description" content="A small body of original cinematic vocal works composed and performed by Triin Lellep, European composer-soprano. By private invitation for embassies, foundations and signature cultural rooms across Asia, Europe and the Gulf." />
+<meta property="og:title" content="Triin Lellep — Private Vocal Works" />
+<meta property="og:description" content="Original cinematic vocal works by composer-soprano Triin Lellep. By private invitation." />
+<meta property="og:type" content="website" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Marcellus&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+<style>
+  /* ============== TOKENS ============== */
+  :root {
+    --burgundy: #5C2E2E;
+    --burgundy-deep: #3D1E1E;
+    --burgundy-glow: #7A3F3F;
+    --gold: #C9A961;
+    --gold-soft: #B89651;
+    --gold-deep: #8C7338;
+    --pearl: #EDE5D5;
+    --pearl-warm: #F5EFE3;
+    --black: #1C1612;
+    --black-warm: #2A1F1A;
+    --black-deep: #0F0B09;
+    --grey: #8B7E72;
+    --grey-warm: #A89B8E;
+    --line: rgba(201, 169, 97, 0.18);
+    --line-strong: rgba(201, 169, 97, 0.42);
+    --line-dim: rgba(237, 229, 213, 0.08);
+
+    --display: 'Marcellus', 'Cormorant Garamond', 'Garamond', serif;
+    --serif: 'Cormorant Garamond', 'EB Garamond', 'Garamond', serif;
+    --body: 'EB Garamond', 'Cormorant Garamond', Georgia, serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  *::selection { background: var(--gold); color: var(--black); }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--body);
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--pearl);
+    background: var(--black);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  /* ============== ANIMATIONS ============== */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes glowPulse {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 0.7; }
+  }
+  @keyframes lineDraw {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+  }
+
+  .animate-fadeUp { animation: fadeUp 1s cubic-bezier(0.2, 0.6, 0.2, 1) both; }
+  .delay-1 { animation-delay: 0.1s; }
+  .delay-2 { animation-delay: 0.25s; }
+  .delay-3 { animation-delay: 0.4s; }
+  .delay-4 { animation-delay: 0.55s; }
+  .delay-5 { animation-delay: 0.7s; }
+  .delay-6 { animation-delay: 0.85s; }
+
+  /* ============== NAVIGATION ============== */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 24px 48px;
+    background: linear-gradient(180deg, rgba(15, 11, 9, 0.92) 0%, rgba(15, 11, 9, 0) 100%);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid transparent;
+    transition: all 0.4s ease;
+  }
+
+  nav.scrolled {
+    background: rgba(15, 11, 9, 0.96);
+    border-bottom-color: var(--line);
+    padding: 18px 48px;
+  }
+
+  .logo {
+    font-family: var(--display);
+    font-size: 16px;
+    letter-spacing: 0.32em;
+    font-weight: 400;
+    color: var(--pearl);
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .nav-links a {
+    font-family: var(--body);
+    font-size: 13px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--pearl);
+    opacity: 0.78;
+    transition: opacity 0.3s, color 0.3s;
+    position: relative;
+  }
+
+  .nav-links a:hover { opacity: 1; color: var(--gold); }
+
+  .nav-cta {
+    color: var(--gold) !important;
+    opacity: 1 !important;
+    border: 1px solid var(--line-strong);
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+  }
+
+  .nav-cta:hover {
+    background: var(--gold);
+    color: var(--black) !important;
+  }
+
+  .lang-switch {
+    display: flex;
+    gap: 14px;
+    padding-left: 24px;
+    margin-left: 8px;
+    border-left: 1px solid var(--line);
+  }
+
+  .lang-switch a {
+    font-size: 12px;
+    letter-spacing: 0.2em;
+  }
+
+  .lang-switch a.active {
+    color: var(--gold);
+    opacity: 1;
+  }
+
+  /* ============== HERO ============== */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 140px 48px 80px;
+    position: relative;
+    background: radial-gradient(ellipse at 50% 70%, var(--burgundy-deep) 0%, var(--black) 65%);
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 20% 30%, rgba(201, 169, 97, 0.06) 0%, transparent 50%),
+      radial-gradient(circle at 80% 70%, rgba(92, 46, 46, 0.18) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .hero-inner {
+    max-width: 980px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-eyebrow {
+    font-family: var(--body);
+    font-size: 11px;
+    letter-spacing: 0.42em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 32px;
+    opacity: 0.95;
+  }
+
+  .hero-eyebrow::before, .hero-eyebrow::after {
+    content: '—';
+    margin: 0 16px;
+    color: var(--gold);
+    opacity: 0.65;
+  }
+
+  .hero-title {
+    font-family: var(--display);
+    font-size: clamp(54px, 9vw, 120px);
+    line-height: 0.96;
+    font-weight: 400;
+    color: var(--pearl);
+    letter-spacing: 0.04em;
+    margin-bottom: 32px;
+  }
+
+  .hero-subtitle {
+    font-family: var(--serif);
+    font-size: clamp(20px, 2.4vw, 28px);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--gold);
+    margin-bottom: 48px;
+    letter-spacing: 0.02em;
+  }
+
+  .hero-lede {
+    font-family: var(--serif);
+    font-size: clamp(17px, 1.6vw, 21px);
+    line-height: 1.65;
+    color: var(--pearl);
+    max-width: 680px;
+    margin: 0 auto 56px;
+    opacity: 0.92;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .hero-cta {
+    display: inline-block;
+    padding: 18px 48px;
+    background: var(--gold);
+    color: var(--black);
+    font-family: var(--body);
+    font-size: 13px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    transition: all 0.4s cubic-bezier(0.2, 0.6, 0.2, 1);
+    border: 1px solid var(--gold);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--burgundy);
+    transform: translateY(101%);
+    transition: transform 0.4s cubic-bezier(0.2, 0.6, 0.2, 1);
+    z-index: 0;
+  }
+
+  .hero-cta:hover { color: var(--pearl); border-color: var(--burgundy); }
+  .hero-cta:hover::before { transform: translateY(0); }
+  .hero-cta span { position: relative; z-index: 1; }
+
+  .hero-secondary {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 16px;
+    color: var(--pearl);
+    opacity: 0.7;
+    transition: opacity 0.3s, color 0.3s;
+  }
+
+  .hero-secondary:hover { opacity: 1; color: var(--gold); }
+  .hero-secondary span { transition: transform 0.3s; display: inline-block; margin-left: 6px; }
+  .hero-secondary:hover span { transform: translateX(6px); }
+
+  .scroll-indicator {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    opacity: 0.5;
+    animation: glowPulse 3s ease-in-out infinite;
+  }
+
+  .scroll-indicator span {
+    font-family: var(--body);
+    font-size: 10px;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  .scroll-indicator div {
+    width: 1px;
+    height: 36px;
+    background: var(--gold);
+  }
+
+  /* ============== NEGATION ============== */
+  .negation {
+    padding: 140px 48px;
+    background: var(--black);
+    text-align: center;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .negation-inner { max-width: 760px; margin: 0 auto; }
+
+  .negation-line {
+    font-family: var(--display);
+    font-size: clamp(24px, 3.2vw, 38px);
+    line-height: 1.4;
+    color: var(--pearl);
+    margin-bottom: 18px;
+    opacity: 0.5;
+    position: relative;
+    display: inline-block;
+  }
+
+  .negation-line.strike::after {
+    content: '';
+    position: absolute;
+    left: -8%;
+    right: -8%;
+    top: 50%;
+    height: 1px;
+    background: var(--gold);
+    opacity: 0.65;
+  }
+
+  .negation-rule {
+    width: 60px;
+    height: 1px;
+    background: var(--gold);
+    margin: 56px auto;
+    opacity: 0.6;
+  }
+
+  .negation-affirm {
+    font-family: var(--display);
+    font-size: clamp(28px, 3.5vw, 42px);
+    line-height: 1.35;
+    color: var(--pearl);
+    font-weight: 400;
+  }
+
+  .negation-affirm em {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  /* ============== PULL QUOTE ============== */
+  .pull-quote {
+    padding: 100px 48px;
+    background: linear-gradient(180deg, var(--black) 0%, var(--burgundy-deep) 50%, var(--black) 100%);
+    text-align: center;
+  }
+
+  .pull-quote-inner {
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: var(--display);
+    font-size: clamp(26px, 3.5vw, 42px);
+    line-height: 1.45;
+    color: var(--pearl);
+    font-style: italic;
+  }
+
+  .pull-quote-inner span {
+    display: block;
+    margin-top: 20px;
+    color: var(--gold);
+    font-style: italic;
+  }
+
+  /* ============== SECTIONS ============== */
+  section { position: relative; }
+
+  .section-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .section-eyebrow {
+    font-family: var(--body);
+    font-size: 11px;
+    letter-spacing: 0.42em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .section-eyebrow::before {
+    content: '';
+    width: 32px;
+    height: 1px;
+    background: var(--gold);
+    opacity: 0.65;
+  }
+
+  h2 {
+    font-family: var(--display);
+    font-size: clamp(34px, 4.2vw, 54px);
+    line-height: 1.15;
+    font-weight: 400;
+    color: var(--pearl);
+    margin-bottom: 56px;
+    max-width: 900px;
+    letter-spacing: 0.01em;
+  }
+
+  h2 em { font-style: italic; color: var(--gold); }
+
+  /* ============== THE WORK ============== */
+  .work {
+    padding: 160px 48px;
+    background: var(--black-warm);
+  }
+
+  .work-prose {
+    font-family: var(--serif);
+    font-size: 19px;
+    line-height: 1.75;
+    color: var(--pearl);
+    max-width: 760px;
+    margin-bottom: 80px;
+    opacity: 0.92;
+  }
+
+  .work-prose em { color: var(--gold); font-style: italic; }
+
+  .work-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 80px;
+    border-top: 1px solid var(--line);
+    padding-top: 56px;
+  }
+
+  .work-fact {
+    border-left: 1px solid var(--line);
+    padding-left: 24px;
+  }
+
+  .work-fact-label {
+    font-family: var(--body);
+    font-size: 10px;
+    letter-spacing: 0.36em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 10px;
+  }
+
+  .work-fact-value {
+    font-family: var(--display);
+    font-size: 22px;
+    line-height: 1.35;
+    color: var(--pearl);
+  }
+
+  /* ============== FORMATS ============== */
+  .formats {
+    padding: 160px 48px;
+    background: var(--black);
+  }
+
+  .formats-lede {
+    font-family: var(--serif);
+    font-size: 19px;
+    line-height: 1.75;
+    color: var(--pearl);
+    max-width: 780px;
+    margin-bottom: 80px;
+    opacity: 0.92;
+  }
+
+  .formats-lede em { color: var(--gold); font-style: italic; }
+
+  .formats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+
+  .format-card {
+    background: linear-gradient(180deg, var(--black-warm) 0%, var(--black-deep) 100%);
+    border: 1px solid var(--line);
+    padding: 48px 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.2, 0.6, 0.2, 1);
+  }
+
+  .format-card:hover {
+    border-color: var(--line-strong);
+    transform: translateY(-4px);
+  }
+
+  .format-card.featured {
+    background: linear-gradient(180deg, var(--burgundy-deep) 0%, var(--black-deep) 100%);
+    border-color: var(--line-strong);
+  }
+
+  .format-card.featured::before {
+    content: 'PRIMARY';
+    position: absolute;
+    top: -10px;
+    left: 36px;
+    background: var(--gold);
+    color: var(--black);
+    font-family: var(--body);
+    font-size: 9px;
+    letter-spacing: 0.32em;
+    padding: 4px 12px;
+  }
+
+  .format-eyebrow {
+    font-family: var(--body);
+    font-size: 11px;
+    letter-spacing: 0.36em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  .format-card h3 {
+    font-family: var(--display);
+    font-size: 26px;
+    line-height: 1.2;
+    color: var(--pearl);
+    font-weight: 400;
+  }
+
+  .format-meta {
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    padding: 18px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .format-meta-row {
+    display: flex;
+    gap: 14px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .format-meta-label {
+    font-family: var(--body);
+    font-size: 9px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--gold);
+    min-width: 90px;
+    padding-top: 3px;
+  }
+
+  .format-meta-value {
+    font-family: var(--serif);
+    color: var(--pearl);
+    flex: 1;
+  }
+
+  .format-meta-value em { color: var(--gold); font-style: italic; }
+
+  .format-prose {
+    font-family: var(--serif);
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--pearl);
+    opacity: 0.82;
+  }
+
+  /* ============== ARCHITECTURE ============== */
+  .architecture {
+    padding: 160px 48px;
+    background: var(--black-warm);
+    position: relative;
+  }
+
+  .architecture::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 240px;
+    bottom: 200px;
+    width: 1px;
+    background: linear-gradient(180deg, transparent 0%, var(--gold) 50%, transparent 100%);
+    opacity: 0.35;
+    transform: translateX(-50%);
+  }
+
+  .movements-list {
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+    margin-top: 32px;
+    position: relative;
+  }
+
+  .movement {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 32px;
+    align-items: start;
+    position: relative;
+  }
+
+  .movement-num {
+    font-family: var(--display);
+    font-size: 56px;
+    line-height: 1;
+    color: var(--gold);
+    text-align: right;
+    font-weight: 400;
+    opacity: 0.85;
+  }
+
+  .movement-content h3 {
+    font-family: var(--display);
+    font-size: clamp(28px, 3vw, 40px);
+    line-height: 1.2;
+    color: var(--pearl);
+    font-weight: 400;
+    margin-bottom: 14px;
+  }
+
+  .movement-trans {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--gold);
+    font-size: 0.6em;
+    margin-left: 8px;
+    opacity: 0.85;
+  }
+
+  .movement-content p {
+    font-family: var(--serif);
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--pearl);
+    opacity: 0.85;
+    max-width: 640px;
+  }
+
+  /* ============== ARTIST ============== */
+  .artist {
+    padding: 160px 48px;
+    background: var(--black);
+  }
+
+  .artist-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .artist-name {
+    font-family: var(--display);
+    font-size: clamp(40px, 5vw, 64px);
+    line-height: 1.05;
+    color: var(--pearl);
+    margin-bottom: 24px;
+    font-weight: 400;
+  }
+
+  .artist-mark {
+    width: 80px;
+    height: 1px;
+    background: var(--gold);
+    margin-bottom: 32px;
+  }
+
+  .artist-bio {
+    font-family: var(--serif);
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--pearl);
+    opacity: 0.92;
+  }
+
+  .artist-bio em {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  .credentials {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .credential {
+    font-family: var(--body);
+    font-size: 11px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--gold);
+    padding: 8px 16px;
+    border: 1px solid var(--line-strong);
+  }
+
+  /* ============== HOSTS ============== */
+  .hosts {
+    padding: 160px 48px;
+    background: var(--black-warm);
+  }
+
+  .hosts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+  }
+
+  .host-tile {
+    background: var(--black-warm);
+    padding: 40px 32px;
+    transition: all 0.5s ease;
+  }
+
+  .host-tile:hover {
+    background: var(--burgundy-deep);
+  }
+
+  .host-tile-num {
+    font-family: var(--display);
+    font-size: 14px;
+    color: var(--gold);
+    margin-bottom: 14px;
+    letter-spacing: 0.05em;
+  }
+
+  .host-tile h4 {
+    font-family: var(--display);
+    font-size: 19px;
+    line-height: 1.35;
+    color: var(--pearl);
+    font-weight: 400;
+  }
+
+  /* ============== INVITATION ============== */
+  .invitation {
+    padding: 160px 48px;
+    background: linear-gradient(180deg, var(--black) 0%, var(--burgundy-deep) 100%);
+  }
+
+  .invitation-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+    border-top: 1px solid var(--line);
+    padding-top: 64px;
+  }
+
+  .invitation-details {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .invitation-row {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    gap: 16px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .invitation-label {
+    font-family: var(--body);
+    font-size: 10px;
+    letter-spacing: 0.36em;
+    text-transform: uppercase;
+    color: var(--gold);
+    padding-top: 4px;
+  }
+
+  .invitation-value {
+    font-family: var(--display);
+    font-size: 19px;
+    color: var(--pearl);
+    line-height: 1.4;
+  }
+
+  .invitation-value em { color: var(--gold); font-style: italic; }
+
+  .invitation-cta {
+    background: var(--black-deep);
+    border: 1px solid var(--line-strong);
+    padding: 56px 48px;
+    position: relative;
+  }
+
+  .invitation-cta-eyebrow {
+    font-family: var(--body);
+    font-size: 11px;
+    letter-spacing: 0.42em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+  }
+
+  .invitation-cta-title {
+    font-family: var(--display);
+    font-size: 32px;
+    line-height: 1.25;
+    color: var(--pearl);
+    margin-bottom: 24px;
+    font-weight: 400;
+  }
+
+  .invitation-cta p {
+    font-family: var(--serif);
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--pearl);
+    opacity: 0.88;
+    margin-bottom: 32px;
+  }
+
+  .invitation-button {
+    display: inline-block;
+    padding: 16px 36px;
+    background: var(--gold);
+    color: var(--black);
+    font-family: var(--body);
+    font-size: 12px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    transition: all 0.4s ease;
+    border: 1px solid var(--gold);
+  }
+
+  .invitation-button:hover {
+    background: transparent;
+    color: var(--gold);
+  }
+
+  /* ============== FOOTER ============== */
+  footer {
+    padding: 100px 48px 48px;
+    background: var(--black-deep);
+    border-top: 1px solid var(--line);
+  }
+
+  .footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 64px;
+  }
+
+  .footer-logo {
+    font-family: var(--display);
+    font-size: 18px;
+    letter-spacing: 0.32em;
+    color: var(--pearl);
+    margin-bottom: 18px;
+  }
+
+  .footer-tagline {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--pearl);
+    opacity: 0.7;
+  }
+
+  .footer-col h5 {
+    font-family: var(--body);
+    font-size: 11px;
+    letter-spacing: 0.36em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 18px;
+    font-weight: 400;
+  }
+
+  .footer-col a, .footer-col p {
+    display: block;
+    font-family: var(--serif);
+    font-size: 15px;
+    color: var(--pearl);
+    opacity: 0.75;
+    line-height: 1.7;
+    margin-bottom: 6px;
+    transition: opacity 0.3s, color 0.3s;
+  }
+
+  .footer-col a:hover { opacity: 1; color: var(--gold); }
+
+  .footer-circle {
+    color: var(--gold) !important;
+    font-style: italic;
+    margin-top: 14px !important;
+    opacity: 1 !important;
+  }
+
+  .footer-bottom {
+    max-width: 1200px;
+    margin: 64px auto 0;
+    padding-top: 32px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--body);
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    color: var(--grey);
+  }
+
+  /* ============== RESPONSIVE ============== */
+  @media (max-width: 900px) {
+    nav { padding: 18px 24px; }
+    nav.scrolled { padding: 14px 24px; }
+    .nav-links { gap: 20px; }
+    .nav-links li:not(.lang-switch):not(:last-child):not(.always-show) { display: none; }
+    .lang-switch { padding-left: 16px; gap: 10px; }
+
+    .hero { padding: 120px 24px 60px; }
+    .hero-eyebrow::before, .hero-eyebrow::after { display: none; }
+
+    .negation, .pull-quote, .work, .formats, .architecture,
+    .artist, .hosts, .invitation { padding: 80px 24px; }
+
+    .work-grid { grid-template-columns: 1fr; gap: 32px; }
+    .formats-grid { grid-template-columns: 1fr; gap: 24px; }
+    .format-card { padding: 36px 28px; }
+
+    .architecture::before { display: none; }
+    .movement { grid-template-columns: 56px 1fr; gap: 20px; }
+    .movement-num { font-size: 40px; }
+
+    .artist-grid { grid-template-columns: 1fr; gap: 40px; }
+    .hosts-grid { grid-template-columns: 1fr 1fr; }
+    .invitation-grid { grid-template-columns: 1fr; gap: 48px; }
+    .invitation-cta { padding: 36px 28px; }
+
+    .footer-inner { grid-template-columns: 1fr; gap: 40px; }
+    .footer-bottom { flex-direction: column; gap: 12px; padding: 24px 0 0; }
+
+    h2 { margin-bottom: 40px; }
+  }
+
+  @media (max-width: 600px) {
+    .hosts-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+
+<body>
+
+<!-- ============== NAVIGATION ============== -->
+<nav id="nav">
+  <div class="logo">TRIIN LELLEP</div>
+  <ul class="nav-links">
+    <li><a href="#work">The Work</a></li>
+    <li><a href="#artist">The Artist</a></li>
+    <li><a href="#hosts">For Hosts</a></li>
+    <li class="always-show"><a href="#invitation" class="nav-cta">Invitation</a></li>
+    <li class="lang-switch always-show">
+      <a href="index.html" class="active">EN</a>
+      <a href="fr.html">FR</a>
+      <a href="zh.html">中</a>
+    </li>
+  </ul>
+</nav>
+
+<!-- ============== HERO ============== -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow animate-fadeUp">By Private Invitation</div>
+    <h1 class="hero-title animate-fadeUp delay-1">TRIIN LELLEP</h1>
+    <div class="hero-subtitle animate-fadeUp delay-2">Composer-Soprano · Private Vocal Works</div>
+    <p class="hero-lede animate-fadeUp delay-3">
+      A small body of original cinematic vocal works, composed and performed
+      by their composer in private interiors for embassies, foundations,
+      family offices and signature cultural rooms across Asia, Europe and the Gulf.
+    </p>
+    <div class="hero-actions animate-fadeUp delay-4">
+      <a href="#invitation" class="hero-cta"><span>Request a Private Invitation</span></a>
+      <a href="circle.html" class="hero-secondary">Or join <em>The Écoute Circle</em> <span>→</span></a>
+    </div>
+  </div>
+  <div class="scroll-indicator"><span>Continue</span><div></div></div>
+</section>
+
+<!-- ============== NEGATION ============== -->
+<section class="negation">
+  <div class="negation-inner">
+    <p class="negation-line strike">This is not a concert.</p>
+    <p class="negation-line strike">This is not a recital.</p>
+    <p class="negation-line strike">This is not a wellness session.</p>
+    <div class="negation-rule"></div>
+    <p class="negation-affirm">It is <em>a private écoute</em> — a cinematic vocal work that builds in a single arc from silence to fullness.</p>
+  </div>
+</section>
+
+<!-- ============== PULL QUOTE ============== -->
+<section class="pull-quote">
+  <div class="pull-quote-inner">
+    The artist does not enter the room to entertain.
+    <span>She enters to compose it.</span>
+  </div>
+</section>
+
+<!-- ============== THE WORK ============== -->
+<section class="work" id="work">
+  <div class="section-inner">
+    <div class="section-eyebrow">The Work</div>
+    <h2>Ninety minutes of <em>cinematic sound and presence</em>, composed for the room you offer.</h2>
+
+    <p class="work-prose">
+      <em>Opus I</em> is the first of a small body of original works composed by Triin Lellep
+      for private performance. It is structured as a single ninety-minute arc — beginning in
+      near silence and rising, movement by movement, into a final illuminated fullness.
+      Voice, instruments and light are choreographed together. The work is theatrical,
+      meditative, and unmistakably cinematic in scale, while remaining acoustic and intimate
+      at its source.
+    </p>
+
+    <div class="work-grid">
+      <div class="work-fact">
+        <div class="work-fact-label">Duration</div>
+        <div class="work-fact-value">90 minutes</div>
+      </div>
+      <div class="work-fact">
+        <div class="work-fact-label">Form</div>
+        <div class="work-fact-value">Single arc · five movements · piano to forte</div>
+      </div>
+      <div class="work-fact">
+        <div class="work-fact-label">Voice</div>
+        <div class="work-fact-value">Acoustic soprano · no source amplification</div>
+      </div>
+      <div class="work-fact">
+        <div class="work-fact-label">Languages</div>
+        <div class="work-fact-value">English · French · Italian · Latin</div>
+      </div>
+      <div class="work-fact">
+        <div class="work-fact-label">Setting</div>
+        <div class="work-fact-value">Private interior · no conventional stage required</div>
+      </div>
+      <div class="work-fact">
+        <div class="work-fact-label">Access</div>
+        <div class="work-fact-value">Invitation only · curated by host</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FORMATS ============== -->
+<section class="formats">
+  <div class="section-inner">
+    <div class="section-eyebrow">Three Formats</div>
+    <h2>One work. Three intensities. <em>Composed to the room you offer.</em></h2>
+
+    <p class="formats-lede">
+      Each <em>écoute</em> is performed in three distinct configurations — each a complete
+      realisation of the same work, scaled in voice, instrumentation and light to match
+      the host's room and intention.
+    </p>
+
+    <div class="formats-grid">
+      <div class="format-card">
+        <div class="format-eyebrow">i. Intime</div>
+        <h3>Candle &amp; Solo Accompaniment</h3>
+        <div class="format-meta">
+          <div class="format-meta-row">
+            <div class="format-meta-label">Capacity</div>
+            <div class="format-meta-value">20–40 guests</div>
+          </div>
+          <div class="format-meta-row">
+            <div class="format-meta-label">Light</div>
+            <div class="format-meta-value">Candlelight · two soft spotlights</div>
+          </div>
+          <div class="format-meta-row">
+            <div class="format-meta-label">Instruments</div>
+            <div class="format-meta-value">Piano <em>or</em> kannel <em>or</em> classical guitar</div>
+          </div>
+          <div class="format-meta-row">
+            <div class="format-meta-label">Atmosphere</div>
+            <div class="format-meta-value"><em>Acoustic, contemplative, mystical</em></div>
+          </div>
+        </div>
+        <p class="format-prose">
+          The most acoustically pure expression of the work. Performed in candle-lit
+          private interiors with a single accompanying instrument. The voice and the
+          room are the primary architecture.
+        </p>
+      </div>
+
+      <div class="format-card featured">
+        <div class="format-eyebrow">ii. Privé</div>
+        <h3>Cinematic Light &amp; Atmosphere</h3>
+        <div class="format-meta">
+          <div class="format-meta-row">
+            <div class="format-meta-label">Capacity</div>
+            <div class="format-meta-value">60–100 guests</div>
+          </div>
+          <div class="format-meta-row">
+            <div class="format-meta-label">Light</div>
+            <div class="format-meta-value">Layered spotlights · cinematic ambient · optional haze</div>
+          </div>
+          <div class="format-meta-row">
+            <div class="format-meta-label">Instruments</div>
+            <div class="format-meta-value">Piano · kannel · handpan</div>
+          </div>
+          <div class="format-meta-row">
+            <div class="format-meta-label">Atmosphere</div>
+            <div class="format-meta-value"><em>Mystical, theatrical, filmic</em></div>
+          </div>
+        </div>
+        <p class="format-prose">
+          A fully cinematic staging. Lighting design is choreographed to the work —
+          moving from near-darkness through atmospheric haze into a final illuminated
+          fullness. Suited to ballrooms, private galleries and curated cultural venues.
+        </p>
+      </div>
+
+      <div class="format-card">
+        <div class="format-eyebrow">iii. Souverain</div>
+        <h3>Full Ensemble &amp; Cinematic Production</h3>
+        <div class="format-meta">
+          <div class="format-meta-row">
+            <div class="format-meta-label">Capacity</div>
+            <div class="format-meta-value">150–200 guests</div>
+          </div>
+          <div class="format-meta-row">
+            <div class="format-meta-label">Light</div>
+            <div class="format-meta-value">Full cinematic lighting · atmospheric haze</div>
+          </div>
+          <div class="format-meta-row">
+            <div class="format-meta-label">Instruments</div>
+            <div class="format-meta-value">Voice · string quartet · handpan · piano · kannel</div>
+          </div>
+          <div class="format-meta-row">
+            <div class="format-meta-label">Atmosphere</div>
+            <div class="format-meta-value"><em>Epic, filmic, sovereign</em></div>
+          </div>
+        </div>
+        <p class="format-prose">
+          The work at its full scale. A string quartet and handpan join the principal
+          instruments; lighting and atmosphere are produced to cinematic standards.
+          Reserved for foundations, embassies and signature state-level cultural occasions.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== ARCHITECTURE ============== -->
+<section class="architecture">
+  <div class="section-inner">
+    <div class="section-eyebrow">The Architecture</div>
+    <h2>Five movements, <em>composed as a single rising arc</em> — from breath to fullness.</h2>
+
+    <div class="movements-list">
+      <div class="movement">
+        <div class="movement-num">I.</div>
+        <div class="movement-content">
+          <h3>Souffle <span class="movement-trans">/ Breath</span></h3>
+          <p>The room crosses into silence. A single sustained tone begins so quietly that several guests will not notice when it began — only that the air has changed. <em>Piano.</em> Almost nothing. The work enters.</p>
+        </div>
+      </div>
+
+      <div class="movement">
+        <div class="movement-num">II.</div>
+        <div class="movement-content">
+          <h3>Héritage <span class="movement-trans">/ Inheritance</span></h3>
+          <p>Three classical pieces in Italian, French and Latin — the technical and historical foundation of the European voice. By the end of the movement, no guest doubts the voice that holds the room.</p>
+        </div>
+      </div>
+
+      <div class="movement">
+        <div class="movement-num">III.</div>
+        <div class="movement-content">
+          <h3>Le Récit <span class="movement-trans">/ The Telling</span></h3>
+          <p>A continuous narrative thread woven through voice and gesture. Theatrical. Philosophical literary fragments from the artist's published work. The work reveals its story; the room is no longer audience but witness.</p>
+        </div>
+      </div>
+
+      <div class="movement">
+        <div class="movement-num">IV.</div>
+        <div class="movement-content">
+          <h3>Ascension <span class="movement-trans">/ Rising</span></h3>
+          <p>Instruments gather. Light deepens. Sustained vowels open into wider intervals; voice and accompaniment fold together. The work passes through meditation toward the cinematic. The room begins to lean forward.</p>
+        </div>
+      </div>
+
+      <div class="movement">
+        <div class="movement-num">V.</div>
+        <div class="movement-content">
+          <h3>Crescendo <span class="movement-trans">/ Fullness</span></h3>
+          <p><em>Forte.</em> The full architecture of the work arrives — voice, ensemble and light converging into a single sustained presence. Cinematic, epic, unmistakable. The moment most guests will remember as the most singular artistic encounter of their year.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== ARTIST ============== -->
+<section class="artist" id="artist">
+  <div class="section-inner">
+    <div class="section-eyebrow">The Artist</div>
+    <div class="artist-grid">
+      <div>
+        <div class="artist-name">Triin<br/>Lellep</div>
+        <div class="artist-mark"></div>
+      </div>
+      <div>
+        <p class="artist-bio">
+          A European <em>composer-soprano</em>, author and stage artist, trained at the
+          <em>Helsinki Conservatory</em> and <em>Paris 8</em>. The works performed in
+          <em>Private Écoute</em> are composed by Triin herself — bringing together her
+          classical voice, original cinematic writing, the literary cosmology of her
+          published work, and a theatrical dramaturgy that builds each work from
+          silence to fullness.
+        </p>
+        <p class="artist-bio" style="margin-top: 24px;">
+          Based between Europe and Asia, she creates a small number of private cinematic
+          vocal works each year for selected international hosts.
+        </p>
+        <div class="credentials">
+          <span class="credential">Composer</span>
+          <span class="credential">Soprano</span>
+          <span class="credential">Author</span>
+          <span class="credential">Helsinki Conservatory</span>
+          <span class="credential">Paris 8</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== HOSTS ============== -->
+<section class="hosts" id="hosts">
+  <div class="section-inner">
+    <div class="section-eyebrow">For Hosts</div>
+    <h2>For rooms that already have everything — <em>and now seek something cinematic, original, irreducible.</em></h2>
+
+    <div class="hosts-grid">
+      <div class="host-tile"><div class="host-tile-num">i.</div><h4>Embassies &amp; cultural institutes</h4></div>
+      <div class="host-tile"><div class="host-tile-num">ii.</div><h4>Foundations</h4></div>
+      <div class="host-tile"><div class="host-tile-num">iii.</div><h4>Family offices</h4></div>
+      <div class="host-tile"><div class="host-tile-num">iv.</div><h4>Boutique luxury hotels</h4></div>
+      <div class="host-tile"><div class="host-tile-num">v.</div><h4>Private members' clubs</h4></div>
+      <div class="host-tile"><div class="host-tile-num">vi.</div><h4>Curated retreat properties</h4></div>
+      <div class="host-tile"><div class="host-tile-num">vii.</div><h4>Private salons</h4></div>
+      <div class="host-tile"><div class="host-tile-num">viii.</div><h4>Collectors' dinners</h4></div>
+      <div class="host-tile"><div class="host-tile-num">ix.</div><h4>State cultural occasions</h4></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== INVITATION ============== -->
+<section class="invitation" id="invitation">
+  <div class="section-inner">
+    <div class="section-eyebrow">Private Invitation</div>
+    <h2>Available by <em>private invitation</em> for selected hosts in Asia, Europe and the Gulf.</h2>
+
+    <div class="invitation-grid">
+      <div class="invitation-details">
+        <div class="invitation-row">
+          <div class="invitation-label">Programme</div>
+          <div class="invitation-value"><em>Opus I</em> · a private écoute by Triin Lellep</div>
+        </div>
+        <div class="invitation-row">
+          <div class="invitation-label">Duration</div>
+          <div class="invitation-value">90 minutes · single arc</div>
+        </div>
+        <div class="invitation-row">
+          <div class="invitation-label">Formats</div>
+          <div class="invitation-value">Intime · Privé · Souverain</div>
+        </div>
+        <div class="invitation-row">
+          <div class="invitation-label">Capacity</div>
+          <div class="invitation-value">From 20 to 200 guests, scaled to room</div>
+        </div>
+        <div class="invitation-row">
+          <div class="invitation-label">Languages</div>
+          <div class="invitation-value">English · French · Italian · Latin</div>
+        </div>
+        <div class="invitation-row">
+          <div class="invitation-label">Geography</div>
+          <div class="invitation-value">Asia · Europe · the Gulf</div>
+        </div>
+        <div class="invitation-row">
+          <div class="invitation-label">Availability</div>
+          <div class="invitation-value">From June 2026</div>
+        </div>
+        <div class="invitation-row" style="border-bottom: none;">
+          <div class="invitation-label">Fee</div>
+          <div class="invitation-value">By private commission</div>
+        </div>
+      </div>
+
+      <div class="invitation-cta">
+        <div class="invitation-cta-eyebrow">Begin the conversation</div>
+        <div class="invitation-cta-title">Request a private invitation</div>
+        <p>
+          Tell us a little about the room you have in mind, and the format that best
+          matches your intention. If the alignment is right, we will be in touch
+          personally within seven days.
+        </p>
+        <a href="mailto:triinlellep@gmail.com?subject=Private%20%C3%89coute%20%E2%80%94%20Invitation%20Inquiry" class="invitation-button">
+          Write to Triin
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FOOTER ============== -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">TRIIN LELLEP</div>
+      <p class="footer-tagline">
+        Tonight you are not at a concert.<br/>
+        You are inside a private écoute.
+      </p>
+    </div>
+
+    <div class="footer-col">
+      <h5>Private Inquiries</h5>
+      <a href="mailto:triinlellep@gmail.com">triinlellep@gmail.com</a>
+      <a href="https://wa.me/37255575590">WhatsApp +372 5557 5590</a>
+      <a href="circle.html" class="footer-circle">The Écoute Circle →</a>
+    </div>
+
+    <div class="footer-col">
+      <h5>Languages</h5>
+      <a href="index.html">English</a>
+      <a href="fr.html">Français</a>
+      <a href="zh.html">中文</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2026 Triin Lellep · Composer-Soprano · All rights reserved</span>
+    <span>Private Vocal Works</span>
+  </div>
+</footer>
+
+<script>
+  // Nav scroll effect
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 40) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  });
+</script>
+
+</body>
+</html>
