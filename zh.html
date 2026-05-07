@@ -54,7 +54,7 @@
   .hero-inner { max-width: 980px; text-align: center; position: relative; z-index: 2; }
   .hero-eyebrow { font-family: var(--body); font-size: 12px; letter-spacing: 0.32em; color: var(--gold); margin-bottom: 32px; opacity: 0.95; }
   .hero-eyebrow::before, .hero-eyebrow::after { content: '—'; margin: 0 16px; color: var(--gold); opacity: 0.65; }
-  .hero-title { font-family: 'Marcellus', serif; font-size: clamp(54px, 9vw, 120px); line-height: 0.96; color: var(--pearl); letter-spacing: 0.04em; margin-bottom: 24px; }
+  .hero-title { font-family: 'Cormorant Garamond', 'EB Garamond', Garamond, serif; font-size: clamp(54px, 9vw, 120px); line-height: 0.96; font-weight: 500; color: var(--pearl); letter-spacing: 0.055em; margin-bottom: 24px; }
   .hero-title-cn { font-family: var(--display-cn); font-size: clamp(20px, 2.4vw, 28px); color: var(--gold); margin-bottom: 32px; letter-spacing: 0.32em; font-weight: 400; }
   .hero-subtitle { font-family: var(--display-cn); font-size: clamp(18px, 2.2vw, 24px); color: var(--gold); margin-bottom: 48px; letter-spacing: 0.18em; }
   .hero-lede { font-family: var(--serif); font-size: clamp(16px, 1.5vw, 19px); line-height: 1.95; color: var(--pearl); max-width: 720px; margin: 0 auto 56px; opacity: 0.92; }
@@ -172,7 +172,11 @@
     .lang-switch { padding-left: 14px; gap: 10px; }
     .nav-cta { border: none; padding: 6px 0; }
     .nav-cta:hover { background: transparent; color: var(--gold) !important; }
-    .hero { padding: 120px 24px 60px; }
+    .hero { padding: 96px 24px 56px; }
+    .hero-eyebrow { margin-bottom: 22px; }
+    .hero-title { margin-bottom: 22px; }
+    .hero-subtitle { margin-bottom: 34px; }
+    .hero-lede { margin: 0 auto 44px; }
     .hero-eyebrow::before, .hero-eyebrow::after { display: none; }
     .negation, .pull-quote, .work, .formats, .architecture, .artist, .hosts, .invitation { padding: 80px 24px; }
     .work-grid { grid-template-columns: 1fr; gap: 32px; }
