@@ -1992,11 +1992,20 @@
     <div class="artist-grid">
       <div>
         <div class="artist-portrait">
-          <!-- Replace this placeholder with: <img src="triin-portrait.jpg" alt="Triin Lellep" /> -->
-          <div class="artist-portrait-placeholder">
-            <div class="artist-portrait-placeholder-mark">TL</div>
-            <div class="artist-portrait-placeholder-text">Portrait<br/>To Follow</div>
-          </div>
+          <picture>
+            <source
+              type="image/webp"
+              srcset="triin-portrait-800.webp 800w, triin-portrait-1600.webp 1600w"
+              sizes="(max-width: 900px) 380px, 460px" />
+            <img
+              src="triin-portrait-800.jpg"
+              srcset="triin-portrait-800.jpg 800w, triin-portrait-1600.jpg 1600w"
+              sizes="(max-width: 900px) 380px, 460px"
+              alt="Triin Lellep — composer-soprano, photographed in cinematic light"
+              loading="lazy"
+              decoding="async"
+              width="800" height="1066" />
+          </picture>
         </div>
         <div class="artist-name">Triin Lellep</div>
         <div class="artist-name-meta">Composer-Soprano</div>
