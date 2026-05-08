@@ -1,6 +1,6 @@
 # TRIIN LELLEP — Private Vocal Works
 
-Maailmaklassi staatiline veebisait. GitHub Pages-valmis. Kolm keelt. Stripe + krüpto + pangaülekanne integreeritud.
+Maailmaklassi staatiline veebisait. GitHub Pages-valmis. Kolm keelt. Stripe + krüpto + pangaülekanne integreeritud. Klikitav kalender päevavalikuga.
 
 ---
 
@@ -12,6 +12,8 @@ Maailmaklassi staatiline veebisait. GitHub Pages-valmis. Kolm keelt. Stripe + kr
 | `fr.html` | Prantsuse versioon | Français |
 | `zh.html` | Hiina versioon | 中文 |
 | `circle.html` | The Écoute Circle (patroonide leht + maksed) | Inglise |
+| `commissions.html` | Commissions leht — klikitav kalender + booking form | Inglise |
+| `CNAME` | Custom domeen GitHub Pages jaoks (`triinlellep.studio`) | — |
 | `.nojekyll` | GitHub Pages konfiguratsioon | — |
 
 ---
@@ -22,9 +24,24 @@ Maailmaklassi staatiline veebisait. GitHub Pages-valmis. Kolm keelt. Stripe + kr
 - **Descriptor:** Composer-Soprano · Private Vocal Works
 - **Format language:** Private Écoute
 - **First programme:** Opus I
-- **Patron layer:** The Écoute Circle (31 places, €29,000)
+- **Patron layer:** The Écoute Circle (31 places)
 - **Tiers:** Intime · Privé · Souverain
 - **Languages:** English · Français · 中文
+
+---
+
+## KALENDRI KLIKITAVUS (commissions.html)
+
+Kalendri lahtrid on nüüd klikitavad nupud. Patron klikib kuule → avaneb modal ühe selle kuu päevadega → klikib päeva → modal sulgub, vorm `Preferred Date` täidetakse, leht scrollib formile, kuupäeva väli helendab korraks kuldselt.
+
+**Loogika:**
+- **Available** kuud → kõik tulevased päevad klikitavad, kuldsed nädalavahetused esiletõstetud
+- **Limited** kuud → samuti, aga modal'i pealdis hoiatab et kohti vähe
+- **Held** kuud → samuti, aga vormi `Context` välja ette lisatakse `[selected from held month — please confirm availability]`
+- **Booked** (Asia Chapter, juuni 2026) → mitte-klikitav, näitab et kuu on suletud
+- Mineviku päevad on hägused ja klikitamatuid
+
+**Kuude staatuste muutmiseks** muuda lihtsalt `commissions.html` failis vastavate `<button class="cal-cell ...">` blokkide `data-status` ja `cal-status` klassi.
 
 ---
 
@@ -32,19 +49,14 @@ Maailmaklassi staatiline veebisait. GitHub Pages-valmis. Kolm keelt. Stripe + kr
 
 ### 1. Loo uus repo
 
-GitHub'is loo uus public repo, näiteks:
-- `triin-lellep` (soovitus)
-- `private-ecoute`
-- `lellep`
+GitHub'is loo uus public repo, näiteks `triin-lellep`.
 
 ### 2. Lisa failid
-
-Lae üles kõik failid kausta juurest (`index.html`, `fr.html`, `zh.html`, `circle.html`, `.nojekyll`).
 
 ```bash
 git init
 git add .
-git commit -m "Initial launch — Private Vocal Works"
+git commit -m "Launch — Private Vocal Works + clickable calendar"
 git branch -M main
 git remote add origin git@github.com:STEVENALBER/triin-lellep.git
 git push -u origin main
@@ -54,97 +66,19 @@ git push -u origin main
 
 Repo Settings → Pages → Source: `main` branch, root.
 
-Sait avaneb aadressil:
-```
-https://stevenalber.github.io/triin-lellep/
-```
+### 4. Custom domeen — `triinlellep.studio`
 
-### 4. Hiljem — Triinu domeen
+`CNAME` fail on juba kaasas. DNS-is (Gandi) sea:
+- `A` records `triinlellep.studio` → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
+- `CNAME` `www` → `stevenalber.github.io`
 
-Kui Triin annab `triinlellep.com` auth code'i (või sa hangid eraldi domeeni nagu `triinlellep.studio`):
-
-1. Tekita repo juurde fail `CNAME` mille sisuks ainult:
-   ```
-   triinlellep.com
-   ```
-2. DNS-is (Gandi vms) sea:
-   - `A` records `triinlellep.com` → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
-   - `CNAME` `www` → `stevenalber.github.io`
-3. GitHub Pages → Settings → Custom domain: `triinlellep.com`, salvesta, ootad SSL'i (~10 min).
+GitHub Pages → Settings → Custom domain: `triinlellep.studio`, salvesta, ootad SSL'i (~10 min).
 
 ---
 
-## STRIPE INTEGRATSIOON
+## STRIPE INTEGRATSIOON (circle.html)
 
-`circle.html` on **valmis kodeeritud** Stripe Payment Links jaoks.
-
-### 1. Loo Stripe Payment Links
-
-Mine: https://dashboard.stripe.com/payment-links → New payment link
-
-Loo kolm linki:
-
-| Tier | Hind | Toote nimi |
-|---|---|---|
-| Founding Friend | €250 EUR | The Écoute Circle — Founding Friend |
-| Founding Member | €1,000 EUR | The Écoute Circle — Founding Member |
-| Founding Patron | €3,000 EUR | The Écoute Circle — Founding Patron |
-
-Iga lingi puhul:
-- Currency: EUR
-- Quantity: 1, fixed
-- Collect customer info: name, email, address
-- Lisa metadata: `tier=friend` / `member` / `patron`
-
-### 2. Asenda lingid `circle.html` failis
-
-Otsi failist:
-
-```javascript
-const STRIPE_LINKS = {
-  friend:  'https://buy.stripe.com/REPLACE_WITH_FRIEND_LINK',
-  member:  'https://buy.stripe.com/REPLACE_WITH_MEMBER_LINK',
-  patron:  'https://buy.stripe.com/REPLACE_WITH_PATRON_LINK'
-};
-```
-
-Asenda igaüks oma päris Stripe lingiga (need näevad välja umbes nii: `https://buy.stripe.com/14k5kAcDh9pKaqQfYY`).
-
-Push GitHubisse — leht uuendub automaatselt.
-
-### 3. Aasia maksete jaoks
-
-Stripe Dashboard → Settings → Payment methods → lülita sisse:
-- UnionPay
-- Alipay
-- WeChat Pay
-
-See võimaldab Hiina patroonidel maksta otse oma kohaliku makselahendusega.
-
----
-
-## PANGAÜLEKANNE
-
-`circle.html` näitab praegu "Provided upon request" — patron klikib "Request Details" ja saadab e-posti.
-
-**Miks request-flow on parim:**
-1. Kaitseb sind spämmist
-2. Loob isikliku kontakti enne suurt ülekannet
-3. Sina kontrollid millise IBAN'i (EE / US / HK) saadad sõltuvalt patronist
-
-Kui soovid IBAN'i otse näidata, otsi failist `EE__ ____ ____ ____ ____` ja asenda päris numbriga.
-
----
-
-## KRÜPTOVALUUTA
-
-Sama loogika — placeholder aadressid:
-```
-BTC: bc1q__provided_on_request__
-ETH/USDC: 0x__provided_on_request__
-```
-
-Soovitus on jätta request-flow (KYC/AML, personaalne kontakt). Kui asendad, otsi failist need stringid.
+Vt eraldi `STRIPE_SETUP.md` faili.
 
 ---
 
@@ -156,20 +90,16 @@ Soovitus on jätta request-flow (KYC/AML, personaalne kontakt). Kui asendad, ots
 **Typography:**
 - Display: **Marcellus**
 - Serif: **Cormorant Garamond**
-- Body: **EB Garamond**
+- Body: **EB Garamond** + **Inter**
 - Mandarin: **Noto Serif SC**
 
-**Animatsioonid:** fadeUp staggered, scroll-aware nav, hover micro-interactions.
-**Mobiil:** Täielikult responsive (breakpoints 900px ja 600px).
+**Animatsioonid:** fadeUp staggered, scroll-aware nav, hover micro-interactions, modal backdrop blur.
+**Mobiil:** Täielikult responsive, hero plokk lõplikult tsentreeritud.
 
 ---
 
-## KIIRTEST ENNE LIVE'i
+## VORMI INTEGRATSIOON
 
-1. `index.html` avaneb
-2. Hiina ja prantsuse versioonid töötavad (lingid navist)
-3. `circle.html` avaneb
-4. Stripe modaal avaneb kui klikid "Become a Friend"
-5. Modal sulgub ESC-iga ja taustaklikiga
-6. Mobiilis (telefonist!) navigatsioon ja layout töötavad
-7. Fonts laaditakse (Google Fonts)
+`commissions.html` vorm kasutab FormSubmit'it: `https://formsubmit.co/triinlellep@gmail.com`
+
+Esmakordsel saatmisel saadab FormSubmit Triinule kinnituslingi, millele tuleb klikata kontode aktiveerimiseks. Pärast seda hakkavad kõik vormi sissekanded automaatselt e-mailile saabuma.

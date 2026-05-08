@@ -114,8 +114,14 @@ nav.scrolled { background: rgba(28, 22, 18, 0.92); backdrop-filter: blur(12px); 
 .availability-lede { font-family: var(--serif); font-size: 18px; line-height: 1.75; color: var(--pearl); max-width: 780px; margin-bottom: 56px; opacity: 0.92; }
 .availability-lede em { color: var(--gold); font-style: italic; }
 .calendar { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); margin-bottom: 32px; }
-.cal-cell { background: var(--black-warm); padding: 24px 16px; min-height: 120px; display: flex; flex-direction: column; justify-content: space-between; transition: background 0.3s; position: relative; }
-.cal-cell:hover { background: var(--black); }
+.cal-cell { background: var(--black-warm); padding: 24px 16px; min-height: 120px; display: flex; flex-direction: column; justify-content: space-between; transition: background 0.3s, border-color 0.3s; position: relative; border: none; text-align: left; color: inherit; font: inherit; cursor: default; }
+.cal-cell.is-clickable { cursor: pointer; }
+.cal-cell.is-clickable:hover { background: var(--black); }
+.cal-cell.is-clickable:hover .cal-status.available { border-color: var(--gold); background: rgba(201, 169, 97, 0.08); }
+.cal-cell.is-clickable::after { content: ''; position: absolute; inset: 0; border: 1px solid transparent; pointer-events: none; transition: border-color 0.3s; }
+.cal-cell.is-clickable:hover::after { border-color: rgba(201, 169, 97, 0.35); }
+.cal-cell:focus-visible { outline: none; }
+.cal-cell:focus-visible::after { border-color: var(--gold); }
 .cal-month { font-family: var(--display); font-size: 17px; color: var(--pearl); margin-bottom: 4px; }
 .cal-year { font-family: var(--body); font-size: 9px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--pearl); opacity: 0.5; margin-bottom: 16px; }
 .cal-status { font-family: var(--body); font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; padding: 5px 10px; border: 1px solid; display: inline-block; align-self: flex-start; }
@@ -130,6 +136,38 @@ nav.scrolled { background: rgba(28, 22, 18, 0.92); backdrop-filter: blur(12px); 
 .cal-legend-dot.limited { border-color: var(--line-strong); }
 .cal-legend-dot.booked { border-color: var(--burgundy); background: rgba(92, 46, 46, 0.4); }
 .cal-legend-dot.held { border-color: var(--line); opacity: 0.55; }
+.cal-hint { font-family: var(--body); font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--pearl); opacity: 0.55; margin-top: 18px; }
+.cal-hint em { color: var(--gold); font-style: normal; opacity: 0.9; }
+
+/* DAY PICKER MODAL */
+.day-modal { display: none; position: fixed; inset: 0; z-index: 1000; background: rgba(15, 11, 9, 0.94); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); align-items: center; justify-content: center; padding: 24px; }
+.day-modal.open { display: flex; animation: dayFadeIn 0.3s ease; }
+@keyframes dayFadeIn { from { opacity: 0; } to { opacity: 1; } }
+.day-modal-inner { max-width: 520px; width: 100%; max-height: 92vh; background: var(--black-warm); border: 1px solid var(--line-strong); padding: 40px 32px 32px; position: relative; overflow-y: auto; }
+.day-modal-close { position: absolute; top: 14px; right: 18px; background: none; border: none; color: var(--pearl); font-size: 26px; cursor: pointer; opacity: 0.6; transition: opacity 0.3s, color 0.3s; line-height: 1; padding: 6px 10px; }
+.day-modal-close:hover { opacity: 1; color: var(--gold); }
+.day-modal-eyebrow { font-family: var(--body); font-size: 10px; letter-spacing: 0.36em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+.day-modal-title { font-family: var(--display); font-size: 30px; color: var(--pearl); margin-bottom: 6px; font-weight: 400; line-height: 1.15; }
+.day-modal-title em { color: var(--gold); font-style: italic; }
+.day-modal-status { font-family: var(--body); font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--pearl); opacity: 0.7; margin-bottom: 22px; }
+.day-modal-status.available { color: var(--gold); opacity: 0.9; }
+.day-modal-status.limited { color: var(--pearl); opacity: 0.85; }
+.day-modal-status.held { color: var(--pearl-dim); }
+.day-modal-lede { font-family: var(--serif); font-size: 14px; line-height: 1.65; color: var(--pearl); opacity: 0.82; margin-bottom: 24px; }
+.day-modal-lede em { color: var(--gold); font-style: italic; }
+
+.day-grid-head { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; margin-bottom: 6px; }
+.day-grid-head span { font-family: var(--body); font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--pearl); opacity: 0.5; text-align: center; padding: 6px 0; }
+.day-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; margin-bottom: 24px; }
+.day-cell { aspect-ratio: 1 / 1; background: transparent; border: 1px solid var(--line); color: var(--pearl); font-family: var(--display); font-size: 15px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.2s; padding: 0; }
+.day-cell:hover { background: rgba(201, 169, 97, 0.08); border-color: var(--gold); color: var(--gold); }
+.day-cell:focus-visible { outline: 1px solid var(--gold); outline-offset: 1px; }
+.day-cell.empty { border: none; cursor: default; pointer-events: none; }
+.day-cell.past { opacity: 0.22; cursor: not-allowed; pointer-events: none; }
+.day-cell.weekend { color: var(--gold); opacity: 0.95; }
+.day-cell.weekend:hover { color: var(--pearl); background: rgba(201, 169, 97, 0.16); }
+
+.day-modal-foot { font-family: var(--body); font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--pearl); opacity: 0.55; text-align: center; padding-top: 12px; border-top: 1px solid var(--line); }
 
 /* BOOKING PATHS */
 .paths { padding: 140px 48px; background: var(--black); }
@@ -245,6 +283,11 @@ footer { padding: 80px 48px 40px; background: var(--black-deep); border-top: 1px
   .form-grid { grid-template-columns: 1fr; gap: 18px; }
   .commission-terms-grid { grid-template-columns: 1fr; gap: 28px; }
   .modal-inner { padding: 36px 24px; }
+  .day-modal { padding: 16px; }
+  .day-modal-inner { padding: 32px 22px 22px; max-height: 88vh; }
+  .day-modal-title { font-size: 26px; }
+  .day-cell { font-size: 14px; }
+  .day-grid-head span { font-size: 8.5px; letter-spacing: 0.18em; }
 }
 </style>
 </head>
@@ -451,69 +494,71 @@ footer { padding: 80px 48px 40px; background: var(--black-deep); border-top: 1px
 
     <div class="calendar">
 
-      <div class="cal-cell">
+      <button type="button" class="cal-cell" data-month="6" data-year="2026" data-status="booked">
         <div class="cal-month">June</div>
         <div class="cal-year">2026</div>
         <div class="cal-status booked">Asia Chapter</div>
-      </div>
-      <div class="cal-cell">
+      </button>
+      <button type="button" class="cal-cell is-clickable" data-month="7" data-year="2026" data-status="available">
         <div class="cal-month">July</div>
         <div class="cal-year">2026</div>
         <div class="cal-status available">Available</div>
-      </div>
-      <div class="cal-cell">
+      </button>
+      <button type="button" class="cal-cell is-clickable" data-month="8" data-year="2026" data-status="available">
         <div class="cal-month">August</div>
         <div class="cal-year">2026</div>
         <div class="cal-status available">Available</div>
-      </div>
-      <div class="cal-cell">
+      </button>
+      <button type="button" class="cal-cell is-clickable" data-month="9" data-year="2026" data-status="limited">
         <div class="cal-month">September</div>
         <div class="cal-year">2026</div>
         <div class="cal-status limited">Limited</div>
-      </div>
-      <div class="cal-cell">
+      </button>
+      <button type="button" class="cal-cell is-clickable" data-month="10" data-year="2026" data-status="available">
         <div class="cal-month">October</div>
         <div class="cal-year">2026</div>
         <div class="cal-status available">Available</div>
-      </div>
-      <div class="cal-cell">
+      </button>
+      <button type="button" class="cal-cell is-clickable" data-month="11" data-year="2026" data-status="available">
         <div class="cal-month">November</div>
         <div class="cal-year">2026</div>
         <div class="cal-status available">Available</div>
-      </div>
+      </button>
 
-      <div class="cal-cell">
+      <button type="button" class="cal-cell is-clickable" data-month="12" data-year="2026" data-status="held">
         <div class="cal-month">December</div>
         <div class="cal-year">2026</div>
         <div class="cal-status held">Held</div>
-      </div>
-      <div class="cal-cell">
+      </button>
+      <button type="button" class="cal-cell is-clickable" data-month="1" data-year="2027" data-status="available">
         <div class="cal-month">January</div>
         <div class="cal-year">2027</div>
         <div class="cal-status available">Available</div>
-      </div>
-      <div class="cal-cell">
+      </button>
+      <button type="button" class="cal-cell is-clickable" data-month="2" data-year="2027" data-status="available">
         <div class="cal-month">February</div>
         <div class="cal-year">2027</div>
         <div class="cal-status available">Available</div>
-      </div>
-      <div class="cal-cell">
+      </button>
+      <button type="button" class="cal-cell is-clickable" data-month="3" data-year="2027" data-status="limited">
         <div class="cal-month">March</div>
         <div class="cal-year">2027</div>
         <div class="cal-status limited">Limited</div>
-      </div>
-      <div class="cal-cell">
+      </button>
+      <button type="button" class="cal-cell is-clickable" data-month="4" data-year="2027" data-status="available">
         <div class="cal-month">April</div>
         <div class="cal-year">2027</div>
         <div class="cal-status available">Available</div>
-      </div>
-      <div class="cal-cell">
+      </button>
+      <button type="button" class="cal-cell is-clickable" data-month="5" data-year="2027" data-status="available">
         <div class="cal-month">May</div>
         <div class="cal-year">2027</div>
         <div class="cal-status available">Available</div>
-      </div>
+      </button>
 
     </div>
+
+    <p class="cal-hint"><em>Tap any month</em> · select a day · the form below opens with your date pre-filled.</p>
 
     <div class="cal-legend">
       <div class="cal-legend-item"><span class="cal-legend-dot available"></span> Available</div>
@@ -859,6 +904,24 @@ footer { padding: 80px 48px 40px; background: var(--black-deep); border-top: 1px
   </div>
 </section>
 
+<!-- ============== DAY PICKER MODAL ============== -->
+<div class="day-modal" id="day-modal" role="dialog" aria-modal="true" aria-labelledby="day-modal-title">
+  <div class="day-modal-inner">
+    <button type="button" class="day-modal-close" aria-label="Close" id="day-modal-close">×</button>
+    <div class="day-modal-eyebrow">Select a day</div>
+    <h3 class="day-modal-title" id="day-modal-title"><em>Month</em></h3>
+    <div class="day-modal-status" id="day-modal-status">Available</div>
+    <p class="day-modal-lede" id="day-modal-lede">
+      Choose a preferred day. The inquiry form opens below with your date filled in. <em>This is a soft selection</em> — the final date is confirmed in writing.
+    </p>
+    <div class="day-grid-head">
+      <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+    </div>
+    <div class="day-grid" id="day-grid"></div>
+    <div class="day-modal-foot">Past dates are dimmed · weekends shown in gold</div>
+  </div>
+</div>
+
 <!-- ============== FOOTER ============== -->
 <footer>
   <div class="footer-inner">
@@ -894,6 +957,143 @@ footer { padding: 80px 48px 40px; background: var(--black-deep); border-top: 1px
     if (window.scrollY > 40) nav.classList.add('scrolled');
     else nav.classList.remove('scrolled');
   });
+
+  /* ============== DAY PICKER MODAL ============== */
+  (function () {
+    const MONTH_NAMES = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+    const STATUS_TEXT = {
+      available: 'Available — open for booking',
+      limited:   'Limited — one or two slots remain',
+      held:      'Held — under negotiation, ask before selecting',
+      booked:    'Confirmed chapter — closed for new bookings'
+    };
+    const STATUS_LEDE = {
+      available: 'Choose a preferred day. The inquiry form opens below with your date filled in. <em>This is a soft selection</em> — the final date is confirmed in writing.',
+      limited:   'A small number of dates remain in this month. <em>Choose a preferred day</em>; we will confirm in writing whether it is still open.',
+      held:      'This month is currently <em>under negotiation</em>. You may still propose a day, but please note an existing reservation may pre-empt it.',
+      booked:    'This month is already confirmed for another chapter and is not available for new commissions.'
+    };
+
+    const modal      = document.getElementById('day-modal');
+    const modalTitle = document.getElementById('day-modal-title');
+    const modalStatus= document.getElementById('day-modal-status');
+    const modalLede  = document.getElementById('day-modal-lede');
+    const modalClose = document.getElementById('day-modal-close');
+    const grid       = document.getElementById('day-grid');
+    const cells      = document.querySelectorAll('.cal-cell.is-clickable');
+    const dateInput  = document.querySelector('input[name="Preferred Date"]');
+    const contextInput = document.querySelector('textarea[name="Context"]');
+
+    if (!modal || !grid || cells.length === 0) return;
+
+    const today = new Date();
+    today.setHours(0,0,0,0);
+
+    function pad(n) { return n < 10 ? '0' + n : '' + n; }
+
+    function buildGrid(month, year, status) {
+      grid.innerHTML = '';
+      const firstDay = new Date(year, month - 1, 1);
+      // Convert Sunday=0..Saturday=6 to Monday=0..Sunday=6
+      let firstWeekday = firstDay.getDay() - 1;
+      if (firstWeekday < 0) firstWeekday = 6;
+      const daysInMonth = new Date(year, month, 0).getDate();
+
+      // Empty leading cells
+      for (let i = 0; i < firstWeekday; i++) {
+        const e = document.createElement('div');
+        e.className = 'day-cell empty';
+        grid.appendChild(e);
+      }
+
+      for (let d = 1; d <= daysInMonth; d++) {
+        const cellDate = new Date(year, month - 1, d);
+        const dow = cellDate.getDay(); // 0=Sun..6=Sat
+        const isWeekend = (dow === 0 || dow === 6);
+        const isPast = cellDate < today;
+
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'day-cell';
+        if (isWeekend) btn.classList.add('weekend');
+        if (isPast || status === 'booked') btn.classList.add('past');
+        btn.textContent = d;
+        btn.setAttribute('aria-label',
+          MONTH_NAMES[month - 1] + ' ' + d + ', ' + year +
+          (isWeekend ? ' (weekend)' : '')
+        );
+
+        if (!isPast && status !== 'booked') {
+          btn.addEventListener('click', () => selectDay(year, month, d, status));
+        }
+        grid.appendChild(btn);
+      }
+    }
+
+    function openModal(month, year, status) {
+      modalTitle.innerHTML = '<em>' + MONTH_NAMES[month - 1] + '</em> ' + year;
+      modalStatus.textContent = STATUS_TEXT[status] || '';
+      modalStatus.className = 'day-modal-status ' + status;
+      modalLede.innerHTML = STATUS_LEDE[status] || STATUS_LEDE.available;
+      buildGrid(month, year, status);
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      // Focus close button so ESC works immediately
+      setTimeout(() => modalClose.focus(), 50);
+    }
+
+    function closeModal() {
+      modal.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function selectDay(year, month, day, status) {
+      const iso = year + '-' + pad(month) + '-' + pad(day);
+      if (dateInput) {
+        dateInput.value = iso;
+        // Trigger change so any listeners fire
+        dateInput.dispatchEvent(new Event('change', { bubbles: true }));
+      }
+      // If month is held, prepend a context note so the patron is reminded
+      if (contextInput && status === 'held' && !contextInput.value.includes('[selected from held month]')) {
+        const note = '[selected from held month — please confirm availability] ';
+        contextInput.value = note + contextInput.value;
+      }
+      closeModal();
+      // Smooth scroll to form
+      const target = document.getElementById('booking-form');
+      if (target) {
+        setTimeout(() => {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          // Briefly highlight the date field
+          if (dateInput) {
+            const original = dateInput.style.boxShadow;
+            dateInput.style.boxShadow = '0 0 0 2px rgba(201, 169, 97, 0.55)';
+            setTimeout(() => { dateInput.style.boxShadow = original; }, 1600);
+          }
+        }, 120);
+      }
+    }
+
+    // Wire up calendar cells
+    cells.forEach((cell) => {
+      cell.addEventListener('click', () => {
+        const month  = parseInt(cell.dataset.month, 10);
+        const year   = parseInt(cell.dataset.year, 10);
+        const status = cell.dataset.status;
+        openModal(month, year, status);
+      });
+    });
+
+    // Close handlers
+    modalClose.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+    });
+  })();
 </script>
 
 </body>

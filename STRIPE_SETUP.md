@@ -63,17 +63,7 @@ const STRIPE_LINKS = {
 };
 ```
 
-Replace with the real URLs from step 3:
-
-```javascript
-const STRIPE_LINKS = {
-  friend:  'https://buy.stripe.com/aBcDeF123456',
-  member:  'https://buy.stripe.com/gHiJkL789012',
-  patron:  'https://buy.stripe.com/mNoPqR345678'
-};
-```
-
-Commit and push. The buttons are now live.
+Replace with the real URLs from step 3, then commit and push. The buttons are now live.
 
 ## Crypto wallet setup
 
@@ -82,49 +72,21 @@ placeholders that say "provided on request." This is the recommended approach �
 it keeps wallet addresses private and gives Triin control over confirming
 each contribution.
 
-When a patron writes to inquire, send them:
-
-- **Bitcoin (BTC)** — a Bech32 address starting with `bc1q...`
-- **Ether (ETH)** — an Ethereum address starting with `0x...`
-- **USDC** — same Ethereum address (USDC on ERC-20)
-
-If you wish to display addresses publicly instead, edit the relevant
-`<span id="btc-addr">` and `<span id="eth-addr">` lines in `circle.html`.
-
 ## Bank transfer setup
 
 The page asks patrons to email for IBAN details. When they write, reply
-with Triin's beneficiary information:
-
-- Beneficiary name
-- IBAN
-- BIC/SWIFT code
-- Bank name and address
-- Reference line: "The Écoute Circle — [Friend/Member/Patron] — [Patron name]"
-
-If you wish to display IBAN publicly, edit the `<div class="pm-detail" id="bank-details">`
-block in `circle.html`.
+with Triin's beneficiary information.
 
 ## Tracking patrons
 
-Stripe gives Triin a dashboard with:
-- Every successful payment
-- Customer email and name
-- Payment date and amount
-
-For bank transfers and crypto, Triin should keep a simple spreadsheet
-(or notion page) tracking:
-- Patron name
-- Tier
-- Amount received
-- Date
-- Method (bank / crypto)
-- Sent confirmation email? (Y/N)
+Stripe gives Triin a dashboard with every successful payment, customer email
+and name, payment date and amount. For bank transfers and crypto, keep a
+simple spreadsheet tracking patron name, tier, amount, date, method, and
+confirmation status.
 
 ## Closing date
 
-The page states the circle closes **31 May 2026 or when full**. To close
-the circle:
-1. **Deactivate the Stripe Payment Links** (Stripe Dashboard → Payment Links → ⋯ → Archive)
-2. **Update circle.html** — change the buttons to "Circle Closed" or remove them entirely
-3. **Send a final email** to every patron confirming closure and next steps
+The page states the circle closes **31 May 2026 or when full**. To close:
+1. **Deactivate the Stripe Payment Links** (Dashboard → Payment Links → ⋯ → Archive)
+2. **Update circle.html** — change the buttons to "Circle Closed" or remove them
+3. **Send a final email** to every patron confirming closure
