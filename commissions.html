@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Commission a Private Écoute · Triin Lellep</title>
+<meta name="description" content="Commission an original cinematic vocal work by composer-soprano Triin Lellep for your room — Asia, Europe, the Americas, the Gulf. Three formats. Transparent honoraria. Direct booking." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Cormorant+Garamond:wght@400;500&family=EB+Garamond:wght@400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+
+<style>
+:root {
+  --burgundy: #5C2E2E;
+  --burgundy-deep: #3D1E1E;
+  --burgundy-darker: #2A1414;
+  --gold: #C9A961;
+  --gold-warm: #B8964A;
+  --pearl: #EDE5D5;
+  --pearl-dim: #B8AC95;
+  --black: #1C1612;
+  --black-warm: #211A14;
+  --black-deep: #15100C;
+  --line: rgba(201, 169, 97, 0.18);
+  --line-strong: rgba(201, 169, 97, 0.32);
+  --display: 'Marcellus', serif;
+  --display-large: 'Cormorant Garamond', serif;
+  --serif: 'EB Garamond', serif;
+  --body: 'Inter', system-ui, sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body { background: var(--black); color: var(--pearl); font-family: var(--serif); font-size: 17px; line-height: 1.7; overflow-x: hidden; }
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; }
+
+.section-inner { max-width: 1240px; margin: 0 auto; }
+.section-eyebrow { font-family: var(--body); font-size: 11px; letter-spacing: 0.42em; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; display: flex; align-items: center; gap: 16px; font-weight: 400; }
+.section-eyebrow::before { content: ''; width: 32px; height: 1px; background: var(--gold); opacity: 0.65; }
+
+h2 { font-family: var(--display); font-size: clamp(32px, 4.4vw, 52px); line-height: 1.18; color: var(--pearl); margin-bottom: 36px; font-weight: 400; }
+h2 em { font-style: italic; color: var(--gold); }
+
+/* NAV */
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 22px 48px; display: flex; justify-content: space-between; align-items: center; transition: all 0.4s; }
+nav.scrolled { background: rgba(28, 22, 18, 0.92); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); padding: 16px 48px; border-bottom: 1px solid var(--line); }
+.nav-logo { font-family: var(--display); font-size: 20px; color: var(--pearl); letter-spacing: 0.08em; }
+.nav-logo em { color: var(--gold); font-style: italic; }
+.nav-links { display: flex; gap: 32px; align-items: center; }
+.nav-links a { font-family: var(--body); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--pearl); opacity: 0.78; transition: opacity 0.3s; }
+.nav-links a:hover { opacity: 1; color: var(--gold); }
+.nav-links a.active { color: var(--gold); opacity: 1; }
+.nav-cta { padding: 10px 22px; border: 1px solid var(--line-strong); color: var(--gold); }
+.nav-cta:hover { background: rgba(201, 169, 97, 0.08); border-color: var(--gold); }
+
+/* HERO */
+.hero { min-height: 88vh; padding: 160px 48px 100px; display: flex; align-items: center;
+  background:
+    radial-gradient(ellipse at 50% 20%, rgba(92, 46, 46, 0.22) 0%, transparent 65%),
+    linear-gradient(180deg, var(--black-warm) 0%, var(--black) 60%, var(--black-deep) 100%);
+}
+.hero-inner { max-width: 1240px; margin: 0 auto; width: 100%; text-align: center; }
+.hero-eyebrow { font-family: var(--body); font-size: 11px; letter-spacing: 0.5em; text-transform: uppercase; color: var(--gold); margin-bottom: 36px; display: inline-flex; align-items: center; gap: 16px; }
+.hero-eyebrow::before, .hero-eyebrow::after { content: ''; width: 48px; height: 1px; background: var(--gold); opacity: 0.55; }
+.hero-title { font-family: var(--display-large); font-weight: 500; font-size: clamp(44px, 8vw, 96px); line-height: 1.05; color: var(--pearl); margin-bottom: 32px; letter-spacing: 0.01em; }
+.hero-title em { font-style: italic; color: var(--gold); }
+.hero-lede { font-family: var(--serif); font-size: clamp(17px, 1.7vw, 21px); line-height: 1.65; color: var(--pearl); max-width: 760px; margin: 0 auto 48px; opacity: 0.92; }
+.hero-meta { display: flex; gap: 48px; justify-content: center; flex-wrap: wrap; padding-top: 36px; border-top: 1px solid var(--line); max-width: 720px; margin: 0 auto; }
+.hero-meta-item { text-align: center; }
+.hero-meta-label { font-family: var(--body); font-size: 10px; letter-spacing: 0.36em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+.hero-meta-value { font-family: var(--display); font-size: 18px; color: var(--pearl); }
+
+/* INTRO */
+.intro { padding: 140px 48px; background: var(--black); border-top: 1px solid var(--line); }
+.intro-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 80px; align-items: start; }
+.intro-prose { font-family: var(--serif); font-size: 18px; line-height: 1.85; color: var(--pearl); opacity: 0.92; }
+.intro-prose p { margin-bottom: 20px; }
+.intro-prose em { font-style: italic; color: var(--gold); }
+
+/* FORMATS */
+.formats { padding: 140px 48px; background: var(--black-warm); }
+.formats-table { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); margin-top: 56px; }
+.format-cell { background: var(--black-warm); padding: 48px 36px; display: flex; flex-direction: column; transition: background 0.4s; }
+.format-cell:hover { background: var(--black); }
+.format-cell.featured { background: linear-gradient(180deg, var(--burgundy-darker) 0%, var(--black-warm) 100%); }
+.format-cell-eyebrow { font-family: var(--body); font-size: 11px; letter-spacing: 0.4em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+.format-cell h3 { font-family: var(--display); font-size: 32px; color: var(--pearl); margin-bottom: 12px; font-weight: 400; }
+.format-cell-tagline { font-family: var(--serif); font-style: italic; font-size: 16px; color: var(--gold); margin-bottom: 28px; opacity: 0.95; }
+.format-cell-honorarium { font-family: var(--display); font-size: 30px; color: var(--pearl); margin-bottom: 4px; line-height: 1.2; }
+.format-cell-honorarium em { color: var(--gold); font-style: normal; }
+.format-cell-honorarium-meta { font-family: var(--body); font-size: 10px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--pearl); opacity: 0.6; margin-bottom: 28px; }
+.format-cell-divider { width: 36px; height: 1px; background: var(--gold); opacity: 0.55; margin-bottom: 28px; }
+.format-cell-list { list-style: none; }
+.format-cell-list li { font-family: var(--serif); font-size: 15px; line-height: 1.55; color: var(--pearl); opacity: 0.88; padding: 8px 0; padding-left: 18px; position: relative; }
+.format-cell-list li::before { content: '·'; position: absolute; left: 0; color: var(--gold); font-size: 18px; line-height: 1; top: 10px; }
+.format-cell-list li strong { color: var(--gold); font-weight: normal; }
+
+/* WHATS INCLUDED */
+.included { padding: 140px 48px; background: var(--black); }
+.included-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); margin-top: 48px; }
+.included-cell { background: var(--black); padding: 48px 40px; }
+.included-cell-eyebrow { font-family: var(--body); font-size: 10px; letter-spacing: 0.4em; text-transform: uppercase; color: var(--gold); margin-bottom: 18px; }
+.included-cell h3 { font-family: var(--display); font-size: 26px; color: var(--pearl); font-weight: 400; margin-bottom: 24px; }
+.included-list { list-style: none; }
+.included-list li { font-family: var(--serif); font-size: 16px; line-height: 1.7; color: var(--pearl); opacity: 0.88; padding: 10px 0; border-bottom: 1px solid var(--line); }
+.included-list li:last-child { border-bottom: none; }
+.included-note { margin-top: 28px; padding: 18px 22px; background: rgba(201, 169, 97, 0.06); border: 1px solid var(--line); font-family: var(--serif); font-style: italic; font-size: 14px; line-height: 1.6; color: var(--pearl); opacity: 0.85; }
+.included-note strong { color: var(--gold); font-weight: normal; font-style: normal; }
+
+/* AVAILABILITY */
+.availability { padding: 140px 48px; background: var(--black-warm); }
+.availability-lede { font-family: var(--serif); font-size: 18px; line-height: 1.75; color: var(--pearl); max-width: 780px; margin-bottom: 56px; opacity: 0.92; }
+.availability-lede em { color: var(--gold); font-style: italic; }
+.calendar { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); margin-bottom: 32px; }
+.cal-cell { background: var(--black-warm); padding: 24px 16px; min-height: 120px; display: flex; flex-direction: column; justify-content: space-between; transition: background 0.3s; position: relative; }
+.cal-cell:hover { background: var(--black); }
+.cal-month { font-family: var(--display); font-size: 17px; color: var(--pearl); margin-bottom: 4px; }
+.cal-year { font-family: var(--body); font-size: 9px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--pearl); opacity: 0.5; margin-bottom: 16px; }
+.cal-status { font-family: var(--body); font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; padding: 5px 10px; border: 1px solid; display: inline-block; align-self: flex-start; }
+.cal-status.available { color: var(--gold); border-color: rgba(201, 169, 97, 0.5); }
+.cal-status.limited { color: var(--pearl); border-color: var(--line-strong); opacity: 0.7; }
+.cal-status.booked { color: var(--burgundy); border-color: rgba(92, 46, 46, 0.6); background: rgba(92, 46, 46, 0.18); }
+.cal-status.held { color: var(--pearl-dim); border-color: var(--line); opacity: 0.55; }
+.cal-legend { display: flex; gap: 28px; flex-wrap: wrap; padding-top: 24px; }
+.cal-legend-item { display: flex; align-items: center; gap: 10px; font-family: var(--body); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--pearl); opacity: 0.78; }
+.cal-legend-dot { width: 10px; height: 10px; border: 1px solid; }
+.cal-legend-dot.available { border-color: var(--gold); background: rgba(201, 169, 97, 0.2); }
+.cal-legend-dot.limited { border-color: var(--line-strong); }
+.cal-legend-dot.booked { border-color: var(--burgundy); background: rgba(92, 46, 46, 0.4); }
+.cal-legend-dot.held { border-color: var(--line); opacity: 0.55; }
+
+/* BOOKING PATHS */
+.paths { padding: 140px 48px; background: var(--black); }
+.paths-lede { font-family: var(--serif); font-size: 19px; line-height: 1.75; color: var(--pearl); max-width: 820px; margin-bottom: 64px; opacity: 0.92; }
+.paths-lede em { color: var(--gold); font-style: italic; }
+.paths-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+.path { background: linear-gradient(180deg, var(--black-warm) 0%, var(--black-deep) 100%); border: 1px solid var(--line); padding: 48px 40px; display: flex; flex-direction: column; transition: all 0.5s cubic-bezier(0.2, 0.6, 0.2, 1); }
+.path:hover { border-color: var(--line-strong); transform: translateY(-4px); }
+.path.featured { border-color: rgba(201, 169, 97, 0.45); background: linear-gradient(180deg, var(--burgundy-darker) 0%, var(--black-deep) 100%); }
+.path-eyebrow { font-family: var(--body); font-size: 11px; letter-spacing: 0.4em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+.path h3 { font-family: var(--display); font-size: 30px; color: var(--pearl); font-weight: 400; line-height: 1.2; margin-bottom: 14px; }
+.path-tagline { font-family: var(--serif); font-style: italic; font-size: 16px; color: var(--gold); margin-bottom: 32px; opacity: 0.95; }
+.path-percent { font-family: var(--display); font-size: 64px; color: var(--gold); line-height: 1; margin-bottom: 8px; }
+.path-percent-label { font-family: var(--body); font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--pearl); opacity: 0.7; margin-bottom: 32px; }
+.path p { font-family: var(--serif); font-size: 16px; line-height: 1.75; color: var(--pearl); opacity: 0.88; margin-bottom: 18px; }
+.path-list { list-style: none; margin-bottom: 36px; }
+.path-list li { font-family: var(--serif); font-size: 15px; line-height: 1.6; color: var(--pearl); opacity: 0.85; padding: 8px 0 8px 24px; position: relative; }
+.path-list li::before { content: '→'; position: absolute; left: 0; color: var(--gold); }
+.path-cta { padding: 16px 28px; font-family: var(--body); font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; text-align: center; transition: all 0.3s; cursor: pointer; border: 1px solid; background: transparent; margin-top: auto; display: block; }
+.path-cta-secondary { color: var(--pearl); border-color: var(--line-strong); }
+.path-cta-secondary:hover { color: var(--gold); border-color: var(--gold); }
+.path-cta-primary { color: var(--gold); border-color: rgba(201, 169, 97, 0.5); background: rgba(201, 169, 97, 0.06); }
+.path-cta-primary:hover { background: rgba(201, 169, 97, 0.14); color: var(--pearl); border-color: rgba(201, 169, 97, 0.85); }
+
+/* BOOKING FORM */
+.booking-form { padding: 140px 48px; background: linear-gradient(180deg, var(--black-warm) 0%, var(--burgundy-darker) 100%); }
+.booking-form-inner { max-width: 880px; margin: 0 auto; }
+.booking-form .section-eyebrow { justify-content: center; }
+.booking-form .section-eyebrow::before { display: none; }
+.booking-form h2 { text-align: center; max-width: 720px; margin: 0 auto 24px; }
+.booking-form-lede { font-family: var(--serif); font-size: 18px; line-height: 1.7; color: var(--pearl); text-align: center; max-width: 720px; margin: 0 auto 56px; opacity: 0.92; }
+.booking-form-lede em { color: var(--gold); font-style: italic; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.form-field { display: flex; flex-direction: column; }
+.form-field-full { grid-column: 1 / -1; }
+.form-label { font-family: var(--body); font-size: 10px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+.form-input, .form-select, .form-textarea {
+  background: var(--black); border: 1px solid var(--line); padding: 14px 16px;
+  font-family: var(--serif); font-size: 16px; color: var(--pearl);
+  transition: border-color 0.3s; outline: none;
+}
+.form-input:focus, .form-select:focus, .form-textarea:focus { border-color: var(--gold); }
+.form-textarea { resize: vertical; min-height: 120px; font-family: var(--serif); }
+.form-select { appearance: none; -webkit-appearance: none; background-image: linear-gradient(45deg, transparent 50%, var(--gold) 50%), linear-gradient(135deg, var(--gold) 50%, transparent 50%); background-position: calc(100% - 18px) center, calc(100% - 12px) center; background-size: 6px 6px, 6px 6px; background-repeat: no-repeat; padding-right: 36px; }
+.form-submit { margin-top: 40px; padding: 18px 40px; background: rgba(201, 169, 97, 0.1); border: 1px solid var(--gold); color: var(--gold); font-family: var(--body); font-size: 12px; letter-spacing: 0.32em; text-transform: uppercase; cursor: pointer; transition: all 0.3s; width: 100%; }
+.form-submit:hover { background: rgba(201, 169, 97, 0.2); color: var(--pearl); }
+.form-disclaimer { font-family: var(--serif); font-size: 13px; font-style: italic; color: var(--pearl); opacity: 0.65; text-align: center; margin-top: 24px; line-height: 1.7; }
+
+/* TERMS */
+.commission-terms { padding: 140px 48px; background: var(--black); border-top: 1px solid var(--line); }
+.commission-terms-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 36px 56px; margin-top: 48px; }
+.commission-terms-block h3 { font-family: var(--display); font-size: 22px; color: var(--gold); margin-bottom: 14px; font-weight: 400; }
+.commission-terms-block p { font-family: var(--serif); font-size: 16px; line-height: 1.75; color: var(--pearl); opacity: 0.88; }
+.commission-terms-block p em { color: var(--gold); font-style: italic; }
+.commission-terms-block p strong { color: var(--pearl); font-weight: normal; border-bottom: 1px solid var(--line-strong); padding-bottom: 1px; }
+
+/* FAQ */
+.faq { padding: 140px 48px; background: var(--black-warm); }
+.faq-list { max-width: 920px; margin: 48px auto 0; }
+.faq-item { border-bottom: 1px solid var(--line); padding: 28px 0; }
+.faq-item h4 { font-family: var(--display); font-size: 22px; color: var(--pearl); margin-bottom: 14px; font-weight: 400; }
+.faq-item p { font-family: var(--serif); font-size: 16px; line-height: 1.75; color: var(--pearl); opacity: 0.88; }
+.faq-item p em { color: var(--gold); font-style: italic; }
+
+/* FOOTER */
+footer { padding: 80px 48px 40px; background: var(--black-deep); border-top: 1px solid var(--line); }
+.footer-inner { max-width: 1240px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; }
+.footer-logo { font-family: var(--display); font-size: 16px; color: var(--pearl); letter-spacing: 0.06em; opacity: 0.85; }
+.footer-logo em { color: var(--gold); font-style: italic; }
+.footer-right { display: flex; gap: 32px; flex-wrap: wrap; }
+.footer-right a { font-family: var(--body); font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--pearl); opacity: 0.65; transition: opacity 0.3s; }
+.footer-right a:hover { opacity: 1; color: var(--gold); }
+
+/* MODAL */
+.modal { display: none; position: fixed; inset: 0; z-index: 1000; background: rgba(15, 11, 9, 0.94); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); align-items: center; justify-content: center; padding: 24px; }
+.modal.open { display: flex; animation: fadeUp 0.3s ease; }
+.modal-inner { max-width: 620px; width: 100%; max-height: 90vh; background: var(--black-warm); border: 1px solid var(--line-strong); padding: 48px 40px; position: relative; overflow-y: auto; }
+.modal-close { position: absolute; top: 16px; right: 20px; background: none; border: none; color: var(--pearl); font-size: 24px; cursor: pointer; opacity: 0.6; transition: opacity 0.3s; }
+.modal-close:hover { opacity: 1; color: var(--gold); }
+.modal-eyebrow { font-family: var(--body); font-size: 10px; letter-spacing: 0.36em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; opacity: 0.85; }
+.modal h3 { font-family: var(--display); font-size: 30px; color: var(--pearl); margin-bottom: 14px; font-weight: 400; }
+.modal h3 em { font-style: italic; color: var(--gold); }
+.modal p { font-family: var(--serif); font-size: 15px; line-height: 1.75; color: var(--pearl); margin-bottom: 18px; opacity: 0.92; }
+.modal p em { color: var(--gold); font-style: italic; }
+.modal-block { padding: 16px 0; border-bottom: 1px solid var(--line); }
+.modal-block:last-of-type { border-bottom: none; }
+.modal-block-label { font-family: var(--body); font-size: 10px; letter-spacing: 0.36em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+.modal-block p { font-size: 14px; line-height: 1.7; margin-bottom: 0; }
+
+@keyframes fadeUp { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+/* RESPONSIVE */
+@media (max-width: 1100px) {
+  .formats-table { grid-template-columns: 1fr; }
+  .calendar { grid-template-columns: repeat(4, 1fr); }
+}
+@media (max-width: 900px) {
+  nav { padding: 16px 24px; }
+  .nav-links { gap: 18px; }
+  .nav-cta { display: none; }
+  .nav-links a:not(.nav-cta) { display: none; }
+  .hero { padding: 120px 24px 80px; min-height: auto; }
+  .hero-title { font-size: clamp(36px, 11vw, 64px); }
+  .hero-meta { gap: 24px; }
+  .intro, .formats, .included, .availability, .paths, .booking-form, .commission-terms, .faq { padding: 80px 24px; }
+  .intro-grid { grid-template-columns: 1fr; gap: 32px; }
+  .included-grid { grid-template-columns: 1fr; }
+  .calendar { grid-template-columns: 1fr 1fr; }
+  .cal-cell { min-height: 100px; }
+  .paths-grid { grid-template-columns: 1fr; gap: 20px; }
+  .path { padding: 36px 28px; }
+  .path-percent { font-size: 52px; }
+  .form-grid { grid-template-columns: 1fr; gap: 18px; }
+  .commission-terms-grid { grid-template-columns: 1fr; gap: 28px; }
+  .modal-inner { padding: 36px 24px; }
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="index.html" class="nav-logo">Triin <em>Lellep</em></a>
+  <div class="nav-links">
+    <a href="index.html">The Work</a>
+    <a href="circle.html">The Circle</a>
+    <a href="commissions.html" class="active">Commissions</a>
+    <a href="#booking" class="nav-cta">Reserve a Date</a>
+  </div>
+</nav>
+
+<!-- ============== HERO ============== -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Private Commissions</div>
+    <h1 class="hero-title">Commission a <em>Private Écoute</em><br/>for your room.</h1>
+    <p class="hero-lede">
+      An original ninety-minute cinematic vocal work, composed and performed by
+      Triin Lellep, scaled to your interior, your guests, and your occasion. Three
+      formats. Transparent honoraria. Direct booking. No call required to begin.
+    </p>
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <div class="hero-meta-label">Geography</div>
+        <div class="hero-meta-value">Worldwide</div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="hero-meta-label">Lead Time</div>
+        <div class="hero-meta-value">Min. 90 days</div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="hero-meta-label">Format</div>
+        <div class="hero-meta-value">Three Configurations</div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="hero-meta-label">Honoraria</div>
+        <div class="hero-meta-value">€35k – €300k</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== INTRO ============== -->
+<section class="intro">
+  <div class="section-inner">
+    <div class="intro-grid">
+      <div>
+        <div class="section-eyebrow">How this works</div>
+        <h2>The room is the brief. <em>Everything else is in writing.</em></h2>
+      </div>
+      <div class="intro-prose">
+        <p>
+          A private commission is a single, complete cinematic vocal event — composed,
+          performed, and produced for one room, one evening, one host. It is not a
+          recital. It is not a concert. It is not background music for a larger
+          programme. It is a ninety-minute artistic work, structured as a single arc,
+          delivered acoustically in the host's interior.
+        </p>
+        <p>
+          Everything about the engagement is written down before any conversation
+          takes place: the format, what is included, what is additional, the
+          honorarium, the deposit, the timeline, the cancellation terms. <em>Once a
+          date is reserved, sustained discussion of artistic detail begins — directly
+          with the artist.</em>
+        </p>
+        <p>
+          We do not hold long calls before payment. We have learned that this
+          consumes the artist's working time without producing serious commissions.
+          If you are ready to commission, the path is short and clear. If you are
+          not yet ready, the materials on this page are designed to answer your
+          questions in writing.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FORMATS ============== -->
+<section class="formats" id="formats">
+  <div class="section-inner">
+    <div class="section-eyebrow">The Three Formats</div>
+    <h2>One work. <em>Three intensities.</em></h2>
+
+    <div class="formats-table">
+
+      <div class="format-cell">
+        <div class="format-cell-eyebrow">i. Intime</div>
+        <h3>Intime</h3>
+        <div class="format-cell-tagline">Candle &amp; solo accompaniment</div>
+        <div class="format-cell-honorarium">€35k – <em>€55k</em></div>
+        <div class="format-cell-honorarium-meta">Artist Honorarium · EUR</div>
+        <div class="format-cell-divider"></div>
+        <ul class="format-cell-list">
+          <li><strong>Capacity</strong> 20–40 guests</li>
+          <li><strong>Light</strong> Candlelight, two soft spots</li>
+          <li><strong>Instruments</strong> Piano, kannel, or classical guitar</li>
+          <li><strong>Atmosphere</strong> Acoustic, contemplative, mystical</li>
+          <li><strong>Suited to</strong> Private salons, residence dinners, retreat closing evenings</li>
+          <li><strong>Duration</strong> 90 minutes, single arc</li>
+        </ul>
+      </div>
+
+      <div class="format-cell featured">
+        <div class="format-cell-eyebrow">ii. Privé</div>
+        <h3>Privé</h3>
+        <div class="format-cell-tagline">Cinematic light &amp; atmosphere</div>
+        <div class="format-cell-honorarium">€75k – <em>€120k</em></div>
+        <div class="format-cell-honorarium-meta">Artist Honorarium · EUR</div>
+        <div class="format-cell-divider"></div>
+        <ul class="format-cell-list">
+          <li><strong>Capacity</strong> 60–100 guests</li>
+          <li><strong>Light</strong> Layered cinematic, choreographed to the work</li>
+          <li><strong>Instruments</strong> Piano, kannel, handpan</li>
+          <li><strong>Atmosphere</strong> Mystical, theatrical, filmic</li>
+          <li><strong>Suited to</strong> Foundation halls, ballrooms, private galleries, anniversary events</li>
+          <li><strong>Duration</strong> 90 minutes, single arc</li>
+        </ul>
+      </div>
+
+      <div class="format-cell">
+        <div class="format-cell-eyebrow">iii. Souverain</div>
+        <h3>Souverain</h3>
+        <div class="format-cell-tagline">Full cinematic production · ensemble</div>
+        <div class="format-cell-honorarium">€180k – <em>€300k</em></div>
+        <div class="format-cell-honorarium-meta">Artist Honorarium · EUR</div>
+        <div class="format-cell-divider"></div>
+        <ul class="format-cell-list">
+          <li><strong>Capacity</strong> 150–200 guests</li>
+          <li><strong>Light</strong> Full cinematic production, lighting designer</li>
+          <li><strong>Instruments</strong> String quartet, piano, kannel, handpan</li>
+          <li><strong>Atmosphere</strong> Epic, filmic, sovereign</li>
+          <li><strong>Suited to</strong> Embassies, foundations, signature state-level cultural occasions</li>
+          <li><strong>Duration</strong> 90 minutes, single arc</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============== INCLUDED / ADDITIONAL ============== -->
+<section class="included">
+  <div class="section-inner">
+    <div class="section-eyebrow">In the Honorarium · Additional</div>
+    <h2>What the honorarium <em>contains</em>, and what is quoted <em>separately</em>.</h2>
+
+    <div class="included-grid">
+
+      <div class="included-cell">
+        <div class="included-cell-eyebrow">Included in the artist honorarium</div>
+        <h3>Within the quoted figure</h3>
+        <ul class="included-list">
+          <li>Composition and rehearsal of the full programme</li>
+          <li>Triin's performance — voice and primary instruments</li>
+          <li>Programme dramaturgy and stage architecture</li>
+          <li>Artistic direction of light, sound, and atmosphere</li>
+          <li>One pre-event walkthrough with the host (remote or on-site)</li>
+          <li>Coordination with the host's room and team</li>
+          <li>One private rehearsal in the room before the event</li>
+        </ul>
+        <div class="included-note">
+          <strong>One commission.</strong> One ninety-minute event. Repeat performances within the same trip are quoted separately at preferred terms.
+        </div>
+      </div>
+
+      <div class="included-cell">
+        <div class="included-cell-eyebrow">Quoted separately, in full transparency</div>
+        <h3>Production &amp; logistics</h3>
+        <ul class="included-list">
+          <li>International flights for artist and accompanying musicians</li>
+          <li>Accommodation, ground transport, per diems</li>
+          <li>Instrument transport and tuning (or local hire)</li>
+          <li>Lighting designer and equipment rental</li>
+          <li>Sound design and acoustic preparation</li>
+          <li>Documentation team (videographer, photographer) if requested</li>
+          <li>Local fixer and translator if required</li>
+          <li>Insurance, visa support, customs documentation</li>
+        </ul>
+        <div class="included-note">
+          <strong>Typical range.</strong> Production and logistics for an Asian or Gulf engagement: <em>€8k – €25k</em>. For the Americas: <em>€12k – €40k</em>. Quoted to the host within 7 days of date reservation.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============== AVAILABILITY ============== -->
+<section class="availability" id="availability">
+  <div class="section-inner">
+    <div class="section-eyebrow">Availability</div>
+    <h2>Calendar of <em>open and held</em> months.</h2>
+
+    <p class="availability-lede">
+      The artist creates a small number of private écoutes each year — typically <em>six to twelve commissions</em>.
+      Months marked Available are open for booking. Limited indicates one or two slots remain.
+      Held means a date is reserved while contract details are finalised. To check
+      a specific date, send an inquiry below.
+    </p>
+
+    <div class="calendar">
+
+      <div class="cal-cell">
+        <div class="cal-month">June</div>
+        <div class="cal-year">2026</div>
+        <div class="cal-status booked">Asia Chapter</div>
+      </div>
+      <div class="cal-cell">
+        <div class="cal-month">July</div>
+        <div class="cal-year">2026</div>
+        <div class="cal-status available">Available</div>
+      </div>
+      <div class="cal-cell">
+        <div class="cal-month">August</div>
+        <div class="cal-year">2026</div>
+        <div class="cal-status available">Available</div>
+      </div>
+      <div class="cal-cell">
+        <div class="cal-month">September</div>
+        <div class="cal-year">2026</div>
+        <div class="cal-status limited">Limited</div>
+      </div>
+      <div class="cal-cell">
+        <div class="cal-month">October</div>
+        <div class="cal-year">2026</div>
+        <div class="cal-status available">Available</div>
+      </div>
+      <div class="cal-cell">
+        <div class="cal-month">November</div>
+        <div class="cal-year">2026</div>
+        <div class="cal-status available">Available</div>
+      </div>
+
+      <div class="cal-cell">
+        <div class="cal-month">December</div>
+        <div class="cal-year">2026</div>
+        <div class="cal-status held">Held</div>
+      </div>
+      <div class="cal-cell">
+        <div class="cal-month">January</div>
+        <div class="cal-year">2027</div>
+        <div class="cal-status available">Available</div>
+      </div>
+      <div class="cal-cell">
+        <div class="cal-month">February</div>
+        <div class="cal-year">2027</div>
+        <div class="cal-status available">Available</div>
+      </div>
+      <div class="cal-cell">
+        <div class="cal-month">March</div>
+        <div class="cal-year">2027</div>
+        <div class="cal-status limited">Limited</div>
+      </div>
+      <div class="cal-cell">
+        <div class="cal-month">April</div>
+        <div class="cal-year">2027</div>
+        <div class="cal-status available">Available</div>
+      </div>
+      <div class="cal-cell">
+        <div class="cal-month">May</div>
+        <div class="cal-year">2027</div>
+        <div class="cal-status available">Available</div>
+      </div>
+
+    </div>
+
+    <div class="cal-legend">
+      <div class="cal-legend-item"><span class="cal-legend-dot available"></span> Available</div>
+      <div class="cal-legend-item"><span class="cal-legend-dot limited"></span> Limited</div>
+      <div class="cal-legend-item"><span class="cal-legend-dot held"></span> Held — under negotiation</div>
+      <div class="cal-legend-item"><span class="cal-legend-dot booked"></span> Confirmed chapter</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== TWO PATHS ============== -->
+<section class="paths" id="booking">
+  <div class="section-inner">
+    <div class="section-eyebrow">Two Booking Paths</div>
+    <h2>Reserve a date, or <em>confirm a booking</em>.</h2>
+
+    <p class="paths-lede">
+      We offer two paths into a commission. The first locks a date with a deposit
+      while artistic detail is settled directly with the artist. The second confirms
+      a booking outright. <em>Both paths begin with the same form below.</em>
+    </p>
+
+    <div class="paths-grid">
+
+      <div class="path">
+        <div class="path-eyebrow">Path A</div>
+        <h3>Reserve a Date</h3>
+        <div class="path-tagline">When you know <em>when</em> but not yet exactly <em>what</em></div>
+        <div class="path-percent">10%</div>
+        <div class="path-percent-label">Reservation Deposit</div>
+        <p>
+          Pay 10% of the lower honorarium of your chosen format to lock the date. The
+          deposit guarantees the date is held exclusively for you for <em>60 days</em>,
+          during which Triin works directly with you on the artistic detail — format,
+          programme variation, instruments, light, the room.
+        </p>
+        <ul class="path-list">
+          <li>Date reserved exclusively, calendar marked Held</li>
+          <li>Direct artistic dialogue with Triin begins</li>
+          <li>Final proposal and contract delivered within 60 days</li>
+          <li>Remaining 40% of first instalment due on contract signing</li>
+          <li>Final 50% due 7 days after the écoute</li>
+          <li>If terms cannot be agreed, 50% of deposit is refunded</li>
+        </ul>
+        <a href="#booking-form" class="path-cta path-cta-secondary" onclick="setPath('reserve')">Reserve a Date →</a>
+      </div>
+
+      <div class="path featured">
+        <div class="path-eyebrow">Path B</div>
+        <h3>Confirm a Booking</h3>
+        <div class="path-tagline">When you know <em>exactly</em> what you wish to commission</div>
+        <div class="path-percent">50%</div>
+        <div class="path-percent-label">First Instalment</div>
+        <p>
+          Pay 50% of the agreed honorarium to confirm the booking outright. This is
+          for hosts who already know which format, which date, which room. Production
+          and logistics are quoted within 7 days. Final 50% is due 7 days after the
+          écoute takes place.
+        </p>
+        <ul class="path-list">
+          <li>Date and format confirmed at booking</li>
+          <li>Production logistics quoted within 7 days</li>
+          <li>Contract issued within 14 days</li>
+          <li>Direct artistic dialogue with Triin begins immediately</li>
+          <li>Final 50% due 7 days after the event</li>
+          <li>Cancellation terms apply (see below)</li>
+        </ul>
+        <a href="#booking-form" class="path-cta path-cta-primary" onclick="setPath('confirm')">Confirm a Booking →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============== BOOKING FORM ============== -->
+<section class="booking-form" id="booking-form">
+  <div class="booking-form-inner">
+    <div class="section-eyebrow">Inquiry &amp; Booking Form</div>
+    <h2>Begin in <em>writing</em>.</h2>
+    <p class="booking-form-lede">
+      Complete the form below. We respond within 24–48 hours with the figures, the
+      contract draft, and the deposit instructions for your chosen path.
+      <em>All correspondence is coordinated through KRYONIS Cultural Lab</em>;
+      direct artistic dialogue with Triin opens once a deposit is confirmed.
+    </p>
+
+    <form action="https://formsubmit.co/triinlellep@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="Private Écoute — Commission Inquiry" />
+      <input type="hidden" name="_template" value="table" />
+      <input type="hidden" name="_captcha" value="true" />
+      <input type="hidden" id="hidden-path" name="Booking Path" value="" />
+
+      <div class="form-grid">
+
+        <div class="form-field">
+          <label class="form-label">Your full name</label>
+          <input type="text" name="Full Name" class="form-input" required />
+        </div>
+
+        <div class="form-field">
+          <label class="form-label">Organisation (if any)</label>
+          <input type="text" name="Organisation" class="form-input" />
+        </div>
+
+        <div class="form-field">
+          <label class="form-label">Email</label>
+          <input type="email" name="Email" class="form-input" required />
+        </div>
+
+        <div class="form-field">
+          <label class="form-label">Phone (with country code)</label>
+          <input type="tel" name="Phone" class="form-input" />
+        </div>
+
+        <div class="form-field">
+          <label class="form-label">City &amp; Country of the event</label>
+          <input type="text" name="City and Country" class="form-input" placeholder="e.g. Buenos Aires, Argentina" required />
+        </div>
+
+        <div class="form-field">
+          <label class="form-label">Type of room / venue</label>
+          <input type="text" name="Venue" class="form-input" placeholder="e.g. private residence, foundation hall" />
+        </div>
+
+        <div class="form-field">
+          <label class="form-label">Preferred date</label>
+          <input type="date" name="Preferred Date" class="form-input" required />
+        </div>
+
+        <div class="form-field">
+          <label class="form-label">Alternative date (optional)</label>
+          <input type="date" name="Alternative Date" class="form-input" />
+        </div>
+
+        <div class="form-field">
+          <label class="form-label">Format</label>
+          <select name="Format" class="form-select" required>
+            <option value="">Select format</option>
+            <option value="Intime (20–40 guests · €35k–55k)">Intime — 20–40 guests · €35k–55k</option>
+            <option value="Privé (60–100 guests · €75k–120k)">Privé — 60–100 guests · €75k–120k</option>
+            <option value="Souverain (150–200 guests · €180k–300k)">Souverain — 150–200 guests · €180k–300k</option>
+            <option value="Not yet decided — advise me">Not yet decided — advise me</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label class="form-label">Number of guests (approx)</label>
+          <input type="number" name="Guests" class="form-input" min="1" />
+        </div>
+
+        <div class="form-field">
+          <label class="form-label">Booking path</label>
+          <select name="Path" class="form-select" id="path-select" required>
+            <option value="">Select path</option>
+            <option value="Path A — Reserve Date (10% deposit)">Path A — Reserve Date (10% deposit)</option>
+            <option value="Path B — Confirm Booking (50% first instalment)">Path B — Confirm Booking (50% first instalment)</option>
+            <option value="Inquiry only — not yet committing">Inquiry only — not yet committing</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label class="form-label">How did you hear of us?</label>
+          <input type="text" name="Referral" class="form-input" />
+        </div>
+
+        <div class="form-field form-field-full">
+          <label class="form-label">Context of the occasion</label>
+          <textarea name="Context" class="form-textarea" placeholder="Anniversary · opening · retreat closing · state visit · private celebration · other. The more detail you give, the more precisely we can prepare the proposal." required></textarea>
+        </div>
+
+      </div>
+
+      <button type="submit" class="form-submit">Send Inquiry &amp; Booking Request</button>
+
+      <p class="form-disclaimer">
+        Submission is encrypted and goes directly to KRYONIS Cultural Lab. We respond
+        within 24–48 hours with figures, contract draft, and deposit instructions.
+        No call is required to begin.
+      </p>
+    </form>
+  </div>
+</section>
+
+<!-- ============== COMMISSION TERMS ============== -->
+<section class="commission-terms" id="terms">
+  <div class="section-inner">
+    <div class="section-eyebrow">Commission Terms</div>
+    <h2>Clarity, in <em>writing</em>, before any commitment.</h2>
+
+    <div class="commission-terms-grid">
+
+      <div class="commission-terms-block">
+        <h3>Cancellation by the host</h3>
+        <p>
+          <strong>More than 90 days before the event:</strong> 50% of paid deposits refunded.<br/>
+          <strong>30–90 days before:</strong> deposits non-refundable; final instalment is waived if not yet paid.<br/>
+          <strong>Less than 30 days before:</strong> full honorarium remains payable; production costs already committed are owed in addition.
+        </p>
+      </div>
+
+      <div class="commission-terms-block">
+        <h3>Cancellation by the artist</h3>
+        <p>
+          In the unlikely event of artist cancellation due to illness, family emergency,
+          or force majeure, all paid deposits are returned <em>in full</em> within 7
+          working days. We will offer to re-book within 12 months at no additional
+          honorarium increase if the host wishes.
+        </p>
+      </div>
+
+      <div class="commission-terms-block">
+        <h3>Documentation rights</h3>
+        <p>
+          The artist retains full copyright over the work and any film, sound, or
+          photography produced during the event. Hosts may request private
+          documentation rights for personal archives at additional cost. <em>The work
+          itself is never licensed for resale or rebroadcast.</em>
+        </p>
+      </div>
+
+      <div class="commission-terms-block">
+        <h3>Confidentiality</h3>
+        <p>
+          The host's identity, the room, and the guests are held in confidence by the
+          artist and her team. Public mention of any commission is made only with
+          explicit written consent of the host. <em>Discretion is the default.</em>
+        </p>
+      </div>
+
+      <div class="commission-terms-block">
+        <h3>Production responsibility</h3>
+        <p>
+          KRYONIS Cultural Lab coordinates all production, logistics, contracts, and
+          payments. Triin engages with the host on artistic matters only — programme,
+          room, instruments, light, atmosphere — and only after a deposit has been
+          confirmed.
+        </p>
+      </div>
+
+      <div class="commission-terms-block">
+        <h3>Governing law</h3>
+        <p>
+          The commission agreement is between the host and Triin Lellep, a private
+          cultural practitioner based in the European Union. <em>Estonian law applies.</em>
+          Any dispute is resolved personally first; only if that fails are formal
+          channels engaged.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============== FAQ ============== -->
+<section class="faq">
+  <div class="section-inner">
+    <div class="section-eyebrow">Frequently Asked</div>
+    <h2>The <em>direct</em> answers.</h2>
+
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <h4>Why is no introductory call available before payment?</h4>
+        <p>
+          Triin spends her preparation time composing, not selling. <em>We have learned that
+          long pre-payment calls consume working time without producing serious commitments.</em>
+          The materials on this site, including the doctrine paper, are designed to answer
+          all questions in writing. Once a deposit is confirmed, direct artistic dialogue with
+          Triin begins immediately.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Can the work be performed in languages other than those listed?</h4>
+        <p>
+          Opus I is performed in English, French, Italian, and Latin — these are
+          composed into the work. Bespoke commissions in other languages can be
+          discussed for Souverain-format engagements <em>once a deposit is confirmed</em>.
+          Translation does not happen on a recital basis.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Will Triin perform a programme of standard repertoire by request?</h4>
+        <p>
+          No. <em>Private Écoute is an original work, not a song programme.</em> Hosts who
+          wish to commission a specific repertoire — operatic arias, art songs, popular
+          ballads — are politely advised that they are seeking a different category
+          of artist.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Is the artist available for shorter formats — 30 or 45 minutes?</h4>
+        <p>
+          <em>The work is composed as a single ninety-minute arc.</em> Shortening
+          breaks the architecture. Hosts who require a brief musical presence within a
+          larger evening should consider a different artist; the cinematic vocal
+          structure does not adapt to interval slots.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Can two private écoutes be commissioned on the same trip?</h4>
+        <p>
+          Yes — within the same region, two engagements separated by at least 48
+          hours can be arranged. The second is offered at <em>preferred terms</em>
+          (reduced honorarium, shared logistics). This is discussed at proposal stage.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h4>What happens if my room turns out to be acoustically unsuitable?</h4>
+        <p>
+          A pre-event walkthrough — remote or on-site — is included in every
+          commission. If acoustic concerns arise, alternative configurations are
+          proposed: instrument substitution, room re-arrangement, or in rare cases,
+          a venue change. <em>The work always sounds as composed</em>; that is the artistic standard.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Can the engagement include a meet-and-greet or signing?</h4>
+        <p>
+          The artist remains present after the écoute for a brief reception of up to
+          forty-five minutes. Formal signing sessions, panel discussions, or photo
+          calls are not part of the standard commission and are not offered.
+          <em>The work itself is the encounter.</em>
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h4>What currencies and payment methods are accepted?</h4>
+        <p>
+          EUR, USD, GBP, CHF, and major Asian currencies. Payment by SEPA / SWIFT
+          bank transfer is preferred for amounts above €25,000. Stripe (card) and
+          cryptocurrency (BTC, ETH, USDC) are accepted for deposits and smaller
+          honoraria.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============== FOOTER ============== -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Triin <em>Lellep</em> · Composer-Soprano</div>
+    <div class="footer-right">
+      <a href="index.html">The Work</a>
+      <a href="circle.html">The Circle</a>
+      <a href="commissions.html">Commissions</a>
+      <a href="mailto:triinlellep@gmail.com">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function setPath(path) {
+    const select = document.getElementById('path-select');
+    if (!select) return;
+    if (path === 'reserve') {
+      select.value = 'Path A — Reserve Date (10% deposit)';
+    } else if (path === 'confirm') {
+      select.value = 'Path B — Confirm Booking (50% first instalment)';
+    }
+    document.getElementById('hidden-path').value = select.value;
+  }
+
+  document.getElementById('path-select')?.addEventListener('change', (e) => {
+    document.getElementById('hidden-path').value = e.target.value;
+  });
+
+  // Nav scroll effect
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 40) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  });
+</script>
+
+</body>
+</html>
