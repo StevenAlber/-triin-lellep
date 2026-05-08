@@ -216,9 +216,24 @@
   .modal-btn-primary:disabled { opacity: 0.3; cursor: not-allowed; }
 
   .modal-options { display: flex; flex-direction: column; gap: 12px; }
-  .modal-option { display: flex; justify-content: space-between; align-items: center; padding: 18px 24px; background: var(--black); border: 1px solid var(--line); color: var(--pearl); font-family: var(--body); font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; transition: all 0.3s; cursor: pointer; }
+  .modal-option { display: flex; justify-content: space-between; align-items: center; padding: 18px 24px; background: var(--black); border: 1px solid var(--line); color: var(--pearl); font-family: var(--body); font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; transition: all 0.3s; cursor: pointer; width: 100%; text-align: left; }
   .modal-option:hover { border-color: var(--gold); color: var(--gold); transform: translateX(4px); }
-  .modal-option-icon { font-family: var(--display); color: var(--gold); font-size: 18px; }
+  .modal-option-icon { font-family: var(--display); color: var(--gold); font-size: 18px; transition: transform 0.3s; }
+  .modal-option.active { border-color: var(--gold); color: var(--gold); transform: translateX(0); }
+  .modal-option.active .modal-option-icon { transform: rotate(45deg); }
+
+  .modal-panel { display: none; padding: 22px 24px 24px; background: var(--black); border: 1px solid var(--gold); border-top: none; margin-top: -12px; animation: fadeUp 0.3s ease; }
+  .modal-panel.open { display: block; }
+  .modal-panel-row { display: flex; flex-wrap: wrap; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+  .modal-panel-row:last-of-type { border-bottom: none; }
+  .modal-panel-label { font-family: var(--body); font-size: 10px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--gold); min-width: 110px; padding-top: 2px; }
+  .modal-panel-value { font-family: var(--serif); font-size: 15px; line-height: 1.5; color: var(--pearl); flex: 1; }
+  .modal-panel-value-mono { font-family: 'SF Mono', 'Monaco', 'Menlo', monospace; font-size: 14px; letter-spacing: 0.06em; }
+  .modal-panel-intro { font-family: var(--serif); font-size: 14px; line-height: 1.7; color: var(--pearl); opacity: 0.9; margin-bottom: 18px; }
+  .modal-panel-instructions { font-family: var(--serif); font-size: 13px; line-height: 1.7; color: var(--pearl); opacity: 0.85; padding: 16px 0 4px; margin-top: 12px; border-top: 1px solid var(--line); }
+  .modal-panel-instructions strong { color: var(--gold); font-weight: normal; }
+  .modal-panel-cta { display: inline-block; margin-top: 16px; padding: 12px 24px; background: rgba(201, 169, 97, 0.06); color: var(--gold); border: 1px solid rgba(201, 169, 97, 0.45); font-family: var(--body); font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; text-align: center; transition: all 0.3s; cursor: pointer; }
+  .modal-panel-cta:hover { background: rgba(201, 169, 97, 0.14); color: var(--pearl); border-color: rgba(201, 169, 97, 0.75); }
   .modal-back { display: inline-block; margin-top: 18px; font-family: var(--body); font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--pearl); opacity: 0.6; cursor: pointer; transition: opacity 0.3s; }
   .modal-back:hover { opacity: 1; color: var(--gold); }
 
@@ -717,14 +732,39 @@
           <span>Pay by Card · Stripe</span>
           <span class="modal-option-icon">→</span>
         </a>
-        <a href="mailto:triinlellep@gmail.com" class="modal-option" id="modal-bank">
+        <button type="button" class="modal-option" id="modal-bank-btn" onclick="togglePanel('bank')">
           <span>Bank Transfer (SEPA / SWIFT)</span>
-          <span class="modal-option-icon">→</span>
-        </a>
-        <a href="mailto:triinlellep@gmail.com" class="modal-option" id="modal-crypto">
+          <span class="modal-option-icon" id="bank-chevron">+</span>
+        </button>
+
+        <div class="modal-panel" id="bank-panel">
+          <div class="modal-panel-row"><span class="modal-panel-label">Beneficiary</span><span class="modal-panel-value">Triin Lellep</span></div>
+          <div class="modal-panel-row"><span class="modal-panel-label">IBAN</span><span class="modal-panel-value modal-panel-value-mono">EE06 2200 0011 0527 2211</span></div>
+          <div class="modal-panel-row"><span class="modal-panel-label">Bank</span><span class="modal-panel-value">Swedbank AS</span></div>
+          <div class="modal-panel-row"><span class="modal-panel-label">SWIFT / BIC</span><span class="modal-panel-value modal-panel-value-mono">HABAEE2X</span></div>
+          <div class="modal-panel-row"><span class="modal-panel-label">Bank address</span><span class="modal-panel-value">Liivalaia 8, 15040 Tallinn, Estonia</span></div>
+          <div class="modal-panel-row"><span class="modal-panel-label">Reference</span><span class="modal-panel-value" id="bank-reference">The Écoute Circle — Founding Patron</span></div>
+          <div class="modal-panel-instructions">
+            <strong>Two simple steps:</strong><br/>
+            1. Make the SEPA / SWIFT transfer from your bank using the details above.<br/>
+            2. Send a short confirmation email so we can record your patronage and send your benefits.
+          </div>
+          <a href="mailto:triinlellep@gmail.com" class="modal-panel-cta" id="bank-confirm-mail">
+            Send Confirmation Email →
+          </a>
+        </div>
+
+        <button type="button" class="modal-option" id="modal-crypto-btn" onclick="togglePanel('crypto')">
           <span>Cryptocurrency · BTC / ETH / USDC</span>
-          <span class="modal-option-icon">→</span>
-        </a>
+          <span class="modal-option-icon" id="crypto-chevron">+</span>
+        </button>
+
+        <div class="modal-panel" id="crypto-panel">
+          <p class="modal-panel-intro">For patrons who prefer to contribute in digital assets. Please email first so we can confirm receipt and attach your contribution to the patron record.</p>
+          <a href="mailto:triinlellep@gmail.com" class="modal-panel-cta" id="crypto-request-mail">
+            Request Wallet Addresses →
+          </a>
+        </div>
       </div>
       <span class="modal-back" onclick="backToTerms()">← Back to terms</span>
     </div>
@@ -744,21 +784,15 @@
   const TIER_DATA = {
     friend: {
       name: 'Founding Friend', amount: '€1,000',
-      receive: 'Three-minute cinematic film of the first chapter; annual private letter from Triin; name listed in the private Écoute Circle document; early notice on the first European return chapter (2027).',
-      bankSubject: 'The%20%C3%89coute%20Circle%20%E2%80%94%20Founding%20Friend%20%E2%80%94%20Bank%20Transfer',
-      cryptoSubject: 'The%20%C3%89coute%20Circle%20%E2%80%94%20Founding%20Friend%20%E2%80%94%20Crypto'
+      receive: 'Three-minute cinematic film of the first chapter; annual private letter from Triin; name listed in the private Écoute Circle document; early notice on the first European return chapter (2027).'
     },
     member: {
       name: 'Founding Member', amount: '€5,000',
-      receive: 'Twelve-minute documentary film, before public release; quarterly private letter from Triin (four per year); signed copy of the cosmological book in English when published; priority for tickets at the first European return chapter (2027); name listed in the private Écoute Circle document.',
-      bankSubject: 'The%20%C3%89coute%20Circle%20%E2%80%94%20Founding%20Member%20%E2%80%94%20Bank%20Transfer',
-      cryptoSubject: 'The%20%C3%89coute%20Circle%20%E2%80%94%20Founding%20Member%20%E2%80%94%20Crypto'
+      receive: 'Twelve-minute documentary film, before public release; quarterly private letter from Triin (four per year); signed copy of the cosmological book in English when published; priority for tickets at the first European return chapter (2027); name listed in the private Écoute Circle document.'
     },
     patron: {
       name: 'Founding Patron', amount: '€15,000',
-      receive: 'Private salon evening with Triin in Tallinn or Helsinki, summer 2026 — for Patrons only; full documentary film before public release; personal ten-minute vocal phrase, recorded for you and sent privately; first right to commission a private écoute at preferred terms in 2027–2028; signed copy of the cosmological book in English; name listed in the private Écoute Circle document.',
-      bankSubject: 'The%20%C3%89coute%20Circle%20%E2%80%94%20Founding%20Patron%20%E2%80%94%20Bank%20Transfer',
-      cryptoSubject: 'The%20%C3%89coute%20Circle%20%E2%80%94%20Founding%20Patron%20%E2%80%94%20Crypto'
+      receive: 'Private salon evening with Triin in Tallinn or Helsinki, summer 2026 — for Patrons only; full documentary film before public release; personal ten-minute vocal phrase, recorded for you and sent privately; first right to commission a private écoute at preferred terms in 2027–2028; signed copy of the cosmological book in English; name listed in the private Écoute Circle document.'
     }
   };
 
@@ -778,12 +812,49 @@
     document.getElementById('modal-title').textContent = data.name;
     document.getElementById('modal-amount').textContent = data.amount;
     document.getElementById('modal-stripe').href = STRIPE_LINKS[tier];
-    document.getElementById('modal-bank').href = `mailto:triinlellep@gmail.com?subject=${data.bankSubject}`;
-    document.getElementById('modal-crypto').href = `mailto:triinlellep@gmail.com?subject=${data.cryptoSubject}`;
+
+    // Bank: pre-fill reference and confirmation mail
+    document.getElementById('bank-reference').textContent = `The Écoute Circle — ${data.name}`;
+    const bankSubject = encodeURIComponent(`The Écoute Circle — ${data.name} (${data.amount}) — Bank Transfer Confirmation`);
+    const bankBody = encodeURIComponent(
+`Dear Triin,
+
+I have made a SEPA / SWIFT transfer for ${data.amount} as a ${data.name} contribution to The Écoute Circle.
+
+Bank: [your bank]
+Date of transfer: [date]
+Reference used: The Écoute Circle — ${data.name}
+
+Please confirm receipt and add me to the patron record.
+
+With kindest regards,
+[your full name]
+[your country]`
+    );
+    document.getElementById('bank-confirm-mail').href = `mailto:triinlellep@gmail.com?subject=${bankSubject}&body=${bankBody}`;
+
+    // Crypto: request wallet addresses
+    const cryptoSubject = encodeURIComponent(`The Écoute Circle — ${data.name} (${data.amount}) — Cryptocurrency`);
+    const cryptoBody = encodeURIComponent(
+`Dear Triin,
+
+I would like to contribute ${data.amount} to The Écoute Circle as a ${data.name}, in cryptocurrency.
+
+Preferred asset: [BTC / ETH / USDC]
+
+Please send me the appropriate wallet address.
+
+With kindest regards,
+[your full name]
+[your country]`
+    );
+    document.getElementById('crypto-request-mail').href = `mailto:triinlellep@gmail.com?subject=${cryptoSubject}&body=${cryptoBody}`;
 
     // Reset to step 1
     document.getElementById('terms-accept').checked = false;
     document.getElementById('btn-proceed').disabled = true;
+    closePanel('bank');
+    closePanel('crypto');
     showStep('terms');
 
     document.getElementById('modal').classList.add('open');
@@ -800,7 +871,6 @@
     document.getElementById('step-payment').classList.toggle('active', step === 'payment');
     document.getElementById('dot-1').classList.toggle('active', true);
     document.getElementById('dot-2').classList.toggle('active', step === 'payment');
-    // Scroll to top of modal
     const inner = document.querySelector('.modal-inner');
     if (inner) inner.scrollTop = 0;
   }
@@ -817,6 +887,34 @@
 
   function backToTerms() {
     showStep('terms');
+  }
+
+  function togglePanel(which) {
+    const panel = document.getElementById(`${which}-panel`);
+    const btn = document.getElementById(`modal-${which}-btn`);
+    const chevron = document.getElementById(`${which}-chevron`);
+    const isOpen = panel.classList.contains('open');
+
+    // Close other panel
+    const other = which === 'bank' ? 'crypto' : 'bank';
+    closePanel(other);
+
+    if (isOpen) {
+      closePanel(which);
+    } else {
+      panel.classList.add('open');
+      btn.classList.add('active');
+      chevron.textContent = '×';
+    }
+  }
+
+  function closePanel(which) {
+    const panel = document.getElementById(`${which}-panel`);
+    const btn = document.getElementById(`modal-${which}-btn`);
+    const chevron = document.getElementById(`${which}-chevron`);
+    if (panel) panel.classList.remove('open');
+    if (btn) btn.classList.remove('active');
+    if (chevron) chevron.textContent = '+';
   }
 
   // Close on backdrop click
