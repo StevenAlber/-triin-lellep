@@ -168,6 +168,31 @@
   .host-tile-num { font-family: 'Marcellus', serif; font-size: 14px; color: var(--gold); margin-bottom: 14px; }
   .host-tile h4 { font-family: var(--display-cn); font-size: 18px; line-height: 1.55; color: var(--pearl); font-weight: 500; }
 
+  .commissions-promo { padding: 160px 48px; background: radial-gradient(ellipse at 50% 30%, rgba(92, 46, 46, 0.18) 0%, transparent 60%), linear-gradient(180deg, var(--black-warm) 0%, var(--black) 100%); border-top: 1px solid var(--line); text-align: center; }
+  .commissions-promo .section-eyebrow { justify-content: center; }
+  .commissions-promo .section-eyebrow::before { display: none; }
+  .commissions-promo h2 { text-align: center; max-width: 920px; margin: 0 auto 32px; }
+  .commissions-promo-lede { font-family: var(--serif); font-size: clamp(17px, 1.6vw, 19px); line-height: 1.95; color: var(--pearl); max-width: 760px; margin: 0 auto 80px; opacity: 0.92; text-align: center; }
+  .commissions-promo-lede em { color: var(--gold); font-style: normal; }
+  .commissions-formats { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); margin-bottom: 80px; text-align: left; }
+  .commission-format { background: var(--black); padding: 40px 32px; transition: background 0.4s; }
+  .commission-format:hover { background: var(--black-warm); }
+  .commission-format.featured { background: linear-gradient(180deg, rgba(92, 46, 46, 0.12) 0%, var(--black) 100%); }
+  .commission-format-eyebrow { font-family: 'Marcellus', serif; font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
+  .commission-format h3 { font-family: var(--display-cn); font-size: 26px; color: var(--pearl); font-weight: 500; margin-bottom: 8px; }
+  .commission-format-tagline { font-family: var(--serif); font-size: 14px; color: var(--gold); margin-bottom: 24px; opacity: 0.95; }
+  .commission-format-honor { font-family: 'Marcellus', serif; font-size: 26px; color: var(--gold); line-height: 1.2; margin-bottom: 4px; }
+  .commission-format-honor-meta { font-family: var(--body); font-size: 10px; letter-spacing: 0.28em; color: var(--pearl); opacity: 0.6; margin-bottom: 24px; }
+  .commission-format-divider { width: 32px; height: 1px; background: var(--gold); opacity: 0.5; margin-bottom: 20px; }
+  .commission-format-meta { font-family: var(--serif); font-size: 14px; line-height: 1.85; color: var(--pearl); opacity: 0.85; }
+  .commission-format-meta-row { padding: 6px 0; }
+  .commission-format-meta-row strong { color: var(--gold); font-weight: normal; font-family: var(--display-cn); font-size: 11px; letter-spacing: 0.22em; display: block; margin-bottom: 4px; }
+  .commissions-promo-cta-row { display: flex; gap: 20px; justify-content: center; align-items: center; flex-wrap: wrap; }
+  .commissions-promo-cta { display: inline-block; padding: 18px 40px; background: rgba(201, 169, 97, 0.08); border: 1px solid var(--gold); color: var(--gold); font-family: var(--display-cn); font-size: 14px; letter-spacing: 0.2em; transition: all 0.3s; }
+  .commissions-promo-cta:hover { background: rgba(201, 169, 97, 0.18); color: var(--pearl); }
+  .commissions-promo-secondary { font-family: var(--display-cn); font-size: 13px; letter-spacing: 0.18em; color: var(--pearl); opacity: 0.65; transition: opacity 0.3s; }
+  .commissions-promo-secondary:hover { opacity: 1; color: var(--gold); }
+
   .invitation { padding: 160px 48px; background: linear-gradient(180deg, var(--black) 0%, var(--burgundy-deep) 100%); }
   .invitation-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; border-top: 1px solid var(--line); padding-top: 64px; }
   .invitation-details { display: flex; flex-direction: column; gap: 24px; }
@@ -215,7 +240,8 @@
     .hero-actions { gap: 18px; }
     .scroll-indicator { display: none; }
     .hero-eyebrow::before, .hero-eyebrow::after { display: none; }
-    .negation, .pull-quote, .work, .formats, .architecture, .artist, .hosts, .invitation { padding: 80px 24px; }
+    .negation, .pull-quote, .work, .formats, .architecture, .artist, .hosts, .invitation, .commissions-promo { padding: 80px 24px; }
+    .commissions-formats { grid-template-columns: 1fr; }
     .work-grid { grid-template-columns: 1fr; gap: 32px; }
     .formats-grid { grid-template-columns: 1fr; gap: 24px; }
     .format-card { padding: 36px 28px; }
@@ -509,6 +535,64 @@
       <div class="doc-gallery-tile">viii</div>
     </div>
 
+  </div>
+</section>
+
+<section class="commissions-promo" id="commissions">
+  <div class="section-inner">
+    <div class="section-eyebrow">私人委约</div>
+    <h2>为您的厅堂<em>委约一场私人 écoute</em>。</h2>
+    <p class="commissions-promo-lede">
+      使馆、基金会、家族办公室与签名级私人主人，皆可为其私密空间委约一场原创九十分钟 <em>écoute</em>。三种形制。<em>酬金透明，直接预订。</em>开始无需任何通话。
+    </p>
+
+    <div class="commissions-formats">
+
+      <div class="commission-format">
+        <div class="commission-format-eyebrow">i. Intime</div>
+        <h3>Intime · 内息</h3>
+        <div class="commission-format-tagline">烛光与独奏伴奏</div>
+        <div class="commission-format-honor">€35k – €55k</div>
+        <div class="commission-format-honor-meta">艺术家酬金</div>
+        <div class="commission-format-divider"></div>
+        <div class="commission-format-meta">
+          <div class="commission-format-meta-row"><strong>规模</strong>20–40 位宾客</div>
+          <div class="commission-format-meta-row"><strong>适合场合</strong>私人沙龙、退修闭幕之夜</div>
+        </div>
+      </div>
+
+      <div class="commission-format featured">
+        <div class="commission-format-eyebrow">ii. Privé</div>
+        <h3>Privé · 私室</h3>
+        <div class="commission-format-tagline">电影感光线与气氛</div>
+        <div class="commission-format-honor">€75k – €120k</div>
+        <div class="commission-format-honor-meta">艺术家酬金</div>
+        <div class="commission-format-divider"></div>
+        <div class="commission-format-meta">
+          <div class="commission-format-meta-row"><strong>规模</strong>60–100 位宾客</div>
+          <div class="commission-format-meta-row"><strong>适合场合</strong>基金会大厅、周年庆典、签名级活动</div>
+        </div>
+      </div>
+
+      <div class="commission-format">
+        <div class="commission-format-eyebrow">iii. Souverain</div>
+        <h3>Souverain · 主权</h3>
+        <div class="commission-format-tagline">完整电影制作 · 整组乐团</div>
+        <div class="commission-format-honor">€180k – €300k</div>
+        <div class="commission-format-honor-meta">艺术家酬金</div>
+        <div class="commission-format-divider"></div>
+        <div class="commission-format-meta">
+          <div class="commission-format-meta-row"><strong>规模</strong>150–200 位宾客</div>
+          <div class="commission-format-meta-row"><strong>适合场合</strong>使馆、国家级文化场合</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="commissions-promo-cta-row">
+      <a href="commissions.html" class="commissions-promo-cta">前往预订系统 →</a>
+      <a href="commissions.html#availability" class="commissions-promo-secondary">或查看可订日历</a>
+    </div>
   </div>
 </section>
 

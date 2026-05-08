@@ -993,6 +993,186 @@
     font-weight: 400;
   }
 
+  /* ============== COMMISSIONS PROMO ============== */
+  .commissions-promo {
+    padding: 160px 48px;
+    background:
+      radial-gradient(ellipse at 50% 30%, rgba(92, 46, 46, 0.18) 0%, transparent 60%),
+      linear-gradient(180deg, var(--black-warm) 0%, var(--black) 100%);
+    border-top: 1px solid var(--line);
+    text-align: center;
+  }
+
+  .commissions-promo .section-eyebrow {
+    justify-content: center;
+  }
+
+  .commissions-promo .section-eyebrow::before {
+    display: none;
+  }
+
+  .commissions-promo h2 {
+    text-align: center;
+    max-width: 920px;
+    margin: 0 auto 32px;
+  }
+
+  .commissions-promo-lede {
+    font-family: var(--serif);
+    font-size: clamp(17px, 1.6vw, 20px);
+    line-height: 1.75;
+    color: var(--pearl);
+    max-width: 760px;
+    margin: 0 auto 80px;
+    opacity: 0.92;
+    text-align: center;
+  }
+
+  .commissions-promo-lede em {
+    color: var(--gold);
+    font-style: italic;
+  }
+
+  .commissions-formats {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    margin-bottom: 80px;
+    text-align: left;
+  }
+
+  .commission-format {
+    background: var(--black);
+    padding: 40px 32px;
+    transition: background 0.4s;
+  }
+
+  .commission-format:hover {
+    background: var(--black-warm);
+  }
+
+  .commission-format.featured {
+    background: linear-gradient(180deg, rgba(92, 46, 46, 0.12) 0%, var(--black) 100%);
+  }
+
+  .commission-format-eyebrow {
+    font-family: var(--body);
+    font-size: 10px;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 14px;
+  }
+
+  .commission-format h3 {
+    font-family: var(--display);
+    font-size: 28px;
+    color: var(--pearl);
+    font-weight: 400;
+    margin-bottom: 8px;
+  }
+
+  .commission-format-tagline {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 14px;
+    color: var(--gold);
+    margin-bottom: 24px;
+    opacity: 0.95;
+  }
+
+  .commission-format-honor {
+    font-family: var(--display);
+    font-size: 26px;
+    color: var(--gold);
+    line-height: 1.2;
+    margin-bottom: 4px;
+  }
+
+  .commission-format-honor-meta {
+    font-family: var(--body);
+    font-size: 9px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--pearl);
+    opacity: 0.6;
+    margin-bottom: 24px;
+  }
+
+  .commission-format-divider {
+    width: 32px;
+    height: 1px;
+    background: var(--gold);
+    opacity: 0.5;
+    margin-bottom: 20px;
+  }
+
+  .commission-format-meta {
+    font-family: var(--serif);
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--pearl);
+    opacity: 0.85;
+  }
+
+  .commission-format-meta-row {
+    padding: 6px 0;
+  }
+
+  .commission-format-meta-row strong {
+    color: var(--gold);
+    font-weight: normal;
+    font-family: var(--body);
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 2px;
+  }
+
+  .commissions-promo-cta-row {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .commissions-promo-cta {
+    display: inline-block;
+    padding: 18px 40px;
+    background: rgba(201, 169, 97, 0.08);
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    font-family: var(--body);
+    font-size: 12px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    transition: all 0.3s;
+  }
+
+  .commissions-promo-cta:hover {
+    background: rgba(201, 169, 97, 0.18);
+    color: var(--pearl);
+  }
+
+  .commissions-promo-secondary {
+    font-family: var(--body);
+    font-size: 11px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--pearl);
+    opacity: 0.65;
+    transition: opacity 0.3s;
+  }
+
+  .commissions-promo-secondary:hover {
+    opacity: 1;
+    color: var(--gold);
+  }
+
   /* ============== INVITATION ============== */
   .invitation {
     padding: 160px 48px;
@@ -1240,6 +1420,8 @@
     .artist-portrait { max-width: 380px; margin: 0 auto; }
     .doc-grid { grid-template-columns: 1fr; gap: 20px; }
     .doc-gallery { grid-template-columns: 1fr 1fr; gap: 12px; }
+    .commissions-formats { grid-template-columns: 1fr; }
+    .commissions-promo { padding: 80px 24px; }
     .hosts-grid { grid-template-columns: 1fr 1fr; }
     .invitation-grid { grid-template-columns: 1fr; gap: 48px; }
     .invitation-cta { padding: 36px 28px; }
@@ -1642,6 +1824,67 @@
       <div class="doc-gallery-tile">viii</div>
     </div>
 
+  </div>
+</section>
+
+<!-- ============== COMMISSIONS PROMO ============== -->
+<section class="commissions-promo" id="commissions">
+  <div class="section-inner">
+    <div class="section-eyebrow">Private Commissions</div>
+    <h2>Commission a <em>private écoute</em> for your room.</h2>
+    <p class="commissions-promo-lede">
+      Embassies, foundations, family offices, and signature private hosts may
+      commission an original ninety-minute écoute for their interior. Three formats.
+      <em>Transparent honoraria. Direct booking.</em> No call required to begin.
+    </p>
+
+    <div class="commissions-formats">
+
+      <div class="commission-format">
+        <div class="commission-format-eyebrow">i. Intime</div>
+        <h3>Intime</h3>
+        <div class="commission-format-tagline">Candle &amp; solo accompaniment</div>
+        <div class="commission-format-honor">€35k – €55k</div>
+        <div class="commission-format-honor-meta">Artist Honorarium</div>
+        <div class="commission-format-divider"></div>
+        <div class="commission-format-meta">
+          <div class="commission-format-meta-row"><strong>Capacity</strong>20–40 guests</div>
+          <div class="commission-format-meta-row"><strong>Suited to</strong>Private salons, retreat closing evenings</div>
+        </div>
+      </div>
+
+      <div class="commission-format featured">
+        <div class="commission-format-eyebrow">ii. Privé</div>
+        <h3>Privé</h3>
+        <div class="commission-format-tagline">Cinematic light &amp; atmosphere</div>
+        <div class="commission-format-honor">€75k – €120k</div>
+        <div class="commission-format-honor-meta">Artist Honorarium</div>
+        <div class="commission-format-divider"></div>
+        <div class="commission-format-meta">
+          <div class="commission-format-meta-row"><strong>Capacity</strong>60–100 guests</div>
+          <div class="commission-format-meta-row"><strong>Suited to</strong>Foundation halls, anniversaries, signature events</div>
+        </div>
+      </div>
+
+      <div class="commission-format">
+        <div class="commission-format-eyebrow">iii. Souverain</div>
+        <h3>Souverain</h3>
+        <div class="commission-format-tagline">Full cinematic production · ensemble</div>
+        <div class="commission-format-honor">€180k – €300k</div>
+        <div class="commission-format-honor-meta">Artist Honorarium</div>
+        <div class="commission-format-divider"></div>
+        <div class="commission-format-meta">
+          <div class="commission-format-meta-row"><strong>Capacity</strong>150–200 guests</div>
+          <div class="commission-format-meta-row"><strong>Suited to</strong>Embassies, state-level cultural occasions</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="commissions-promo-cta-row">
+      <a href="commissions.html" class="commissions-promo-cta">View Booking System →</a>
+      <a href="commissions.html#availability" class="commissions-promo-secondary">Or check availability calendar</a>
+    </div>
   </div>
 </section>
 
