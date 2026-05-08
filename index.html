@@ -8,42 +8,10 @@
 <meta property="og:title" content="Triin Lellep — Private Vocal Works" />
 <meta property="og:description" content="Original cinematic vocal works by composer-soprano Triin Lellep. By private invitation." />
 <meta property="og:type" content="website" />
-<meta property="og:site_name" content="Triin Lellep" />
-<meta property="og:url" content="https://triinlellep.studio/" />
-<meta property="og:locale" content="en" />
-<meta property="og:locale:alternate" content="fr" />
-<meta property="og:locale:alternate" content="zh_CN" />
-<meta property="og:image" content="https://triinlellep.studio/og/og-index.jpg" />
-<meta property="og:image:secure_url" content="https://triinlellep.studio/og/og-index.jpg" />
-<meta property="og:image:type" content="image/jpeg" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="Triin Lellep — Composer-Soprano · Private Vocal Works" />
-
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Triin Lellep — Private Vocal Works" />
-<meta name="twitter:description" content="Original cinematic vocal works by composer-soprano Triin Lellep. By private invitation." />
-<meta name="twitter:image" content="https://triinlellep.studio/og/og-index.jpg" />
-<meta name="twitter:image:alt" content="Triin Lellep — Composer-Soprano · Private Vocal Works" />
-
-<link rel="canonical" href="https://triinlellep.studio/" />
-<link rel="alternate" hreflang="en" href="https://triinlellep.studio/" />
-<link rel="alternate" hreflang="fr" href="https://triinlellep.studio/fr.html" />
-<link rel="alternate" hreflang="zh-CN" href="https://triinlellep.studio/zh.html" />
-<link rel="alternate" hreflang="x-default" href="https://triinlellep.studio/" />
-
-<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
-<link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png" />
-<link rel="manifest" href="/site.webmanifest" />
-<meta name="theme-color" content="#1C1612" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&amp;family=Marcellus&amp;family=EB+Garamond:ital,wght@0,400;0,500;1,400&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Marcellus&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 
 <style>
   /* ============== TOKENS ============== */
@@ -365,14 +333,17 @@
     opacity: 0.5;
     position: relative;
     display: inline-block;
-    max-width: 100%;
   }
 
-  .negation-line.strike {
-    text-decoration: line-through;
-    text-decoration-color: rgba(201, 169, 97, 0.65);
-    text-decoration-thickness: 1px;
-    text-underline-offset: 0;
+  .negation-line.strike::after {
+    content: '';
+    position: absolute;
+    left: -8%;
+    right: -8%;
+    top: 50%;
+    height: 1px;
+    background: var(--gold);
+    opacity: 0.65;
   }
 
   .negation-rule {
@@ -711,13 +682,69 @@
     align-items: start;
   }
 
+  .artist-portrait {
+    aspect-ratio: 3 / 4;
+    background:
+      linear-gradient(180deg, rgba(92, 46, 46, 0.18) 0%, rgba(15, 11, 9, 0.55) 100%),
+      var(--black-warm);
+    border: 1px solid var(--line);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .artist-portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .artist-portrait-placeholder {
+    text-align: center;
+    padding: 32px;
+  }
+
+  .artist-portrait-placeholder-mark {
+    font-family: var(--display);
+    font-size: 56px;
+    color: var(--gold);
+    opacity: 0.55;
+    line-height: 1;
+    margin-bottom: 18px;
+    letter-spacing: 0.1em;
+  }
+
+  .artist-portrait-placeholder-text {
+    font-family: var(--body);
+    font-size: 10px;
+    letter-spacing: 0.36em;
+    text-transform: uppercase;
+    color: var(--gold);
+    opacity: 0.75;
+    line-height: 1.6;
+  }
+
   .artist-name {
     font-family: var(--display);
-    font-size: clamp(40px, 5vw, 64px);
+    font-size: clamp(36px, 4.5vw, 56px);
     line-height: 1.05;
     color: var(--pearl);
-    margin-bottom: 24px;
+    margin-top: 32px;
+    margin-bottom: 14px;
     font-weight: 400;
+    letter-spacing: 0.02em;
+  }
+
+  .artist-name-meta {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 16px;
+    color: var(--gold);
+    margin-bottom: 24px;
+    opacity: 0.9;
   }
 
   .artist-mark {
@@ -755,6 +782,175 @@
     color: var(--gold);
     padding: 8px 16px;
     border: 1px solid var(--line-strong);
+  }
+
+  /* ============== DOCUMENTATION ============== */
+  .documentation {
+    padding: 160px 48px;
+    background: var(--black);
+    border-top: 1px solid var(--line);
+  }
+
+  .documentation-lede {
+    font-family: var(--serif);
+    font-size: 19px;
+    line-height: 1.75;
+    color: var(--pearl);
+    max-width: 780px;
+    margin-bottom: 80px;
+    opacity: 0.92;
+  }
+
+  .documentation-lede em { color: var(--gold); font-style: italic; }
+
+  .doc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-bottom: 80px;
+  }
+
+  .doc-card {
+    background: linear-gradient(180deg, var(--black-warm) 0%, var(--black-deep) 100%);
+    border: 1px solid var(--line);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.5s cubic-bezier(0.2, 0.6, 0.2, 1);
+  }
+
+  .doc-card:hover {
+    border-color: var(--line-strong);
+    transform: translateY(-4px);
+  }
+
+  .doc-card-media {
+    aspect-ratio: 16 / 9;
+    background:
+      linear-gradient(180deg, rgba(92, 46, 46, 0.18) 0%, rgba(15, 11, 9, 0.55) 100%),
+      var(--black-warm);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--line);
+    overflow: hidden;
+  }
+
+  .doc-card-media video,
+  .doc-card-media img,
+  .doc-card-media iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border: none;
+  }
+
+  .doc-card-placeholder {
+    text-align: center;
+    padding: 32px;
+  }
+
+  .doc-card-placeholder-icon {
+    width: 56px;
+    height: 56px;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    margin: 0 auto 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold);
+    font-family: var(--display);
+    font-size: 22px;
+    opacity: 0.7;
+  }
+
+  .doc-card-placeholder-label {
+    font-family: var(--body);
+    font-size: 10px;
+    letter-spacing: 0.36em;
+    text-transform: uppercase;
+    color: var(--gold);
+    opacity: 0.7;
+    margin-bottom: 8px;
+  }
+
+  .doc-card-placeholder-eta {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 14px;
+    color: var(--pearl);
+    opacity: 0.55;
+  }
+
+  .doc-card-content {
+    padding: 32px 32px 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .doc-card-eyebrow {
+    font-family: var(--body);
+    font-size: 10px;
+    letter-spacing: 0.36em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  .doc-card h3 {
+    font-family: var(--display);
+    font-size: 24px;
+    line-height: 1.3;
+    color: var(--pearl);
+    font-weight: 400;
+  }
+
+  .doc-card p {
+    font-family: var(--serif);
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--pearl);
+    opacity: 0.82;
+  }
+
+  .doc-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  .doc-gallery-tile {
+    aspect-ratio: 1 / 1;
+    background:
+      linear-gradient(180deg, rgba(92, 46, 46, 0.18) 0%, rgba(15, 11, 9, 0.55) 100%),
+      var(--black-warm);
+    border: 1px solid var(--line);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold);
+    opacity: 0.55;
+    font-family: var(--body);
+    font-size: 9px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    transition: opacity 0.4s ease, border-color 0.4s ease;
+    overflow: hidden;
+  }
+
+  .doc-gallery-tile:hover {
+    opacity: 1;
+    border-color: var(--line-strong);
+  }
+
+  .doc-gallery-tile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
   }
 
   /* ============== HOSTS ============== */
@@ -991,31 +1187,38 @@
 
     .hero {
       min-height: 100svh;
-      align-items: center;
-      justify-content: center;
-      padding: 130px 24px 60px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding: 150px 24px 48px;
     }
-    .hero-inner { max-width: 100%; width: 100%; text-align: center; }
-    .hero-eyebrow { margin-bottom: 20px; font-size: 10px; letter-spacing: 0.34em; text-align: center; }
+    .hero-inner { max-width: 100%; }
+    .hero-eyebrow { margin-bottom: 20px; font-size: 10px; letter-spacing: 0.34em; }
     .hero-eyebrow::before, .hero-eyebrow::after { display: none; }
     .hero-title {
       display: block;
       width: 100%;
       text-align: center;
       font-size: clamp(54px, 17vw, 72px);
-      line-height: 0.92;
-      letter-spacing: 0.04em;
+      line-height: 0.86;
+      letter-spacing: 0;
       margin-bottom: 22px;
-      padding-left: 0.04em;
     }
     .hero-title-line {
       display: block;
-      width: 100%;
+      width: max-content;
+      max-width: 100%;
+      margin-left: auto;
+      margin-right: auto;
       text-align: center;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.055em;
+      will-change: transform;
     }
-    .hero-title-line:first-child { transform: none; }
-    .hero-title-line:last-child { transform: none; }
+    .hero-title-line:first-child {
+      transform: translateX(0.32em);
+    }
+    .hero-title-line:last-child {
+      transform: translateX(0.36em);
+    }
     .hero-subtitle { font-size: 20px; margin-bottom: 30px; }
     .hero-lede { font-size: 18px; line-height: 1.58; margin: 0 auto 38px; max-width: 340px; }
     .hero-actions { gap: 18px; }
@@ -1024,11 +1227,6 @@
 
     .negation, .pull-quote, .work, .formats, .architecture,
     .artist, .hosts, .invitation { padding: 80px 24px; }
-
-    .negation-line { font-size: 22px; line-height: 1.35; }
-    .negation-affirm { font-size: 24px; line-height: 1.4; }
-    .pull-quote-inner { font-size: 22px; line-height: 1.4; }
-    .pull-quote-inner span { margin-top: 16px; }
 
     .work-grid { grid-template-columns: 1fr; gap: 32px; }
     .formats-grid { grid-template-columns: 1fr; gap: 24px; }
@@ -1039,6 +1237,9 @@
     .movement-num { font-size: 40px; }
 
     .artist-grid { grid-template-columns: 1fr; gap: 40px; }
+    .artist-portrait { max-width: 380px; margin: 0 auto; }
+    .doc-grid { grid-template-columns: 1fr; gap: 20px; }
+    .doc-gallery { grid-template-columns: 1fr 1fr; gap: 12px; }
     .hosts-grid { grid-template-columns: 1fr 1fr; }
     .invitation-grid { grid-template-columns: 1fr; gap: 48px; }
     .invitation-cta { padding: 36px 28px; }
@@ -1065,6 +1266,7 @@
     <li><a href="#work">The Work</a></li>
     <li><a href="#artist">The Artist</a></li>
     <li><a href="#hosts">For Hosts</a></li>
+    <li><a href="#documentation">Documentation</a></li>
     <li class="always-show"><a href="#invitation" class="nav-cta">Invitation</a></li>
     <li class="lang-switch always-show">
       <a href="index.html" class="active">EN</a>
@@ -1311,7 +1513,15 @@
     <div class="section-eyebrow">The Artist</div>
     <div class="artist-grid">
       <div>
-        <div class="artist-name">Triin<br/>Lellep</div>
+        <div class="artist-portrait">
+          <!-- Replace this placeholder with: <img src="triin-portrait.jpg" alt="Triin Lellep" /> -->
+          <div class="artist-portrait-placeholder">
+            <div class="artist-portrait-placeholder-mark">TL</div>
+            <div class="artist-portrait-placeholder-text">Portrait<br/>To Follow</div>
+          </div>
+        </div>
+        <div class="artist-name">Triin Lellep</div>
+        <div class="artist-name-meta">Composer-Soprano</div>
         <div class="artist-mark"></div>
       </div>
       <div>
@@ -1356,6 +1566,81 @@
       <div class="host-tile"><div class="host-tile-num">viii.</div><h4>Collectors' dinners</h4></div>
       <div class="host-tile"><div class="host-tile-num">ix.</div><h4>State cultural occasions</h4></div>
     </div>
+  </div>
+</section>
+
+<!-- ============== DOCUMENTATION ============== -->
+<section class="documentation" id="documentation">
+  <div class="section-inner">
+    <div class="section-eyebrow">Documentation</div>
+    <h2>The first chapter is being filmed and recorded under <em>cinematic standards</em>.</h2>
+
+    <p class="documentation-lede">
+      Each <em>écoute</em> is documented as a foundational record of the category — a small archive
+      of cinematography, sound, and photography from which all subsequent communications are drawn.
+      Patrons of <em>The Écoute Circle</em> receive these documents privately, before any public release.
+    </p>
+
+    <div class="doc-grid">
+
+      <div class="doc-card">
+        <div class="doc-card-media">
+          <!-- Replace placeholder with: <video src="cinematic-film.mp4" poster="poster.jpg" controls></video>
+               or: <iframe src="https://player.vimeo.com/video/XXX" allowfullscreen></iframe> -->
+          <div class="doc-card-placeholder">
+            <div class="doc-card-placeholder-icon">▶</div>
+            <div class="doc-card-placeholder-label">Cinematic Film</div>
+            <div class="doc-card-placeholder-eta">Following Asian chapter, June 2026</div>
+          </div>
+        </div>
+        <div class="doc-card-content">
+          <div class="doc-card-eyebrow">i.  Three Minutes</div>
+          <h3>The Cinematic Film</h3>
+          <p>
+            A three-minute cinematic film of the first écoute — composed for private circulation
+            among hosts, prospective patrons, and the founding circle. The film is the artistic
+            signature of the category.
+          </p>
+        </div>
+      </div>
+
+      <div class="doc-card">
+        <div class="doc-card-media">
+          <!-- Replace placeholder with: <video src="documentary.mp4" poster="poster.jpg" controls></video>
+               or: <iframe src="https://player.vimeo.com/video/XXX" allowfullscreen></iframe> -->
+          <div class="doc-card-placeholder">
+            <div class="doc-card-placeholder-icon">▶</div>
+            <div class="doc-card-placeholder-label">Documentary</div>
+            <div class="doc-card-placeholder-eta">Following Asian chapter, June 2026</div>
+          </div>
+        </div>
+        <div class="doc-card-content">
+          <div class="doc-card-eyebrow">ii.  Twelve Minutes</div>
+          <h3>The Documentary Film</h3>
+          <p>
+            A twelve-minute documentary tracing the architecture of the work — its composition,
+            its movements, its rooms, its philosophy. Released to international cultural press
+            after first patron circulation.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="section-eyebrow" style="margin-bottom: 40px;">Photographic Archive</div>
+
+    <div class="doc-gallery">
+      <!-- Replace each placeholder with: <img src="photo.jpg" alt="..." /> -->
+      <div class="doc-gallery-tile">i</div>
+      <div class="doc-gallery-tile">ii</div>
+      <div class="doc-gallery-tile">iii</div>
+      <div class="doc-gallery-tile">iv</div>
+      <div class="doc-gallery-tile">v</div>
+      <div class="doc-gallery-tile">vi</div>
+      <div class="doc-gallery-tile">vii</div>
+      <div class="doc-gallery-tile">viii</div>
+    </div>
+
   </div>
 </section>
 

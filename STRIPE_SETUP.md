@@ -30,20 +30,20 @@ Create one link per tier:
 
 #### Founding Friend
 - **Product name:** The Écoute Circle — Founding Friend
-- **Price:** €250.00 EUR · One-time
+- **Price:** €1,000.00 EUR · One-time
 - **Description:** Founding Friend of The Écoute Circle. Triin Lellep — Private Vocal Works.
 - **Collect:** Customer name, email
 - **Confirmation page:** Custom message (e.g., "Thank you. You are now a Founding Friend of The Écoute Circle. Triin will write to you personally within 7 days.")
 
 #### Founding Member
 - **Product name:** The Écoute Circle — Founding Member
-- **Price:** €1,000.00 EUR · One-time
+- **Price:** €5,000.00 EUR · One-time
 - **Description:** Founding Member of The Écoute Circle.
 - Same confirmation pattern.
 
 #### Founding Patron
 - **Product name:** The Écoute Circle — Founding Patron
-- **Price:** €3,000.00 EUR · One-time
+- **Price:** €15,000.00 EUR · One-time
 - **Description:** Founding Patron of The Écoute Circle.
 - Same confirmation pattern.
 

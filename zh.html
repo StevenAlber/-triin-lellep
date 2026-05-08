@@ -8,42 +8,10 @@
 <meta property="og:title" content="Triin Lellep — 私密声乐作品" />
 <meta property="og:description" content="作曲家兼女高音 Triin Lellep 的原创电影声乐作品。仅以私密邀请形式。" />
 <meta property="og:type" content="website" />
-<meta property="og:site_name" content="Triin Lellep" />
-<meta property="og:url" content="https://triinlellep.studio/zh.html" />
-<meta property="og:locale" content="zh_CN" />
-<meta property="og:locale:alternate" content="en" />
-<meta property="og:locale:alternate" content="fr" />
-<meta property="og:image" content="https://triinlellep.studio/og/og-zh.jpg" />
-<meta property="og:image:secure_url" content="https://triinlellep.studio/og/og-zh.jpg" />
-<meta property="og:image:type" content="image/jpeg" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="Triin Lellep — 作曲家兼女高音 · 私密声乐作品" />
-
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Triin Lellep — 私密声乐作品" />
-<meta name="twitter:description" content="作曲家兼女高音 Triin Lellep 的原创电影声乐作品。仅以私密邀请形式。" />
-<meta name="twitter:image" content="https://triinlellep.studio/og/og-zh.jpg" />
-<meta name="twitter:image:alt" content="Triin Lellep — 作曲家兼女高音" />
-
-<link rel="canonical" href="https://triinlellep.studio/zh.html" />
-<link rel="alternate" hreflang="en" href="https://triinlellep.studio/" />
-<link rel="alternate" hreflang="fr" href="https://triinlellep.studio/fr.html" />
-<link rel="alternate" hreflang="zh-CN" href="https://triinlellep.studio/zh.html" />
-<link rel="alternate" hreflang="x-default" href="https://triinlellep.studio/" />
-
-<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
-<link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png" />
-<link rel="manifest" href="/site.webmanifest" />
-<meta name="theme-color" content="#1C1612" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&amp;family=Marcellus&amp;family=Noto+Serif+SC:wght@300;400;500;600&amp;family=EB+Garamond:ital,wght@0,400;0,500;1,400&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Marcellus&family=Noto+Serif+SC:wght@300;400;500;600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 
 <style>
   :root {
@@ -105,8 +73,8 @@
 
   .negation { padding: 140px 48px; background: var(--black); text-align: center; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
   .negation-inner { max-width: 800px; margin: 0 auto; }
-  .negation-line { font-family: var(--display-cn); font-size: clamp(22px, 3vw, 36px); line-height: 1.4; color: var(--pearl); margin-bottom: 18px; opacity: 0.5; position: relative; display: inline-block; letter-spacing: 0.12em; max-width: 100%; }
-  .negation-line.strike { text-decoration: line-through; text-decoration-color: rgba(201, 169, 97, 0.65); text-decoration-thickness: 1px; }
+  .negation-line { font-family: var(--display-cn); font-size: clamp(22px, 3vw, 36px); line-height: 1.4; color: var(--pearl); margin-bottom: 18px; opacity: 0.5; position: relative; display: inline-block; letter-spacing: 0.12em; }
+  .negation-line.strike::after { content: ''; position: absolute; left: -8%; right: -8%; top: 50%; height: 1px; background: var(--gold); opacity: 0.65; }
   .negation-rule { width: 60px; height: 1px; background: var(--gold); margin: 56px auto; opacity: 0.6; }
   .negation-affirm { font-family: var(--display-cn); font-size: clamp(26px, 3.4vw, 40px); line-height: 1.5; color: var(--pearl); letter-spacing: 0.08em; }
   .negation-affirm em { font-style: italic; color: var(--gold); }
@@ -159,12 +127,39 @@
 
   .artist { padding: 160px 48px; background: var(--black); }
   .artist-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 80px; align-items: start; }
-  .artist-name { font-family: 'Marcellus', serif; font-size: clamp(40px, 5vw, 64px); line-height: 1.05; color: var(--pearl); margin-bottom: 24px; }
+  .artist-portrait { aspect-ratio: 3 / 4; background: linear-gradient(180deg, rgba(92, 46, 46, 0.18) 0%, rgba(15, 11, 9, 0.55) 100%), var(--black-warm); border: 1px solid var(--line); position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+  .artist-portrait img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .artist-portrait-placeholder { text-align: center; padding: 32px; }
+  .artist-portrait-placeholder-mark { font-family: 'Marcellus', serif; font-size: 56px; color: var(--gold); opacity: 0.55; line-height: 1; margin-bottom: 18px; letter-spacing: 0.1em; }
+  .artist-portrait-placeholder-text { font-family: var(--body); font-size: 11px; letter-spacing: 0.32em; color: var(--gold); opacity: 0.75; line-height: 1.6; }
+  .artist-name { font-family: 'Marcellus', serif; font-size: clamp(36px, 4.5vw, 56px); line-height: 1.05; color: var(--pearl); margin-top: 32px; margin-bottom: 14px; letter-spacing: 0.02em; }
+  .artist-name-meta { font-family: var(--display-cn); font-size: 16px; color: var(--gold); margin-bottom: 24px; opacity: 0.9; letter-spacing: 0.18em; }
   .artist-mark { width: 80px; height: 1px; background: var(--gold); margin-bottom: 32px; }
   .artist-bio { font-family: var(--serif); font-size: 17px; line-height: 2; color: var(--pearl); opacity: 0.92; }
   .artist-bio em { font-style: normal; color: var(--gold); }
   .credentials { margin-top: 40px; display: flex; flex-wrap: wrap; gap: 10px; }
   .credential { font-family: var(--body); font-size: 12px; letter-spacing: 0.24em; color: var(--gold); padding: 8px 16px; border: 1px solid var(--line-strong); }
+
+  .documentation { padding: 160px 48px; background: var(--black); border-top: 1px solid var(--line); }
+  .documentation-lede { font-family: var(--serif); font-size: 18px; line-height: 1.95; color: var(--pearl); max-width: 800px; margin-bottom: 80px; opacity: 0.92; }
+  .documentation-lede em { color: var(--gold); font-style: normal; }
+  .doc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-bottom: 80px; }
+  .doc-card { background: linear-gradient(180deg, var(--black-warm) 0%, var(--black-deep) 100%); border: 1px solid var(--line); overflow: hidden; display: flex; flex-direction: column; transition: all 0.5s cubic-bezier(0.2, 0.6, 0.2, 1); }
+  .doc-card:hover { border-color: var(--line-strong); transform: translateY(-4px); }
+  .doc-card-media { aspect-ratio: 16 / 9; background: linear-gradient(180deg, rgba(92, 46, 46, 0.18) 0%, rgba(15, 11, 9, 0.55) 100%), var(--black-warm); position: relative; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid var(--line); overflow: hidden; }
+  .doc-card-media video, .doc-card-media img, .doc-card-media iframe { width: 100%; height: 100%; object-fit: cover; display: block; border: none; }
+  .doc-card-placeholder { text-align: center; padding: 32px; }
+  .doc-card-placeholder-icon { width: 56px; height: 56px; border: 1px solid var(--gold); border-radius: 50%; margin: 0 auto 18px; display: flex; align-items: center; justify-content: center; color: var(--gold); font-family: 'Marcellus', serif; font-size: 22px; opacity: 0.7; }
+  .doc-card-placeholder-label { font-family: var(--body); font-size: 11px; letter-spacing: 0.32em; color: var(--gold); opacity: 0.7; margin-bottom: 8px; }
+  .doc-card-placeholder-eta { font-family: var(--serif); font-size: 14px; color: var(--pearl); opacity: 0.55; }
+  .doc-card-content { padding: 32px 32px 36px; display: flex; flex-direction: column; gap: 12px; }
+  .doc-card-eyebrow { font-family: 'Marcellus', serif; font-size: 12px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); }
+  .doc-card h3 { font-family: var(--display-cn); font-size: 22px; line-height: 1.4; color: var(--pearl); font-weight: 500; }
+  .doc-card p { font-family: var(--serif); font-size: 14px; line-height: 1.9; color: var(--pearl); opacity: 0.82; }
+  .doc-gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .doc-gallery-tile { aspect-ratio: 1 / 1; background: linear-gradient(180deg, rgba(92, 46, 46, 0.18) 0%, rgba(15, 11, 9, 0.55) 100%), var(--black-warm); border: 1px solid var(--line); display: flex; align-items: center; justify-content: center; color: var(--gold); opacity: 0.55; font-family: 'Marcellus', serif; font-size: 11px; letter-spacing: 0.28em; transition: opacity 0.4s ease, border-color 0.4s ease; overflow: hidden; }
+  .doc-gallery-tile:hover { opacity: 1; border-color: var(--line-strong); }
+  .doc-gallery-tile img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
   .hosts { padding: 160px 48px; background: var(--black-warm); }
   .hosts-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
@@ -206,14 +201,14 @@
     .nav-cta { display: none; }
     .lang-switch { border-left: none; padding-left: 0; margin-left: 0; gap: 9px; }
     .lang-switch a { font-size: 11px; letter-spacing: 0.16em; }
-    .hero { min-height: 100svh; align-items: center; justify-content: center; padding: 130px 24px 60px; }
-    .hero-inner { max-width: 100%; width: 100%; text-align: center; }
-    .hero-eyebrow { margin-bottom: 20px; font-size: 11px; letter-spacing: 0.28em; text-align: center; }
+    .hero { min-height: 100svh; align-items: flex-start; justify-content: flex-start; padding: 150px 24px 48px; }
+    .hero-inner { max-width: 100%; }
+    .hero-eyebrow { margin-bottom: 20px; font-size: 11px; letter-spacing: 0.28em; }
     .hero-eyebrow::before, .hero-eyebrow::after { display: none; }
-    .hero-title { display: block; width: 100%; text-align: center; font-size: clamp(54px, 17vw, 72px); line-height: 0.92; letter-spacing: 0.04em; margin-bottom: 18px; padding-left: 0.04em; }
-    .hero-title-line { display: block; width: 100%; text-align: center; letter-spacing: 0.04em; }
-    .hero-title-line:first-child { transform: none; }
-    .hero-title-line:last-child { transform: none; }
+    .hero-title { display: block; width: 100%; text-align: center; font-size: clamp(54px, 17vw, 72px); line-height: 0.86; letter-spacing: 0; margin-bottom: 18px; }
+    .hero-title-line { display: block; width: max-content; max-width: 100%; margin-left: auto; margin-right: auto; text-align: center; letter-spacing: 0.055em; will-change: transform; }
+    .hero-title-line:first-child { transform: translateX(0.32em); }
+    .hero-title-line:last-child { transform: translateX(0.36em); }
     .hero-title-cn { font-size: 18px; letter-spacing: 0.24em; margin-bottom: 22px; }
     .hero-subtitle { font-size: 17px; letter-spacing: 0.16em; margin-bottom: 30px; }
     .hero-lede { font-size: 16px; line-height: 1.85; margin: 0 auto 38px; max-width: 340px; }
@@ -221,10 +216,6 @@
     .scroll-indicator { display: none; }
     .hero-eyebrow::before, .hero-eyebrow::after { display: none; }
     .negation, .pull-quote, .work, .formats, .architecture, .artist, .hosts, .invitation { padding: 80px 24px; }
-    .negation-line { font-size: 20px; line-height: 1.4; }
-    .negation-affirm { font-size: 22px; line-height: 1.5; }
-    .pull-quote-inner { font-size: 22px; line-height: 1.5; }
-    .pull-quote-inner span { margin-top: 16px; }
     .work-grid { grid-template-columns: 1fr; gap: 32px; }
     .formats-grid { grid-template-columns: 1fr; gap: 24px; }
     .format-card { padding: 36px 28px; }
@@ -232,6 +223,9 @@
     .movement { grid-template-columns: 56px 1fr; gap: 20px; }
     .movement-num { font-size: 40px; }
     .artist-grid { grid-template-columns: 1fr; gap: 40px; }
+    .artist-portrait { max-width: 380px; margin: 0 auto; }
+    .doc-grid { grid-template-columns: 1fr; gap: 20px; }
+    .doc-gallery { grid-template-columns: 1fr 1fr; gap: 12px; }
     .hosts-grid { grid-template-columns: 1fr 1fr; }
     .invitation-grid { grid-template-columns: 1fr; gap: 48px; }
     .invitation-cta { padding: 36px 28px; }
@@ -251,6 +245,7 @@
     <li><a href="#work">作品</a></li>
     <li><a href="#artist">艺术家</a></li>
     <li><a href="#hosts">致主人</a></li>
+    <li><a href="#documentation">文献档案</a></li>
     <li class="always-show"><a href="#invitation" class="nav-cta">私密邀请</a></li>
     <li class="lang-switch always-show">
       <a href="index.html">EN</a>
@@ -402,7 +397,15 @@
     <div class="section-eyebrow">艺术家</div>
     <div class="artist-grid">
       <div>
-        <div class="artist-name">Triin<br/>Lellep</div>
+        <div class="artist-portrait">
+          <!-- Replace placeholder with: <img src="triin-portrait.jpg" alt="Triin Lellep" /> -->
+          <div class="artist-portrait-placeholder">
+            <div class="artist-portrait-placeholder-mark">TL</div>
+            <div class="artist-portrait-placeholder-text">肖像<br/>即将呈现</div>
+          </div>
+        </div>
+        <div class="artist-name">Triin Lellep</div>
+        <div class="artist-name-meta">作曲家兼女高音</div>
         <div class="artist-mark"></div>
       </div>
       <div>
@@ -440,6 +443,71 @@
       <div class="host-tile"><div class="host-tile-num">viii.</div><h4>收藏家晚宴</h4></div>
       <div class="host-tile"><div class="host-tile-num">ix.</div><h4>国家级文化场合</h4></div>
     </div>
+  </div>
+</section>
+
+<section class="documentation" id="documentation">
+  <div class="section-inner">
+    <div class="section-eyebrow">文献档案</div>
+    <h2>首场<em>écoute</em> 以电影级标准拍摄与录制。</h2>
+
+    <p class="documentation-lede">
+      每一场 <em>écoute</em> 皆作为这一类别的奠基档案被记录——一组小型的电影、声音与摄影集，所有后续的传播皆由此而出。<em>The Écoute Circle</em> 的赞助人将先于任何公开发布，私密地接收这些档案。
+    </p>
+
+    <div class="doc-grid">
+
+      <div class="doc-card">
+        <div class="doc-card-media">
+          <!-- 替换为: <video src="cinematic-film.mp4" controls></video> 或 <iframe src="..."></iframe> -->
+          <div class="doc-card-placeholder">
+            <div class="doc-card-placeholder-icon">▶</div>
+            <div class="doc-card-placeholder-label">电影短片</div>
+            <div class="doc-card-placeholder-eta">2026 年 6 月亚洲首场之后</div>
+          </div>
+        </div>
+        <div class="doc-card-content">
+          <div class="doc-card-eyebrow">i.  三分钟</div>
+          <h3>电影短片</h3>
+          <p>
+            首场 <em>écoute</em> 的三分钟电影短片——为主人、未来赞助人与创立圈子的私密流通而创。此片是这一类别的艺术签名。
+          </p>
+        </div>
+      </div>
+
+      <div class="doc-card">
+        <div class="doc-card-media">
+          <!-- 替换为: <video src="documentary.mp4" controls></video> 或 <iframe src="..."></iframe> -->
+          <div class="doc-card-placeholder">
+            <div class="doc-card-placeholder-icon">▶</div>
+            <div class="doc-card-placeholder-label">纪录片</div>
+            <div class="doc-card-placeholder-eta">2026 年 6 月亚洲首场之后</div>
+          </div>
+        </div>
+        <div class="doc-card-content">
+          <div class="doc-card-eyebrow">ii.  十二分钟</div>
+          <h3>纪录片</h3>
+          <p>
+            十二分钟的纪录片，追溯作品的建筑结构——其作曲、其乐章、其空间、其哲学。在赞助人首批流通之后，向国际文化媒体发布。
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="section-eyebrow" style="margin-bottom: 40px;">摄影档案</div>
+
+    <div class="doc-gallery">
+      <div class="doc-gallery-tile">i</div>
+      <div class="doc-gallery-tile">ii</div>
+      <div class="doc-gallery-tile">iii</div>
+      <div class="doc-gallery-tile">iv</div>
+      <div class="doc-gallery-tile">v</div>
+      <div class="doc-gallery-tile">vi</div>
+      <div class="doc-gallery-tile">vii</div>
+      <div class="doc-gallery-tile">viii</div>
+    </div>
+
   </div>
 </section>
 
