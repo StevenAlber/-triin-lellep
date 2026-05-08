@@ -226,14 +226,13 @@
     .nav-cta { display: none; }
     .lang-switch { border-left: none; padding-left: 0; margin-left: 0; gap: 9px; }
     .lang-switch a { font-size: 11px; letter-spacing: 0.16em; }
-    .hero { min-height: 100svh; align-items: flex-start; justify-content: flex-start; padding: 150px 24px 48px; }
-    .hero-inner { max-width: 100%; }
-    .hero-eyebrow { margin-bottom: 20px; font-size: 11px; letter-spacing: 0.28em; }
+    .hero { min-height: 100svh; align-items: center; justify-content: center; padding: 120px 24px 64px; }
+    .hero-inner { max-width: 100%; width: 100%; text-align: center; margin: 0 auto; }
+    .hero-eyebrow { margin-bottom: 20px; font-size: 11px; letter-spacing: 0.28em; text-align: center; }
     .hero-eyebrow::before, .hero-eyebrow::after { display: none; }
-    .hero-title { display: block; width: 100%; text-align: center; font-size: clamp(54px, 17vw, 72px); line-height: 0.86; letter-spacing: 0; margin-bottom: 18px; }
-    .hero-title-line { display: block; width: max-content; max-width: 100%; margin-left: auto; margin-right: auto; text-align: center; letter-spacing: 0.055em; will-change: transform; }
-    .hero-title-line:first-child { transform: translateX(0.32em); }
-    .hero-title-line:last-child { transform: translateX(0.36em); }
+    .hero-title { display: block; width: 100%; text-align: center; font-size: clamp(54px, 17vw, 72px); line-height: 0.86; letter-spacing: 0.04em; margin-bottom: 18px; padding-left: 0.04em; }
+    .hero-title-line { display: block; width: 100%; text-align: center; letter-spacing: 0.04em; }
+    .hero-title-line:first-child, .hero-title-line:last-child { transform: none; }
     .hero-title-cn { font-size: 18px; letter-spacing: 0.24em; margin-bottom: 22px; }
     .hero-subtitle { font-size: 17px; letter-spacing: 0.16em; margin-bottom: 30px; }
     .hero-lede { font-size: 16px; line-height: 1.85; margin: 0 auto 38px; max-width: 340px; }

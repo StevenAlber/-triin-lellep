@@ -1367,12 +1367,17 @@
 
     .hero {
       min-height: 100svh;
-      align-items: flex-start;
-      justify-content: flex-start;
-      padding: 150px 24px 48px;
+      align-items: center;
+      justify-content: center;
+      padding: 120px 24px 64px;
     }
-    .hero-inner { max-width: 100%; }
-    .hero-eyebrow { margin-bottom: 20px; font-size: 10px; letter-spacing: 0.34em; }
+    .hero-inner {
+      max-width: 100%;
+      width: 100%;
+      text-align: center;
+      margin: 0 auto;
+    }
+    .hero-eyebrow { margin-bottom: 20px; font-size: 10px; letter-spacing: 0.34em; text-align: center; }
     .hero-eyebrow::before, .hero-eyebrow::after { display: none; }
     .hero-title {
       display: block;
@@ -1380,24 +1385,20 @@
       text-align: center;
       font-size: clamp(54px, 17vw, 72px);
       line-height: 0.86;
-      letter-spacing: 0;
+      letter-spacing: 0.04em;
       margin-bottom: 22px;
+      /* compensate optical drift introduced by letter-spacing on centred text */
+      padding-left: 0.04em;
     }
     .hero-title-line {
       display: block;
-      width: max-content;
-      max-width: 100%;
-      margin-left: auto;
-      margin-right: auto;
+      width: 100%;
       text-align: center;
-      letter-spacing: 0.055em;
-      will-change: transform;
+      letter-spacing: 0.04em;
     }
-    .hero-title-line:first-child {
-      transform: translateX(0.32em);
-    }
+    .hero-title-line:first-child,
     .hero-title-line:last-child {
-      transform: translateX(0.36em);
+      transform: none;
     }
     .hero-subtitle { font-size: 20px; margin-bottom: 30px; }
     .hero-lede { font-size: 18px; line-height: 1.58; margin: 0 auto 38px; max-width: 340px; }
