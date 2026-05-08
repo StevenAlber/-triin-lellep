@@ -2,7 +2,7 @@
 
 Maailmaklassi staatiline veebisait. GitHub Pages-valmis.
 Kolm keelt. Stripe + krüpto + pangaülekanne integreeritud.
-Klikitav kalender päevavalikuga.
+Klikitav kalender päevavalikuga. OG-plaadid, favicon-pakett, PWA manifest.
 
 ---
 
@@ -18,6 +18,13 @@ Klikitav kalender päevavalikuga.
 | `CNAME` | Custom domeen GitHub Pages jaoks | — |
 | `.nojekyll` | GitHub Pages konfiguratsioon | — |
 | `site.webmanifest` | PWA manifest | — |
+| `favicon.ico`, `favicon-16/32.png`, `favicon.png` | Brauseri ikoonid | — |
+| `apple-touch-icon.png` | iOS Home Screen ikoon (180px) | — |
+| `icon-192.png`, `icon-512.png` | PWA / Android ikoonid | — |
+| `og/og-index.jpg` | OG plaat — pealeht (EN) | — |
+| `og/og-fr.jpg` | OG plaat — prantsuse | — |
+| `og/og-zh.jpg` | OG plaat — hiina | — |
+| `og/og-circle.jpg` | OG plaat — Écoute Circle | — |
 
 ---
 
@@ -33,17 +40,40 @@ Klikitav kalender päevavalikuga.
 
 ---
 
+## OG / SOCIAL SHARING
+
+Iga leht (välja arvatud commissions, mis kasutab pealehe OG-plaati) saadab WhatsApp/Telegram/Slack/X jagamisel oma konkreetse OG-pildi:
+
+- pealeht → `og-index.jpg` (TRIIN LELLEP, By Private Invitation)
+- fr.html → `og-fr.jpg` (TRIIN LELLEP, Sur invitation privée)
+- zh.html → `og-zh.jpg` (TRIIN LELLEP, 凭私密邀请)
+- circle.html → `og-circle.jpg` (The Écoute Circle, €250 / €1,000 / €3,000)
+- commissions.html → `og-index.jpg` (jagab pealehe plaati — eraldi commissions OG saab tulevikus lisada)
+
+Twitter Card on `summary_large_image` formaadis. Canonical URL ja hreflang viited on igas keeleversioonis.
+
+### Pärast deploy'd testi OG-plaate
+
+- WhatsApp: saada link iseendale → peaks näitama OG-plaati
+- Facebook Debugger: https://developers.facebook.com/tools/debug/?q=https://triinlellep.studio
+- LinkedIn Inspector: https://www.linkedin.com/post-inspector/
+- X (Twitter) Card Validator: https://cards-dev.twitter.com/validator
+
+Kui esimese saatmise järel pilti ei näidata, kasuta debugger'i "Scrape again" nuppu, et sotsiaalmeedia cache värskendada.
+
+---
+
 ## INDEX.HTML SEKTSIOONIDE JÄRJEKORD
 
 1. Hero
 2. Negation ("It is not...")
 3. Pull Quote
 4. The Work — kategooria tutvustus
-5. **What Happens in the Room** — konkreetne 90-minuti seletus (uus)
+5. **What Happens in the Room** — konkreetne 90-minuti seletus
 6. Three Formats
 7. Architecture (5 liigutust)
 8. The Artist (bio + portree-koht)
-9. **From the Artist** — Triinu enda hääle koht (uus, esimese isikus)
+9. **From the Artist** — Triinu enda hääle koht (esimese isikus)
 10. For Hosts
 11. Documentation (videod + galerii)
 12. Commissions Promo
@@ -57,11 +87,11 @@ Klikitav kalender päevavalikuga.
 ### 1. Loo repo
 GitHub'is loo public repo (`triin-lellep`).
 
-### 2. Lisa failid
+### 2. Lisa failid (säilita kausta-struktuur, eriti `og/`)
 ```bash
 git init
 git add .
-git commit -m "Update — What Happens + From the Artist sections"
+git commit -m "Update — full OG + favicon pack on every page"
 git branch -M main
 git remote add origin git@github.com:STEVENALBER/triin-lellep.git
 git push -u origin main
@@ -70,7 +100,7 @@ git push -u origin main
 ### 3. Pages aktiveerimine
 Repo Settings → Pages → Source: `main` branch, root.
 
-### 4. Custom domeen
+### 4. Custom domeen (`triinlellep.studio`)
 DNS Gandi:
 - A records → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
 - CNAME `www` → `stevenalber.github.io`

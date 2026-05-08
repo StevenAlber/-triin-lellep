@@ -8,10 +8,36 @@
 <meta property="og:title" content="The Écoute Circle — Triin Lellep" />
 <meta property="og:description" content="A small private circle of thirty-one patrons. By invitation, by trust, by alignment." />
 <meta property="og:type" content="website" />
+<meta property="og:site_name" content="Triin Lellep" />
+<meta property="og:url" content="https://triinlellep.studio/circle.html" />
+<meta property="og:locale" content="en" />
+<meta property="og:image" content="https://triinlellep.studio/og/og-circle.jpg" />
+<meta property="og:image:secure_url" content="https://triinlellep.studio/og/og-circle.jpg" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="The Écoute Circle — A small circle of patrons. By invitation, by trust, by alignment." />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="The Écoute Circle — Triin Lellep" />
+<meta name="twitter:description" content="A small private circle of thirty-one patrons. By invitation, by trust, by alignment." />
+<meta name="twitter:image" content="https://triinlellep.studio/og/og-circle.jpg" />
+<meta name="twitter:image:alt" content="The Écoute Circle — Triin Lellep" />
+
+<link rel="canonical" href="https://triinlellep.studio/circle.html" />
+
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
+<link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#1C1612" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Marcellus&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&amp;family=Marcellus&amp;family=EB+Garamond:ital,wght@0,400;0,500;1,400&amp;display=swap" rel="stylesheet">
 
 <style>
   :root {
@@ -131,27 +157,6 @@
   .integrity-block p { font-family: var(--serif); font-size: 16px; line-height: 1.75; color: var(--pearl); opacity: 0.88; }
   .integrity-block p em { color: var(--gold); font-style: italic; }
 
-  /* TERMS POLICY */
-  .terms-policy { padding: 140px 48px; background: var(--black-warm); border-top: 1px solid var(--line); }
-  .terms-policy-inner { max-width: 1100px; margin: 0 auto; }
-  .terms-policy-eyebrow { font-family: var(--body); font-size: 11px; letter-spacing: 0.42em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; display: flex; align-items: center; gap: 16px; }
-  .terms-policy-eyebrow::before { content: ''; width: 32px; height: 1px; background: var(--gold); opacity: 0.65; }
-  .terms-policy h2 { font-family: var(--display); font-size: clamp(32px, 4.2vw, 48px); line-height: 1.2; color: var(--pearl); margin-bottom: 56px; }
-  .terms-policy h2 em { font-style: italic; color: var(--gold); }
-
-  .refund-table { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); margin-bottom: 56px; }
-  .refund-cell { background: var(--black-warm); padding: 36px 28px; }
-  .refund-cell-eyebrow { font-family: var(--body); font-size: 10px; letter-spacing: 0.36em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
-  .refund-cell-amount { font-family: var(--display); font-size: 42px; line-height: 1; color: var(--pearl); margin-bottom: 16px; }
-  .refund-cell-amount em { font-style: italic; color: var(--gold); }
-  .refund-cell-period { font-family: var(--serif); font-style: italic; font-size: 16px; color: var(--gold); margin-bottom: 12px; }
-  .refund-cell-text { font-family: var(--serif); font-size: 14px; line-height: 1.7; color: var(--pearl); opacity: 0.85; }
-
-  .terms-policy-list { display: grid; grid-template-columns: 1fr 1fr; gap: 32px 56px; }
-  .terms-policy-block h3 { font-family: var(--display); font-size: 22px; color: var(--gold); margin-bottom: 12px; }
-  .terms-policy-block p { font-family: var(--serif); font-size: 16px; line-height: 1.75; color: var(--pearl); opacity: 0.88; }
-  .terms-policy-block p em { color: var(--gold); font-style: italic; }
-
   /* CTA FINAL */
   .cta-final { padding: 140px 48px; background: linear-gradient(180deg, var(--black) 0%, var(--burgundy-deep) 100%); text-align: center; }
   .cta-final-inner { max-width: 720px; margin: 0 auto; }
@@ -171,88 +176,31 @@
   .footer-right a:hover { opacity: 1; color: var(--gold); }
 
   /* MODAL */
-  .modal { display: none; position: fixed; inset: 0; z-index: 1000; background: rgba(15, 11, 9, 0.94); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); align-items: center; justify-content: center; padding: 24px; }
+  .modal { display: none; position: fixed; inset: 0; z-index: 1000; background: rgba(15, 11, 9, 0.92); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); align-items: center; justify-content: center; padding: 24px; }
   .modal.open { display: flex; animation: fadeUp 0.3s ease; }
-  .modal-inner { max-width: 620px; width: 100%; max-height: 90vh; background: var(--black-warm); border: 1px solid var(--line-strong); padding: 48px 40px; position: relative; overflow-y: auto; }
-  .modal-close { position: absolute; top: 16px; right: 20px; background: none; border: none; color: var(--pearl); font-size: 24px; cursor: pointer; opacity: 0.6; transition: opacity 0.3s; z-index: 5; }
+  .modal-inner { max-width: 520px; width: 100%; background: var(--black-warm); border: 1px solid var(--line-strong); padding: 48px 40px; position: relative; }
+  .modal-close { position: absolute; top: 16px; right: 20px; background: none; border: none; color: var(--pearl); font-size: 24px; cursor: pointer; opacity: 0.6; transition: opacity 0.3s; }
   .modal-close:hover { opacity: 1; color: var(--gold); }
-
-  .modal-step-indicator { display: flex; gap: 6px; margin-bottom: 24px; }
-  .modal-step-dot { flex: 1; height: 2px; background: var(--line); transition: background 0.4s; }
-  .modal-step-dot.active { background: var(--gold); }
-
   .modal h3 { font-family: var(--display); font-size: 28px; color: var(--gold); margin-bottom: 8px; }
   .modal-tier { font-family: var(--body); font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--pearl); opacity: 0.7; margin-bottom: 24px; }
-  .modal p { font-family: var(--serif); font-size: 15px; line-height: 1.7; color: var(--pearl); margin-bottom: 16px; opacity: 0.9; }
-
-  .modal-step { display: none; }
-  .modal-step.active { display: block; animation: fadeUp 0.4s ease; }
-
-  /* Terms step */
-  .modal-terms-eyebrow { font-family: var(--body); font-size: 10px; letter-spacing: 0.36em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; opacity: 0.85; }
-  .modal-terms-title { font-family: var(--display); font-size: 26px; color: var(--pearl); margin-bottom: 24px; line-height: 1.25; font-weight: 400; }
-  .modal-terms-title em { font-style: italic; color: var(--gold); }
-
-  .terms-block { padding: 18px 0; border-bottom: 1px solid var(--line); }
-  .terms-block:last-of-type { border-bottom: none; padding-bottom: 8px; }
-  .terms-block-label { font-family: var(--body); font-size: 10px; letter-spacing: 0.36em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
-  .terms-block-text { font-family: var(--serif); font-size: 15px; line-height: 1.7; color: var(--pearl); opacity: 0.92; margin: 0; }
-  .terms-block-text em { font-style: italic; color: var(--gold); }
-  .terms-block-text strong { color: var(--pearl); font-weight: normal; border-bottom: 1px solid var(--line-strong); padding-bottom: 1px; }
-
-  .terms-checkbox { display: flex; align-items: flex-start; gap: 14px; margin-top: 28px; padding: 16px 18px; background: var(--black); border: 1px solid var(--line); cursor: pointer; transition: all 0.3s; }
-  .terms-checkbox:hover { border-color: var(--line-strong); }
-  .terms-checkbox input { appearance: none; -webkit-appearance: none; width: 18px; height: 18px; border: 1px solid var(--gold); background: transparent; cursor: pointer; flex-shrink: 0; margin-top: 2px; position: relative; transition: all 0.3s; }
-  .terms-checkbox input:checked { background: var(--gold); }
-  .terms-checkbox input:checked::after { content: '✓'; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -55%); color: var(--black); font-size: 12px; font-weight: bold; }
-  .terms-checkbox label { font-family: var(--serif); font-size: 14px; line-height: 1.55; color: var(--pearl); cursor: pointer; user-select: none; }
-
-  .modal-actions { display: flex; gap: 12px; margin-top: 24px; }
-  .modal-btn { flex: 1; padding: 14px 20px; font-family: var(--body); font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; text-align: center; transition: all 0.3s; cursor: pointer; border: 1px solid; background: transparent; }
-  .modal-btn-secondary { color: var(--pearl); border-color: var(--line); opacity: 0.7; }
-  .modal-btn-secondary:hover { opacity: 1; border-color: var(--line-strong); }
-  .modal-btn-primary { color: var(--gold); border-color: rgba(201, 169, 97, 0.45); background: rgba(201, 169, 97, 0.06); }
-  .modal-btn-primary:hover:not(:disabled) { background: rgba(201, 169, 97, 0.14); border-color: rgba(201, 169, 97, 0.75); color: var(--pearl); }
-  .modal-btn-primary:disabled { opacity: 0.3; cursor: not-allowed; }
-
+  .modal p { font-family: var(--serif); font-size: 15px; line-height: 1.7; color: var(--pearl); margin-bottom: 24px; opacity: 0.9; }
   .modal-options { display: flex; flex-direction: column; gap: 12px; }
-  .modal-option { display: flex; justify-content: space-between; align-items: center; padding: 18px 24px; background: var(--black); border: 1px solid var(--line); color: var(--pearl); font-family: var(--body); font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; transition: all 0.3s; cursor: pointer; width: 100%; text-align: left; }
+  .modal-option { display: flex; justify-content: space-between; align-items: center; padding: 18px 24px; background: var(--black); border: 1px solid var(--line); color: var(--pearl); font-family: var(--body); font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; transition: all 0.3s; cursor: pointer; }
   .modal-option:hover { border-color: var(--gold); color: var(--gold); transform: translateX(4px); }
-  .modal-option-icon { font-family: var(--display); color: var(--gold); font-size: 18px; transition: transform 0.3s; }
-  .modal-option.active { border-color: var(--gold); color: var(--gold); transform: translateX(0); }
-  .modal-option.active .modal-option-icon { transform: rotate(45deg); }
-
-  .modal-panel { display: none; padding: 22px 24px 24px; background: var(--black); border: 1px solid var(--gold); border-top: none; margin-top: -12px; animation: fadeUp 0.3s ease; }
-  .modal-panel.open { display: block; }
-  .modal-panel-row { display: flex; flex-wrap: wrap; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--line); }
-  .modal-panel-row:last-of-type { border-bottom: none; }
-  .modal-panel-label { font-family: var(--body); font-size: 10px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--gold); min-width: 110px; padding-top: 2px; }
-  .modal-panel-value { font-family: var(--serif); font-size: 15px; line-height: 1.5; color: var(--pearl); flex: 1; }
-  .modal-panel-value-mono { font-family: 'SF Mono', 'Monaco', 'Menlo', monospace; font-size: 14px; letter-spacing: 0.06em; }
-  .modal-panel-intro { font-family: var(--serif); font-size: 14px; line-height: 1.7; color: var(--pearl); opacity: 0.9; margin-bottom: 18px; }
-  .modal-panel-instructions { font-family: var(--serif); font-size: 13px; line-height: 1.7; color: var(--pearl); opacity: 0.85; padding: 16px 0 4px; margin-top: 12px; border-top: 1px solid var(--line); }
-  .modal-panel-instructions strong { color: var(--gold); font-weight: normal; }
-  .modal-panel-cta { display: inline-block; margin-top: 16px; padding: 12px 24px; background: rgba(201, 169, 97, 0.06); color: var(--gold); border: 1px solid rgba(201, 169, 97, 0.45); font-family: var(--body); font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; text-align: center; transition: all 0.3s; cursor: pointer; }
-  .modal-panel-cta:hover { background: rgba(201, 169, 97, 0.14); color: var(--pearl); border-color: rgba(201, 169, 97, 0.75); }
-  .modal-back { display: inline-block; margin-top: 18px; font-family: var(--body); font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--pearl); opacity: 0.6; cursor: pointer; transition: opacity 0.3s; }
-  .modal-back:hover { opacity: 1; color: var(--gold); }
+  .modal-option-icon { font-family: var(--display); color: var(--gold); font-size: 18px; }
 
   /* RESPONSIVE */
   @media (max-width: 900px) {
     nav { padding: 18px 24px; }
     nav.scrolled { padding: 14px 24px; }
-    .hero { min-height: auto; align-items: flex-start; padding: 92px 24px 52px; }
-    .hero-inner { margin-top: 8px; }
+    .hero { min-height: auto; align-items: center; justify-content: center; padding: 100px 24px 52px; }
+    .hero-inner { margin-top: 8px; width: 100%; }
     .hero-eyebrow::before, .hero-eyebrow::after { display: none; }
     .hero-eyebrow { margin-bottom: 20px; }
     .hero-title { margin-bottom: 20px; }
     .hero-lede { margin: 24px auto 0; }
     .hero-numbers { flex-direction: column; gap: 20px; margin-top: 40px; padding-top: 32px; }
-    .invitation-letter, .tiers-section, .payment-methods, .integrity, .terms-policy, .cta-final { padding: 80px 24px; }
-    .refund-table { grid-template-columns: 1fr; }
-    .refund-cell { padding: 28px 24px; }
-    .refund-cell-amount { font-size: 36px; }
-    .terms-policy-list { grid-template-columns: 1fr; gap: 28px; }
+    .invitation-letter, .tiers-section, .payment-methods, .integrity, .cta-final { padding: 80px 24px; }
     .tiers { grid-template-columns: 1fr; gap: 20px; }
     .tier { padding: 36px 28px; }
     .pm-grid { grid-template-columns: 1fr; gap: 16px; }
@@ -269,10 +217,7 @@
     TRIIN LELLEP
     <span>The Écoute Circle</span>
   </div>
-  <div style="display: flex; gap: 24px; align-items: center;">
-    <a href="commissions.html" style="font-family: var(--body); font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--pearl); opacity: 0.75; transition: opacity 0.3s; white-space: nowrap;" onmouseover="this.style.color='var(--gold)'; this.style.opacity='1';" onmouseout="this.style.color='var(--pearl)'; this.style.opacity='0.75';">Commissions</a>
-    <a href="index.html" class="nav-back">← The Work</a>
-  </div>
+  <a href="index.html" class="nav-back">← The Work</a>
 </nav>
 
 <!-- HERO -->
@@ -288,7 +233,7 @@
 
     <div class="hero-numbers animate-fadeUp delay-3">
       <div class="hero-number">
-        <div class="hero-number-value">€141,000</div>
+        <div class="hero-number-value">€29,000</div>
         <div class="hero-number-label">Project</div>
       </div>
       <div class="hero-number">
@@ -351,7 +296,7 @@
       <div class="tier-name">Witness the beginning</div>
       <div class="tier-tagline">For those who want to be present at the start.</div>
 
-      <div class="tier-price">€1,000</div>
+      <div class="tier-price">€250</div>
       <div class="tier-availability">16 places · 4 confirmed</div>
 
       <div class="tier-includes-label">Each Friend receives</div>
@@ -362,7 +307,7 @@
         <li>Early notice on the first European return event in 2027</li>
       </ul>
 
-      <button class="tier-cta" onclick="openModal('friend', '€1,000', 'Founding Friend')">Join as Friend</button>
+      <button class="tier-cta" onclick="openModal('friend', '€250', 'Founding Friend')">Join as Friend</button>
     </div>
 
     <div class="tier">
@@ -370,7 +315,7 @@
       <div class="tier-name">Hold the room with us</div>
       <div class="tier-tagline">For those who want to be part of the architecture.</div>
 
-      <div class="tier-price">€5,000</div>
+      <div class="tier-price">€1,000</div>
       <div class="tier-availability">10 places · 2 confirmed</div>
 
       <div class="tier-includes-label">Each Member receives</div>
@@ -382,7 +327,7 @@
         <li>Name listed in the private Écoute Circle document</li>
       </ul>
 
-      <button class="tier-cta" onclick="openModal('member', '€5,000', 'Founding Member')">Join as Member</button>
+      <button class="tier-cta" onclick="openModal('member', '€1,000', 'Founding Member')">Join as Member</button>
     </div>
 
     <div class="tier featured">
@@ -390,7 +335,7 @@
       <div class="tier-name">Bring a private écoute to your room</div>
       <div class="tier-tagline">For those who want to host.</div>
 
-      <div class="tier-price">€15,000</div>
+      <div class="tier-price">€3,000</div>
       <div class="tier-availability">5 places · 1 confirmed</div>
 
       <div class="tier-includes-label">Each Patron receives</div>
@@ -403,7 +348,7 @@
         <li>Name listed in the private Écoute Circle document</li>
       </ul>
 
-      <button class="tier-cta" onclick="openModal('patron', '€15,000', 'Founding Patron')">Join as Patron</button>
+      <button class="tier-cta" onclick="openModal('patron', '€3,000', 'Founding Patron')">Join as Patron</button>
     </div>
 
   </div>
@@ -445,17 +390,10 @@
           <strong>Beneficiary</strong>
           Triin Lellep<br/><br/>
           <strong>IBAN</strong>
-          EE06 2200 0011 0527 2211<br/><br/>
-          <strong>Bank</strong>
-          Swedbank AS<br/><br/>
-          <strong>SWIFT / BIC</strong>
-          HABAEE2X<br/><br/>
-          <strong>Bank address</strong>
-          Liivalaia 8, 15040 Tallinn, Estonia<br/><br/>
-          <strong>Reference</strong>
-          The Écoute Circle — [your tier] — [your name]
+          EE__ ____ ____ ____ ____<br/>
+          <em style="opacity: 0.6; font-size: 11px;">Provided upon request — please write to triinlellep@gmail.com</em>
         </div>
-        <a href="mailto:triinlellep@gmail.com?subject=The%20%C3%89coute%20Circle%20%E2%80%94%20Bank%20Transfer%20Confirmation" class="pm-copy">Confirm by Email</a>
+        <a href="mailto:triinlellep@gmail.com?subject=The%20%C3%89coute%20Circle%20%E2%80%94%20Bank%20Transfer%20Details" class="pm-copy">Request Details</a>
       </div>
 
       <!-- CARD 3: CRYPTO -->
@@ -504,7 +442,7 @@
       <div class="integrity-block">
         <h3>If we cannot fill the circle</h3>
         <p>
-          If by 31 May 2026 the full €141,000 is not committed, the work will still launch
+          If by 31 May 2026 the full €29,000 is not committed, the work will still launch
           — at a smaller scale, with what is gathered. Every patron will still receive
           their full benefits. Nothing is held hostage to a fundraising target.
         </p>
@@ -528,112 +466,6 @@
           This is the architecture, not a marketing decision.
         </p>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- TERMS &amp; CANCELLATION POLICY -->
-<section class="terms-policy" id="terms">
-  <div class="terms-policy-inner">
-    <div class="terms-policy-eyebrow">Terms of Patronage</div>
-    <h2>Clarity, in <em>writing</em>, before any contribution.</h2>
-
-    <div class="refund-table">
-
-      <div class="refund-cell">
-        <div class="refund-cell-eyebrow">i. Before 31 May 2026</div>
-        <div class="refund-cell-amount"><em>100%</em></div>
-        <div class="refund-cell-period">Circle still open</div>
-        <div class="refund-cell-text">
-          Full refund of your contribution at any time before the Circle closes,
-          less the bank transfer cost (€15). Withdrawal is straightforward — write to
-          us and the funds are returned within ten working days.
-        </div>
-      </div>
-
-      <div class="refund-cell">
-        <div class="refund-cell-eyebrow">ii. 1 – 14 June 2026</div>
-        <div class="refund-cell-amount"><em>75%</em></div>
-        <div class="refund-cell-period">Chapter preparation</div>
-        <div class="refund-cell-text">
-          Seventy-five per cent refund. The remaining twenty-five per cent
-          covers production commitments — flights, instruments, lighting,
-          documentation team — already engaged on your patronage.
-        </div>
-      </div>
-
-      <div class="refund-cell">
-        <div class="refund-cell-eyebrow">iii. From 15 June 2026</div>
-        <div class="refund-cell-amount"><em>0%</em></div>
-        <div class="refund-cell-period">Chapter takes place</div>
-        <div class="refund-cell-text">
-          No refund once the chapter takes place. Your benefits — film,
-          documentary, letters, the document of the Circle — are delivered
-          regardless of attendance.
-        </div>
-      </div>
-
-    </div>
-
-    <div class="terms-policy-list">
-
-      <div class="terms-policy-block">
-        <h3>What you commit to</h3>
-        <p>
-          A single one-time contribution at the tier you select. There are no recurring
-          payments, no membership fees, no future obligations. Your patronage holds a
-          place in <em>The Écoute Circle</em> for the first chapter only — future chapters,
-          if you wish to participate in them, are separately offered.
-        </p>
-      </div>
-
-      <div class="terms-policy-block">
-        <h3>What you receive</h3>
-        <p>
-          The benefits of your selected tier, delivered after the first écoute in
-          Asia, June 2026. Films and documents are sent privately to patrons before
-          any public release. The signed book is sent on publication.
-        </p>
-      </div>
-
-      <div class="terms-policy-block">
-        <h3>Confidentiality</h3>
-        <p>
-          The patron list is private and held by the artist. Your name appears in the
-          private <em>Écoute Circle</em> document only with your written consent. We do
-          not publish or share your participation publicly without your explicit
-          permission.
-        </p>
-      </div>
-
-      <div class="terms-policy-block">
-        <h3>If the Circle does not fully close</h3>
-        <p>
-          If by 31 May 2026 the full <em>€141,000</em> is not committed, the first
-          chapter still proceeds — at a scale appropriate to what has been gathered.
-          Every patron who has joined receives their full benefits regardless. Nothing
-          is held hostage to a fundraising target.
-        </p>
-      </div>
-
-      <div class="terms-policy-block">
-        <h3>Financial transparency</h3>
-        <p>
-          After the first écoute, every patron receives a private financial summary
-          of how the funds were used. This is not investor reporting. It is courtesy
-          between the artist and the people who made the work possible.
-        </p>
-      </div>
-
-      <div class="terms-policy-block">
-        <h3>Governing law &amp; the artist</h3>
-        <p>
-          The patronage agreement is between you and Triin Lellep, a private cultural
-          practitioner based in the European Union. Estonian law applies. Any dispute
-          we resolve personally first; only if that fails are formal channels engaged.
-        </p>
-      </div>
-
     </div>
   </div>
 </section>
@@ -668,110 +500,23 @@
 <div class="modal" id="modal">
   <div class="modal-inner">
     <button class="modal-close" onclick="closeModal()">×</button>
-
-    <div class="modal-step-indicator">
-      <div class="modal-step-dot active" id="dot-1"></div>
-      <div class="modal-step-dot" id="dot-2"></div>
+    <h3 id="modal-title">Founding Patron</h3>
+    <div class="modal-tier" id="modal-amount">€3,000</div>
+    <p>Choose how you would like to contribute. Each method is secure and confirmation will follow within 24 hours.</p>
+    <div class="modal-options">
+      <a href="#" class="modal-option" id="modal-stripe">
+        <span>Pay by Card · Stripe</span>
+        <span class="modal-option-icon">→</span>
+      </a>
+      <a href="mailto:triinlellep@gmail.com" class="modal-option" id="modal-bank">
+        <span>Bank Transfer (SEPA/SWIFT)</span>
+        <span class="modal-option-icon">→</span>
+      </a>
+      <a href="mailto:triinlellep@gmail.com" class="modal-option" id="modal-crypto">
+        <span>Cryptocurrency · BTC / ETH / USDC</span>
+        <span class="modal-option-icon">→</span>
+      </a>
     </div>
-
-    <!-- STEP 1: TERMS -->
-    <div class="modal-step active" id="step-terms">
-      <div class="modal-terms-eyebrow">Step 1 of 2 · Terms of Patronage</div>
-      <div class="modal-terms-title">Joining the <em id="terms-tier-name">Founding Patron</em> tier · <span id="terms-tier-amount">€15,000</span></div>
-
-      <div class="terms-block">
-        <div class="terms-block-label">What you receive</div>
-        <p class="terms-block-text" id="terms-receive">Full benefits of the selected tier as described on this page, delivered after the first écoute in Asia, June 2026.</p>
-      </div>
-
-      <div class="terms-block">
-        <div class="terms-block-label">Your commitment</div>
-        <p class="terms-block-text">Your contribution holds a place in The Écoute Circle, a closed circle of <em>thirty-one founding patrons</em> who support the first chapter of the work. Patron places are filled in order of confirmed contribution.</p>
-      </div>
-
-      <div class="terms-block">
-        <div class="terms-block-label">If we cannot fill the Circle</div>
-        <p class="terms-block-text">If by <strong>31 May 2026</strong> the full €141,000 is not committed, the first chapter still proceeds — at a scale appropriate to what has been gathered. Every patron receives their full benefits regardless. Nothing is held hostage to a fundraising target.</p>
-      </div>
-
-      <div class="terms-block">
-        <div class="terms-block-label">Cancellation &amp; refund policy</div>
-        <p class="terms-block-text">
-          <strong>Before 31 May 2026</strong> (Circle closing): full refund, less bank transfer cost (€15).<br/><br/>
-          <strong>1 June – 14 June 2026</strong> (chapter preparation): 75% refund. The remaining 25% covers production commitments already made on your patronage.<br/><br/>
-          <strong>From 15 June 2026 onward</strong> (chapter takes place): no refund. Your benefits are delivered as scheduled.
-        </p>
-      </div>
-
-      <div class="terms-block">
-        <div class="terms-block-label">Confidentiality</div>
-        <p class="terms-block-text">The patron list is private and held by the artist. Your name appears in the private Écoute Circle document only with your consent. We will not publish or share your participation publicly without your explicit permission.</p>
-      </div>
-
-      <div class="terms-block">
-        <div class="terms-block-label">After the chapter</div>
-        <p class="terms-block-text">Every patron receives, after the first écoute, a private financial summary of how the funds were used. This is not investor reporting — it is courtesy between the artist and the people who made the work possible.</p>
-      </div>
-
-      <div class="terms-checkbox">
-        <input type="checkbox" id="terms-accept" onchange="toggleProceed()" />
-        <label for="terms-accept">I have read and accept the terms of patronage above. I understand that my contribution holds a place in The Écoute Circle and that the cancellation and refund policy applies as stated.</label>
-      </div>
-
-      <div class="modal-actions">
-        <button class="modal-btn modal-btn-secondary" onclick="closeModal()">Cancel</button>
-        <button class="modal-btn modal-btn-primary" id="btn-proceed" onclick="goToPayment()" disabled>Continue to Payment</button>
-      </div>
-    </div>
-
-    <!-- STEP 2: PAYMENT -->
-    <div class="modal-step" id="step-payment">
-      <div class="modal-terms-eyebrow">Step 2 of 2 · Method of Contribution</div>
-      <h3 id="modal-title">Founding Patron</h3>
-      <div class="modal-tier" id="modal-amount">€15,000</div>
-      <p>Choose how you would like to contribute. Confirmation will follow within 24 hours.</p>
-      <div class="modal-options">
-        <a href="#" class="modal-option" id="modal-stripe" target="_blank" rel="noopener">
-          <span>Pay by Card · Stripe</span>
-          <span class="modal-option-icon">→</span>
-        </a>
-        <button type="button" class="modal-option" id="modal-bank-btn" onclick="togglePanel('bank')">
-          <span>Bank Transfer (SEPA / SWIFT)</span>
-          <span class="modal-option-icon" id="bank-chevron">+</span>
-        </button>
-
-        <div class="modal-panel" id="bank-panel">
-          <div class="modal-panel-row"><span class="modal-panel-label">Beneficiary</span><span class="modal-panel-value">Triin Lellep</span></div>
-          <div class="modal-panel-row"><span class="modal-panel-label">IBAN</span><span class="modal-panel-value modal-panel-value-mono">EE06 2200 0011 0527 2211</span></div>
-          <div class="modal-panel-row"><span class="modal-panel-label">Bank</span><span class="modal-panel-value">Swedbank AS</span></div>
-          <div class="modal-panel-row"><span class="modal-panel-label">SWIFT / BIC</span><span class="modal-panel-value modal-panel-value-mono">HABAEE2X</span></div>
-          <div class="modal-panel-row"><span class="modal-panel-label">Bank address</span><span class="modal-panel-value">Liivalaia 8, 15040 Tallinn, Estonia</span></div>
-          <div class="modal-panel-row"><span class="modal-panel-label">Reference</span><span class="modal-panel-value" id="bank-reference">The Écoute Circle — Founding Patron</span></div>
-          <div class="modal-panel-instructions">
-            <strong>Two simple steps:</strong><br/>
-            1. Make the SEPA / SWIFT transfer from your bank using the details above.<br/>
-            2. Send a short confirmation email so we can record your patronage and send your benefits.
-          </div>
-          <a href="mailto:triinlellep@gmail.com" class="modal-panel-cta" id="bank-confirm-mail">
-            Send Confirmation Email →
-          </a>
-        </div>
-
-        <button type="button" class="modal-option" id="modal-crypto-btn" onclick="togglePanel('crypto')">
-          <span>Cryptocurrency · BTC / ETH / USDC</span>
-          <span class="modal-option-icon" id="crypto-chevron">+</span>
-        </button>
-
-        <div class="modal-panel" id="crypto-panel">
-          <p class="modal-panel-intro">For patrons who prefer to contribute in digital assets. Please email first so we can confirm receipt and attach your contribution to the patron record.</p>
-          <a href="mailto:triinlellep@gmail.com" class="modal-panel-cta" id="crypto-request-mail">
-            Request Wallet Addresses →
-          </a>
-        </div>
-      </div>
-      <span class="modal-back" onclick="backToTerms()">← Back to terms</span>
-    </div>
-
   </div>
 </div>
 
@@ -779,145 +524,35 @@
   // Stripe Payment Links — REPLACE THESE WITH ACTUAL LINKS WHEN STRIPE ACCOUNT IS LIVE
   // Generate at: https://dashboard.stripe.com/payment-links
   const STRIPE_LINKS = {
-    friend:  'https://buy.stripe.com/REPLACE_WITH_FRIEND_LINK',   // €1,000 · Founding Friend
-    member:  'https://buy.stripe.com/REPLACE_WITH_MEMBER_LINK',   // €5,000 · Founding Member
-    patron:  'https://buy.stripe.com/REPLACE_WITH_PATRON_LINK'    // €15,000 · Founding Patron
+    friend:  'https://buy.stripe.com/REPLACE_WITH_FRIEND_LINK',   // €250 · Founding Friend
+    member:  'https://buy.stripe.com/REPLACE_WITH_MEMBER_LINK',   // €1,000 · Founding Member
+    patron:  'https://buy.stripe.com/REPLACE_WITH_PATRON_LINK'    // €3,000 · Founding Patron
   };
 
   const TIER_DATA = {
-    friend: {
-      name: 'Founding Friend', amount: '€1,000',
-      receive: 'Three-minute cinematic film of the first chapter; annual private letter from Triin; name listed in the private Écoute Circle document; early notice on the first European return chapter (2027).'
-    },
-    member: {
-      name: 'Founding Member', amount: '€5,000',
-      receive: 'Twelve-minute documentary film, before public release; quarterly private letter from Triin (four per year); signed copy of the cosmological book in English when published; priority for tickets at the first European return chapter (2027); name listed in the private Écoute Circle document.'
-    },
-    patron: {
-      name: 'Founding Patron', amount: '€15,000',
-      receive: 'Private salon evening with Triin in Tallinn or Helsinki, summer 2026 — for Patrons only; full documentary film before public release; personal ten-minute vocal phrase, recorded for you and sent privately; first right to commission a private écoute at preferred terms in 2027–2028; signed copy of the cosmological book in English; name listed in the private Écoute Circle document.'
-    }
+    friend: { name: 'Founding Friend', amount: '€250',
+              bankSubject: 'The%20%C3%89coute%20Circle%20%E2%80%94%20Founding%20Friend%20%E2%80%94%20Bank%20Transfer',
+              cryptoSubject: 'The%20%C3%89coute%20Circle%20%E2%80%94%20Founding%20Friend%20%E2%80%94%20Crypto' },
+    member: { name: 'Founding Member', amount: '€1,000',
+              bankSubject: 'The%20%C3%89coute%20Circle%20%E2%80%94%20Founding%20Member%20%E2%80%94%20Bank%20Transfer',
+              cryptoSubject: 'The%20%C3%89coute%20Circle%20%E2%80%94%20Founding%20Member%20%E2%80%94%20Crypto' },
+    patron: { name: 'Founding Patron', amount: '€3,000',
+              bankSubject: 'The%20%C3%89coute%20Circle%20%E2%80%94%20Founding%20Patron%20%E2%80%94%20Bank%20Transfer',
+              cryptoSubject: 'The%20%C3%89coute%20Circle%20%E2%80%94%20Founding%20Patron%20%E2%80%94%20Crypto' }
   };
-
-  let currentTier = null;
 
   function openModal(tier) {
     const data = TIER_DATA[tier];
-    if (!data) return;
-    currentTier = tier;
-
-    // Step 1 — terms
-    document.getElementById('terms-tier-name').textContent = data.name;
-    document.getElementById('terms-tier-amount').textContent = data.amount;
-    document.getElementById('terms-receive').textContent = data.receive;
-
-    // Step 2 — payment
     document.getElementById('modal-title').textContent = data.name;
     document.getElementById('modal-amount').textContent = data.amount;
     document.getElementById('modal-stripe').href = STRIPE_LINKS[tier];
-
-    // Bank: pre-fill reference and confirmation mail
-    document.getElementById('bank-reference').textContent = `The Écoute Circle — ${data.name}`;
-    const bankSubject = encodeURIComponent(`The Écoute Circle — ${data.name} (${data.amount}) — Bank Transfer Confirmation`);
-    const bankBody = encodeURIComponent(
-`Dear Triin,
-
-I have made a SEPA / SWIFT transfer for ${data.amount} as a ${data.name} contribution to The Écoute Circle.
-
-Bank: [your bank]
-Date of transfer: [date]
-Reference used: The Écoute Circle — ${data.name}
-
-Please confirm receipt and add me to the patron record.
-
-With kindest regards,
-[your full name]
-[your country]`
-    );
-    document.getElementById('bank-confirm-mail').href = `mailto:triinlellep@gmail.com?subject=${bankSubject}&body=${bankBody}`;
-
-    // Crypto: request wallet addresses
-    const cryptoSubject = encodeURIComponent(`The Écoute Circle — ${data.name} (${data.amount}) — Cryptocurrency`);
-    const cryptoBody = encodeURIComponent(
-`Dear Triin,
-
-I would like to contribute ${data.amount} to The Écoute Circle as a ${data.name}, in cryptocurrency.
-
-Preferred asset: [BTC / ETH / USDC]
-
-Please send me the appropriate wallet address.
-
-With kindest regards,
-[your full name]
-[your country]`
-    );
-    document.getElementById('crypto-request-mail').href = `mailto:triinlellep@gmail.com?subject=${cryptoSubject}&body=${cryptoBody}`;
-
-    // Reset to step 1
-    document.getElementById('terms-accept').checked = false;
-    document.getElementById('btn-proceed').disabled = true;
-    closePanel('bank');
-    closePanel('crypto');
-    showStep('terms');
-
+    document.getElementById('modal-bank').href = `mailto:triinlellep@gmail.com?subject=${data.bankSubject}`;
+    document.getElementById('modal-crypto').href = `mailto:triinlellep@gmail.com?subject=${data.cryptoSubject}`;
     document.getElementById('modal').classList.add('open');
-    document.body.style.overflow = 'hidden';
   }
 
   function closeModal() {
     document.getElementById('modal').classList.remove('open');
-    document.body.style.overflow = '';
-  }
-
-  function showStep(step) {
-    document.getElementById('step-terms').classList.toggle('active', step === 'terms');
-    document.getElementById('step-payment').classList.toggle('active', step === 'payment');
-    document.getElementById('dot-1').classList.toggle('active', true);
-    document.getElementById('dot-2').classList.toggle('active', step === 'payment');
-    const inner = document.querySelector('.modal-inner');
-    if (inner) inner.scrollTop = 0;
-  }
-
-  function toggleProceed() {
-    const checkbox = document.getElementById('terms-accept');
-    document.getElementById('btn-proceed').disabled = !checkbox.checked;
-  }
-
-  function goToPayment() {
-    if (!document.getElementById('terms-accept').checked) return;
-    showStep('payment');
-  }
-
-  function backToTerms() {
-    showStep('terms');
-  }
-
-  function togglePanel(which) {
-    const panel = document.getElementById(`${which}-panel`);
-    const btn = document.getElementById(`modal-${which}-btn`);
-    const chevron = document.getElementById(`${which}-chevron`);
-    const isOpen = panel.classList.contains('open');
-
-    // Close other panel
-    const other = which === 'bank' ? 'crypto' : 'bank';
-    closePanel(other);
-
-    if (isOpen) {
-      closePanel(which);
-    } else {
-      panel.classList.add('open');
-      btn.classList.add('active');
-      chevron.textContent = '×';
-    }
-  }
-
-  function closePanel(which) {
-    const panel = document.getElementById(`${which}-panel`);
-    const btn = document.getElementById(`modal-${which}-btn`);
-    const chevron = document.getElementById(`${which}-chevron`);
-    if (panel) panel.classList.remove('open');
-    if (btn) btn.classList.remove('active');
-    if (chevron) chevron.textContent = '+';
   }
 
   // Close on backdrop click
