@@ -1031,6 +1031,158 @@
     border-top: 1px solid var(--line);
   }
 
+  /* A GLIMPSE — pre-chapter video sektsioon */
+  .glimpse {
+    padding: 140px 48px 100px;
+    background: var(--black-deep, #0F0B09);
+    border-top: 1px solid var(--line);
+    position: relative;
+  }
+  .glimpse-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .glimpse-eyebrow {
+    font-family: var(--body);
+    font-size: 11px;
+    letter-spacing: 0.42em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 32px;
+    text-align: center;
+    opacity: 0.85;
+  }
+  .glimpse-eyebrow::before,
+  .glimpse-eyebrow::after {
+    content: '';
+    display: inline-block;
+    width: 36px;
+    height: 1px;
+    background: var(--gold);
+    opacity: 0.55;
+    vertical-align: middle;
+    margin: 0 18px;
+  }
+  .glimpse-frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #000;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    box-shadow:
+      0 30px 80px -20px rgba(0,0,0,0.65),
+      0 0 0 1px rgba(201, 169, 97, 0.06);
+  }
+  .glimpse-frame video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .glimpse-caption {
+    margin-top: 28px;
+    text-align: center;
+    font-family: var(--serif);
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--pearl);
+    opacity: 0.62;
+    font-style: italic;
+    max-width: 620px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .glimpse-caption em {
+    color: var(--gold);
+    opacity: 0.85;
+  }
+  .glimpse-actions {
+    margin-top: 26px;
+    text-align: center;
+  }
+  .glimpse-listen-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 26px;
+    background: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    font-family: var(--body);
+    font-size: 11px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+  }
+  .glimpse-listen-btn:hover {
+    background: rgba(201, 169, 97, 0.08);
+    color: var(--pearl);
+  }
+  .glimpse-listen-btn-icon {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--gold);
+    transition: background 0.3s;
+  }
+  .glimpse-listen-btn:hover .glimpse-listen-btn-icon {
+    background: var(--pearl);
+  }
+
+  /* Full-version modal */
+  .glimpse-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    background: rgba(0,0,0,0.96);
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
+  .glimpse-modal.open {
+    display: flex;
+    animation: glimpseFadeIn 0.4s ease;
+  }
+  @keyframes glimpseFadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+  .glimpse-modal-inner {
+    width: 100%;
+    max-width: 1100px;
+    aspect-ratio: 16 / 9;
+    position: relative;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+  }
+  .glimpse-modal-inner video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: #000;
+  }
+  .glimpse-modal-close {
+    position: absolute;
+    top: -48px;
+    right: 0;
+    background: none;
+    border: none;
+    color: var(--pearl);
+    font-size: 32px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s, color 0.3s;
+    line-height: 1;
+    padding: 4px 12px;
+  }
+  .glimpse-modal-close:hover {
+    opacity: 1;
+    color: var(--gold);
+  }
+
   .documentation-lede {
     font-family: var(--serif);
     font-size: 19px;
@@ -1664,6 +1816,10 @@
     .artist-portrait { max-width: 380px; margin: 0 auto; }
     .doc-grid { grid-template-columns: 1fr; gap: 20px; }
     .doc-gallery { grid-template-columns: 1fr 1fr; gap: 12px; }
+    .glimpse { padding: 80px 24px 64px; }
+    .glimpse-eyebrow { font-size: 9px; letter-spacing: 0.32em; }
+    .glimpse-eyebrow::before, .glimpse-eyebrow::after { display: none; }
+    .glimpse-modal-close { top: -40px; font-size: 28px; }
     .commissions-formats { grid-template-columns: 1fr; }
     .commissions-promo { padding: 80px 24px; }
     .hosts-grid { grid-template-columns: 1fr 1fr; }
@@ -2098,6 +2254,45 @@
   </div>
 </section>
 
+<!-- ============== A GLIMPSE — pre-chapter video ============== -->
+<section class="glimpse" id="glimpse">
+  <div class="glimpse-inner">
+    <div class="glimpse-eyebrow">A Glimpse</div>
+    <div class="glimpse-frame">
+      <video
+        autoplay muted loop playsinline preload="metadata"
+        poster="triin-poster.jpg"
+        aria-label="A short cinematic glimpse of Triin Lellep — silent loop">
+        <source src="triin-loop.webm" type="video/webm">
+        <source src="triin-loop.mp4" type="video/mp4">
+      </video>
+    </div>
+    <p class="glimpse-caption">
+      A brief cinematic fragment from a previous studio session — <em>before the first chapter</em>.
+      Silent on the page; the full version, with sound, opens below.
+    </p>
+    <div class="glimpse-actions">
+      <button type="button" class="glimpse-listen-btn" id="glimpse-listen">
+        <span class="glimpse-listen-btn-icon"></span>
+        Watch with sound
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ============== GLIMPSE FULL MODAL ============== -->
+<div class="glimpse-modal" id="glimpse-modal" role="dialog" aria-modal="true" aria-label="Full version with sound">
+  <div class="glimpse-modal-inner">
+    <button type="button" class="glimpse-modal-close" id="glimpse-modal-close" aria-label="Close">×</button>
+    <video
+      id="glimpse-modal-video"
+      controls playsinline preload="none"
+      poster="triin-poster.jpg">
+      <source src="triin-full.mp4" type="video/mp4">
+    </video>
+  </div>
+</div>
+
 <!-- ============== DOCUMENTATION ============== -->
 <section class="documentation" id="documentation">
   <div class="section-inner">
@@ -2331,6 +2526,35 @@
     if (window.scrollY > 40) nav.classList.add('scrolled');
     else nav.classList.remove('scrolled');
   });
+
+  // Glimpse modal — full version with sound
+  (function () {
+    const btn   = document.getElementById('glimpse-listen');
+    const modal = document.getElementById('glimpse-modal');
+    const close = document.getElementById('glimpse-modal-close');
+    const video = document.getElementById('glimpse-modal-video');
+    if (!btn || !modal || !video) return;
+
+    function open() {
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      // load and play with sound
+      try { video.currentTime = 0; video.play(); } catch (e) {}
+    }
+    function shut() {
+      modal.classList.remove('open');
+      document.body.style.overflow = '';
+      try { video.pause(); } catch (e) {}
+    }
+    btn.addEventListener('click', open);
+    close.addEventListener('click', shut);
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) shut();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('open')) shut();
+    });
+  })();
 </script>
 
 </body>
