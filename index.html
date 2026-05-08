@@ -480,6 +480,214 @@
     color: var(--pearl);
   }
 
+  /* ============== WHAT HAPPENS IN THE ROOM ============== */
+  .what-happens {
+    padding: 140px 48px;
+    background: var(--black);
+    border-top: 1px solid var(--line);
+  }
+
+  .what-happens-inner {
+    max-width: 980px;
+    margin: 0 auto;
+  }
+
+  .what-happens-eyebrow {
+    font-family: var(--body);
+    font-size: 11px;
+    letter-spacing: 0.42em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .what-happens-eyebrow::before {
+    content: '';
+    width: 32px;
+    height: 1px;
+    background: var(--gold);
+    opacity: 0.65;
+  }
+
+  .what-happens h2 {
+    font-family: var(--display);
+    font-size: clamp(32px, 4.4vw, 50px);
+    line-height: 1.18;
+    color: var(--pearl);
+    margin-bottom: 48px;
+    font-weight: 400;
+  }
+
+  .what-happens h2 em {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  .what-happens-prose {
+    font-family: var(--serif);
+    font-size: 19px;
+    line-height: 1.85;
+    color: var(--pearl);
+    opacity: 0.93;
+    margin-bottom: 48px;
+  }
+
+  .what-happens-prose p {
+    margin-bottom: 22px;
+  }
+
+  .what-happens-prose em {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  .what-happens-prose strong {
+    color: var(--pearl);
+    font-weight: normal;
+    border-bottom: 1px solid var(--line-strong);
+    padding-bottom: 1px;
+  }
+
+  .what-happens-elements {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    margin-bottom: 36px;
+  }
+
+  .what-happens-element {
+    background: var(--black);
+    padding: 28px 22px;
+    text-align: center;
+  }
+
+  .what-happens-element-icon {
+    font-family: var(--display);
+    font-size: 26px;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 12px;
+  }
+
+  .what-happens-element-label {
+    font-family: var(--body);
+    font-size: 10px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 6px;
+  }
+
+  .what-happens-element-value {
+    font-family: var(--serif);
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--pearl);
+    opacity: 0.86;
+  }
+
+  .what-happens-summary {
+    padding: 28px 32px;
+    background: rgba(201, 169, 97, 0.05);
+    border: 1px solid var(--line-strong);
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--pearl);
+    text-align: center;
+  }
+
+  .what-happens-summary strong {
+    color: var(--gold);
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  /* ============== FROM THE ARTIST ============== */
+  .from-artist {
+    padding: 140px 48px;
+    background: linear-gradient(180deg, var(--black) 0%, var(--burgundy-darker) 100%);
+    border-top: 1px solid var(--line);
+  }
+
+  .from-artist-inner {
+    max-width: 820px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .from-artist-eyebrow {
+    font-family: var(--body);
+    font-size: 11px;
+    letter-spacing: 0.42em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 36px;
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .from-artist-eyebrow::before,
+  .from-artist-eyebrow::after {
+    content: '';
+    width: 36px;
+    height: 1px;
+    background: var(--gold);
+    opacity: 0.55;
+  }
+
+  .from-artist-mark {
+    font-family: var(--display);
+    font-size: 64px;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 32px;
+    opacity: 0.85;
+  }
+
+  .from-artist-prose {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(19px, 1.9vw, 23px);
+    line-height: 1.75;
+    color: var(--pearl);
+    opacity: 0.95;
+    margin-bottom: 48px;
+  }
+
+  .from-artist-prose p {
+    margin-bottom: 22px;
+  }
+
+  .from-artist-prose em {
+    font-style: normal;
+    color: var(--gold);
+  }
+
+  .from-artist-signature {
+    font-family: var(--display);
+    font-size: 22px;
+    color: var(--gold);
+    letter-spacing: 0.04em;
+  }
+
+  .from-artist-signature-meta {
+    font-family: var(--body);
+    font-size: 10px;
+    letter-spacing: 0.36em;
+    text-transform: uppercase;
+    color: var(--pearl);
+    opacity: 0.65;
+    margin-top: 8px;
+  }
+
   /* ============== FORMATS ============== */
   .formats {
     padding: 160px 48px;
@@ -1410,6 +1618,9 @@
     .artist, .hosts, .invitation { padding: 80px 24px; }
 
     .work-grid { grid-template-columns: 1fr; gap: 32px; }
+    .what-happens, .from-artist { padding: 80px 24px; }
+    .what-happens-elements { grid-template-columns: 1fr 1fr; }
+    .from-artist-mark { font-size: 48px; }
     .formats-grid { grid-template-columns: 1fr; gap: 24px; }
     .format-card { padding: 36px 28px; }
 
@@ -1537,6 +1748,57 @@
         <div class="work-fact-label">Access</div>
         <div class="work-fact-value">Invitation only · curated by host</div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== WHAT HAPPENS IN THE ROOM ============== -->
+<section class="what-happens" id="what-happens">
+  <div class="what-happens-inner">
+    <div class="what-happens-eyebrow">What Happens in the Room</div>
+    <h2>Ninety minutes. <em>One room. One arc.</em></h2>
+
+    <div class="what-happens-prose">
+      <p>
+        A <em>Private Écoute</em> is a single ninety-minute composed evening, written
+        and performed by Triin Lellep for one host, one room, one selected audience.
+        The voice is acoustic. The work is structured as a <strong>single dramatic arc</strong>
+        — beginning in near silence, rising through original music, classical vocal
+        material, and spoken text, and resolving into cinematic fullness.
+      </p>
+      <p>
+        It is not a recital. It is not a private concert. It is not a wellness session.
+        It is closer to <em>a film delivered live</em>: composed, lit, scored, and
+        documented as a single artistic event in the host's interior.
+      </p>
+    </div>
+
+    <div class="what-happens-elements">
+      <div class="what-happens-element">
+        <div class="what-happens-element-icon">i.</div>
+        <div class="what-happens-element-label">Voice</div>
+        <div class="what-happens-element-value">Original music, classical vocal material, spoken text in a single arc</div>
+      </div>
+      <div class="what-happens-element">
+        <div class="what-happens-element-icon">ii.</div>
+        <div class="what-happens-element-label">Instruments</div>
+        <div class="what-happens-element-value">Piano, kannel, handpan, string quartet — by format</div>
+      </div>
+      <div class="what-happens-element">
+        <div class="what-happens-element-icon">iii.</div>
+        <div class="what-happens-element-label">Light</div>
+        <div class="what-happens-element-value">Candlelight or cinematic lighting, choreographed to the work</div>
+      </div>
+      <div class="what-happens-element">
+        <div class="what-happens-element-icon">iv.</div>
+        <div class="what-happens-element-label">Documentation</div>
+        <div class="what-happens-element-value">Filmed and photographed under cinematic standards</div>
+      </div>
+    </div>
+
+    <div class="what-happens-summary">
+      <strong>Intimate</strong> like a salon. <strong>Structured</strong> like a performance.
+      <strong>Documented</strong> like a cultural film.
     </div>
   </div>
 </section>
@@ -1730,6 +1992,48 @@
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ============== FROM THE ARTIST ============== -->
+<section class="from-artist" id="from-artist">
+  <div class="from-artist-inner">
+    <div class="from-artist-eyebrow">From the Artist</div>
+    <div class="from-artist-mark">"</div>
+
+    <!--
+      TRIIN — THIS SECTION IS YOURS.
+      Replace the placeholder text below with your own words, in your own voice,
+      in first person. One to three short paragraphs. This is the only section
+      on the site written by you, not about you. Keep it personal. Speak to the
+      reader as if they are sitting in the room with you, listening before the
+      first note is sung.
+
+      The placeholder below is a draft you may use as a starting point —
+      rewrite freely.
+    -->
+
+    <div class="from-artist-prose">
+      <p>
+        For years I tried to fit my voice into rooms that already had a name —
+        the recital, the concert, the chamber evening. None of them held what I
+        was actually composing. <em>Private Écoute</em> is the form I have written
+        for myself, and for you.
+      </p>
+      <p>
+        What happens in the ninety minutes is not a programme of pieces. It is
+        a single arc — silence, breath, voice, language, and fullness — composed
+        for the room you offer. I bring the work; you bring the room. The
+        evening exists once, only there.
+      </p>
+      <p>
+        If something in this resonates, write to me. The first conversation is
+        always personal.
+      </p>
+    </div>
+
+    <div class="from-artist-signature">Triin Lellep</div>
+    <div class="from-artist-signature-meta">Composer-Soprano</div>
   </div>
 </section>
 
