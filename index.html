@@ -1333,6 +1333,11 @@
     overflow: hidden;
   }
 
+  .doc-gallery-tile:has(picture),
+  .doc-gallery-tile:has(img) {
+    opacity: 1;
+  }
+
   .doc-gallery-tile:hover {
     opacity: 1;
     border-color: var(--line-strong);
@@ -2263,7 +2268,6 @@
         autoplay muted loop playsinline preload="metadata"
         poster="triin-poster.jpg"
         aria-label="A short cinematic glimpse of Triin Lellep — silent loop">
-        <source src="triin-loop.webm" type="video/webm">
         <source src="triin-loop.mp4" type="video/mp4">
       </video>
     </div>
@@ -2354,15 +2358,49 @@
     <div class="section-eyebrow" style="margin-bottom: 40px;">Photographic Archive</div>
 
     <div class="doc-gallery">
-      <!-- Replace each placeholder with: <img src="photo.jpg" alt="..." /> -->
-      <div class="doc-gallery-tile">i</div>
-      <div class="doc-gallery-tile">ii</div>
-      <div class="doc-gallery-tile">iii</div>
-      <div class="doc-gallery-tile">iv</div>
-      <div class="doc-gallery-tile">v</div>
-      <div class="doc-gallery-tile">vi</div>
-      <div class="doc-gallery-tile">vii</div>
-      <div class="doc-gallery-tile">viii</div>
+      <div class="doc-gallery-tile">
+        <picture>
+          <source type="image/webp" srcset="gallery-i-800.webp 800w, gallery-i-1600.webp 1600w" sizes="(max-width: 900px) 50vw, 25vw">
+          <img src="gallery-i-800.jpg" srcset="gallery-i-800.jpg 800w, gallery-i-1600.jpg 1600w" sizes="(max-width: 900px) 50vw, 25vw" alt="Triin Lellep — Paris arcade, white coat" loading="lazy" decoding="async" width="800" height="800">
+        </picture>
+      </div>
+      <div class="doc-gallery-tile">
+        <picture>
+          <source type="image/webp" srcset="gallery-ii-800.webp 800w, gallery-ii-1600.webp 1600w" sizes="(max-width: 900px) 50vw, 25vw">
+          <img src="gallery-ii-800.jpg" srcset="gallery-ii-800.jpg 800w, gallery-ii-1600.jpg 1600w" sizes="(max-width: 900px) 50vw, 25vw" alt="Triin Lellep — Paris doorway, pleated dress" loading="lazy" decoding="async" width="800" height="800">
+        </picture>
+      </div>
+      <div class="doc-gallery-tile">
+        <picture>
+          <source type="image/webp" srcset="gallery-iii-800.webp 800w, gallery-iii-1600.webp 1600w" sizes="(max-width: 900px) 50vw, 25vw">
+          <img src="gallery-iii-800.jpg" srcset="gallery-iii-800.jpg 800w, gallery-iii-1600.jpg 1600w" sizes="(max-width: 900px) 50vw, 25vw" alt="Triin Lellep — aerial composition, white tulle" loading="lazy" decoding="async" width="800" height="800">
+        </picture>
+      </div>
+      <div class="doc-gallery-tile">
+        <picture>
+          <source type="image/webp" srcset="gallery-iv-800.webp 800w, gallery-iv-1600.webp 1600w" sizes="(max-width: 900px) 50vw, 25vw">
+          <img src="gallery-iv-800.jpg" srcset="gallery-iv-800.jpg 800w, gallery-iv-1600.jpg 1600w" sizes="(max-width: 900px) 50vw, 25vw" alt="Triin Lellep — gilded mirror, blush gown" loading="lazy" decoding="async" width="800" height="800">
+        </picture>
+      </div>
+      <div class="doc-gallery-tile">
+        <picture>
+          <source type="image/webp" srcset="gallery-v-800.webp 800w, gallery-v-1600.webp 1600w" sizes="(max-width: 900px) 50vw, 25vw">
+          <img src="gallery-v-800.jpg" srcset="gallery-v-800.jpg 800w, gallery-v-1600.jpg 1600w" sizes="(max-width: 900px) 50vw, 25vw" alt="Triin Lellep — black dress, prismatic light" loading="lazy" decoding="async" width="800" height="800">
+        </picture>
+      </div>
+      <div class="doc-gallery-tile">
+        <picture>
+          <source type="image/webp" srcset="gallery-vi-800.webp 800w, gallery-vi-1600.webp 1600w" sizes="(max-width: 900px) 50vw, 25vw">
+          <img src="gallery-vi-800.jpg" srcset="gallery-vi-800.jpg 800w, gallery-vi-1600.jpg 1600w" sizes="(max-width: 900px) 50vw, 25vw" alt="Triin Lellep — baroque interior, ivory dress" loading="lazy" decoding="async" width="800" height="800">
+        </picture>
+      </div>
+      <div class="doc-gallery-tile">
+        <picture>
+          <source type="image/webp" srcset="gallery-vii-800.webp 800w, gallery-vii-1600.webp 1600w" sizes="(max-width: 900px) 50vw, 25vw">
+          <img src="gallery-vii-800.jpg" srcset="gallery-vii-800.jpg 800w, gallery-vii-1600.jpg 1600w" sizes="(max-width: 900px) 50vw, 25vw" alt="Triin Lellep — Cannes Film Festival" loading="lazy" decoding="async" width="800" height="800">
+        </picture>
+      </div>
+      <div class="doc-gallery-tile">viii — to follow</div>
     </div>
 
   </div>
