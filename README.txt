@@ -1,70 +1,73 @@
-TRIIN LELLEP STUDIO — STUDIO-MUDELI ÜLEMINEK
+TRIIN LELLEP STUDIO — TUGI-SÜSTEEMI TÄIENDUS
 =============================================
-2026-05-16 (õhtune fix-pakk)
+2026-05-16  (õhtune lõpetus)
 
-KOLM SUUREMAT MUUDATUST:
-
-1. KONTAKTID — kogu otse-kontakt Triiniga eemaldatud
-   ---------------------------------------------------
-   - Triini Eesti telefon: EEMALDATUD kõikidest lehtedest
-   - Triini isiklik gmail: EEMALDATUD
-   - Asendatud: inquiries@triinlellep.studio
-   - "Write to Triin" / "Écrire à Triin" / "致信特林" → "Write to the Studio" / 
-     "Écrire au Studio" / "致信工作室"
-   - Footer pealkiri "Private Inquiries" → "The Studio" (vastavad keeled)
-
-   See viib brändi tippartisti-mudelisse: kogu suhtlus käib läbi stuudio.
-
-2. OPEN GRAPH PILDID — sotsiaalmeedia ja messaging linkid
-   ---------------------------------------------------------
-   Lisatud kolm OG-pilti (1200×630) kausta og/:
-     og-index.jpg   (inglise)
-     og-fr.jpg      (prantsuse)  
-     og-zh.jpg      (hiina)
-   
-   HTML viitab juba neile faili-teedele. Nüüd kui keegi jagab linki
-   WhatsApp / Telegram / iMessage / Twitter / LinkedIn -is, kuvatakse
-   ilus eelvaade Triini portreega.
-
-3. SCHEMA.ORG STRUKTUREERITUD ANDMED
-   ----------------------------------
-   Lisatud JSON-LD plokk index.html / fr.html / zh.html sees.
-   Sisaldab: Person (Triin), MusicComposition (Opus I), Service 
-   (Private Écoute), WebSite. See aitab Google'il, ChatGPT-l, 
-   Claude'il, Perplexity'l Triini õigesti esindada otsingutulemustes.
+SISU:
+  - 12 uut tier-lehte (Listen, Resonate, Carry, Witness × EN/FR/ZH)
+  - 3 uuendatud Tugi-lehte (nupud viivad nüüd tier-lehtedele, mitte otse Stripe-le)
+  - Triin-Stripe-juhend-2026-05-16.pdf — täielik samm-sammult eestikeelne juhend
 
 
-GITHUB-IS:
-  1. Loo repo's uus kaust nimega "og" (kui pole)
-  2. Lae üles 3 OG-pilti kausta og/
-  3. Asenda repo juurkausta järgmised 6 HTML-faili:
-     - index.html
-     - fr.html
-     - zh.html
-     - support.html
-     - support-fr.html
-     - support-zh.html
-  4. Commit otse main-i
-
-OLULINE — STUUDIO E-MAIL:
-  inquiries@triinlellep.studio peab tegelikult olemas olema.
-  Sea see üles oma DNS-i kaudu (Gandi, kust domeen tuli):
-    - Lihtsaim viis: forward'i see oma KRYONIS-mail-i või Triini gmail-i juurde
-    - Email forwarding tasuta enamasti Gandi paketis
-    - Sätte koht Gandi: domeen → Email forwarding → Add forwarding
+MIKS UUS STRUKTUUR:
+  Varem: klikk Tugi-lehel "Soutenir · €25" → kohe Stripe kaardimakse-vorm.
+  See oli liiga otsene tippartist'i jaoks — eriti €450 tier-i puhul.
+  
+  Nüüd: klikk "Listen — Learn More" → avab terve tier-lehe, mis sisaldab:
+    1. Hero — tier nimi, tagline, hind
+    2. Triin'i sõnum just sellele tier-tasandile
+    3. Mida saad selle eest (3-5 punkti)
+    4. Konteksti — miks see summa, miks see vorm
+    5. Maksunupp lehe lõpus, koos turvasignaalidega
+  
+  Maksenupp viib alles seal lõpus Stripe-le. Kogu kogemus on professionaalne,
+  põhjalik, kunstiline — ja Stripe avaneb ainult tõsiselt veendunutele.
 
 
-MUUD MÄRKUSED (vajab käsitsi kontrolli):
+12 UUT FAILI:
+  Inglise:    listen.html · resonate.html · carry.html · witness.html
+  Prantsuse:  listen-fr.html · resonate-fr.html · carry-fr.html · witness-fr.html
+  Hiina:      listen-zh.html · resonate-zh.html · carry-zh.html · witness-zh.html
 
-  - circle.html ja commissions.html — pole selles paketis, kuna pole 
-    minu töökeskkonnas. KONTROLLI NEED LEHED REPOS — kui sealt leiad 
-    "triinlellep@gmail.com" või "+372 5557 5590", asenda samuti.
-    Saada need failid mulle, kui tahad et ka need uuendaks.
 
-  - Stripe Payment Links — endiselt asendamata support*.html failides.
-    Kui veel pole loonud: REPLACE_WITH_LISTEN_25 / RESONATE_50 / 
-    CARRY_150 / WITNESS_450
+3 UUENDATUD FAILI:
+  support.html · support-fr.html · support-zh.html
+  (Tugi-lehe tier-kaartide nupud viivad nüüd tier-lehtedele)
+
+
+STRIPE PDF JUHEND TRIINULE:
+  Triin-Stripe-juhend-2026-05-16.pdf (8 lehte, eesti keeles)
+  
+  Sisukord:
+    1. Stripe konto loomine
+    2. Konto seadistamine ja kinnitamine (KYC)
+    3. Maksu-seadistus
+    4. Nelja Payment Link'i loomine (täpsed väljad iga tier kohta)
+    5. Linkide kopeerimine ja saidile lisamine (kohatäitjate asendus)
+    6. Maksete jälgimine ja väljamaksed (sh teenustasud)
+    7. Tagasimaksete protsess
+    8. Lisaressursid + kontrolli-nimekiri
+  
+  See PDF on iseseisev juhend, mille Triin saab täita ilma KRYONIS abita
+  (vajadusel siiski abi). Kogu protsess ~60-90 min, kui isikutunnistus
+  ja pangakonto andmed on käeulatuses.
+
+
+GITHUBIS:
+  1. Lae üles 12 uut tier-faili (kõik repo juurkausta)
+  2. Asenda 3 olemasolevat support-faili
+  3. Commit otse main-i
+  
+  Kõik 15 faili lähevad sama repo juurkausta, ei vaja eraldi kaustasid.
+
+
+PÄRAST GITHUB-I:
+  Saada Triinule e-mailile PDF + see lühike sõnum:
+  
+    "Triin, lisaks saidi täiendustele on siin Stripe seadistuse juhend.
+    Loo Stripe konto, seadista 4 Payment Link'i juhendis kirjeldatud
+    viisil, ja saada mulle 4 linki - lisan need saidile. Kui mingi
+    samm tundub ebakindel, anna märku."
 
 
 ----
-KRYONIS Sovereign Systems · Mai 2026
+Triin Lellep Studio · Mai 2026
