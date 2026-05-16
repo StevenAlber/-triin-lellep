@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>支持作品 — Triin Lellep</title>
+<meta name="description" content="若作品触动了您,您可以直接支持它。四种留下印记的方式。先聆听四首歌。" />
+
+<meta property="og:title" content="支持作品 — Triin Lellep" />
+<meta property="og:description" content="四种支持作品的方式。先聆听四首歌。" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Triin Lellep" />
+<meta property="og:url" content="https://triinlellep.studio/support-zh.html" />
+<meta property="og:locale" content="zh_CN" />
+<meta property="og:image" content="https://triinlellep.studio/og/og-zh.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="支持作品 — Triin Lellep" />
+<meta name="twitter:description" content="四种支持作品的方式。" />
+<meta name="twitter:image" content="https://triinlellep.studio/og/og-zh.jpg" />
+
+<link rel="canonical" href="https://triinlellep.studio/support-zh.html" />
+<link rel="alternate" hreflang="en" href="https://triinlellep.studio/support.html" />
+<link rel="alternate" hreflang="fr" href="https://triinlellep.studio/support-fr.html" />
+<link rel="alternate" hreflang="zh-CN" href="https://triinlellep.studio/support-zh.html" />
+<link rel="alternate" hreflang="x-default" href="https://triinlellep.studio/support.html" />
+
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#1C1612" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Marcellus&family=Noto+Serif+SC:wght@300;400;500;600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --burgundy: #5C2E2E; --burgundy-deep: #3D1E1E; --burgundy-glow: #7A3F3F;
+    --gold: #C9A961; --gold-soft: #B89651; --gold-deep: #8C7338;
+    --pearl: #EDE5D5; --pearl-warm: #F5EFE3;
+    --black: #1C1612; --black-warm: #2A1F1A; --black-deep: #0F0B09;
+    --grey: #8B7E72;
+    --line: rgba(201, 169, 97, 0.18);
+    --line-strong: rgba(201, 169, 97, 0.42);
+    --display: 'Marcellus', 'Noto Serif SC', serif;
+    --serif: 'Noto Serif SC', 'Cormorant Garamond', serif;
+    --body: 'Noto Serif SC', 'EB Garamond', Georgia, serif;
+    --display-cn: 'Noto Serif SC', serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  *::selection { background: var(--gold); color: var(--black); }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--body); font-size: 16px; line-height: 1.85; color: var(--pearl); background: var(--black); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  a { color: inherit; text-decoration: none; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+  .animate-fadeUp { animation: fadeUp 1s cubic-bezier(0.2, 0.6, 0.2, 1) both; }
+  .delay-1 { animation-delay: 0.1s; } .delay-2 { animation-delay: 0.25s; }
+  .delay-3 { animation-delay: 0.4s; } .delay-4 { animation-delay: 0.55s; }
+
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 24px 48px; background: linear-gradient(180deg, rgba(15, 11, 9, 0.92) 0%, rgba(15, 11, 9, 0) 100%); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid transparent; transition: all 0.4s ease; }
+  nav.scrolled { background: rgba(15, 11, 9, 0.96); border-bottom-color: var(--line); padding: 18px 48px; }
+  .logo { font-family: 'Marcellus', serif; font-size: 16px; letter-spacing: 0.32em; color: var(--pearl); display: flex; flex-direction: column; gap: 2px; }
+  .logo span { font-family: var(--display-cn); font-size: 11px; letter-spacing: 0.24em; color: var(--gold); }
+  .nav-back { font-family: var(--body); font-size: 13px; letter-spacing: 0.14em; color: var(--pearl); opacity: 0.78; transition: all 0.3s; }
+  .nav-back:hover { opacity: 1; color: var(--gold); }
+  .lang-switch { display: flex; gap: 14px; padding-left: 24px; margin-left: 18px; border-left: 1px solid var(--line); align-items: center; }
+  .lang-switch a { font-family: var(--body); font-size: 12px; letter-spacing: 0.18em; color: var(--pearl); opacity: 0.78; transition: all 0.3s; }
+  .lang-switch a:hover { opacity: 1; color: var(--gold); }
+  .lang-switch a.active { color: var(--gold); opacity: 1; }
+  .nav-right { display: flex; align-items: center; }
+
+  .hero { min-height: 88vh; padding: 160px 48px 100px; display: flex; align-items: center; background: radial-gradient(ellipse at 50% 78%, rgba(92, 46, 46, 0.45) 0%, rgba(28, 22, 18, 0.55) 42%, rgba(15, 11, 9, 1) 78%), linear-gradient(180deg, #120E0C 0%, #1A1110 52%, #120E0C 100%); }
+  .hero-inner { max-width: 880px; margin: 0 auto; width: 100%; text-align: center; position: relative; z-index: 2; }
+  .hero-eyebrow { font-family: var(--body); font-size: 12px; letter-spacing: 0.32em; color: var(--gold); margin-bottom: 36px; opacity: 0.95; }
+  .hero-eyebrow::before, .hero-eyebrow::after { content: '—'; margin: 0 16px; color: var(--gold); opacity: 0.65; }
+  .hero-title { font-family: var(--display-cn); font-size: clamp(34px, 5.4vw, 64px); line-height: 1.4; color: var(--pearl); margin-bottom: 32px; letter-spacing: 0.04em; font-weight: 500; }
+  .hero-title em { font-style: normal; color: var(--gold); }
+  .hero-lede { font-family: var(--serif); font-size: clamp(16px, 1.5vw, 19px); line-height: 1.95; color: var(--pearl); max-width: 720px; margin: 0 auto 36px; opacity: 0.92; }
+  .hero-lede em { color: var(--gold); font-style: normal; }
+  .hero-rule { width: 60px; height: 1px; background: var(--gold); margin: 0 auto; opacity: 0.55; }
+
+  .listen { padding: 140px 48px 100px; background: var(--black-warm); border-top: 1px solid var(--line); }
+  .section-inner { max-width: 980px; margin: 0 auto; }
+  .section-eyebrow { font-family: var(--body); font-size: 12px; letter-spacing: 0.32em; color: var(--gold); margin-bottom: 24px; display: flex; align-items: center; gap: 16px; }
+  .section-eyebrow::before { content: ''; width: 32px; height: 1px; background: var(--gold); opacity: 0.65; }
+  h2 { font-family: var(--display-cn); font-size: clamp(28px, 3.6vw, 44px); line-height: 1.4; color: var(--pearl); margin-bottom: 36px; letter-spacing: 0.04em; font-weight: 500; }
+  h2 em { font-style: normal; color: var(--gold); }
+  .listen-lede { font-family: var(--serif); font-size: 17px; line-height: 1.95; color: var(--pearl); opacity: 0.88; max-width: 760px; margin-bottom: 64px; }
+  .listen-lede em { color: var(--gold); font-style: normal; }
+
+  .tracks { display: flex; flex-direction: column; gap: 0; border-top: 1px solid var(--line); }
+  .track { display: grid; grid-template-columns: 56px 1fr auto; gap: 28px; align-items: center; padding: 28px 12px 28px 4px; border-bottom: 1px solid var(--line); transition: background 0.35s ease; }
+  .track:hover { background: rgba(201, 169, 97, 0.025); }
+  .track.is-playing { background: rgba(201, 169, 97, 0.05); }
+  .track-num { font-family: 'Marcellus', serif; font-size: 22px; color: var(--gold); text-align: right; line-height: 1; opacity: 0.85; }
+  .track-info { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+  .track-title { font-family: 'Marcellus', serif; font-size: 22px; line-height: 1.3; color: var(--pearl); letter-spacing: 0.01em; }
+  .track-note { font-family: var(--serif); font-size: 14px; color: var(--gold); opacity: 0.88; line-height: 1.7; }
+  .track-controls { display: flex; align-items: center; gap: 14px; }
+  .play-btn { width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line-strong); background: transparent; color: var(--gold); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; padding: 0; flex-shrink: 0; }
+  .play-btn:hover { background: rgba(201, 169, 97, 0.1); border-color: var(--gold); transform: scale(1.04); }
+  .play-btn:focus-visible { outline: 1px solid var(--gold); outline-offset: 3px; }
+  .play-btn svg { width: 14px; height: 14px; display: block; }
+  .play-icon { display: block; }
+  .pause-icon { display: none; }
+  .track.is-playing .play-icon { display: none; }
+  .track.is-playing .pause-icon { display: block; }
+  .track.is-playing .play-btn { background: rgba(201, 169, 97, 0.14); border-color: var(--gold); }
+  .track-duration { font-family: var(--body); font-size: 11px; letter-spacing: 0.22em; color: var(--pearl); opacity: 0.6; min-width: 38px; text-align: right; }
+  .track-progress { grid-column: 1 / -1; height: 0; overflow: hidden; transition: height 0.3s ease, padding 0.3s ease; padding-top: 0; padding-bottom: 0; }
+  .track.is-playing .track-progress, .track.has-played .track-progress { height: 22px; padding-top: 12px; padding-bottom: 10px; }
+  .track-progress-bar { height: 2px; background: var(--line); position: relative; cursor: pointer; }
+  .track-progress-fill { height: 100%; background: var(--gold); width: 0; transition: width 0.15s linear; }
+  .track-progress-fill::after { content: ''; position: absolute; right: -4px; top: 50%; transform: translateY(-50%); width: 8px; height: 8px; border-radius: 50%; background: var(--gold); opacity: 0; transition: opacity 0.2s ease; }
+  .track.is-playing .track-progress-fill::after { opacity: 1; }
+
+  .tiers-section { padding: 140px 48px; background: var(--black); }
+  .tiers-lede { font-family: var(--serif); font-size: 17px; line-height: 1.95; color: var(--pearl); opacity: 0.92; max-width: 780px; margin-bottom: 72px; }
+  .tiers-lede em { color: var(--gold); font-style: normal; }
+  .tiers { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .tier { background: linear-gradient(180deg, var(--black-warm) 0%, var(--black-deep) 100%); border: 1px solid var(--line); padding: 40px 28px; display: flex; flex-direction: column; position: relative; transition: all 0.5s cubic-bezier(0.2, 0.6, 0.2, 1); }
+  .tier:hover { border-color: var(--line-strong); transform: translateY(-4px); }
+  .tier.featured { background: linear-gradient(180deg, var(--burgundy-deep) 0%, var(--black-deep) 100%); border-color: var(--line-strong); }
+  .tier.featured::before { content: '承载作品'; position: absolute; top: -10px; left: 24px; background: var(--gold); color: var(--black); font-family: var(--display-cn); font-size: 11px; letter-spacing: 0.22em; padding: 4px 12px; }
+  .tier-num { font-family: 'Marcellus', serif; font-size: 14px; color: var(--gold); letter-spacing: 0.06em; margin-bottom: 14px; opacity: 0.85; }
+  .tier-name { font-family: var(--display-cn); font-size: 26px; line-height: 1.3; color: var(--pearl); margin-bottom: 6px; font-weight: 500; }
+  .tier-tagline { font-family: var(--serif); font-size: 14px; color: var(--pearl); opacity: 0.72; line-height: 1.7; margin-bottom: 24px; min-height: 50px; }
+  .tier-price { font-family: 'Marcellus', serif; font-size: 44px; line-height: 1; color: var(--gold); margin-bottom: 6px; letter-spacing: 0.01em; }
+  .tier-price-meta { font-family: var(--body); font-size: 11px; letter-spacing: 0.22em; color: var(--pearl); opacity: 0.55; margin-bottom: 26px; padding-bottom: 22px; border-bottom: 1px solid var(--line); }
+  .tier-gives-label { font-family: var(--body); font-size: 11px; letter-spacing: 0.28em; color: var(--gold); margin-bottom: 14px; }
+  .tier-gives { font-family: var(--serif); font-size: 15px; line-height: 1.85; color: var(--pearl); opacity: 0.88; margin-bottom: 28px; flex: 1; }
+  .tier-gives em { color: var(--gold); font-style: normal; }
+  .tier-cta { display: block; width: 100%; padding: 13px 18px; background: rgba(201, 169, 97, 0.06); color: var(--gold); font-family: var(--body); font-size: 13px; letter-spacing: 0.18em; text-align: center; transition: all 0.4s ease; border: 1px solid rgba(201, 169, 97, 0.45); cursor: pointer; }
+  .tier-cta:hover { background: rgba(201, 169, 97, 0.14); color: var(--pearl); border-color: rgba(201, 169, 97, 0.75); }
+
+  .quiet-note { padding: 100px 48px; background: var(--black-warm); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); text-align: center; }
+  .quiet-note-inner { max-width: 720px; margin: 0 auto; }
+  .quiet-note-mark { font-family: 'Marcellus', serif; font-size: 56px; color: var(--gold); line-height: 1; margin-bottom: 32px; opacity: 0.75; }
+  .quiet-note p { font-family: var(--serif); font-size: clamp(17px, 1.85vw, 21px); line-height: 1.95; color: var(--pearl); opacity: 0.92; margin-bottom: 18px; }
+  .quiet-note p em { color: var(--gold); font-style: normal; }
+  .quiet-note-sig { font-family: 'Marcellus', serif; font-size: 18px; color: var(--gold); letter-spacing: 0.04em; margin-top: 28px; }
+
+  .alternatives { padding: 120px 48px; background: var(--black); }
+  .alt-eyebrow { font-family: var(--body); font-size: 12px; letter-spacing: 0.32em; color: var(--gold); margin-bottom: 24px; display: flex; align-items: center; gap: 16px; max-width: 880px; margin-left: auto; margin-right: auto; }
+  .alt-eyebrow::before { content: ''; width: 32px; height: 1px; background: var(--gold); opacity: 0.65; }
+  .alt-title { font-family: var(--display-cn); font-size: clamp(26px, 3.2vw, 36px); line-height: 1.4; color: var(--pearl); margin-bottom: 56px; max-width: 880px; margin-left: auto; margin-right: auto; font-weight: 500; }
+  .alt-title em { font-style: normal; color: var(--gold); }
+  .alt-grid { max-width: 880px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+  .alt-card { background: linear-gradient(180deg, var(--black-warm) 0%, var(--black-deep) 100%); border: 1px solid var(--line); padding: 36px 32px; display: flex; flex-direction: column; gap: 14px; transition: all 0.4s ease; }
+  .alt-card:hover { border-color: var(--line-strong); }
+  .alt-card-eyebrow { font-family: var(--body); font-size: 11px; letter-spacing: 0.28em; color: var(--gold); }
+  .alt-card h3 { font-family: var(--display-cn); font-size: 22px; color: var(--pearl); font-weight: 500; }
+  .alt-card p { font-family: var(--serif); font-size: 15px; line-height: 1.9; color: var(--pearl); opacity: 0.85; flex: 1; margin-bottom: 6px; }
+  .alt-card p em { color: var(--gold); font-style: normal; }
+  .alt-card-link { font-family: var(--body); font-size: 12px; letter-spacing: 0.22em; color: var(--gold); padding-top: 8px; border-top: 1px solid var(--line); transition: color 0.3s; }
+  .alt-card-link:hover { color: var(--pearl); }
+  .alt-card-link::after { content: ' →'; transition: margin 0.3s; }
+  .alt-card:hover .alt-card-link::after { margin-left: 4px; }
+
+  footer { padding: 80px 48px 40px; background: var(--black-deep); border-top: 1px solid var(--line); }
+  .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; }
+  .footer-left { font-family: var(--body); font-size: 13px; letter-spacing: 0.14em; color: var(--grey); }
+  .footer-right { display: flex; gap: 24px; flex-wrap: wrap; }
+  .footer-right a { font-family: var(--body); font-size: 12px; letter-spacing: 0.18em; color: var(--pearl); opacity: 0.7; transition: all 0.3s; }
+  .footer-right a:hover { opacity: 1; color: var(--gold); }
+
+  @media (max-width: 1100px) { .tiers { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 900px) {
+    nav { padding: 16px 22px; }
+    nav.scrolled { padding: 14px 22px; }
+    .logo { font-size: 14px; letter-spacing: 0.28em; }
+    .lang-switch { padding-left: 14px; margin-left: 10px; gap: 9px; }
+    .lang-switch a { font-size: 11px; letter-spacing: 0.16em; }
+    .hero { padding: 120px 24px 70px; min-height: auto; }
+    .hero-eyebrow::before, .hero-eyebrow::after { display: none; }
+    .listen, .tiers-section, .quiet-note, .alternatives { padding: 80px 24px; }
+    .listen-lede { margin-bottom: 40px; }
+    .track { grid-template-columns: 38px 1fr auto; gap: 18px; padding: 22px 4px; }
+    .track-num { font-size: 18px; }
+    .track-title { font-size: 18px; }
+    .track-controls { gap: 10px; }
+    .play-btn { width: 40px; height: 40px; }
+    .track-duration { font-size: 10px; min-width: 32px; }
+    .tiers { grid-template-columns: 1fr; gap: 16px; }
+    .tier { padding: 36px 28px; }
+    .tier-tagline { min-height: auto; }
+    .alt-grid { grid-template-columns: 1fr; gap: 16px; }
+    .alt-card { padding: 28px 24px; }
+    h2 { margin-bottom: 28px; }
+  }
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="zh.html" class="logo">
+    TRIIN LELLEP
+    <span>支持作品</span>
+  </a>
+  <div class="nav-right">
+    <a href="zh.html" class="nav-back">← 作品</a>
+    <div class="lang-switch">
+      <a href="support.html">EN</a>
+      <a href="support-fr.html">FR</a>
+      <a href="support-zh.html" class="active">中</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow animate-fadeUp">一扇更安静的门</div>
+    <h1 class="hero-title animate-fadeUp delay-1">若作品触动了您,<em>您可以留下印记</em>。</h1>
+    <p class="hero-lede animate-fadeUp delay-2">
+      并非每一次相遇,皆须属于正式的赞助或委约架构。有时,一个声音只是寻到了您——在某个奇异的时刻,在两种语言之间,在并未期待它的房间里——而您愿意承认,它已抵达。<em>此页,正是为此而设。</em>
+    </p>
+    <p class="hero-lede animate-fadeUp delay-3" style="margin-bottom: 56px;">
+      下方有四首歌可供聆听,再往下,有四种支持作品的方式。请选您觉得诚实的那一种。此处无一物是象征性的;<em>每一笔贡献,皆直接资助作品的第一章——以及尚未到达的房间</em>。
+    </p>
+    <div class="hero-rule animate-fadeUp delay-4"></div>
+  </div>
+</section>
+
+<section class="listen" id="listen">
+  <div class="section-inner">
+    <div class="section-eyebrow">先聆听</div>
+    <h2>四首歌,<em>在您决定之前</em>。</h2>
+    <p class="listen-lede">
+      这些并非出自 <em>Opus I</em>。它们更早,也更轻——是 Triin 在过去两年间于录音室所写、所录的歌。这是聆听这是怎样一种声音、最简单的方式——在再读一字之前。
+    </p>
+
+    <div class="tracks">
+      <article class="track" data-track-id="i">
+        <div class="track-num">I.</div>
+        <div class="track-info">
+          <div class="track-title">Ticki Ticki Tock</div>
+          <div class="track-note">一件细小、滴答之物——在一首歌尚未知道自己是什么之前的初次冲动。</div>
+        </div>
+        <div class="track-controls">
+          <button class="play-btn" aria-label="播放 Ticki Ticki Tock" data-audio="track-i-ticki-ticki-tock.mp3">
+            <svg class="play-icon" viewBox="0 0 14 14" fill="currentColor"><path d="M2 0 L14 7 L2 14 Z"/></svg>
+            <svg class="pause-icon" viewBox="0 0 14 14" fill="currentColor"><rect x="1" y="0" width="4" height="14"/><rect x="9" y="0" width="4" height="14"/></svg>
+          </button>
+          <span class="track-duration">3:30</span>
+        </div>
+        <div class="track-progress"><div class="track-progress-bar"><div class="track-progress-fill"></div></div></div>
+      </article>
+
+      <article class="track" data-track-id="ii">
+        <div class="track-num">II.</div>
+        <div class="track-info">
+          <div class="track-title">Magic</div>
+          <div class="track-note">一种被谱写的敬意——当魔法被命名之后,仍然留存之物。</div>
+        </div>
+        <div class="track-controls">
+          <button class="play-btn" aria-label="播放 Magic" data-audio="track-ii-magic.mp3">
+            <svg class="play-icon" viewBox="0 0 14 14" fill="currentColor"><path d="M2 0 L14 7 L2 14 Z"/></svg>
+            <svg class="pause-icon" viewBox="0 0 14 14" fill="currentColor"><rect x="1" y="0" width="4" height="14"/><rect x="9" y="0" width="4" height="14"/></svg>
+          </button>
+          <span class="track-duration">4:07</span>
+        </div>
+        <div class="track-progress"><div class="track-progress-bar"><div class="track-progress-fill"></div></div></div>
+      </article>
+
+      <article class="track" data-track-id="iii">
+        <div class="track-num">III.</div>
+        <div class="track-info">
+          <div class="track-title">I Walk the Fire</div>
+          <div class="track-note">调到一个缓慢的频率——一首适合闭眼聆听的歌。</div>
+        </div>
+        <div class="track-controls">
+          <button class="play-btn" aria-label="播放 I Walk the Fire" data-audio="track-iii-i-walk-the-fire.mp3">
+            <svg class="play-icon" viewBox="0 0 14 14" fill="currentColor"><path d="M2 0 L14 7 L2 14 Z"/></svg>
+            <svg class="pause-icon" viewBox="0 0 14 14" fill="currentColor"><rect x="1" y="0" width="4" height="14"/><rect x="9" y="0" width="4" height="14"/></svg>
+          </button>
+          <span class="track-duration">2:57</span>
+        </div>
+        <div class="track-progress"><div class="track-progress-bar"><div class="track-progress-fill"></div></div></div>
+      </article>
+
+      <article class="track" data-track-id="iv">
+        <div class="track-num">IV.</div>
+        <div class="track-info">
+          <div class="track-title">Mountains</div>
+          <div class="track-note">最接近自身源头的声音——最接近它后来所成为的那场 écoute 的一首歌。</div>
+        </div>
+        <div class="track-controls">
+          <button class="play-btn" aria-label="播放 Mountains" data-audio="track-iv-mountains.mp3">
+            <svg class="play-icon" viewBox="0 0 14 14" fill="currentColor"><path d="M2 0 L14 7 L2 14 Z"/></svg>
+            <svg class="pause-icon" viewBox="0 0 14 14" fill="currentColor"><rect x="1" y="0" width="4" height="14"/><rect x="9" y="0" width="4" height="14"/></svg>
+          </button>
+          <span class="track-duration">3:01</span>
+        </div>
+        <div class="track-progress"><div class="track-progress-bar"><div class="track-progress-fill"></div></div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="tiers-section" id="tiers">
+  <div class="section-inner">
+    <div class="section-eyebrow">四种支持方式</div>
+    <h2>选您觉得<em>诚实</em>的那一种。</h2>
+    <p class="tiers-lede">
+      每个层级都是一次性贡献。无订阅,无续费,无未来义务。您所收到的回礼是小而私人的——一份私下的致谢、一份安静的列名、一部影片,视乎您的姿态。<em>重要的是您所成就的,而非寄回给您的。</em>
+    </p>
+
+    <div class="tiers">
+
+      <div class="tier">
+        <div class="tier-num">i.</div>
+        <div class="tier-name">聆听</div>
+        <div class="tier-tagline">献给在其中一首歌前曾驻足的聆听者。</div>
+        <div class="tier-price">€25</div>
+        <div class="tier-price-meta">一次性 · 无续费</div>
+        <div class="tier-gives-label">作为致谢</div>
+        <p class="tier-gives">
+          私密发送四首歌的高分辨率原档至您的电邮——未经压缩,以 Triin 录制时的原貌。
+        </p>
+        <a href="https://buy.stripe.com/REPLACE_WITH_LISTEN_25" target="_blank" rel="noopener" class="tier-cta">支持 · €25</a>
+      </div>
+
+      <div class="tier">
+        <div class="tier-num">ii.</div>
+        <div class="tier-name">共鸣</div>
+        <div class="tier-tagline">献给已知此为何种艺术家的友人。</div>
+        <div class="tier-price">€50</div>
+        <div class="tier-price-meta">一次性 · 无续费</div>
+        <div class="tier-gives-label">作为致谢</div>
+        <p class="tier-gives">
+          高分辨率四首歌,加上 <em>Triin 亲笔手写的一封信</em>,寄至您所选的地址——纸上的、非电邮的。
+        </p>
+        <a href="https://buy.stripe.com/REPLACE_WITH_RESONATE_50" target="_blank" rel="noopener" class="tier-cta">支持 · €50</a>
+      </div>
+
+      <div class="tier featured">
+        <div class="tier-num">iii.</div>
+        <div class="tier-name">承载</div>
+        <div class="tier-tagline">献给愿意帮助将这把声音,送入它尚未到过的房间者。</div>
+        <div class="tier-price">€150</div>
+        <div class="tier-price-meta">一次性 · 无续费</div>
+        <div class="tier-gives-label">作为致谢</div>
+        <p class="tier-gives">
+          以上一切,以及首场 écoute 完成后的<em>三分钟电影短片</em>——在任何公开发布之前,私密送达。
+        </p>
+        <a href="https://buy.stripe.com/REPLACE_WITH_CARRY_150" target="_blank" rel="noopener" class="tier-cta">支持 · €150</a>
+      </div>
+
+      <div class="tier">
+        <div class="tier-num">iv.</div>
+        <div class="tier-name">见证</div>
+        <div class="tier-tagline">献给愿意安静地立于第一章近旁者。</div>
+        <div class="tier-price">€450</div>
+        <div class="tier-price-meta">一次性 · 无续费</div>
+        <div class="tier-gives-label">作为致谢</div>
+        <p class="tier-gives">
+          以上一切,十二分钟纪录片在发布前的私密版本,以及——若您愿意——<em>您的姓名</em>列入使第一章成为可能者的私密名册。
+        </p>
+        <a href="https://buy.stripe.com/REPLACE_WITH_WITNESS_450" target="_blank" rel="noopener" class="tier-cta">支持 · €450</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="quiet-note">
+  <div class="quiet-note-inner">
+    <div class="quiet-note-mark">"</div>
+    <p>
+      我从未以此种方式请求支持。我现在轻轻地请求,因为<em>作品的第一章,属于那些早于世界听见它的人</em>。
+    </p>
+    <p>
+      您所寄出的——二十五、五十、一百五十、四百五十——皆会直接抵达。我们之间无平台。感谢您读到这里。
+    </p>
+    <div class="quiet-note-sig">Triin Lellep</div>
+  </div>
+</section>
+
+<section class="alternatives">
+  <div class="alt-eyebrow">另外两扇门</div>
+  <h2 class="alt-title">若您与作品的<em>关系</em>不同。</h2>
+
+  <div class="alt-grid">
+    <a href="circle.html" class="alt-card">
+      <div class="alt-card-eyebrow">致赞助人</div>
+      <h3>The Écoute Circle</h3>
+      <p>
+        一个小型私密圈子,由三十一位赞助人组成,支持电影声乐作品的第一章。<em>€500 — €7,500。</em>凭邀请,凭信任,凭契合。
+      </p>
+      <span class="alt-card-link">阅读邀请函</span>
+    </a>
+
+    <a href="commissions.html" class="alt-card">
+      <div class="alt-card-eyebrow">致主人</div>
+      <h3>私人委约</h3>
+      <p>
+        为您的厅堂委约一场九十分钟的原创私密 écoute。三种规模。<em>€17.5k — €150k。</em>酬金透明,直接预订。
+      </p>
+      <span class="alt-card-link">前往预订系统</span>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-left">© 2026 Triin Lellep · 作曲家兼女高音 · 版权所有</div>
+    <div class="footer-right">
+      <a href="zh.html">作品</a>
+      <a href="circle.html">The Circle</a>
+      <a href="commissions.html">委约</a>
+      <a href="mailto:triinlellep@gmail.com">联系</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 40) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  });
+
+  (function () {
+    const audio = new Audio();
+    audio.preload = 'metadata';
+    let currentRow = null;
+    const rows = document.querySelectorAll('.track');
+
+    function reset(row) {
+      if (!row) return;
+      row.classList.remove('is-playing');
+      const fill = row.querySelector('.track-progress-fill');
+      if (fill) fill.style.width = '0%';
+    }
+    function play(row) {
+      const btn = row.querySelector('.play-btn');
+      const src = btn.dataset.audio;
+      if (currentRow === row && !audio.paused) {
+        audio.pause(); row.classList.remove('is-playing'); return;
+      }
+      if (currentRow !== row) {
+        if (currentRow) reset(currentRow);
+        audio.src = src; currentRow = row;
+      }
+      audio.play().then(() => {
+        row.classList.add('is-playing'); row.classList.add('has-played');
+      }).catch((err) => console.error('Playback failed:', err));
+    }
+    rows.forEach((row) => {
+      const btn = row.querySelector('.play-btn');
+      btn.addEventListener('click', () => play(row));
+      const bar = row.querySelector('.track-progress-bar');
+      bar.addEventListener('click', (e) => {
+        if (currentRow !== row || !audio.duration) return;
+        const rect = bar.getBoundingClientRect();
+        const ratio = (e.clientX - rect.left) / rect.width;
+        audio.currentTime = audio.duration * Math.max(0, Math.min(1, ratio));
+      });
+    });
+    audio.addEventListener('timeupdate', () => {
+      if (!currentRow || !audio.duration) return;
+      const fill = currentRow.querySelector('.track-progress-fill');
+      if (fill) fill.style.width = (audio.currentTime / audio.duration * 100) + '%';
+    });
+    audio.addEventListener('ended', () => {
+      if (currentRow) {
+        currentRow.classList.remove('is-playing');
+        const fill = currentRow.querySelector('.track-progress-fill');
+        if (fill) fill.style.width = '0%';
+      }
+    });
+    audio.addEventListener('pause', () => {
+      if (currentRow && !audio.ended) currentRow.classList.remove('is-playing');
+    });
+  })();
+</script>
+
+</body>
+</html>

@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Triin Lellep — 作曲家兼女高音 · 私密声乐作品</title>
-<meta name="description" content="由欧洲作曲家兼女高音 Triin Lellep 创作并演绎的少量原创电影声乐作品。仅以私密邀请形式呈现。" />
-<meta property="og:title" content="Triin Lellep — 私密声乐作品" />
-<meta property="og:description" content="作曲家兼女高音 Triin Lellep 的原创电影声乐作品。仅以私密邀请形式。" />
+<title>特林·勒勒普 — 作曲家兼女高音 · 私人声乐作品</title>
+<meta name="description" content="由欧洲作曲家兼女高音特林·勒勒普创作并演绎的电影感声乐原创作品。仅限私人邀请,面向亚洲、欧洲及海湾地区精选文化主办方。" />
+<meta property="og:title" content="特林·勒勒普 — 私人声乐作品" />
+<meta property="og:description" content="作曲家兼女高音特林·勒勒普创作的电影感声乐原创作品。仅限私人邀请。" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Triin Lellep" />
 <meta property="og:url" content="https://triinlellep.studio/zh.html" />
@@ -14,17 +14,15 @@
 <meta property="og:locale:alternate" content="en" />
 <meta property="og:locale:alternate" content="fr" />
 <meta property="og:image" content="https://triinlellep.studio/og/og-zh.jpg" />
-<meta property="og:image:secure_url" content="https://triinlellep.studio/og/og-zh.jpg" />
-<meta property="og:image:type" content="image/jpeg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="Triin Lellep — 作曲家兼女高音 · 私密声乐作品" />
+<meta property="og:image:alt" content="特林·勒勒普 — 作曲家兼女高音 · 私人声乐作品" />
 
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Triin Lellep — 私密声乐作品" />
-<meta name="twitter:description" content="作曲家兼女高音 Triin Lellep 的原创电影声乐作品。仅以私密邀请形式。" />
+<meta name="twitter:title" content="特林·勒勒普 — 私人声乐作品" />
+<meta name="twitter:description" content="作曲家兼女高音特林·勒勒普创作的电影感声乐原创作品。仅限私人邀请。" />
 <meta name="twitter:image" content="https://triinlellep.studio/og/og-zh.jpg" />
-<meta name="twitter:image:alt" content="Triin Lellep — 作曲家兼女高音 · 私密声乐作品" />
+<meta name="twitter:image:alt" content="特林·勒勒普 — 作曲家兼女高音 · 私人声乐作品" />
 
 <link rel="canonical" href="https://triinlellep.studio/zh.html" />
 <link rel="alternate" hreflang="en" href="https://triinlellep.studio/" />
@@ -43,254 +41,983 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Marcellus&family=Noto+Serif+SC:wght@300;400;500;600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Marcellus&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Noto+Serif+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
-  :root {
-    --burgundy: #5C2E2E; --burgundy-deep: #3D1E1E; --burgundy-glow: #7A3F3F;
-    --gold: #C9A961; --gold-soft: #B89651; --gold-deep: #8C7338;
-    --pearl: #EDE5D5; --pearl-warm: #F5EFE3;
-    --black: #1C1612; --black-warm: #2A1F1A; --black-deep: #0F0B09;
-    --grey: #8B7E72; --grey-warm: #A89B8E;
-    --line: rgba(201, 169, 97, 0.18); --line-strong: rgba(201, 169, 97, 0.42);
-    --display: 'Marcellus', 'Noto Serif SC', serif;
-    --serif: 'Noto Serif SC', 'Cormorant Garamond', serif;
-    --body: 'Noto Serif SC', 'EB Garamond', Georgia, serif;
-    --display-cn: 'Noto Serif SC', serif;
+/* ============== TOKENS ============== */
+:root {
+  --burgundy: #5C2E2E;
+  --burgundy-deep: #3D1E1E;
+  --burgundy-glow: #7A3F3F;
+  --gold: #C9A961;
+  --gold-soft: #B89651;
+  --gold-deep: #8C7338;
+  --pearl: #EDE5D5;
+  --pearl-warm: #F5EFE3;
+  --black: #1C1612;
+  --black-warm: #2A1F1A;
+  --black-deep: #0F0B09;
+  --grey: #8B7E72;
+  --grey-warm: #A89B8E;
+  --line: rgba(201, 169, 97, 0.18);
+  --line-strong: rgba(201, 169, 97, 0.42);
+  --line-dim: rgba(237, 229, 213, 0.08);
+
+  --display: 'Marcellus', 'Cormorant Garamond', 'Garamond', serif;
+  --serif: 'Cormorant Garamond', 'EB Garamond', 'Garamond', serif;
+  --body: 'EB Garamond', 'Cormorant Garamond', Georgia, serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+*::selection { background: var(--gold); color: var(--black); }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--body);
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--pearl);
+  background: var(--black);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+a { color: inherit; text-decoration: none; }
+
+/* ============== ANIMATIONS ============== */
+@keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes glowPulse { 0%, 100% { opacity: 0.4; } 50% { opacity: 0.7; } }
+@keyframes appearSlow { from { opacity: 0; transform: scale(1.04); } to { opacity: 1; transform: scale(1); } }
+
+.animate-fadeUp { animation: fadeUp 1s cubic-bezier(0.2, 0.6, 0.2, 1) both; }
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.25s; }
+.delay-3 { animation-delay: 0.4s; }
+.delay-4 { animation-delay: 0.55s; }
+.delay-5 { animation-delay: 0.7s; }
+.delay-6 { animation-delay: 0.85s; }
+
+/* ============== NAVIGATION ============== */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  padding: 24px 48px;
+  background: linear-gradient(180deg, rgba(15, 11, 9, 0.92) 0%, rgba(15, 11, 9, 0) 100%);
+  backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+  display: flex; justify-content: space-between; align-items: center;
+  border-bottom: 1px solid transparent; transition: all 0.4s ease;
+}
+nav.scrolled { background: rgba(15, 11, 9, 0.96); border-bottom-color: var(--line); padding: 18px 48px; }
+.logo { font-family: var(--display); font-size: 16px; letter-spacing: 0.32em; font-weight: 400; color: var(--pearl); }
+.nav-links { list-style: none; display: flex; gap: 32px; align-items: center; }
+.nav-links a {
+  font-family: var(--body); font-size: 13px; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--pearl); opacity: 0.78;
+  transition: opacity 0.3s, color 0.3s; position: relative;
+}
+.nav-links a:hover { opacity: 1; color: var(--gold); }
+.nav-support { color: var(--gold) !important; opacity: 1 !important; }
+.nav-cta {
+  color: var(--gold) !important; opacity: 1 !important;
+  border: 1px solid var(--line-strong); padding: 10px 20px;
+  transition: all 0.3s ease;
+}
+.nav-cta:hover { background: var(--gold); color: var(--black) !important; }
+.lang-switch {
+  display: flex; gap: 14px; padding-left: 22px; margin-left: 6px;
+  border-left: 1px solid var(--line);
+}
+.lang-switch a { font-size: 12px; letter-spacing: 0.2em; }
+.lang-switch a.active { color: var(--gold); opacity: 1; }
+
+/* ============== HERO ============== */
+.hero {
+  min-height: 100vh; display: flex; align-items: center; justify-content: center;
+  padding: 140px 48px 80px; position: relative;
+  background:
+    radial-gradient(ellipse at 50% 78%, rgba(92, 46, 46, 0.58) 0%, rgba(28, 22, 18, 0.55) 42%, rgba(15, 11, 9, 1) 78%),
+    linear-gradient(180deg, #120E0C 0%, #1A1110 52%, #120E0C 100%);
+}
+.hero::before {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background:
+    radial-gradient(circle at 50% 58%, rgba(201, 169, 97, 0.035) 0%, transparent 42%),
+    radial-gradient(circle at 50% 82%, rgba(92, 46, 46, 0.12) 0%, transparent 48%);
+}
+.hero-inner { max-width: 980px; text-align: center; position: relative; z-index: 2; }
+.hero-eyebrow {
+  font-family: var(--body); font-size: 11px; letter-spacing: 0.42em;
+  text-transform: uppercase; color: var(--gold); margin-bottom: 32px; opacity: 0.95;
+}
+.hero-eyebrow::before, .hero-eyebrow::after { content: '—'; margin: 0 16px; color: var(--gold); opacity: 0.65; }
+.hero-title {
+  font-family: 'Cormorant Garamond', 'EB Garamond', Garamond, serif;
+  font-size: clamp(54px, 9vw, 120px); line-height: 0.96;
+  font-weight: 500; color: var(--pearl); letter-spacing: 0.055em; margin-bottom: 32px;
+}
+.hero-title-line { display: inline; }
+.hero-subtitle {
+  font-family: var(--serif); font-size: clamp(20px, 2.4vw, 28px);
+  font-style: italic; font-weight: 400; color: var(--gold);
+  margin-bottom: 48px; letter-spacing: 0.02em;
+}
+.hero-lede {
+  font-family: var(--serif); font-size: clamp(17px, 1.6vw, 21px);
+  line-height: 1.65; color: var(--pearl); max-width: 680px;
+  margin: 0 auto 56px; opacity: 0.92;
+}
+.hero-actions { display: flex; flex-direction: column; align-items: center; gap: 20px; }
+.hero-cta {
+  display: inline-block; padding: 14px 28px;
+  background: rgba(201, 169, 97, 0.06); color: var(--gold);
+  font-family: var(--body); font-size: 12px; letter-spacing: 0.18em;
+  text-transform: uppercase;
+  transition: all 0.4s cubic-bezier(0.2, 0.6, 0.2, 1);
+  border: 1px solid rgba(201, 169, 97, 0.45); text-align: center;
+}
+.hero-cta:hover { background: rgba(201, 169, 97, 0.14); color: var(--pearl); border-color: rgba(201, 169, 97, 0.75); }
+.hero-secondary {
+  font-family: var(--serif); font-style: italic; font-size: 16px;
+  color: var(--pearl); opacity: 0.7; transition: opacity 0.3s, color 0.3s;
+}
+.hero-secondary:hover { opacity: 1; color: var(--gold); }
+.hero-secondary span { transition: transform 0.3s; display: inline-block; margin-left: 6px; }
+.hero-secondary:hover span { transform: translateX(6px); }
+.scroll-indicator {
+  position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 12px;
+  opacity: 0.5; animation: glowPulse 3s ease-in-out infinite;
+}
+.scroll-indicator span {
+  font-family: var(--body); font-size: 10px; letter-spacing: 0.4em;
+  text-transform: uppercase; color: var(--gold);
+}
+.scroll-indicator div { width: 1px; height: 36px; background: var(--gold); }
+
+
+/* ============== NEGATION ============== */
+.negation {
+  padding: 140px 48px; background: var(--black); text-align: center;
+  border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+}
+.negation-inner { max-width: 760px; margin: 0 auto; }
+.negation-line {
+  font-family: var(--display); font-size: clamp(24px, 3.2vw, 38px);
+  line-height: 1.4; color: var(--pearl); margin-bottom: 18px;
+  opacity: 0.5; position: relative; display: inline-block;
+}
+.negation-line.strike::after {
+  content: ''; position: absolute; left: -8%; right: -8%; top: 50%;
+  height: 1px; background: var(--gold); opacity: 0.65;
+}
+.negation-rule { width: 60px; height: 1px; background: var(--gold); margin: 56px auto; opacity: 0.6; }
+.negation-affirm {
+  font-family: var(--display); font-size: clamp(28px, 3.5vw, 42px);
+  line-height: 1.35; color: var(--pearl); font-weight: 400;
+}
+.negation-affirm em { font-style: italic; color: var(--gold); }
+
+/* ============== APPEARANCE — full-bleed portrait after Negation ============== */
+.appearance {
+  background: var(--black); position: relative; overflow: hidden; padding: 0;
+}
+.appearance-frame {
+  position: relative; width: 100%;
+  max-height: 92vh; overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+  background: #0a0706;
+}
+.appearance-frame::before,
+.appearance-frame::after {
+  content: ''; position: absolute; left: 0; right: 0;
+  height: 18%; pointer-events: none; z-index: 2;
+}
+.appearance-frame::before {
+  top: 0;
+  background: linear-gradient(180deg, var(--black) 0%, rgba(15, 11, 9, 0.85) 40%, rgba(15, 11, 9, 0) 100%);
+}
+.appearance-frame::after {
+  bottom: 0;
+  background: linear-gradient(0deg, var(--black) 0%, rgba(15, 11, 9, 0.85) 40%, rgba(15, 11, 9, 0) 100%);
+}
+.appearance-frame img {
+  display: block; width: 100%; height: auto;
+  max-height: 92vh; object-fit: contain; object-position: center;
+  animation: appearSlow 1.6s cubic-bezier(0.2, 0.6, 0.2, 1) both;
+}
+.appearance-caption {
+  position: absolute; bottom: 40px; left: 0; right: 0;
+  text-align: center; z-index: 3; pointer-events: none; padding: 0 24px;
+  animation: fadeUp 1.4s cubic-bezier(0.2, 0.6, 0.2, 1) both;
+  animation-delay: 0.5s;
+}
+.appearance-caption-mark {
+  font-family: var(--display); font-size: 11px; letter-spacing: 0.42em;
+  text-transform: uppercase; color: var(--gold); opacity: 0.78; margin-bottom: 10px;
+}
+.appearance-caption-text {
+  font-family: var(--serif); font-style: italic;
+  font-size: clamp(16px, 1.5vw, 19px); color: var(--pearl);
+  opacity: 0.88; letter-spacing: 0.01em;
+}
+.appearance-caption-text em { color: var(--gold); font-style: italic; }
+
+/* ============== PULL QUOTE ============== */
+.pull-quote {
+  padding: 100px 48px;
+  background: linear-gradient(180deg, var(--black) 0%, var(--burgundy-deep) 50%, var(--black) 100%);
+  text-align: center;
+}
+.pull-quote-inner {
+  max-width: 800px; margin: 0 auto;
+  font-family: var(--display); font-size: clamp(26px, 3.5vw, 42px);
+  line-height: 1.45; color: var(--pearl); font-style: italic;
+}
+.pull-quote-inner span { display: block; margin-top: 20px; color: var(--gold); font-style: italic; }
+
+/* ============== SECTIONS ============== */
+section { position: relative; }
+.section-inner { max-width: 1200px; margin: 0 auto; padding: 0; }
+.section-eyebrow {
+  font-family: var(--body); font-size: 11px; letter-spacing: 0.42em;
+  text-transform: uppercase; color: var(--gold); margin-bottom: 24px;
+  display: flex; align-items: center; gap: 16px;
+}
+.section-eyebrow::before { content: ''; width: 32px; height: 1px; background: var(--gold); opacity: 0.65; }
+h2 {
+  font-family: var(--display); font-size: clamp(34px, 4.2vw, 54px);
+  line-height: 1.15; font-weight: 400; color: var(--pearl);
+  margin-bottom: 56px; max-width: 900px; letter-spacing: 0.01em;
+}
+h2 em { font-style: italic; color: var(--gold); }
+
+/* ============== THE WORK ============== */
+.work { padding: 160px 48px; background: var(--black-warm); }
+.work-prose {
+  font-family: var(--serif); font-size: 19px; line-height: 1.75;
+  color: var(--pearl); max-width: 760px; margin-bottom: 80px; opacity: 0.92;
+}
+.work-prose em { color: var(--gold); font-style: italic; }
+.work-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 40px 80px;
+  border-top: 1px solid var(--line); padding-top: 56px;
+}
+.work-fact { border-left: 1px solid var(--line); padding-left: 24px; }
+.work-fact-label {
+  font-family: var(--body); font-size: 10px; letter-spacing: 0.36em;
+  text-transform: uppercase; color: var(--gold); margin-bottom: 10px;
+}
+.work-fact-value { font-family: var(--display); font-size: 22px; line-height: 1.35; color: var(--pearl); }
+
+/* ============== WHAT HAPPENS IN THE ROOM ============== */
+.what-happens { padding: 140px 48px; background: var(--black); border-top: 1px solid var(--line); }
+.what-happens-inner { max-width: 980px; margin: 0 auto; }
+.what-happens-eyebrow {
+  font-family: var(--body); font-size: 11px; letter-spacing: 0.42em;
+  text-transform: uppercase; color: var(--gold); margin-bottom: 24px;
+  display: flex; align-items: center; gap: 16px;
+}
+.what-happens-eyebrow::before { content: ''; width: 32px; height: 1px; background: var(--gold); opacity: 0.65; }
+.what-happens h2 {
+  font-family: var(--display); font-size: clamp(32px, 4.4vw, 50px);
+  line-height: 1.18; color: var(--pearl); margin-bottom: 48px; font-weight: 400;
+}
+.what-happens h2 em { font-style: italic; color: var(--gold); }
+.what-happens-prose {
+  font-family: var(--serif); font-size: 19px; line-height: 1.85;
+  color: var(--pearl); opacity: 0.93; margin-bottom: 48px;
+}
+.what-happens-prose p { margin-bottom: 22px; }
+.what-happens-prose em { font-style: italic; color: var(--gold); }
+.what-happens-prose strong { color: var(--pearl); font-weight: normal; border-bottom: 1px solid var(--line-strong); padding-bottom: 1px; }
+.what-happens-elements {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
+  background: var(--line); border: 1px solid var(--line); margin-bottom: 36px;
+}
+.what-happens-element { background: var(--black); padding: 28px 22px; text-align: center; }
+.what-happens-element-icon { font-family: var(--display); font-size: 26px; color: var(--gold); line-height: 1; margin-bottom: 12px; }
+.what-happens-element-label {
+  font-family: var(--body); font-size: 10px; letter-spacing: 0.32em;
+  text-transform: uppercase; color: var(--gold); margin-bottom: 6px;
+}
+.what-happens-element-value { font-family: var(--serif); font-size: 14px; line-height: 1.55; color: var(--pearl); opacity: 0.86; }
+.what-happens-summary {
+  padding: 28px 32px; background: rgba(201, 169, 97, 0.05);
+  border: 1px solid var(--line-strong);
+  font-family: var(--serif); font-style: italic; font-size: 17px;
+  line-height: 1.7; color: var(--pearl); text-align: center;
+}
+.what-happens-summary strong { color: var(--gold); font-weight: normal; font-style: normal; }
+
+/* ============== FROM THE ARTIST ============== */
+.from-artist {
+  padding: 140px 48px;
+  background: linear-gradient(180deg, var(--black) 0%, var(--burgundy-deep) 100%);
+  border-top: 1px solid var(--line);
+}
+.from-artist-inner { max-width: 820px; margin: 0 auto; text-align: center; }
+.from-artist-eyebrow {
+  font-family: var(--body); font-size: 11px; letter-spacing: 0.42em;
+  text-transform: uppercase; color: var(--gold); margin-bottom: 36px;
+  display: inline-flex; align-items: center; gap: 16px;
+}
+.from-artist-eyebrow::before, .from-artist-eyebrow::after {
+  content: ''; width: 36px; height: 1px; background: var(--gold); opacity: 0.55;
+}
+.from-artist-mark { font-family: var(--display); font-size: 64px; color: var(--gold); line-height: 1; margin-bottom: 32px; opacity: 0.85; }
+.from-artist-prose {
+  font-family: var(--serif); font-style: italic;
+  font-size: clamp(19px, 1.9vw, 23px); line-height: 1.75;
+  color: var(--pearl); opacity: 0.95; margin-bottom: 48px;
+}
+.from-artist-prose p { margin-bottom: 22px; }
+.from-artist-prose em { font-style: normal; color: var(--gold); }
+.from-artist-signature { font-family: var(--display); font-size: 22px; color: var(--gold); letter-spacing: 0.04em; }
+.from-artist-signature-meta {
+  font-family: var(--body); font-size: 10px; letter-spacing: 0.36em;
+  text-transform: uppercase; color: var(--pearl); opacity: 0.65; margin-top: 8px;
+}
+
+/* ============== FORMATS ============== */
+.formats { padding: 160px 48px; background: var(--black); }
+.formats-lede {
+  font-family: var(--serif); font-size: 19px; line-height: 1.75;
+  color: var(--pearl); max-width: 780px; margin-bottom: 80px; opacity: 0.92;
+}
+.formats-lede em { color: var(--gold); font-style: italic; }
+.formats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+.format-card {
+  background: linear-gradient(180deg, var(--black-warm) 0%, var(--black-deep) 100%);
+  border: 1px solid var(--line); padding: 48px 36px;
+  display: flex; flex-direction: column; gap: 22px;
+  position: relative; transition: all 0.5s cubic-bezier(0.2, 0.6, 0.2, 1);
+}
+.format-card:hover { border-color: var(--line-strong); transform: translateY(-4px); }
+.format-card.featured {
+  background: linear-gradient(180deg, var(--burgundy-deep) 0%, var(--black-deep) 100%);
+  border-color: var(--line-strong);
+}
+.format-card.featured::before {
+  content: 'PRIMARY'; position: absolute; top: -10px; left: 36px;
+  background: var(--gold); color: var(--black);
+  font-family: var(--body); font-size: 9px; letter-spacing: 0.32em; padding: 4px 12px;
+}
+.format-eyebrow { font-family: var(--body); font-size: 11px; letter-spacing: 0.36em; text-transform: uppercase; color: var(--gold); }
+.format-card h3 { font-family: var(--display); font-size: 26px; line-height: 1.2; color: var(--pearl); font-weight: 400; }
+.format-meta {
+  border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  padding: 18px 0; display: flex; flex-direction: column; gap: 10px;
+}
+.format-meta-row { display: flex; gap: 14px; font-size: 14px; line-height: 1.5; }
+.format-meta-label {
+  font-family: var(--body); font-size: 9px; letter-spacing: 0.28em;
+  text-transform: uppercase; color: var(--gold); min-width: 90px; padding-top: 3px;
+}
+.format-meta-value { font-family: var(--serif); color: var(--pearl); flex: 1; }
+.format-meta-value em { color: var(--gold); font-style: italic; }
+.format-prose { font-family: var(--serif); font-size: 15px; line-height: 1.7; color: var(--pearl); opacity: 0.82; }
+
+
+/* ============== ARCHITECTURE ============== */
+.architecture { padding: 160px 48px; background: var(--black-warm); position: relative; }
+.architecture::before {
+  content: ''; position: absolute; left: 50%; top: 240px; bottom: 200px;
+  width: 1px; background: linear-gradient(180deg, transparent 0%, var(--gold) 50%, transparent 100%);
+  opacity: 0.35; transform: translateX(-50%);
+}
+.movements-list { display: flex; flex-direction: column; gap: 56px; margin-top: 32px; position: relative; }
+.movement { display: grid; grid-template-columns: 80px 1fr; gap: 32px; align-items: start; position: relative; }
+.movement-num {
+  font-family: var(--display); font-size: 56px; line-height: 1;
+  color: var(--gold); text-align: right; font-weight: 400; opacity: 0.85;
+}
+.movement-content h3 {
+  font-family: var(--display); font-size: clamp(28px, 3vw, 40px);
+  line-height: 1.2; color: var(--pearl); font-weight: 400; margin-bottom: 14px;
+}
+.movement-trans {
+  font-family: var(--serif); font-style: italic; font-weight: 400;
+  color: var(--gold); font-size: 0.6em; margin-left: 8px; opacity: 0.85;
+}
+.movement-content p {
+  font-family: var(--serif); font-size: 17px; line-height: 1.75;
+  color: var(--pearl); opacity: 0.85; max-width: 640px;
+}
+.movement-content p em { color: var(--gold); font-style: italic; }
+
+/* ============== ARTIST ============== */
+.artist { padding: 160px 48px; background: var(--black); }
+.artist-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 80px; align-items: start; }
+.artist-portrait {
+  aspect-ratio: 3 / 4;
+  background: linear-gradient(180deg, rgba(92, 46, 46, 0.18) 0%, rgba(15, 11, 9, 0.55) 100%), var(--black-warm);
+  border: 1px solid var(--line); position: relative; overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+}
+.artist-portrait img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.artist-name {
+  font-family: var(--display); font-size: clamp(36px, 4.5vw, 56px);
+  line-height: 1.05; color: var(--pearl); margin-top: 32px; margin-bottom: 14px;
+  font-weight: 400; letter-spacing: 0.02em;
+}
+.artist-name-meta { font-family: var(--serif); font-style: italic; font-size: 16px; color: var(--gold); margin-bottom: 24px; opacity: 0.9; }
+.artist-mark { width: 80px; height: 1px; background: var(--gold); margin-bottom: 32px; }
+.artist-bio { font-family: var(--serif); font-size: 18px; line-height: 1.8; color: var(--pearl); opacity: 0.92; }
+.artist-bio em { font-style: italic; color: var(--gold); }
+.credentials { margin-top: 40px; display: flex; flex-wrap: wrap; gap: 10px; }
+.credential {
+  font-family: var(--body); font-size: 11px; letter-spacing: 0.28em;
+  text-transform: uppercase; color: var(--gold);
+  padding: 8px 16px; border: 1px solid var(--line-strong);
+}
+
+/* ============== HOSTS ============== */
+.hosts { padding: 160px 48px; background: var(--black-warm); }
+.hosts-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+.host-tile { background: var(--black-warm); padding: 40px 32px; transition: all 0.5s ease; }
+.host-tile:hover { background: var(--burgundy-deep); }
+.host-tile-num { font-family: var(--display); font-size: 14px; color: var(--gold); margin-bottom: 14px; letter-spacing: 0.05em; }
+.host-tile h4 { font-family: var(--display); font-size: 19px; line-height: 1.35; color: var(--pearl); font-weight: 400; }
+
+/* ============== GLIMPSE ============== */
+.glimpse { padding: 140px 48px 100px; background: var(--black-deep); border-top: 1px solid var(--line); position: relative; }
+.glimpse-inner { max-width: 1200px; margin: 0 auto; }
+.glimpse-eyebrow {
+  font-family: var(--body); font-size: 11px; letter-spacing: 0.42em;
+  text-transform: uppercase; color: var(--gold);
+  margin-bottom: 32px; text-align: center; opacity: 0.85;
+}
+.glimpse-eyebrow::before, .glimpse-eyebrow::after {
+  content: ''; display: inline-block; width: 36px; height: 1px;
+  background: var(--gold); opacity: 0.55; vertical-align: middle; margin: 0 18px;
+}
+.glimpse-frame {
+  position: relative; width: 100%; aspect-ratio: 16 / 9;
+  background: #000; overflow: hidden; border: 1px solid var(--line);
+  box-shadow: 0 30px 80px -20px rgba(0,0,0,0.65), 0 0 0 1px rgba(201, 169, 97, 0.06);
+}
+.glimpse-frame video { width: 100%; height: 100%; object-fit: cover; display: block; }
+.glimpse-caption {
+  margin-top: 28px; text-align: center; font-family: var(--serif);
+  font-size: 15px; line-height: 1.7; color: var(--pearl); opacity: 0.62;
+  font-style: italic; max-width: 620px; margin-left: auto; margin-right: auto;
+}
+.glimpse-caption em { color: var(--gold); opacity: 0.85; }
+.glimpse-actions { margin-top: 26px; text-align: center; }
+.glimpse-listen-btn {
+  display: inline-flex; align-items: center; gap: 12px;
+  padding: 14px 26px; background: transparent;
+  border: 1px solid var(--gold); color: var(--gold);
+  font-family: var(--body); font-size: 11px; letter-spacing: 0.32em;
+  text-transform: uppercase; cursor: pointer; transition: all 0.3s; text-decoration: none;
+}
+.glimpse-listen-btn:hover { background: rgba(201, 169, 97, 0.08); color: var(--pearl); }
+.glimpse-listen-btn-icon { width: 8px; height: 8px; border-radius: 50%; background: var(--gold); transition: background 0.3s; }
+.glimpse-listen-btn:hover .glimpse-listen-btn-icon { background: var(--pearl); }
+
+.glimpse-modal {
+  display: none; position: fixed; inset: 0; z-index: 2000;
+  background: rgba(0,0,0,0.96); align-items: center; justify-content: center; padding: 24px;
+}
+.glimpse-modal.open { display: flex; animation: fadeIn 0.4s ease; }
+.glimpse-modal-inner {
+  width: 100%; max-width: 1100px; aspect-ratio: 16 / 9;
+  position: relative; box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+}
+.glimpse-modal-inner video { width: 100%; height: 100%; display: block; background: #000; }
+.glimpse-modal-close {
+  position: absolute; top: -48px; right: 0; background: none; border: none;
+  color: var(--pearl); font-size: 32px; cursor: pointer;
+  opacity: 0.7; transition: opacity 0.3s, color 0.3s; line-height: 1; padding: 4px 12px;
+}
+.glimpse-modal-close:hover { opacity: 1; color: var(--gold); }
+
+/* ============== DOCUMENTATION ============== */
+.documentation { padding: 160px 48px; background: var(--black); border-top: 1px solid var(--line); }
+.documentation-lede {
+  font-family: var(--serif); font-size: 19px; line-height: 1.75;
+  color: var(--pearl); max-width: 780px; margin-bottom: 80px; opacity: 0.92;
+}
+.documentation-lede em { color: var(--gold); font-style: italic; }
+.doc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-bottom: 80px; }
+.doc-card {
+  background: linear-gradient(180deg, var(--black-warm) 0%, var(--black-deep) 100%);
+  border: 1px solid var(--line); overflow: hidden;
+  display: flex; flex-direction: column;
+  transition: all 0.5s cubic-bezier(0.2, 0.6, 0.2, 1);
+}
+.doc-card:hover { border-color: var(--line-strong); transform: translateY(-4px); }
+.doc-card-media {
+  aspect-ratio: 16 / 9;
+  background: linear-gradient(180deg, rgba(92, 46, 46, 0.18) 0%, rgba(15, 11, 9, 0.55) 100%), var(--black-warm);
+  position: relative; display: flex; align-items: center; justify-content: center;
+  border-bottom: 1px solid var(--line); overflow: hidden;
+}
+.doc-card-media video, .doc-card-media img, .doc-card-media iframe {
+  width: 100%; height: 100%; object-fit: cover; display: block; border: none;
+}
+.doc-card-placeholder { text-align: center; padding: 32px; }
+.doc-card-placeholder-icon {
+  width: 56px; height: 56px; border: 1px solid var(--gold); border-radius: 50%;
+  margin: 0 auto 18px; display: flex; align-items: center; justify-content: center;
+  color: var(--gold); font-family: var(--display); font-size: 22px; opacity: 0.7;
+}
+.doc-card-placeholder-label {
+  font-family: var(--body); font-size: 10px; letter-spacing: 0.36em;
+  text-transform: uppercase; color: var(--gold); opacity: 0.7; margin-bottom: 8px;
+}
+.doc-card-placeholder-eta { font-family: var(--serif); font-style: italic; font-size: 14px; color: var(--pearl); opacity: 0.55; }
+.doc-card-content { padding: 32px 32px 36px; display: flex; flex-direction: column; gap: 12px; }
+.doc-card-eyebrow {
+  font-family: var(--body); font-size: 10px; letter-spacing: 0.36em;
+  text-transform: uppercase; color: var(--gold);
+}
+.doc-card h3 { font-family: var(--display); font-size: 24px; line-height: 1.3; color: var(--pearl); font-weight: 400; }
+.doc-card p { font-family: var(--serif); font-size: 15px; line-height: 1.7; color: var(--pearl); opacity: 0.82; }
+
+.doc-gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.doc-gallery-tile {
+  aspect-ratio: 1 / 1;
+  background: linear-gradient(180deg, rgba(92, 46, 46, 0.18) 0%, rgba(15, 11, 9, 0.55) 100%), var(--black-warm);
+  border: 1px solid var(--line);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--gold); opacity: 0.55;
+  font-family: var(--body); font-size: 9px; letter-spacing: 0.32em; text-transform: uppercase;
+  transition: opacity 0.4s ease, border-color 0.4s ease; overflow: hidden;
+}
+.doc-gallery-tile:has(picture), .doc-gallery-tile:has(img) { opacity: 1; }
+.doc-gallery-tile:hover { opacity: 1; border-color: var(--line-strong); }
+.doc-gallery-tile:has(picture) { cursor: pointer; }
+.doc-gallery-tile img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* Photographic Archive lightbox */
+.gallery-lightbox {
+  display: none; position: fixed; inset: 0; z-index: 2100;
+  background: rgba(0,0,0,0.96);
+  align-items: center; justify-content: center; padding: 32px 16px;
+}
+.gallery-lightbox.open { display: flex; animation: fadeIn 0.3s ease; }
+.gallery-lightbox-inner {
+  position: relative; max-width: 1200px; max-height: calc(100vh - 80px);
+  display: flex; align-items: center; justify-content: center;
+}
+.gallery-lightbox-img {
+  max-width: 100%; max-height: calc(100vh - 80px);
+  width: auto; height: auto; display: block;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+}
+.gallery-lightbox-close {
+  position: absolute; top: -44px; right: 0; background: none; border: none;
+  color: var(--pearl); font-size: 32px; cursor: pointer;
+  opacity: 0.7; transition: opacity 0.3s, color 0.3s; line-height: 1; padding: 4px 12px;
+}
+.gallery-lightbox-close:hover { opacity: 1; color: var(--gold); }
+.gallery-lightbox-nav {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  background: none; border: 1px solid rgba(237, 229, 213, 0.25);
+  color: var(--pearl); width: 44px; height: 44px; border-radius: 50%;
+  cursor: pointer; opacity: 0.6; transition: all 0.3s;
+  font-size: 20px; display: flex; align-items: center; justify-content: center;
+}
+.gallery-lightbox-nav:hover { opacity: 1; border-color: var(--gold); color: var(--gold); }
+.gallery-lightbox-prev { left: -64px; }
+.gallery-lightbox-next { right: -64px; }
+
+
+/* ============== COMMISSIONS PROMO ============== */
+.commissions-promo {
+  padding: 160px 48px;
+  background:
+    radial-gradient(ellipse at 50% 30%, rgba(92, 46, 46, 0.18) 0%, transparent 60%),
+    linear-gradient(180deg, var(--black-warm) 0%, var(--black) 100%);
+  border-top: 1px solid var(--line); text-align: center;
+}
+.commissions-promo .section-eyebrow { justify-content: center; }
+.commissions-promo .section-eyebrow::before { display: none; }
+.commissions-promo h2 { text-align: center; max-width: 920px; margin: 0 auto 32px; }
+.commissions-promo-lede {
+  font-family: var(--serif); font-size: clamp(17px, 1.6vw, 20px);
+  line-height: 1.75; color: var(--pearl); max-width: 760px;
+  margin: 0 auto 80px; opacity: 0.92; text-align: center;
+}
+.commissions-promo-lede em { color: var(--gold); font-style: italic; }
+.commissions-formats {
+  display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1px;
+  background: var(--line); border: 1px solid var(--line);
+  margin-bottom: 80px; text-align: left;
+}
+.commission-format { background: var(--black); padding: 40px 32px; transition: background 0.4s; }
+.commission-format:hover { background: var(--black-warm); }
+.commission-format.featured { background: linear-gradient(180deg, rgba(92, 46, 46, 0.12) 0%, var(--black) 100%); }
+.commission-format-eyebrow {
+  font-family: var(--body); font-size: 10px; letter-spacing: 0.4em;
+  text-transform: uppercase; color: var(--gold); margin-bottom: 14px;
+}
+.commission-format h3 { font-family: var(--display); font-size: 28px; color: var(--pearl); font-weight: 400; margin-bottom: 8px; }
+.commission-format-tagline { font-family: var(--serif); font-style: italic; font-size: 14px; color: var(--gold); margin-bottom: 24px; opacity: 0.95; }
+.commission-format-honor { font-family: var(--display); font-size: 26px; color: var(--gold); line-height: 1.2; margin-bottom: 4px; }
+.commission-format-honor-meta {
+  font-family: var(--body); font-size: 9px; letter-spacing: 0.32em;
+  text-transform: uppercase; color: var(--pearl); opacity: 0.6; margin-bottom: 24px;
+}
+.commission-format-divider { width: 32px; height: 1px; background: var(--gold); opacity: 0.5; margin-bottom: 20px; }
+.commission-format-meta { font-family: var(--serif); font-size: 14px; line-height: 1.7; color: var(--pearl); opacity: 0.85; }
+.commission-format-meta-row { padding: 6px 0; }
+.commission-format-meta-row strong {
+  color: var(--gold); font-weight: normal;
+  font-family: var(--body); font-size: 10px; letter-spacing: 0.3em;
+  text-transform: uppercase; display: block; margin-bottom: 2px;
+}
+.commissions-promo-cta-row { display: flex; gap: 20px; justify-content: center; align-items: center; flex-wrap: wrap; }
+.commissions-promo-cta {
+  display: inline-block; padding: 18px 40px;
+  background: rgba(201, 169, 97, 0.08); border: 1px solid var(--gold);
+  color: var(--gold); font-family: var(--body); font-size: 12px;
+  letter-spacing: 0.32em; text-transform: uppercase; transition: all 0.3s;
+}
+.commissions-promo-cta:hover { background: rgba(201, 169, 97, 0.18); color: var(--pearl); }
+.commissions-promo-secondary {
+  font-family: var(--body); font-size: 11px; letter-spacing: 0.28em;
+  text-transform: uppercase; color: var(--pearl); opacity: 0.65; transition: opacity 0.3s;
+}
+.commissions-promo-secondary:hover { opacity: 1; color: var(--gold); }
+
+/* ============== INVITATION ============== */
+.invitation {
+  padding: 160px 48px;
+  background: linear-gradient(180deg, var(--black) 0%, var(--burgundy-deep) 100%);
+}
+.invitation-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 80px;
+  align-items: start; border-top: 1px solid var(--line); padding-top: 64px;
+}
+.invitation-details { display: flex; flex-direction: column; gap: 24px; }
+.invitation-row {
+  display: grid; grid-template-columns: 130px 1fr; gap: 16px;
+  padding-bottom: 18px; border-bottom: 1px solid var(--line);
+}
+.invitation-label {
+  font-family: var(--body); font-size: 10px; letter-spacing: 0.36em;
+  text-transform: uppercase; color: var(--gold); padding-top: 4px;
+}
+.invitation-value { font-family: var(--display); font-size: 19px; color: var(--pearl); line-height: 1.4; }
+.invitation-value em { color: var(--gold); font-style: italic; }
+.invitation-cta {
+  background: var(--black-deep); border: 1px solid var(--line-strong);
+  padding: 56px 48px; position: relative;
+}
+.invitation-cta-eyebrow {
+  font-family: var(--body); font-size: 11px; letter-spacing: 0.42em;
+  text-transform: uppercase; color: var(--gold); margin-bottom: 20px;
+}
+.invitation-cta-title {
+  font-family: var(--display); font-size: 32px; line-height: 1.25;
+  color: var(--pearl); margin-bottom: 24px; font-weight: 400;
+}
+.invitation-cta p {
+  font-family: var(--serif); font-size: 16px; line-height: 1.7;
+  color: var(--pearl); opacity: 0.88; margin-bottom: 32px;
+}
+.invitation-button {
+  display: inline-block; padding: 14px 32px;
+  background: rgba(201, 169, 97, 0.06); color: var(--gold);
+  font-family: var(--body); font-size: 12px; letter-spacing: 0.18em;
+  text-transform: uppercase; transition: all 0.4s ease;
+  border: 1px solid rgba(201, 169, 97, 0.45);
+}
+.invitation-button:hover { background: rgba(201, 169, 97, 0.14); color: var(--pearl); border-color: rgba(201, 169, 97, 0.75); }
+
+/* ============== FOOTER ============== */
+footer { padding: 100px 48px 48px; background: var(--black-deep); border-top: 1px solid var(--line); }
+.footer-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 64px; }
+.footer-logo { font-family: var(--display); font-size: 18px; letter-spacing: 0.32em; color: var(--pearl); margin-bottom: 18px; }
+.footer-tagline { font-family: var(--serif); font-style: italic; font-size: 16px; line-height: 1.6; color: var(--pearl); opacity: 0.7; }
+.footer-col h5 {
+  font-family: var(--body); font-size: 11px; letter-spacing: 0.36em;
+  text-transform: uppercase; color: var(--gold); margin-bottom: 18px; font-weight: 400;
+}
+.footer-col a, .footer-col p {
+  display: block; font-family: var(--serif); font-size: 15px; color: var(--pearl);
+  opacity: 0.75; line-height: 1.7; margin-bottom: 6px;
+  transition: opacity 0.3s, color 0.3s;
+}
+.footer-col a:hover { opacity: 1; color: var(--gold); }
+.footer-circle { color: var(--gold) !important; font-style: italic; margin-top: 14px !important; opacity: 1 !important; }
+.footer-support { color: var(--gold) !important; opacity: 0.92 !important; margin-top: 8px !important; }
+.footer-bottom {
+  max-width: 1200px; margin: 64px auto 0; padding-top: 32px;
+  border-top: 1px solid var(--line); display: flex; justify-content: space-between;
+  font-family: var(--body); font-size: 11px; letter-spacing: 0.16em; color: var(--grey);
+}
+
+/* ============== RESPONSIVE ============== */
+@media (max-width: 900px) {
+  nav { padding: 14px 22px; min-height: 78px; background: rgba(15, 11, 9, 0.98); backdrop-filter: none; -webkit-backdrop-filter: none; }
+  nav.scrolled { padding: 14px 22px; }
+  .logo { font-size: 14px; letter-spacing: 0.28em; }
+  .nav-links { gap: 14px; }
+  .nav-links li:not(.lang-switch):not(:last-child):not(.always-show) { display: none; }
+  .nav-cta { display: none; }
+  .lang-switch { border-left: none; padding-left: 0; margin-left: 0; gap: 9px; }
+  .lang-switch a { font-size: 11px; letter-spacing: 0.16em; }
+
+  .hero { min-height: 100svh; align-items: center; justify-content: center; padding: 120px 24px 64px; }
+  .hero-inner { max-width: 100%; width: 100%; text-align: center; margin: 0 auto; }
+  .hero-eyebrow { margin-bottom: 20px; font-size: 10px; letter-spacing: 0.34em; text-align: center; }
+  .hero-eyebrow::before, .hero-eyebrow::after { display: none; }
+  .hero-title {
+    display: block; width: 100%; text-align: center;
+    font-size: clamp(54px, 17vw, 72px); line-height: 0.86;
+    letter-spacing: 0.04em; margin-bottom: 22px; padding-left: 0.04em;
   }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  *::selection { background: var(--gold); color: var(--black); }
-  html { scroll-behavior: smooth; }
-  body { font-family: var(--body); font-size: 16px; line-height: 1.85; color: var(--pearl); background: var(--black); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
-  a { color: inherit; text-decoration: none; }
-  @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
-  @keyframes glowPulse { 0%, 100% { opacity: 0.4; } 50% { opacity: 0.7; } }
-  .animate-fadeUp { animation: fadeUp 1s cubic-bezier(0.2, 0.6, 0.2, 1) both; }
-  .delay-1 { animation-delay: 0.1s; } .delay-2 { animation-delay: 0.25s; }
-  .delay-3 { animation-delay: 0.4s; } .delay-4 { animation-delay: 0.55s; }
+  .hero-title-line { display: block; width: 100%; text-align: center; letter-spacing: 0.04em; }
+  .hero-subtitle { font-size: 20px; margin-bottom: 30px; }
+  .hero-lede { font-size: 18px; line-height: 1.58; margin: 0 auto 38px; max-width: 340px; }
+  .hero-actions { gap: 18px; }
+  .scroll-indicator { display: none; }
 
-  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 24px 48px; background: linear-gradient(180deg, rgba(15, 11, 9, 0.92) 0%, rgba(15, 11, 9, 0) 100%); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid transparent; transition: all 0.4s ease; }
-  nav.scrolled { background: rgba(15, 11, 9, 0.96); border-bottom-color: var(--line); padding: 18px 48px; }
-  .logo { font-family: 'Marcellus', serif; font-size: 16px; letter-spacing: 0.32em; color: var(--pearl); }
-  .nav-links { list-style: none; display: flex; gap: 36px; align-items: center; }
-  .nav-links a { font-family: var(--body); font-size: 14px; letter-spacing: 0.12em; color: var(--pearl); opacity: 0.78; transition: all 0.3s; }
-  .nav-links a:hover { opacity: 1; color: var(--gold); }
-  .nav-cta { color: var(--gold) !important; opacity: 1 !important; border: 1px solid var(--line-strong); padding: 10px 18px; transition: all 0.3s; }
-  .nav-cta:hover { background: var(--gold); color: var(--black) !important; }
-  .lang-switch { display: flex; gap: 14px; padding-left: 20px; margin-left: 8px; border-left: 1px solid var(--line); }
-  .lang-switch a { font-size: 12px; letter-spacing: 0.18em; }
-  .lang-switch a.active { color: var(--gold); opacity: 1; }
+  .negation, .pull-quote, .work, .formats, .architecture,
+  .artist, .hosts, .invitation { padding: 80px 24px; }
 
-  .hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 140px 48px 80px; position: relative; background: radial-gradient(ellipse at 50% 78%, rgba(92, 46, 46, 0.58) 0%, rgba(28, 22, 18, 0.55) 42%, rgba(15, 11, 9, 1) 78%), linear-gradient(180deg, #120E0C 0%, #1A1110 52%, #120E0C 100%); }
-  .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 50% 58%, rgba(201, 169, 97, 0.035) 0%, transparent 42%), radial-gradient(circle at 50% 82%, rgba(92, 46, 46, 0.12) 0%, transparent 48%); pointer-events: none; }
-  .hero-inner { max-width: 980px; text-align: center; position: relative; z-index: 2; }
-  .hero-eyebrow { font-family: var(--body); font-size: 12px; letter-spacing: 0.32em; color: var(--gold); margin-bottom: 32px; opacity: 0.95; }
-  .hero-eyebrow::before, .hero-eyebrow::after { content: '—'; margin: 0 16px; color: var(--gold); opacity: 0.65; }
-  .hero-title { font-family: 'Cormorant Garamond', 'EB Garamond', Garamond, serif; font-size: clamp(54px, 9vw, 120px); line-height: 0.96; font-weight: 500; color: var(--pearl); letter-spacing: 0.055em; margin-bottom: 24px; }
-  .hero-title-line { display: inline; }
-  .hero-title-cn { font-family: var(--display-cn); font-size: clamp(20px, 2.4vw, 28px); color: var(--gold); margin-bottom: 32px; letter-spacing: 0.32em; font-weight: 400; }
-  .hero-subtitle { font-family: var(--display-cn); font-size: clamp(18px, 2.2vw, 24px); color: var(--gold); margin-bottom: 48px; letter-spacing: 0.18em; }
-  .hero-lede { font-family: var(--serif); font-size: clamp(16px, 1.5vw, 19px); line-height: 1.95; color: var(--pearl); max-width: 720px; margin: 0 auto 56px; opacity: 0.92; }
-  .hero-actions { display: flex; flex-direction: column; align-items: center; gap: 20px; }
-  .hero-cta { display: inline-block; padding: 14px 28px; background: rgba(201, 169, 97, 0.06); color: var(--gold); font-family: var(--body); font-size: 13px; letter-spacing: 0.16em; transition: all 0.4s cubic-bezier(0.2, 0.6, 0.2, 1); border: 1px solid rgba(201, 169, 97, 0.45); text-align: center; }
-  .hero-cta:hover { background: rgba(201, 169, 97, 0.14); color: var(--pearl); border-color: rgba(201, 169, 97, 0.75); }
-  .hero-cta span { position: relative; }
-  .hero-secondary { font-family: var(--serif); font-size: 16px; color: var(--pearl); opacity: 0.7; transition: all 0.3s; }
-  .hero-secondary:hover { opacity: 1; color: var(--gold); }
-  .hero-secondary span { transition: transform 0.3s; display: inline-block; margin-left: 6px; }
-  .hero-secondary:hover span { transform: translateX(6px); }
-  .scroll-indicator { position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 12px; opacity: 0.5; animation: glowPulse 3s ease-in-out infinite; }
-  .scroll-indicator span { font-family: var(--body); font-size: 11px; letter-spacing: 0.32em; color: var(--gold); }
-  .scroll-indicator div { width: 1px; height: 36px; background: var(--gold); }
+  .appearance-frame { max-height: 78vh; }
+  .appearance-frame img { max-height: 78vh; }
+  .appearance-caption { bottom: 24px; }
 
-  .negation { padding: 140px 48px; background: var(--black); text-align: center; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-  .negation-inner { max-width: 800px; margin: 0 auto; }
-  .negation-line { font-family: var(--display-cn); font-size: clamp(22px, 3vw, 36px); line-height: 1.4; color: var(--pearl); margin-bottom: 18px; opacity: 0.5; position: relative; display: inline-block; letter-spacing: 0.12em; }
-  .negation-line.strike::after { content: ''; position: absolute; left: -8%; right: -8%; top: 50%; height: 1px; background: var(--gold); opacity: 0.65; }
-  .negation-rule { width: 60px; height: 1px; background: var(--gold); margin: 56px auto; opacity: 0.6; }
-  .negation-affirm { font-family: var(--display-cn); font-size: clamp(26px, 3.4vw, 40px); line-height: 1.5; color: var(--pearl); letter-spacing: 0.08em; }
-  .negation-affirm em { font-style: italic; color: var(--gold); }
+  .work-grid { grid-template-columns: 1fr; gap: 32px; }
+  .what-happens, .from-artist { padding: 80px 24px; }
+  .what-happens-elements { grid-template-columns: 1fr 1fr; }
+  .from-artist-mark { font-size: 48px; }
+  .formats-grid { grid-template-columns: 1fr; gap: 24px; }
+  .format-card { padding: 36px 28px; }
 
-  .pull-quote { padding: 100px 48px; background: linear-gradient(180deg, var(--black) 0%, var(--burgundy-deep) 50%, var(--black) 100%); text-align: center; }
-  .pull-quote-inner { max-width: 800px; margin: 0 auto; font-family: var(--display-cn); font-size: clamp(24px, 3.2vw, 38px); line-height: 1.6; color: var(--pearl); letter-spacing: 0.08em; }
-  .pull-quote-inner span { display: block; margin-top: 20px; color: var(--gold); }
+  .architecture::before { display: none; }
+  .movement { grid-template-columns: 56px 1fr; gap: 20px; }
+  .movement-num { font-size: 40px; }
 
-  section { position: relative; }
-  .section-inner { max-width: 1200px; margin: 0 auto; }
-  .section-eyebrow { font-family: var(--body); font-size: 12px; letter-spacing: 0.32em; color: var(--gold); margin-bottom: 24px; display: flex; align-items: center; gap: 16px; }
-  .section-eyebrow::before { content: ''; width: 32px; height: 1px; background: var(--gold); opacity: 0.65; }
-  h2 { font-family: var(--display-cn); font-size: clamp(30px, 3.8vw, 48px); line-height: 1.4; color: var(--pearl); margin-bottom: 56px; max-width: 900px; letter-spacing: 0.04em; font-weight: 500; }
-  h2 em { font-style: normal; color: var(--gold); }
+  .artist-grid { grid-template-columns: 1fr; gap: 40px; }
+  .artist-portrait { max-width: 380px; margin: 0 auto; }
+  .doc-grid { grid-template-columns: 1fr; gap: 20px; }
+  .doc-gallery { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .glimpse { padding: 80px 24px 64px; }
+  .glimpse-eyebrow { font-size: 9px; letter-spacing: 0.32em; }
+  .glimpse-eyebrow::before, .glimpse-eyebrow::after { display: none; }
+  .glimpse-modal-close { top: -40px; font-size: 28px; }
+  .commissions-formats { grid-template-columns: 1fr; }
+  .commissions-promo { padding: 80px 24px; }
+  .hosts-grid { grid-template-columns: 1fr 1fr; }
+  .invitation-grid { grid-template-columns: 1fr; gap: 48px; }
+  .invitation-cta { padding: 36px 28px; }
 
-  .work { padding: 160px 48px; background: var(--black-warm); }
-  .work-prose { font-family: var(--serif); font-size: 18px; line-height: 1.95; color: var(--pearl); max-width: 780px; margin-bottom: 80px; opacity: 0.92; }
-  .work-prose em { color: var(--gold); font-style: normal; }
-  .work-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px 80px; border-top: 1px solid var(--line); padding-top: 56px; }
-  .work-fact { border-left: 1px solid var(--line); padding-left: 24px; }
-  .work-fact-label { font-family: var(--body); font-size: 11px; letter-spacing: 0.32em; color: var(--gold); margin-bottom: 10px; }
-  .work-fact-value { font-family: var(--display-cn); font-size: 20px; line-height: 1.5; color: var(--pearl); }
+  .footer-inner { grid-template-columns: 1fr; gap: 40px; }
+  .footer-bottom { flex-direction: column; gap: 12px; padding: 24px 0 0; }
 
-  .formats { padding: 160px 48px; background: var(--black); }
-  .formats-lede { font-family: var(--serif); font-size: 18px; line-height: 1.95; color: var(--pearl); max-width: 800px; margin-bottom: 80px; opacity: 0.92; }
-  .formats-lede em { color: var(--gold); font-style: normal; }
-  .formats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
-  .format-card { background: linear-gradient(180deg, var(--black-warm) 0%, var(--black-deep) 100%); border: 1px solid var(--line); padding: 48px 36px; display: flex; flex-direction: column; gap: 22px; position: relative; transition: all 0.5s cubic-bezier(0.2, 0.6, 0.2, 1); }
-  .format-card:hover { border-color: var(--line-strong); transform: translateY(-4px); }
-  .format-card.featured { background: linear-gradient(180deg, var(--burgundy-deep) 0%, var(--black-deep) 100%); border-color: var(--line-strong); }
-  .format-card.featured::before { content: '主推'; position: absolute; top: -10px; left: 36px; background: var(--gold); color: var(--black); font-family: var(--body); font-size: 11px; letter-spacing: 0.24em; padding: 4px 14px; }
-  .format-eyebrow { font-family: 'Marcellus', serif; font-size: 12px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); }
-  .format-card h3 { font-family: var(--display-cn); font-size: 22px; line-height: 1.4; color: var(--pearl); font-weight: 500; }
-  .format-meta { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 18px 0; display: flex; flex-direction: column; gap: 12px; }
-  .format-meta-row { display: flex; gap: 14px; font-size: 14px; line-height: 1.7; }
-  .format-meta-label { font-family: var(--body); font-size: 11px; letter-spacing: 0.24em; color: var(--gold); min-width: 64px; padding-top: 3px; }
-  .format-meta-value { font-family: var(--serif); color: var(--pearl); flex: 1; }
-  .format-meta-value em { color: var(--gold); font-style: normal; }
-  .format-prose { font-family: var(--serif); font-size: 14px; line-height: 1.9; color: var(--pearl); opacity: 0.82; }
+  .gallery-lightbox-prev { left: 8px; }
+  .gallery-lightbox-next { right: 8px; }
+  .gallery-lightbox-close { top: -40px; font-size: 28px; }
 
-  .architecture { padding: 160px 48px; background: var(--black-warm); position: relative; }
-  .architecture::before { content: ''; position: absolute; left: 50%; top: 240px; bottom: 200px; width: 1px; background: linear-gradient(180deg, transparent 0%, var(--gold) 50%, transparent 100%); opacity: 0.35; transform: translateX(-50%); }
-  .movements-list { display: flex; flex-direction: column; gap: 56px; margin-top: 32px; }
-  .movement { display: grid; grid-template-columns: 80px 1fr; gap: 32px; align-items: start; }
-  .movement-num { font-family: 'Marcellus', serif; font-size: 56px; line-height: 1; color: var(--gold); text-align: right; opacity: 0.85; }
-  .movement-content h3 { font-family: var(--display-cn); font-size: clamp(24px, 2.6vw, 32px); line-height: 1.4; color: var(--pearl); margin-bottom: 14px; font-weight: 500; }
-  .movement-trans { font-family: 'Marcellus', serif; font-style: italic; color: var(--gold); font-size: 0.55em; margin-left: 8px; opacity: 0.85; letter-spacing: 0.04em; }
-  .movement-content p { font-family: var(--serif); font-size: 16px; line-height: 1.95; color: var(--pearl); opacity: 0.85; max-width: 640px; }
-  .movement-content p em { color: var(--gold); font-style: normal; }
+  h2 { margin-bottom: 40px; }
+}
 
-  .artist { padding: 160px 48px; background: var(--black); }
-  .artist-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 80px; align-items: start; }
-  .artist-portrait { aspect-ratio: 3 / 4; background: linear-gradient(180deg, rgba(92, 46, 46, 0.18) 0%, rgba(15, 11, 9, 0.55) 100%), var(--black-warm); border: 1px solid var(--line); position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; }
-  .artist-portrait img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  .artist-portrait-placeholder { text-align: center; padding: 32px; }
-  .artist-portrait-placeholder-mark { font-family: 'Marcellus', serif; font-size: 56px; color: var(--gold); opacity: 0.55; line-height: 1; margin-bottom: 18px; letter-spacing: 0.1em; }
-  .artist-portrait-placeholder-text { font-family: var(--body); font-size: 11px; letter-spacing: 0.32em; color: var(--gold); opacity: 0.75; line-height: 1.6; }
-  .artist-name { font-family: 'Marcellus', serif; font-size: clamp(36px, 4.5vw, 56px); line-height: 1.05; color: var(--pearl); margin-top: 32px; margin-bottom: 14px; letter-spacing: 0.02em; }
-  .artist-name-meta { font-family: var(--display-cn); font-size: 16px; color: var(--gold); margin-bottom: 24px; opacity: 0.9; letter-spacing: 0.18em; }
-  .artist-mark { width: 80px; height: 1px; background: var(--gold); margin-bottom: 32px; }
-  .artist-bio { font-family: var(--serif); font-size: 17px; line-height: 2; color: var(--pearl); opacity: 0.92; }
-  .artist-bio em { font-style: normal; color: var(--gold); }
-  .credentials { margin-top: 40px; display: flex; flex-wrap: wrap; gap: 10px; }
-  .credential { font-family: var(--body); font-size: 12px; letter-spacing: 0.24em; color: var(--gold); padding: 8px 16px; border: 1px solid var(--line-strong); }
+@media (max-width: 600px) {
+  .hosts-grid { grid-template-columns: 1fr; }
+  .hero-cta { padding: 13px 22px; font-size: 11px; letter-spacing: 0.16em; }
+}
 
-  .documentation { padding: 160px 48px; background: var(--black); border-top: 1px solid var(--line); }
-  .documentation-lede { font-family: var(--serif); font-size: 18px; line-height: 1.95; color: var(--pearl); max-width: 800px; margin-bottom: 80px; opacity: 0.92; }
-  .documentation-lede em { color: var(--gold); font-style: normal; }
-  .doc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-bottom: 80px; }
-  .doc-card { background: linear-gradient(180deg, var(--black-warm) 0%, var(--black-deep) 100%); border: 1px solid var(--line); overflow: hidden; display: flex; flex-direction: column; transition: all 0.5s cubic-bezier(0.2, 0.6, 0.2, 1); }
-  .doc-card:hover { border-color: var(--line-strong); transform: translateY(-4px); }
-  .doc-card-media { aspect-ratio: 16 / 9; background: linear-gradient(180deg, rgba(92, 46, 46, 0.18) 0%, rgba(15, 11, 9, 0.55) 100%), var(--black-warm); position: relative; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid var(--line); overflow: hidden; }
-  .doc-card-media video, .doc-card-media img, .doc-card-media iframe { width: 100%; height: 100%; object-fit: cover; display: block; border: none; }
-  .doc-card-placeholder { text-align: center; padding: 32px; }
-  .doc-card-placeholder-icon { width: 56px; height: 56px; border: 1px solid var(--gold); border-radius: 50%; margin: 0 auto 18px; display: flex; align-items: center; justify-content: center; color: var(--gold); font-family: 'Marcellus', serif; font-size: 22px; opacity: 0.7; }
-  .doc-card-placeholder-label { font-family: var(--body); font-size: 11px; letter-spacing: 0.32em; color: var(--gold); opacity: 0.7; margin-bottom: 8px; }
-  .doc-card-placeholder-eta { font-family: var(--serif); font-size: 14px; color: var(--pearl); opacity: 0.55; }
-  .doc-card-content { padding: 32px 32px 36px; display: flex; flex-direction: column; gap: 12px; }
-  .doc-card-eyebrow { font-family: 'Marcellus', serif; font-size: 12px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); }
-  .doc-card h3 { font-family: var(--display-cn); font-size: 22px; line-height: 1.4; color: var(--pearl); font-weight: 500; }
-  .doc-card p { font-family: var(--serif); font-size: 14px; line-height: 1.9; color: var(--pearl); opacity: 0.82; }
-  .doc-gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
-  .doc-gallery-tile { aspect-ratio: 1 / 1; background: linear-gradient(180deg, rgba(92, 46, 46, 0.18) 0%, rgba(15, 11, 9, 0.55) 100%), var(--black-warm); border: 1px solid var(--line); display: flex; align-items: center; justify-content: center; color: var(--gold); opacity: 0.55; font-family: 'Marcellus', serif; font-size: 11px; letter-spacing: 0.28em; transition: opacity 0.4s ease, border-color 0.4s ease; overflow: hidden; }
-  .doc-gallery-tile:hover { opacity: 1; border-color: var(--line-strong); }
-  .doc-gallery-tile img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
-  .hosts { padding: 160px 48px; background: var(--black-warm); }
-  .hosts-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
-  .host-tile { background: var(--black-warm); padding: 40px 32px; transition: all 0.5s; }
-  .host-tile:hover { background: var(--burgundy-deep); }
-  .host-tile-num { font-family: 'Marcellus', serif; font-size: 14px; color: var(--gold); margin-bottom: 14px; }
-  .host-tile h4 { font-family: var(--display-cn); font-size: 18px; line-height: 1.55; color: var(--pearl); font-weight: 500; }
+/* ============== ZH OVERRIDES — applied after base CSS ============== */
+/* These overrides adapt the base design system for Chinese typography:
+   - swap display/serif/body fonts to Noto Serif SC where appropriate
+   - remove italics (CJK fonts lack italics), use gold color instead
+   - tighten line-height and letter-spacing for CJK
+   - body font-size 16px instead of 17px for better CJK rendering
+*/
+:root {
+  --display-cn: 'Noto Serif SC', serif;
+}
 
-  .commissions-promo { padding: 160px 48px; background: radial-gradient(ellipse at 50% 30%, rgba(92, 46, 46, 0.18) 0%, transparent 60%), linear-gradient(180deg, var(--black-warm) 0%, var(--black) 100%); border-top: 1px solid var(--line); text-align: center; }
-  .commissions-promo .section-eyebrow { justify-content: center; }
-  .commissions-promo .section-eyebrow::before { display: none; }
-  .commissions-promo h2 { text-align: center; max-width: 920px; margin: 0 auto 32px; }
-  .commissions-promo-lede { font-family: var(--serif); font-size: clamp(17px, 1.6vw, 19px); line-height: 1.95; color: var(--pearl); max-width: 760px; margin: 0 auto 80px; opacity: 0.92; text-align: center; }
-  .commissions-promo-lede em { color: var(--gold); font-style: normal; }
-  .commissions-formats { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); margin-bottom: 80px; text-align: left; }
-  .commission-format { background: var(--black); padding: 40px 32px; transition: background 0.4s; }
-  .commission-format:hover { background: var(--black-warm); }
-  .commission-format.featured { background: linear-gradient(180deg, rgba(92, 46, 46, 0.12) 0%, var(--black) 100%); }
-  .commission-format-eyebrow { font-family: 'Marcellus', serif; font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
-  .commission-format h3 { font-family: var(--display-cn); font-size: 26px; color: var(--pearl); font-weight: 500; margin-bottom: 8px; }
-  .commission-format-tagline { font-family: var(--serif); font-size: 14px; color: var(--gold); margin-bottom: 24px; opacity: 0.95; }
-  .commission-format-honor { font-family: 'Marcellus', serif; font-size: 26px; color: var(--gold); line-height: 1.2; margin-bottom: 4px; }
-  .commission-format-honor-meta { font-family: var(--body); font-size: 10px; letter-spacing: 0.28em; color: var(--pearl); opacity: 0.6; margin-bottom: 24px; }
-  .commission-format-divider { width: 32px; height: 1px; background: var(--gold); opacity: 0.5; margin-bottom: 20px; }
-  .commission-format-meta { font-family: var(--serif); font-size: 14px; line-height: 1.85; color: var(--pearl); opacity: 0.85; }
-  .commission-format-meta-row { padding: 6px 0; }
-  .commission-format-meta-row strong { color: var(--gold); font-weight: normal; font-family: var(--display-cn); font-size: 11px; letter-spacing: 0.22em; display: block; margin-bottom: 4px; }
-  .commissions-promo-cta-row { display: flex; gap: 20px; justify-content: center; align-items: center; flex-wrap: wrap; }
-  .commissions-promo-cta { display: inline-block; padding: 18px 40px; background: rgba(201, 169, 97, 0.08); border: 1px solid var(--gold); color: var(--gold); font-family: var(--display-cn); font-size: 14px; letter-spacing: 0.2em; transition: all 0.3s; }
-  .commissions-promo-cta:hover { background: rgba(201, 169, 97, 0.18); color: var(--pearl); }
-  .commissions-promo-secondary { font-family: var(--display-cn); font-size: 13px; letter-spacing: 0.18em; color: var(--pearl); opacity: 0.65; transition: opacity 0.3s; }
-  .commissions-promo-secondary:hover { opacity: 1; color: var(--gold); }
+body {
+  font-family: 'Noto Serif SC', 'EB Garamond', Georgia, serif;
+  font-size: 16px;
+  line-height: 1.85;
+}
 
-  .invitation { padding: 160px 48px; background: linear-gradient(180deg, var(--black) 0%, var(--burgundy-deep) 100%); }
-  .invitation-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; border-top: 1px solid var(--line); padding-top: 64px; }
-  .invitation-details { display: flex; flex-direction: column; gap: 24px; }
-  .invitation-row { display: grid; grid-template-columns: 110px 1fr; gap: 16px; padding-bottom: 18px; border-bottom: 1px solid var(--line); }
-  .invitation-label { font-family: var(--body); font-size: 11px; letter-spacing: 0.32em; color: var(--gold); padding-top: 4px; }
-  .invitation-value { font-family: var(--display-cn); font-size: 17px; color: var(--pearl); line-height: 1.55; }
-  .invitation-value em { color: var(--gold); font-style: normal; }
-  .invitation-cta { background: var(--black-deep); border: 1px solid var(--line-strong); padding: 56px 48px; }
-  .invitation-cta-eyebrow { font-family: var(--body); font-size: 12px; letter-spacing: 0.32em; color: var(--gold); margin-bottom: 20px; }
-  .invitation-cta-title { font-family: var(--display-cn); font-size: 28px; line-height: 1.4; color: var(--pearl); margin-bottom: 24px; font-weight: 500; }
-  .invitation-cta p { font-family: var(--serif); font-size: 15px; line-height: 1.9; color: var(--pearl); opacity: 0.88; margin-bottom: 32px; }
-  .invitation-button { display: inline-block; padding: 14px 32px; background: rgba(201, 169, 97, 0.06); color: var(--gold); font-family: var(--body); font-size: 13px; letter-spacing: 0.16em; transition: all 0.4s; border: 1px solid rgba(201, 169, 97, 0.45); }
-  .invitation-button:hover { background: rgba(201, 169, 97, 0.14); color: var(--pearl); border-color: rgba(201, 169, 97, 0.75); }
+/* Logo stays Marcellus (it's TRIIN LELLEP in Latin chars) */
+.logo { font-family: 'Marcellus', serif; }
 
-  footer { padding: 100px 48px 48px; background: var(--black-deep); border-top: 1px solid var(--line); }
-  .footer-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 64px; }
-  .footer-logo { font-family: 'Marcellus', serif; font-size: 18px; letter-spacing: 0.32em; color: var(--pearl); margin-bottom: 18px; }
-  .footer-tagline { font-family: var(--serif); font-size: 15px; line-height: 1.85; color: var(--pearl); opacity: 0.7; }
-  .footer-col h5 { font-family: var(--body); font-size: 12px; letter-spacing: 0.32em; color: var(--gold); margin-bottom: 18px; font-weight: 500; }
-  .footer-col a, .footer-col p { display: block; font-family: var(--serif); font-size: 14px; color: var(--pearl); opacity: 0.75; line-height: 1.85; margin-bottom: 6px; transition: all 0.3s; }
-  .footer-col a:hover { opacity: 1; color: var(--gold); }
-  .footer-circle { color: var(--gold) !important; margin-top: 14px !important; opacity: 1 !important; }
-  .footer-bottom { max-width: 1200px; margin: 64px auto 0; padding-top: 32px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; font-family: var(--body); font-size: 11px; letter-spacing: 0.16em; color: var(--grey); }
+/* Nav links in Noto Serif SC, slightly bigger */
+.nav-links a { font-family: 'Noto Serif SC', sans-serif; font-size: 14px; letter-spacing: 0.12em; text-transform: none; }
+.nav-cta { text-transform: none; }
 
-  @media (max-width: 900px) {
-    nav { padding: 14px 22px; min-height: 78px; background: rgba(15, 11, 9, 0.98); backdrop-filter: none; -webkit-backdrop-filter: none; }
-    nav.scrolled { padding: 14px 22px; }
-    .logo { font-size: 14px; letter-spacing: 0.28em; }
-    .nav-links { gap: 14px; }
-    .nav-links li:not(.lang-switch):not(:last-child):not(.always-show) { display: none; }
-    .nav-cta { display: none; }
-    .lang-switch { border-left: none; padding-left: 0; margin-left: 0; gap: 9px; }
-    .lang-switch a { font-size: 11px; letter-spacing: 0.16em; }
-    .hero { min-height: 100svh; align-items: center; justify-content: center; padding: 120px 24px 64px; }
-    .hero-inner { max-width: 100%; width: 100%; text-align: center; margin: 0 auto; }
-    .hero-eyebrow { margin-bottom: 20px; font-size: 11px; letter-spacing: 0.28em; text-align: center; }
-    .hero-eyebrow::before, .hero-eyebrow::after { display: none; }
-    .hero-title { display: block; width: 100%; text-align: center; font-size: clamp(54px, 17vw, 72px); line-height: 0.86; letter-spacing: 0.04em; margin-bottom: 18px; padding-left: 0.04em; }
-    .hero-title-line { display: block; width: 100%; text-align: center; letter-spacing: 0.04em; }
-    .hero-title-line:first-child, .hero-title-line:last-child { transform: none; }
-    .hero-title-cn { font-size: 18px; letter-spacing: 0.24em; margin-bottom: 22px; }
-    .hero-subtitle { font-size: 17px; letter-spacing: 0.16em; margin-bottom: 30px; }
-    .hero-lede { font-size: 16px; line-height: 1.85; margin: 0 auto 38px; max-width: 340px; }
-    .hero-actions { gap: 18px; }
-    .scroll-indicator { display: none; }
-    .hero-eyebrow::before, .hero-eyebrow::after { display: none; }
-    .negation, .pull-quote, .work, .formats, .architecture, .artist, .hosts, .invitation, .commissions-promo { padding: 80px 24px; }
-    .commissions-formats { grid-template-columns: 1fr; }
-    .work-grid { grid-template-columns: 1fr; gap: 32px; }
-    .formats-grid { grid-template-columns: 1fr; gap: 24px; }
-    .format-card { padding: 36px 28px; }
-    .architecture::before { display: none; }
-    .movement { grid-template-columns: 56px 1fr; gap: 20px; }
-    .movement-num { font-size: 40px; }
-    .artist-grid { grid-template-columns: 1fr; gap: 40px; }
-    .artist-portrait { max-width: 380px; margin: 0 auto; }
-    .doc-grid { grid-template-columns: 1fr; gap: 20px; }
-    .doc-gallery { grid-template-columns: 1fr 1fr; gap: 12px; }
-    .hosts-grid { grid-template-columns: 1fr 1fr; }
-    .invitation-grid { grid-template-columns: 1fr; gap: 48px; }
-    .invitation-cta { padding: 36px 28px; }
-    .footer-inner { grid-template-columns: 1fr; gap: 40px; }
-    .footer-bottom { flex-direction: column; gap: 12px; padding: 24px 0 0; }
-    h2 { margin-bottom: 40px; }
-  }
-  @media (max-width: 600px) { .hosts-grid { grid-template-columns: 1fr; } .hero-cta { padding: 13px 22px; font-size: 12px; letter-spacing: 0.14em; } }
+/* Section eyebrows in Noto Serif SC, no uppercase */
+.section-eyebrow,
+.what-happens-eyebrow,
+.from-artist-eyebrow,
+.hero-eyebrow,
+.glimpse-eyebrow {
+  font-family: 'Noto Serif SC', sans-serif;
+  text-transform: none;
+  letter-spacing: 0.32em;
+  font-size: 12px;
+}
+
+/* Headings in Noto Serif SC */
+h2,
+.negation-affirm,
+.pull-quote-inner,
+.hero-title,
+.what-happens h2,
+.movement-content h3,
+.format-card h3,
+.doc-card h3,
+.invitation-cta-title,
+.commission-format h3,
+.work-fact-value,
+.host-tile h4,
+.from-artist-prose,
+.appearance-caption-text {
+  font-family: 'Noto Serif SC', serif;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+}
+
+/* Adjust heading sizes for CJK density */
+h2 { font-size: clamp(30px, 3.8vw, 48px); }
+.hero-title { font-size: clamp(54px, 9vw, 110px); letter-spacing: 0.04em; }
+.negation-affirm { font-size: clamp(26px, 3.4vw, 40px); line-height: 1.5; }
+.pull-quote-inner { font-size: clamp(24px, 3.2vw, 38px); font-style: normal; line-height: 1.6; letter-spacing: 0.08em; }
+
+/* Movement numbers stay Latin */
+.movement-num,
+.host-tile-num,
+.from-artist-mark,
+.from-artist-signature,
+.footer-logo,
+.format-eyebrow,
+.commission-format-eyebrow,
+.commission-format-honor,
+.doc-card-eyebrow,
+.tier-num,
+.tier-price,
+.gallery-lightbox-nav {
+  font-family: 'Marcellus', serif;
+}
+
+/* em → gold, no italic (CJK fonts don't have italics) */
+em,
+.what-happens-prose em,
+.work-prose em,
+.formats-lede em,
+.movement-content p em,
+.artist-bio em,
+.documentation-lede em,
+.commissions-promo-lede em,
+.invitation-value em,
+.hero-title em,
+.negation-affirm em,
+.pull-quote-inner em,
+.format-meta-value em,
+.from-artist-prose em,
+.appearance-caption-text em,
+h2 em {
+  font-style: normal;
+  color: var(--gold);
+}
+
+/* What-happens summary — adjust italic for CJK */
+.what-happens-summary { font-style: normal; font-size: 16px; line-height: 1.85; }
+.what-happens-summary strong { font-style: normal; }
+
+/* From artist prose: change from italic to gold accent */
+.from-artist-prose { font-style: normal; }
+.from-artist-signature-meta { font-family: 'Noto Serif SC', sans-serif; }
+
+/* Hero subtitle — replace italic with gold */
+.hero-subtitle { font-family: 'Noto Serif SC', serif; font-style: normal; font-weight: 400; letter-spacing: 0.18em; }
+.hero-lede { font-family: 'Noto Serif SC', serif; font-size: clamp(16px, 1.5vw, 19px); line-height: 1.95; }
+.hero-secondary { font-family: 'Noto Serif SC', serif; font-style: normal; }
+.scroll-indicator span { font-family: 'Noto Serif SC', sans-serif; font-size: 11px; letter-spacing: 0.32em; }
+
+/* Buttons — Noto Serif SC, no uppercase */
+.hero-cta, .nav-cta, .invitation-button, .commissions-promo-cta, .commissions-promo-secondary, .glimpse-listen-btn {
+  font-family: 'Noto Serif SC', sans-serif;
+  text-transform: none;
+  letter-spacing: 0.18em;
+  font-size: 13px;
+}
+.invitation-button { font-size: 13px; letter-spacing: 0.16em; }
+.glimpse-listen-btn { font-size: 12px; letter-spacing: 0.22em; }
+
+/* Format card meta labels */
+.format-meta-label,
+.work-fact-label,
+.commission-format-meta-row strong,
+.invitation-label,
+.format-eyebrow,
+.commission-format-eyebrow,
+.doc-card-eyebrow,
+.commission-format-honor-meta,
+.what-happens-element-label,
+.doc-card-placeholder-label {
+  font-family: 'Noto Serif SC', sans-serif;
+  text-transform: none;
+  letter-spacing: 0.24em;
+}
+.format-meta-label { letter-spacing: 0.22em; min-width: 70px; }
+.work-fact-label { font-size: 11px; letter-spacing: 0.28em; }
+
+/* Lang switch — keep small letters */
+.lang-switch a { font-family: 'Noto Serif SC', sans-serif; font-size: 12px; letter-spacing: 0.18em; text-transform: none; }
+
+/* Footer */
+.footer-col h5 { font-family: 'Noto Serif SC', sans-serif; text-transform: none; letter-spacing: 0.28em; font-size: 12px; }
+.footer-tagline { font-family: 'Noto Serif SC', serif; font-style: normal; }
+.footer-col a, .footer-col p { font-family: 'Noto Serif SC', serif; font-size: 14px; line-height: 1.85; }
+.footer-circle, .footer-support { font-style: normal !important; }
+.footer-bottom { font-family: 'Noto Serif SC', sans-serif; font-size: 12px; letter-spacing: 0.14em; }
+
+/* Credentials */
+.credential { font-family: 'Noto Serif SC', sans-serif; text-transform: none; letter-spacing: 0.22em; font-size: 12px; }
+
+/* Appearance caption */
+.appearance-caption-mark { font-family: 'Noto Serif SC', sans-serif; text-transform: none; letter-spacing: 0.32em; font-size: 12px; }
+.appearance-caption-text { font-style: normal; }
+
+/* Featured format card */
+.format-card.featured::before {
+  content: '主推';
+  font-family: 'Noto Serif SC', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  padding: 4px 14px;
+}
+
+/* Negation lines */
+.negation-line { font-family: 'Noto Serif SC', serif; font-weight: 500; letter-spacing: 0.12em; }
+
+/* Doc card placeholder */
+.doc-card-placeholder-eta { font-family: 'Noto Serif SC', serif; font-style: normal; }
+
+/* What-happens prose */
+.what-happens-prose { font-family: 'Noto Serif SC', serif; font-size: 17px; line-height: 1.95; }
+.work-prose { font-family: 'Noto Serif SC', serif; font-size: 17px; line-height: 1.95; }
+.documentation-lede { font-family: 'Noto Serif SC', serif; font-size: 17px; line-height: 1.95; }
+.formats-lede { font-family: 'Noto Serif SC', serif; font-size: 17px; line-height: 1.95; }
+.commissions-promo-lede { font-family: 'Noto Serif SC', serif; font-size: 17px; line-height: 1.95; }
+.format-prose { font-family: 'Noto Serif SC', serif; font-size: 14px; line-height: 1.9; }
+.format-meta-value { font-family: 'Noto Serif SC', serif; }
+.movement-content p { font-family: 'Noto Serif SC', serif; font-size: 16px; line-height: 1.95; }
+.artist-bio { font-family: 'Noto Serif SC', serif; font-size: 17px; line-height: 2; }
+.invitation-cta p { font-family: 'Noto Serif SC', serif; font-size: 15px; line-height: 1.9; }
+.what-happens-element-value { font-family: 'Noto Serif SC', serif; }
+.movement-trans { font-family: 'Marcellus', serif; font-style: italic; font-size: 0.55em; letter-spacing: 0.04em; }
+
+/* Mobile adjustments specific to zh */
+@media (max-width: 900px) {
+  .hero-title { font-size: clamp(48px, 14vw, 64px); letter-spacing: 0.04em; }
+  .hero-subtitle { font-size: 17px; letter-spacing: 0.16em; margin-bottom: 30px; }
+  .hero-lede { font-size: 16px; line-height: 1.85; max-width: 340px; }
+}
+
 </style>
 </head>
 
@@ -302,9 +1029,9 @@
     <li><a href="#work">作品</a></li>
     <li><a href="#artist">艺术家</a></li>
     <li><a href="#hosts">致主人</a></li>
-    <li><a href="#documentation">文献档案</a></li>
     <li><a href="commissions.html">委约</a></li>
-    <li class="always-show"><a href="#invitation" class="nav-cta">私密邀请</a></li>
+    <li><a href="support-zh.html" class="nav-support">支持</a></li>
+    <li class="always-show"><a href="#invitation" class="nav-cta">邀请</a></li>
     <li class="lang-switch always-show">
       <a href="index.html">EN</a>
       <a href="fr.html">FR</a>
@@ -315,15 +1042,15 @@
 
 <section class="hero">
   <div class="hero-inner">
-    <div class="hero-eyebrow animate-fadeUp">凭私密邀请</div>
+    <div class="hero-eyebrow animate-fadeUp">仅限私人邀请</div>
     <h1 class="hero-title animate-fadeUp delay-1"><span class="hero-title-line">TRIIN</span> <span class="hero-title-line">LELLEP</span></h1>
-    <div class="hero-title-cn animate-fadeUp delay-2">特林 · 勒勒普</div>
-    <div class="hero-subtitle animate-fadeUp delay-2">作曲家兼女高音 · 私密声乐作品</div>
+    <div class="hero-subtitle animate-fadeUp delay-2">特林·勒勒普 · 作曲家兼女高音</div>
     <p class="hero-lede animate-fadeUp delay-3">
-      原创电影声乐作品，由 Triin Lellep 亲自创作并演绎，于私密室内为亚洲、欧洲与海湾地区的精选文化主人呈献。
+      由特林·勒勒普创作并演绎的电影感声乐原创作品,
+      在亚洲、欧洲及海湾地区精选文化主办方的私人空间中呈现。
     </p>
     <div class="hero-actions animate-fadeUp delay-4">
-      <a href="#invitation" class="hero-cta"><span>申请入场</span></a>
+      <a href="#invitation" class="hero-cta"><span>请求邀请</span></a>
       <a href="circle.html" class="hero-secondary">或加入 <em>The Écoute Circle</em> <span>→</span></a>
     </div>
   </div>
@@ -336,81 +1063,168 @@
     <p class="negation-line strike">这不是独唱会。</p>
     <p class="negation-line strike">这不是疗愈课程。</p>
     <div class="negation-rule"></div>
-    <p class="negation-affirm">这是 <em>一场私密 écoute</em>——一部电影声乐作品，以单一弧线，由寂静走向圆满。</p>
+    <p class="negation-affirm">这是一场<em>私人聆听</em> — 一部电影感的声乐作品,以单一弧线从寂静抵达充盈。</p>
+  </div>
+</section>
+
+<section class="appearance" aria-label="艺术家的到来">
+  <div class="appearance-frame">
+    <picture>
+      <source
+        type="image/webp"
+        srcset="appearance-1200.webp 1200w, appearance-2000.webp 2000w"
+        sizes="100vw" />
+      <img
+        src="appearance-1200.jpg"
+        srcset="appearance-1200.jpg 1200w, appearance-2000.jpg 2000w"
+        sizes="100vw"
+        alt="特林·勒勒普 — 黑色礼服,棱镜光"
+        loading="lazy"
+        decoding="async"
+        width="2000" height="3000" />
+    </picture>
+    <div class="appearance-caption">
+      <div class="appearance-caption-mark">—  然后,她走入  —</div>
+      <div class="appearance-caption-text">她<em>在第一个音符之前</em>抵达。</div>
+    </div>
   </div>
 </section>
 
 <section class="pull-quote">
   <div class="pull-quote-inner">
-    艺术家走入房间，并非为娱乐。
-    <span>她走入，是为谱写它。</span>
+    艺术家走入房间,并非为娱乐。
+    <span>她走入,是为了构筑它。</span>
   </div>
 </section>
 
 <section class="work" id="work">
   <div class="section-inner">
     <div class="section-eyebrow">作品</div>
-    <h2>九十分钟<em>电影般的声音与存在</em>，依您所提供的空间而创。</h2>
+    <h2>九十分钟的<em>电影感声音与在场</em>,为您提供的房间而作。</h2>
 
     <p class="work-prose">
-      <em>Opus I</em> 是 Triin Lellep 为私密演出所创作的小型作品集中的首部。作品以单一九十分钟弧线为结构——始于近乎寂静，乐章连乐章，渐升至最终明亮的圆满。声音、乐器与光，三者协同编排。作品具戏剧性、冥想性，规模上无疑是电影般的；然而其源头始终是声学的、亲密的。
+      <em>Opus I</em> 是特林·勒勒普为私人演出而创作的一小组原创作品中的第一部。
+      作品以九十分钟的单一弧线结构展开 — 始于近乎寂静,随着每一乐章逐渐上升,
+      最终抵达被光照亮的充盈之境。人声、乐器与光被一同编排。
+      作品具有戏剧性、冥想性,且在规模上无可争议地具有电影感,
+      同时在其源头保持着声学的、私密的本质。
     </p>
 
     <div class="work-grid">
       <div class="work-fact"><div class="work-fact-label">时长</div><div class="work-fact-value">90 分钟</div></div>
-      <div class="work-fact"><div class="work-fact-label">形式</div><div class="work-fact-value">单一弧线 · 五个乐章 · 由弱至强</div></div>
-      <div class="work-fact"><div class="work-fact-label">声音</div><div class="work-fact-value">声学女高音 · 源头无扩音</div></div>
+      <div class="work-fact"><div class="work-fact-label">形式</div><div class="work-fact-value">单一弧线 · 五个乐章 · 从弱到强</div></div>
+      <div class="work-fact"><div class="work-fact-label">人声</div><div class="work-fact-value">原声女高音 · 无源头扩音</div></div>
       <div class="work-fact"><div class="work-fact-label">语言</div><div class="work-fact-value">英语 · 法语 · 意大利语 · 拉丁语</div></div>
-      <div class="work-fact"><div class="work-fact-label">场地</div><div class="work-fact-value">私密室内 · 无需常规舞台</div></div>
-      <div class="work-fact"><div class="work-fact-label">入场</div><div class="work-fact-value">仅限受邀 · 由主人精选</div></div>
+      <div class="work-fact"><div class="work-fact-label">场地</div><div class="work-fact-value">私人室内 · 无需传统舞台</div></div>
+      <div class="work-fact"><div class="work-fact-label">参与</div><div class="work-fact-value">仅限邀请 · 由主办方策展</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="what-happens" id="what-happens">
+  <div class="what-happens-inner">
+    <div class="what-happens-eyebrow">房间中发生的事</div>
+    <h2>九十分钟。<em>一个房间。一条弧线。</em></h2>
+
+    <div class="what-happens-prose">
+      <p>
+        一场<em>私人聆听</em>是一个九十分钟的完整作曲之夜,
+        由特林·勒勒普为一位主办方、一个房间、一群精选的宾客而书写并演绎。
+        声音是原声的。作品的结构是<strong>单一的戏剧性弧线</strong> —
+        始于近乎寂静,通过原创音乐、古典声乐素材与口述文本逐渐上升,
+        最终化解于电影感的充盈之中。
+      </p>
+      <p>
+        这不是独唱会。这不是私人音乐会。这不是疗愈课程。
+        它更接近<em>一场现场呈现的电影</em>:作曲、布光、配乐、记录,
+        皆作为主办方室内的单一艺术事件。
+      </p>
+    </div>
+
+    <div class="what-happens-elements">
+      <div class="what-happens-element">
+        <div class="what-happens-element-icon">i.</div>
+        <div class="what-happens-element-label">人声</div>
+        <div class="what-happens-element-value">原创音乐、古典声乐素材、口述文本融于一条弧线</div>
+      </div>
+      <div class="what-happens-element">
+        <div class="what-happens-element-icon">ii.</div>
+        <div class="what-happens-element-label">乐器</div>
+        <div class="what-happens-element-value">钢琴、kannel、handpan、弦乐四重奏 — 视形式而定</div>
+      </div>
+      <div class="what-happens-element">
+        <div class="what-happens-element-icon">iii.</div>
+        <div class="what-happens-element-label">光</div>
+        <div class="what-happens-element-value">烛光或电影感布光,与作品同步编排</div>
+      </div>
+      <div class="what-happens-element">
+        <div class="what-happens-element-icon">iv.</div>
+        <div class="what-happens-element-label">记录</div>
+        <div class="what-happens-element-value">以电影标准摄制与摄影记录</div>
+      </div>
+    </div>
+
+    <div class="what-happens-summary">
+      <strong>私密</strong>如沙龙。<strong>结构</strong>如演出。<strong>记录</strong>如文化电影。
     </div>
   </div>
 </section>
 
 <section class="formats">
   <div class="section-inner">
-    <div class="section-eyebrow">三种规模</div>
-    <h2>同一作品。三种强度。<em>依您所提供的空间而谱写。</em></h2>
+    <div class="section-eyebrow">三种形式</div>
+    <h2>一部作品。三种强度。<em>为您提供的房间而作。</em></h2>
 
     <p class="formats-lede">
-      每一场 <em>écoute</em> 以三种独立配置呈现——每一种皆为同一作品的完整实现，在声音、乐器与光的层面，依主人空间与意图而调整规模。
+      每一场<em>聆听</em>都以三种独立的配置呈现 — 每一种都是同一部作品的完整实现,
+      其人声、乐器与光的规模与主办方的房间与意图相匹配。
     </p>
 
     <div class="formats-grid">
       <div class="format-card">
-        <div class="format-eyebrow">i. Intime · 亲密</div>
-        <h3>烛光与独奏伴奏</h3>
+        <div class="format-eyebrow">i. Intime</div>
+        <h3>烛光 &amp; 独奏伴奏</h3>
         <div class="format-meta">
-          <div class="format-meta-row"><div class="format-meta-label">容纳</div><div class="format-meta-value">20–40 位宾客</div></div>
-          <div class="format-meta-row"><div class="format-meta-label">光</div><div class="format-meta-value">烛光 · 两束柔光聚光</div></div>
+          <div class="format-meta-row"><div class="format-meta-label">人数</div><div class="format-meta-value">20–40 位宾客</div></div>
+          <div class="format-meta-row"><div class="format-meta-label">光</div><div class="format-meta-value">烛光 · 两束柔光</div></div>
           <div class="format-meta-row"><div class="format-meta-label">乐器</div><div class="format-meta-value">钢琴 <em>或</em> kannel <em>或</em> 古典吉他</div></div>
-          <div class="format-meta-row"><div class="format-meta-label">气氛</div><div class="format-meta-value"><em>声学的、沉思的、神秘的</em></div></div>
+          <div class="format-meta-row"><div class="format-meta-label">氛围</div><div class="format-meta-value"><em>原声、冥想、神秘</em></div></div>
         </div>
-        <p class="format-prose">作品最纯粹的声学呈现。于烛光私密室内演绎，伴以单一乐器。声音与空间是首要建筑。</p>
+        <p class="format-prose">
+          作品在声学上最纯粹的表达。于烛光照亮的私人室内由单一伴奏乐器演绎。
+          人声与房间是首要的建筑。
+        </p>
       </div>
 
       <div class="format-card featured">
-        <div class="format-eyebrow">ii. Privé · 私密</div>
-        <h3>电影光影与氛围</h3>
+        <div class="format-eyebrow">ii. Privé</div>
+        <h3>电影感光线 &amp; 氛围</h3>
         <div class="format-meta">
-          <div class="format-meta-row"><div class="format-meta-label">容纳</div><div class="format-meta-value">60–100 位宾客</div></div>
-          <div class="format-meta-row"><div class="format-meta-label">光</div><div class="format-meta-value">多层聚光 · 环境电影灯光 · 可选烟雾</div></div>
+          <div class="format-meta-row"><div class="format-meta-label">人数</div><div class="format-meta-value">60–100 位宾客</div></div>
+          <div class="format-meta-row"><div class="format-meta-label">光</div><div class="format-meta-value">分层聚光 · 电影感氛围 · 可选烟雾</div></div>
           <div class="format-meta-row"><div class="format-meta-label">乐器</div><div class="format-meta-value">钢琴 · kannel · handpan</div></div>
-          <div class="format-meta-row"><div class="format-meta-label">气氛</div><div class="format-meta-value"><em>神秘、戏剧性、电影般</em></div></div>
+          <div class="format-meta-row"><div class="format-meta-label">氛围</div><div class="format-meta-value"><em>神秘、戏剧、电影感</em></div></div>
         </div>
-        <p class="format-prose">完整电影舞台呈现。灯光设计与作品同步编排——由近乎黑暗，穿越氛围烟雾，至最终明亮的圆满。适用于宴会厅、私人画廊及精选文化场所。</p>
+        <p class="format-prose">
+          完整的电影感呈现。布光设计与作品同步编排 — 从近乎黑暗,
+          穿过氛围烟雾,抵达最终被光照亮的充盈。适用于宴会厅、私人画廊、
+          以及策展过的文化场所。
+        </p>
       </div>
 
       <div class="format-card">
-        <div class="format-eyebrow">iii. Souverain · 至尊</div>
-        <h3>完整乐团与电影制作</h3>
+        <div class="format-eyebrow">iii. Souverain</div>
+        <h3>完整乐团 &amp; 电影感制作</h3>
         <div class="format-meta">
-          <div class="format-meta-row"><div class="format-meta-label">容纳</div><div class="format-meta-value">150–200 位宾客</div></div>
-          <div class="format-meta-row"><div class="format-meta-label">光</div><div class="format-meta-value">完整电影灯光设计 · 氛围烟雾</div></div>
-          <div class="format-meta-row"><div class="format-meta-label">乐器</div><div class="format-meta-value">声音 · 弦乐四重奏 · handpan · 钢琴 · kannel</div></div>
-          <div class="format-meta-row"><div class="format-meta-label">气氛</div><div class="format-meta-value"><em>史诗、电影般、至尊</em></div></div>
+          <div class="format-meta-row"><div class="format-meta-label">人数</div><div class="format-meta-value">150–200 位宾客</div></div>
+          <div class="format-meta-row"><div class="format-meta-label">光</div><div class="format-meta-value">完整电影感布光 · 氛围烟雾</div></div>
+          <div class="format-meta-row"><div class="format-meta-label">乐器</div><div class="format-meta-value">人声 · 弦乐四重奏 · handpan · 钢琴 · kannel</div></div>
+          <div class="format-meta-row"><div class="format-meta-label">氛围</div><div class="format-meta-value"><em>史诗、电影感、主权</em></div></div>
         </div>
-        <p class="format-prose">作品的完整规模。弦乐四重奏与 handpan 加入主要乐器；灯光与氛围以电影标准制作。专为基金会、大使馆与国家级标志性文化场合保留。</p>
+        <p class="format-prose">
+          作品的完整规模。弦乐四重奏与 handpan 加入主要乐器;
+          光线与氛围以电影标准制作。专为基金会、大使馆与国家级文化场合而备。
+        </p>
       </div>
     </div>
   </div>
@@ -418,34 +1232,45 @@
 
 <section class="architecture">
   <div class="section-inner">
-    <div class="section-eyebrow">建筑结构</div>
-    <h2>五个乐章，<em>谱写为单一渐升之弧</em>——由呼吸至圆满。</h2>
+    <div class="section-eyebrow">结构</div>
+    <h2>五个乐章,<em>作为一条上升的弧线而作</em> — 从呼吸到充盈。</h2>
 
     <div class="movements-list">
-      <div class="movement"><div class="movement-num">I.</div><div class="movement-content">
-        <h3>Souffle <span class="movement-trans">/ 呼吸</span></h3>
-        <p>房间踏入寂静。一个持续的音调如此轻柔地开始，以致几位宾客不会察觉它何时开始——只感到空气已然不同。<em>弱奏。</em>几近于无。作品由此进入。</p>
-      </div></div>
-
-      <div class="movement"><div class="movement-num">II.</div><div class="movement-content">
-        <h3>Héritage <span class="movement-trans">/ 传承</span></h3>
-        <p>三首意大利语、法语与拉丁语的古典曲目——欧洲声乐的技艺与历史根基。到此乐章结束时，无人质疑这把驾驭空间的声音。</p>
-      </div></div>
-
-      <div class="movement"><div class="movement-num">III.</div><div class="movement-content">
-        <h3>Le Récit <span class="movement-trans">/ 叙述</span></h3>
-        <p>一条贯穿声音与姿态的连续叙事线。戏剧性。来自艺术家已出版作品中的哲学文学片段。作品揭示其故事；空间不再只是观众，而是见证者。</p>
-      </div></div>
-
-      <div class="movement"><div class="movement-num">IV.</div><div class="movement-content">
-        <h3>Ascension <span class="movement-trans">/ 升腾</span></h3>
-        <p>乐器汇集。光影深沉。持续的元音敞开为更广的音程；声音与伴奏交融。作品穿越冥想，走向电影感。空间开始向前倾身。</p>
-      </div></div>
-
-      <div class="movement"><div class="movement-num">V.</div><div class="movement-content">
-        <h3>Crescendo <span class="movement-trans">/ 圆满</span></h3>
-        <p><em>强奏。</em>作品的完整建筑现身——声音、乐团与光汇聚为单一持续的存在。电影般、史诗般、不可错认。多数宾客将记住这为他们这年最独特的艺术相遇。</p>
-      </div></div>
+      <div class="movement">
+        <div class="movement-num">I.</div>
+        <div class="movement-content">
+          <h3>Souffle <span class="movement-trans">/ 呼吸</span></h3>
+          <p>房间步入寂静。一个持续的音如此轻柔地开始,以至于若干宾客未能察觉它何时启程 — 只感到空气已然不同。<em>弱声。</em>近乎虚无。作品由此进入。</p>
+        </div>
+      </div>
+      <div class="movement">
+        <div class="movement-num">II.</div>
+        <div class="movement-content">
+          <h3>Héritage <span class="movement-trans">/ 传承</span></h3>
+          <p>三首意大利语、法语与拉丁语的古典作品 — 欧洲人声的技术与历史基础。乐章结束时,无人怀疑那承载着整个房间的声音。</p>
+        </div>
+      </div>
+      <div class="movement">
+        <div class="movement-num">III.</div>
+        <div class="movement-content">
+          <h3>Le Récit <span class="movement-trans">/ 叙述</span></h3>
+          <p>一条贯穿人声与姿态的连续叙事线。戏剧性的。取自艺术家已出版作品的哲学文学片段。作品揭示其故事;房间不再是听众,而是见证者。</p>
+        </div>
+      </div>
+      <div class="movement">
+        <div class="movement-num">IV.</div>
+        <div class="movement-content">
+          <h3>Ascension <span class="movement-trans">/ 升起</span></h3>
+          <p>乐器汇聚。光线加深。持续的元音打开为更宽的音程;人声与伴奏交织。作品穿过冥想,迈向电影感。房间开始向前倾身。</p>
+        </div>
+      </div>
+      <div class="movement">
+        <div class="movement-num">V.</div>
+        <div class="movement-content">
+          <h3>Crescendo <span class="movement-trans">/ 充盈</span></h3>
+          <p><em>强声。</em>作品的完整结构抵达 — 人声、乐团与光线汇聚为单一的持续在场。电影感的、史诗般的、不可错认的。大多数宾客将把这一刻记为他们这一年最独特的艺术相遇。</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -456,25 +1281,37 @@
     <div class="artist-grid">
       <div>
         <div class="artist-portrait">
-          <!-- Replace placeholder with: <img src="triin-portrait.jpg" alt="Triin Lellep" /> -->
-          <div class="artist-portrait-placeholder">
-            <div class="artist-portrait-placeholder-mark">TL</div>
-            <div class="artist-portrait-placeholder-text">肖像<br/>即将呈现</div>
-          </div>
+          <picture>
+            <source
+              type="image/webp"
+              srcset="triin-portrait-800.webp 800w, triin-portrait-1600.webp 1600w"
+              sizes="(max-width: 900px) 380px, 460px" />
+            <img
+              src="triin-portrait-800.jpg"
+              srcset="triin-portrait-800.jpg 800w, triin-portrait-1600.jpg 1600w"
+              sizes="(max-width: 900px) 380px, 460px"
+              alt="特林·勒勒普 — 作曲家兼女高音,以电影感光线拍摄"
+              loading="lazy"
+              decoding="async"
+              width="800" height="1066" />
+          </picture>
         </div>
         <div class="artist-name">Triin Lellep</div>
-        <div class="artist-name-meta">作曲家兼女高音</div>
+        <div class="artist-name-meta">特林·勒勒普 · 作曲家兼女高音</div>
         <div class="artist-mark"></div>
       </div>
       <div>
         <p class="artist-bio">
-          一位欧洲<em>作曲家兼女高音</em>、作家及舞台艺术家，毕业于<em>赫尔辛基音乐学院</em>与<em>巴黎第八大学</em>。<em>Private Écoute</em> 中演绎的作品皆由 Triin 亲自谱写——融合她自身的古典声乐、原创电影音乐创作、其已出版作品中的文学宇宙观，以及将每部作品由寂静谱写至圆满的戏剧性结构。
+          一位欧洲<em>作曲家兼女高音</em>、作家与舞台艺术家,曾就学于
+          <em>赫尔辛基音乐学院</em>与<em>巴黎第八大学</em>。在 <em>Private Écoute</em> 中演绎的作品
+          皆由特林本人创作 — 将她的古典声乐、原创电影感写作、其已出版作品中的文学宇宙观,
+          以及一种自寂静构筑至充盈的戏剧性结构融汇于一体。
         </p>
         <p class="artist-bio" style="margin-top: 24px;">
-          她往返欧洲与亚洲之间，每年为精选国际主人创作少量私密电影声乐作品。
+          往返于欧洲与亚洲之间,她每年仅为精选的国际主办方创作少数私人电影感声乐作品。
         </p>
         <div class="credentials">
-          <span class="credential">作曲家</span>
+          <span class="credential">作曲</span>
           <span class="credential">女高音</span>
           <span class="credential">作家</span>
           <span class="credential">赫尔辛基音乐学院</span>
@@ -485,170 +1322,285 @@
   </div>
 </section>
 
+<section class="from-artist" id="from-artist">
+  <div class="from-artist-inner">
+    <div class="from-artist-eyebrow">来自艺术家</div>
+    <div class="from-artist-mark">"</div>
+
+    <div class="from-artist-prose">
+      <p>
+        多年来,我试图将我的声音放入已被命名的房间 —
+        独唱会、音乐会、室内乐之夜。它们都未能容纳我真正在创作的东西。
+        <em>Private Écoute</em> 是我为自己,也为您所书写的形式。
+      </p>
+      <p>
+        在那九十分钟中发生的并非一份曲目单。它是一条单一的弧线 —
+        寂静、呼吸、人声、语言与充盈 — 为您提供的房间而作。
+        我带来作品;您带来房间。这一夜只存在一次,只在那里。
+      </p>
+      <p>
+        若其中有什么与您共鸣,请写信给我。第一次对话总是私人的。
+      </p>
+    </div>
+
+    <div class="from-artist-signature">Triin Lellep</div>
+    <div class="from-artist-signature-meta">特林·勒勒普 · 作曲家兼女高音</div>
+  </div>
+</section>
+
 <section class="hosts" id="hosts">
   <div class="section-inner">
     <div class="section-eyebrow">致主人</div>
-    <h2>致那些已拥有一切的空间——<em>现寻求电影般、原创、不可化约之物。</em></h2>
+    <h2>致那些已拥有一切的房间 — <em>如今寻求某种电影感的、原创的、不可化约的事物。</em></h2>
 
     <div class="hosts-grid">
-      <div class="host-tile"><div class="host-tile-num">i.</div><h4>大使馆与文化机构</h4></div>
+      <div class="host-tile"><div class="host-tile-num">i.</div><h4>大使馆与文化中心</h4></div>
       <div class="host-tile"><div class="host-tile-num">ii.</div><h4>基金会</h4></div>
       <div class="host-tile"><div class="host-tile-num">iii.</div><h4>家族办公室</h4></div>
       <div class="host-tile"><div class="host-tile-num">iv.</div><h4>精品奢华酒店</h4></div>
       <div class="host-tile"><div class="host-tile-num">v.</div><h4>私人会所</h4></div>
-      <div class="host-tile"><div class="host-tile-num">vi.</div><h4>精选静修庄园</h4></div>
-      <div class="host-tile"><div class="host-tile-num">vii.</div><h4>私密沙龙</h4></div>
+      <div class="host-tile"><div class="host-tile-num">vi.</div><h4>策展型静修空间</h4></div>
+      <div class="host-tile"><div class="host-tile-num">vii.</div><h4>私人沙龙</h4></div>
       <div class="host-tile"><div class="host-tile-num">viii.</div><h4>收藏家晚宴</h4></div>
       <div class="host-tile"><div class="host-tile-num">ix.</div><h4>国家级文化场合</h4></div>
     </div>
   </div>
 </section>
 
+<section class="glimpse" id="glimpse">
+  <div class="glimpse-inner">
+    <div class="glimpse-eyebrow">一瞥</div>
+    <div class="glimpse-frame">
+      <video
+        autoplay muted loop playsinline preload="metadata"
+        poster="triin-poster.jpg"
+        aria-label="特林·勒勒普的简短电影感片段 — 无声循环">
+        <source src="triin-loop.mp4" type="video/mp4">
+      </video>
+    </div>
+    <p class="glimpse-caption">
+      来自此前一次录影中的简短电影感片段 — <em>在第一章之前</em>。
+      页面中无声;完整版,带声音,于下方打开。
+    </p>
+    <div class="glimpse-actions">
+      <button type="button" class="glimpse-listen-btn" id="glimpse-listen">
+        <span class="glimpse-listen-btn-icon"></span>
+        带声音观看
+      </button>
+    </div>
+  </div>
+</section>
+
+<div class="glimpse-modal" id="glimpse-modal" role="dialog" aria-modal="true" aria-label="带声音的完整版">
+  <div class="glimpse-modal-inner">
+    <button type="button" class="glimpse-modal-close" id="glimpse-modal-close" aria-label="关闭">×</button>
+    <video
+      id="glimpse-modal-video"
+      controls playsinline preload="none"
+      poster="triin-poster.jpg">
+      <source src="triin-full.mp4" type="video/mp4">
+    </video>
+  </div>
+</div>
+
 <section class="documentation" id="documentation">
   <div class="section-inner">
-    <div class="section-eyebrow">文献档案</div>
-    <h2>首场<em>écoute</em> 以电影级标准拍摄与录制。</h2>
+    <div class="section-eyebrow">记录</div>
+    <h2>第一章正在以<em>电影标准</em>被拍摄与录制。</h2>
 
     <p class="documentation-lede">
-      每一场 <em>écoute</em> 皆作为这一类别的奠基档案被记录——一组小型的电影、声音与摄影集，所有后续的传播皆由此而出。<em>The Écoute Circle</em> 的赞助人将先于任何公开发布，私密地接收这些档案。
+      每一场<em>聆听</em>都被记录为这一类别的奠基性档案 — 一小组电影摄影、声音与影像,
+      所有后续的传播皆从中提取。<em>The Écoute Circle</em> 的赞助人将私下接收这些记录,
+      早于任何公开发布。
     </p>
 
     <div class="doc-grid">
-
       <div class="doc-card">
         <div class="doc-card-media">
-          <!-- 替换为: <video src="cinematic-film.mp4" controls></video> 或 <iframe src="..."></iframe> -->
           <div class="doc-card-placeholder">
             <div class="doc-card-placeholder-icon">▶</div>
-            <div class="doc-card-placeholder-label">电影短片</div>
-            <div class="doc-card-placeholder-eta">2026 年 6 月亚洲首场之后</div>
+            <div class="doc-card-placeholder-label">电影感影片</div>
+            <div class="doc-card-placeholder-eta">于亚洲篇章之后,2026 年 6 月</div>
           </div>
         </div>
         <div class="doc-card-content">
           <div class="doc-card-eyebrow">i.  三分钟</div>
-          <h3>电影短片</h3>
+          <h3>电影感影片</h3>
           <p>
-            首场 <em>écoute</em> 的三分钟电影短片——为主人、未来赞助人与创立圈子的私密流通而创。此片是这一类别的艺术签名。
+            首场<em>聆听</em>的三分钟电影感影片 — 为在主办方、潜在赞助人与创始圈中
+            私下传阅而作。该影片是这一类别的艺术签名。
           </p>
         </div>
       </div>
 
       <div class="doc-card">
         <div class="doc-card-media">
-          <!-- 替换为: <video src="documentary.mp4" controls></video> 或 <iframe src="..."></iframe> -->
           <div class="doc-card-placeholder">
             <div class="doc-card-placeholder-icon">▶</div>
             <div class="doc-card-placeholder-label">纪录片</div>
-            <div class="doc-card-placeholder-eta">2026 年 6 月亚洲首场之后</div>
+            <div class="doc-card-placeholder-eta">于亚洲篇章之后,2026 年 6 月</div>
           </div>
         </div>
         <div class="doc-card-content">
           <div class="doc-card-eyebrow">ii.  十二分钟</div>
-          <h3>纪录片</h3>
+          <h3>纪录影片</h3>
           <p>
-            十二分钟的纪录片，追溯作品的建筑结构——其作曲、其乐章、其空间、其哲学。在赞助人首批流通之后，向国际文化媒体发布。
+            一部十二分钟的纪录片,追溯作品的结构 — 其创作、其乐章、其房间、其哲学。
+            将于首轮赞助人传阅之后,向国际文化媒体发布。
           </p>
         </div>
       </div>
-
     </div>
 
     <div class="section-eyebrow" style="margin-bottom: 40px;">摄影档案</div>
 
     <div class="doc-gallery">
-      <div class="doc-gallery-tile">i</div>
-      <div class="doc-gallery-tile">ii</div>
-      <div class="doc-gallery-tile">iii</div>
-      <div class="doc-gallery-tile">iv</div>
-      <div class="doc-gallery-tile">v</div>
-      <div class="doc-gallery-tile">vi</div>
-      <div class="doc-gallery-tile">vii</div>
-      <div class="doc-gallery-tile">viii</div>
+      <div class="doc-gallery-tile">
+        <picture>
+          <source type="image/webp" srcset="gallery-i-800.webp 800w, gallery-i-1600.webp 1600w" sizes="(max-width: 900px) 50vw, 25vw">
+          <img src="gallery-i-800.jpg" srcset="gallery-i-800.jpg 800w, gallery-i-1600.jpg 1600w" sizes="(max-width: 900px) 50vw, 25vw" alt="特林·勒勒普 — 巴黎门廊,黑色褶皱礼服" loading="lazy" decoding="async" width="800" height="800">
+        </picture>
+      </div>
+      <div class="doc-gallery-tile">
+        <picture>
+          <source type="image/webp" srcset="gallery-ii-800.webp 800w, gallery-ii-1600.webp 1600w" sizes="(max-width: 900px) 50vw, 25vw">
+          <img src="gallery-ii-800.jpg" srcset="gallery-ii-800.jpg 800w, gallery-ii-1600.jpg 1600w" sizes="(max-width: 900px) 50vw, 25vw" alt="特林·勒勒普 — 黑色礼服,棱镜光" loading="lazy" decoding="async" width="800" height="800">
+        </picture>
+      </div>
+      <div class="doc-gallery-tile">
+        <picture>
+          <source type="image/webp" srcset="gallery-iii-800.webp 800w, gallery-iii-1600.webp 1600w" sizes="(max-width: 900px) 50vw, 25vw">
+          <img src="gallery-iii-800.jpg" srcset="gallery-iii-800.jpg 800w, gallery-iii-1600.jpg 1600w" sizes="(max-width: 900px) 50vw, 25vw" alt="特林·勒勒普 — 俯瞰,白色薄纱" loading="lazy" decoding="async" width="800" height="800">
+        </picture>
+      </div>
+      <div class="doc-gallery-tile">
+        <picture>
+          <source type="image/webp" srcset="gallery-iv-800.webp 800w, gallery-iv-1600.webp 1600w" sizes="(max-width: 900px) 50vw, 25vw">
+          <img src="gallery-iv-800.jpg" srcset="gallery-iv-800.jpg 800w, gallery-iv-1600.jpg 1600w" sizes="(max-width: 900px) 50vw, 25vw" alt="特林·勒勒普 — 镀金镜前,粉色礼服" loading="lazy" decoding="async" width="800" height="800">
+        </picture>
+      </div>
+      <div class="doc-gallery-tile">
+        <picture>
+          <source type="image/webp" srcset="gallery-v-800.webp 800w, gallery-v-1600.webp 1600w" sizes="(max-width: 900px) 50vw, 25vw">
+          <img src="gallery-v-800.jpg" srcset="gallery-v-800.jpg 800w, gallery-v-1600.jpg 1600w" sizes="(max-width: 900px) 50vw, 25vw" alt="特林·勒勒普 — 薰衣草色蕾丝礼服,巴洛克厅堂" loading="lazy" decoding="async" width="800" height="800">
+        </picture>
+      </div>
+      <div class="doc-gallery-tile">
+        <picture>
+          <source type="image/webp" srcset="gallery-vi-800.webp 800w, gallery-vi-1600.webp 1600w" sizes="(max-width: 900px) 50vw, 25vw">
+          <img src="gallery-vi-800.jpg" srcset="gallery-vi-800.jpg 800w, gallery-vi-1600.jpg 1600w" sizes="(max-width: 900px) 50vw, 25vw" alt="特林·勒勒普 — 象牙白礼服,灰泥拱门" loading="lazy" decoding="async" width="800" height="800">
+        </picture>
+      </div>
+      <div class="doc-gallery-tile">
+        <picture>
+          <source type="image/webp" srcset="gallery-vii-800.webp 800w, gallery-vii-1600.webp 1600w" sizes="(max-width: 900px) 50vw, 25vw">
+          <img src="gallery-vii-800.jpg" srcset="gallery-vii-800.jpg 800w, gallery-vii-1600.jpg 1600w" sizes="(max-width: 900px) 50vw, 25vw" alt="特林·勒勒普 — 戛纳电影节" loading="lazy" decoding="async" width="800" height="800">
+        </picture>
+      </div>
+      <div class="doc-gallery-tile">
+        <picture>
+          <source type="image/webp" srcset="gallery-viii-800.webp 800w, gallery-viii-1600.webp 1600w" sizes="(max-width: 900px) 50vw, 25vw">
+          <img src="gallery-viii-800.jpg" srcset="gallery-viii-800.jpg 800w, gallery-viii-1600.jpg 1600w" sizes="(max-width: 900px) 50vw, 25vw" alt="特林·勒勒普 — 红色天鹅绒,白色薄纱" loading="lazy" decoding="async" width="800" height="800">
+        </picture>
+      </div>
     </div>
-
   </div>
 </section>
+
+<div class="gallery-lightbox" id="gallery-lightbox" role="dialog" aria-modal="true" aria-label="照片浏览器">
+  <div class="gallery-lightbox-inner">
+    <button type="button" class="gallery-lightbox-close" id="gallery-lightbox-close" aria-label="关闭">×</button>
+    <button type="button" class="gallery-lightbox-nav gallery-lightbox-prev" id="gallery-lightbox-prev" aria-label="上一张">‹</button>
+    <img class="gallery-lightbox-img" id="gallery-lightbox-img" src="" alt="">
+    <button type="button" class="gallery-lightbox-nav gallery-lightbox-next" id="gallery-lightbox-next" aria-label="下一张">›</button>
+  </div>
+</div>
 
 <section class="commissions-promo" id="commissions">
   <div class="section-inner">
     <div class="section-eyebrow">私人委约</div>
-    <h2>为您的厅堂<em>委约一场私人 écoute</em>。</h2>
+    <h2>为您的房间委约一场<em>私人聆听</em>。</h2>
     <p class="commissions-promo-lede">
-      使馆、基金会、家族办公室与签名级私人主人，皆可为其私密空间委约一场原创九十分钟 <em>écoute</em>。三种形制。<em>酬金透明，直接预订。</em>开始无需任何通话。
+      大使馆、基金会、家族办公室,以及标志性私人主办方,
+      可为其室内委约一部原创九十分钟的<em>聆听</em>。三种形式。
+      <em>透明的艺术家酬金。直接预订。</em>无需通话即可开始。
     </p>
 
     <div class="commissions-formats">
-
       <div class="commission-format">
         <div class="commission-format-eyebrow">i. Intime</div>
-        <h3>Intime · 内息</h3>
-        <div class="commission-format-tagline">烛光与独奏伴奏</div>
+        <h3>Intime</h3>
+        <div class="commission-format-tagline">烛光 &amp; 独奏伴奏</div>
         <div class="commission-format-honor">€17.5k – €27.5k</div>
         <div class="commission-format-honor-meta">艺术家酬金</div>
         <div class="commission-format-divider"></div>
         <div class="commission-format-meta">
-          <div class="commission-format-meta-row"><strong>规模</strong>20–40 位宾客</div>
-          <div class="commission-format-meta-row"><strong>适合场合</strong>私人沙龙、退修闭幕之夜</div>
+          <div class="commission-format-meta-row"><strong>人数</strong>20–40 位宾客</div>
+          <div class="commission-format-meta-row"><strong>适用于</strong>私人沙龙、静修闭幕之夜</div>
         </div>
       </div>
 
       <div class="commission-format featured">
         <div class="commission-format-eyebrow">ii. Privé</div>
-        <h3>Privé · 私室</h3>
-        <div class="commission-format-tagline">电影感光线与气氛</div>
+        <h3>Privé</h3>
+        <div class="commission-format-tagline">电影感光线 &amp; 氛围</div>
         <div class="commission-format-honor">€37.5k – €60k</div>
         <div class="commission-format-honor-meta">艺术家酬金</div>
         <div class="commission-format-divider"></div>
         <div class="commission-format-meta">
-          <div class="commission-format-meta-row"><strong>规模</strong>60–100 位宾客</div>
-          <div class="commission-format-meta-row"><strong>适合场合</strong>基金会大厅、周年庆典、签名级活动</div>
+          <div class="commission-format-meta-row"><strong>人数</strong>60–100 位宾客</div>
+          <div class="commission-format-meta-row"><strong>适用于</strong>基金会厅堂、周年庆典、标志性活动</div>
         </div>
       </div>
 
       <div class="commission-format">
         <div class="commission-format-eyebrow">iii. Souverain</div>
-        <h3>Souverain · 主权</h3>
-        <div class="commission-format-tagline">完整电影制作 · 整组乐团</div>
+        <h3>Souverain</h3>
+        <div class="commission-format-tagline">完整电影感制作 · 乐团</div>
         <div class="commission-format-honor">€90k – €150k</div>
         <div class="commission-format-honor-meta">艺术家酬金</div>
         <div class="commission-format-divider"></div>
         <div class="commission-format-meta">
-          <div class="commission-format-meta-row"><strong>规模</strong>150–200 位宾客</div>
-          <div class="commission-format-meta-row"><strong>适合场合</strong>使馆、国家级文化场合</div>
+          <div class="commission-format-meta-row"><strong>人数</strong>150–200 位宾客</div>
+          <div class="commission-format-meta-row"><strong>适用于</strong>大使馆、国家级文化场合</div>
         </div>
       </div>
-
     </div>
 
     <div class="commissions-promo-cta-row">
-      <a href="commissions.html" class="commissions-promo-cta">前往预订系统 →</a>
-      <a href="commissions.html#availability" class="commissions-promo-secondary">或查看可订日历</a>
+      <a href="commissions.html" class="commissions-promo-cta">预订系统 →</a>
+      <a href="commissions.html#availability" class="commissions-promo-secondary">或查看排期日历</a>
     </div>
   </div>
 </section>
 
 <section class="invitation" id="invitation">
   <div class="section-inner">
-    <div class="section-eyebrow">私密邀请</div>
-    <h2>仅以<em>私密邀请</em>形式向亚洲、欧洲与海湾地区的精选主人开放。</h2>
+    <div class="section-eyebrow">私人邀请</div>
+    <h2>仅<em>以私人邀请方式</em>开放,面向亚洲、欧洲与海湾地区精选主办方。</h2>
 
     <div class="invitation-grid">
       <div class="invitation-details">
-        <div class="invitation-row"><div class="invitation-label">作品</div><div class="invitation-value"><em>Opus I</em> · Triin Lellep 的一场私密 écoute</div></div>
+        <div class="invitation-row"><div class="invitation-label">作品</div><div class="invitation-value"><em>Opus I</em> · 特林·勒勒普的一场私人聆听</div></div>
         <div class="invitation-row"><div class="invitation-label">时长</div><div class="invitation-value">90 分钟 · 单一弧线</div></div>
-        <div class="invitation-row"><div class="invitation-label">规模</div><div class="invitation-value">Intime · Privé · Souverain</div></div>
-        <div class="invitation-row"><div class="invitation-label">容纳</div><div class="invitation-value">由 20 至 200 位宾客，依空间而定</div></div>
+        <div class="invitation-row"><div class="invitation-label">形式</div><div class="invitation-value">Intime · Privé · Souverain</div></div>
+        <div class="invitation-row"><div class="invitation-label">人数</div><div class="invitation-value">从 20 至 200 位宾客,视房间而定</div></div>
         <div class="invitation-row"><div class="invitation-label">语言</div><div class="invitation-value">英语 · 法语 · 意大利语 · 拉丁语</div></div>
-        <div class="invitation-row"><div class="invitation-label">地区</div><div class="invitation-value">亚洲 · 欧洲 · 海湾地区</div></div>
-        <div class="invitation-row"><div class="invitation-label">档期</div><div class="invitation-value">自 2026 年 6 月起</div></div>
-        <div class="invitation-row" style="border-bottom: none;"><div class="invitation-label">费用</div><div class="invitation-value">凭私密委托</div></div>
+        <div class="invitation-row"><div class="invitation-label">区域</div><div class="invitation-value">亚洲 · 欧洲 · 海湾</div></div>
+        <div class="invitation-row"><div class="invitation-label">可预订</div><div class="invitation-value">自 2026 年 6 月起</div></div>
+        <div class="invitation-row" style="border-bottom: none;"><div class="invitation-label">酬金</div><div class="invitation-value">视私人委约而定</div></div>
       </div>
 
       <div class="invitation-cta">
-        <div class="invitation-cta-eyebrow">开启对话</div>
-        <div class="invitation-cta-title">请求私密邀请</div>
-        <p>请告知您心中所想的空间，以及最契合您意图的规模。若契合恰当，我们将于七日内亲自联系您。</p>
-        <a href="mailto:triinlellep@gmail.com?subject=Private%20%C3%89coute%20%E2%80%94%20%E7%A7%81%E5%AF%86%E9%82%80%E8%AF%B7%E5%92%A8%E8%AF%A2" class="invitation-button">致信 Triin</a>
+        <div class="invitation-cta-eyebrow">开始对话</div>
+        <div class="invitation-cta-title">请求一份私人邀请</div>
+        <p>
+          请告诉我们您心中的房间,以及最契合您意图的形式。
+          若彼此对齐,我们将在七日内与您私下联络。
+        </p>
+        <a href="mailto:triinlellep@gmail.com?subject=Private%20%C3%89coute%20%E2%80%94%20Invitation%20Inquiry" class="invitation-button">
+          致信特林
+        </a>
       </div>
     </div>
   </div>
@@ -659,15 +1611,17 @@
     <div>
       <div class="footer-logo">TRIIN LELLEP</div>
       <p class="footer-tagline">
-        今夜您不在音乐会上。<br/>您身处一场私密 écoute 之中。
+        今夜,您不在一场音乐会中。<br/>
+        您在一场私人聆听之内。
       </p>
     </div>
 
     <div class="footer-col">
-      <h5>私密咨询</h5>
+      <h5>私人咨询</h5>
       <a href="mailto:triinlellep@gmail.com">triinlellep@gmail.com</a>
       <a href="https://wa.me/37255575590">WhatsApp +372 5557 5590</a>
       <a href="circle.html" class="footer-circle">The Écoute Circle →</a>
+      <a href="support-zh.html" class="footer-support">支持作品 →</a>
     </div>
 
     <div class="footer-col">
@@ -680,7 +1634,7 @@
 
   <div class="footer-bottom">
     <span>© 2026 Triin Lellep · 作曲家兼女高音 · 版权所有</span>
-    <span>私密声乐作品</span>
+    <span>私人声乐作品</span>
   </div>
 </footer>
 
@@ -690,6 +1644,63 @@
     if (window.scrollY > 40) nav.classList.add('scrolled');
     else nav.classList.remove('scrolled');
   });
+
+  (function () {
+    const btn   = document.getElementById('glimpse-listen');
+    const modal = document.getElementById('glimpse-modal');
+    const close = document.getElementById('glimpse-modal-close');
+    const video = document.getElementById('glimpse-modal-video');
+    if (!btn || !modal || !video) return;
+    function open() {
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      try { video.currentTime = 0; video.play(); } catch (e) {}
+    }
+    function shut() {
+      modal.classList.remove('open');
+      document.body.style.overflow = '';
+      try { video.pause(); } catch (e) {}
+    }
+    btn.addEventListener('click', open);
+    close.addEventListener('click', shut);
+    modal.addEventListener('click', (e) => { if (e.target === modal) shut(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && modal.classList.contains('open')) shut(); });
+  })();
+
+  (function () {
+    const lightbox = document.getElementById('gallery-lightbox');
+    const img      = document.getElementById('gallery-lightbox-img');
+    const closeBtn = document.getElementById('gallery-lightbox-close');
+    const prevBtn  = document.getElementById('gallery-lightbox-prev');
+    const nextBtn  = document.getElementById('gallery-lightbox-next');
+    if (!lightbox || !img) return;
+    const tiles = Array.from(document.querySelectorAll('.doc-gallery-tile')).filter(t => t.querySelector('picture'));
+    const items = tiles.map(t => {
+      const im = t.querySelector('img');
+      let src = im.src;
+      const srcset = im.getAttribute('srcset');
+      if (srcset) {
+        const m = srcset.match(/([^\s,]+)\s+1600w/);
+        if (m) src = m[1];
+      }
+      return { src, alt: im.alt || '' };
+    });
+    let current = 0;
+    function show(i) { current = (i + items.length) % items.length; img.src = items[current].src; img.alt = items[current].alt; }
+    function open(i) { show(i); lightbox.classList.add('open'); document.body.style.overflow = 'hidden'; }
+    function shut() { lightbox.classList.remove('open'); document.body.style.overflow = ''; }
+    tiles.forEach((tile, i) => tile.addEventListener('click', () => open(i)));
+    closeBtn.addEventListener('click', shut);
+    prevBtn.addEventListener('click', (e) => { e.stopPropagation(); show(current - 1); });
+    nextBtn.addEventListener('click', (e) => { e.stopPropagation(); show(current + 1); });
+    lightbox.addEventListener('click', (e) => { if (e.target === lightbox) shut(); });
+    document.addEventListener('keydown', (e) => {
+      if (!lightbox.classList.contains('open')) return;
+      if (e.key === 'Escape')      shut();
+      if (e.key === 'ArrowLeft')   show(current - 1);
+      if (e.key === 'ArrowRight')  show(current + 1);
+    });
+  })();
 </script>
 
 </body>
