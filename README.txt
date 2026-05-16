@@ -1,36 +1,28 @@
-TRIIN LELLEP STUDIO — UUS LUGU + LUGUDE JÄRJEKORRA UUENDUS
-==========================================================
-2026-05-16
+TRIIN LELLEP STUDIO — LUGUDE JÄRJEKORRA UUENDUS
+================================================
+2026-05-16  (väike fix)
 
-Selles pakis:
+Selles pakis on AINULT 3 HTML-faili — asenda need GitHubis olemasolevatega:
+  support.html
+  support-fr.html
+  support-zh.html
 
-1. UUS HELIFAIL
-   track-iii-e-piu-ti-penso.mp3  ← LISADA REPO-SSE
+MUUDATUSED:
+  1. Pealkiri "Four songs" → "Five songs" (vastavalt: Cinq chansons / 五首歌)
+  2. Lugude järjekord on dramaturgiliselt ümber tehtud:
 
-2. ÜMBER NIMETATUD HELIFAILID (kustuta vanad, lae uued):
-   VANA NIMI                          → UUS NIMI
-   track-iii-i-walk-the-fire.mp3      → track-iv-i-walk-the-fire.mp3
-   track-iv-mountains.mp3             → track-v-mountains.mp3
+UUS JÄRJEKORD:
+  I.   I Walk the Fire    — 2:57   (aeglane, silmad-kinni avang)
+  II.  E più ti penso     — 3:36   (itaalia hellus, klassikaline süda)
+  III. Ticki Ticki Tock   — 3:30   (mänguline hingetõmme)
+  IV.  Magic              — 4:07   (kompositsiooniline tipp)
+  V.   Mountains          — 3:01   (lähim peamise écoute juurde)
 
-3. UUENDATUD HTML-FAILID (asenda olemasolevad):
-   support.html      — uus 5-loo nimekiri
-   support-fr.html   — sama prantsuse keeles
-   support-zh.html   — sama hiina keeles
+MP3-FAILE EI OLE VAJA UUESTI LAADIDA — failinimed on samad,
+ainult HTML-i järjestus muutub.
 
-
-UUS LUGUDE JÄRJEKORD:
-  I.   Ticki Ticki Tock      — 3:30
-  II.  Magic                  — 4:07
-  III. E più ti penso         — 3:36   ← UUS
-  IV.  I Walk the Fire        — 2:57
-  V.   Mountains              — 3:01
-
-
-GITHUB-IS:
-  1. Kustuta vanad:
-     - track-iii-i-walk-the-fire.mp3
-     - track-iv-mountains.mp3
-  2. Lae üles uued kõik 6 faili sellest paketist (3 mp3 + 3 html)
-  3. Commit otse main-i
-
-Pärast ~30 sek build'i — toetuse lehel peaks olema 5 lugu.
+GITHUBIS:
+  - Drag & drop 3 HTML-faili → "Add files via upload"
+  - Commit otse main-i
+  - ~30 sek Pages build
+  - Värskenda telefonis (cache!): pull-down või ?v=3 URL-i lõppu
