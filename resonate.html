@@ -116,6 +116,11 @@ nav {
 }
 nav.scrolled { background: rgba(15, 11, 9, 0.96); border-bottom-color: var(--line); padding: 16px 36px; }
 .logo-block { display: flex; flex-direction: column; gap: 4px; }
+.logo-link, .logo-sub-link { display: block; text-decoration: none; transition: opacity 0.3s; }
+.logo-link:hover .logo { color: var(--gold); }
+.logo-sub-link:hover .logo-sub { opacity: 1; color: var(--pearl); }
+.logo .logo-sub { transition: color 0.3s, opacity 0.3s; }
+
 .logo { font-family: var(--display); font-size: 15px; letter-spacing: 0.32em; font-weight: 400; color: var(--pearl); }
 .logo-sub {
   font-family: var(--serif); font-style: italic; font-size: 12px;
@@ -393,8 +398,8 @@ footer {
 
 <nav id="nav">
   <div class="logo-block">
-    <div class="logo">TRIIN LELLEP</div>
-    <div class="logo-sub">Support the Work</div>
+    <a href="index.html" class="logo-link"><div class="logo">TRIIN LELLEP</div></a>
+    <a href="support.html" class="logo-sub-link"><div class="logo-sub">Support the Work</div></a>
   </div>
   <div class="nav-right">
     <a href="support.html" class="nav-back"><span class="nav-back-arrow">←</span>Back to all tiers</a>
