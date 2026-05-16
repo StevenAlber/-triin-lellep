@@ -65,8 +65,12 @@
 
   nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 24px 48px; background: linear-gradient(180deg, rgba(15, 11, 9, 0.92) 0%, rgba(15, 11, 9, 0) 100%); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); display: flex; justify-content: space-between; align-items: center; transition: all 0.4s ease; border-bottom: 1px solid transparent; }
   nav.scrolled { background: rgba(15, 11, 9, 0.96); border-bottom-color: var(--line); padding: 18px 48px; }
-  .logo { font-family: var(--display); font-size: 16px; letter-spacing: 0.32em; color: var(--pearl); display: flex; flex-direction: column; gap: 2px; }
-  .logo span { font-size: 9px; letter-spacing: 0.36em; color: var(--gold); }
+  .logo-block { display: flex; flex-direction: column; gap: 4px; }
+  .logo-link, .logo-sub-link { display: block; text-decoration: none; transition: opacity 0.3s; }
+  .logo-link:hover .logo { color: var(--gold); }
+  .logo-sub-link:hover .logo-sub { opacity: 1; color: var(--pearl); }
+  .logo { font-family: var(--display); font-size: 15px; letter-spacing: 0.32em; color: var(--pearl); font-weight: 400; transition: color 0.3s; }
+  .logo-sub { font-family: var(--serif); font-style: italic; font-size: 12px; color: var(--gold); opacity: 0.85; letter-spacing: 0.06em; transition: color 0.3s, opacity 0.3s; }
   .nav-back { font-family: var(--body); font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--pearl); opacity: 0.78; transition: all 0.3s; }
   .nav-back:hover { opacity: 1; color: var(--gold); }
 
@@ -76,7 +80,7 @@
   .hero-inner { max-width: 980px; text-align: center; position: relative; z-index: 2; }
   .hero-eyebrow { font-family: var(--body); font-size: 11px; letter-spacing: 0.42em; text-transform: uppercase; color: var(--gold); margin-bottom: 32px; }
   .hero-eyebrow::before, .hero-eyebrow::after { content: '—'; margin: 0 16px; color: var(--gold); opacity: 0.65; }
-  .hero-title { font-family: var(--display); font-size: clamp(44px, 7vw, 88px); line-height: 1.1; color: var(--pearl); letter-spacing: 0.02em; margin-bottom: 24px; }
+  .hero-title { font-family: var(--display); font-size: clamp(40px, 6vw, 76px); line-height: 1.1; color: var(--pearl); letter-spacing: 0.02em; margin-bottom: 24px; font-weight: 400; }
   .hero-title em { font-style: italic; color: var(--gold); }
   .hero-numbers { display: flex; justify-content: center; gap: 56px; margin-top: 56px; padding-top: 48px; border-top: 1px solid var(--line); }
   .hero-number { text-align: center; }
@@ -89,7 +93,7 @@
   .invitation-inner { max-width: 800px; margin: 0 auto; }
   .invitation-eyebrow { font-family: var(--body); font-size: 11px; letter-spacing: 0.42em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; display: flex; align-items: center; gap: 16px; }
   .invitation-eyebrow::before { content: ''; width: 32px; height: 1px; background: var(--gold); opacity: 0.65; }
-  .invitation-letter h2 { font-family: var(--display); font-size: clamp(32px, 4.2vw, 48px); line-height: 1.2; color: var(--pearl); margin-bottom: 48px; letter-spacing: 0.01em; }
+  .invitation-letter h2 { font-family: var(--display); font-size: clamp(32px, 4.2vw, 50px); line-height: 1.2; color: var(--pearl); margin-bottom: 48px; letter-spacing: 0.01em; font-weight: 400; }
   .invitation-letter h2 em { font-style: italic; color: var(--gold); }
   .invitation-letter p { font-family: var(--serif); font-size: 18px; line-height: 1.85; color: var(--pearl); margin-bottom: 24px; opacity: 0.92; }
   .invitation-letter p em { color: var(--gold); font-style: italic; }
@@ -98,7 +102,7 @@
   .tiers-section { padding: 140px 48px; background: var(--black); }
   .tiers-section .section-eyebrow { font-family: var(--body); font-size: 11px; letter-spacing: 0.42em; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; display: flex; align-items: center; gap: 16px; max-width: 1200px; margin-left: auto; margin-right: auto; }
   .tiers-section .section-eyebrow::before { content: ''; width: 32px; height: 1px; background: var(--gold); opacity: 0.65; }
-  .tiers-section h2 { font-family: var(--display); font-size: clamp(32px, 4.2vw, 48px); line-height: 1.2; color: var(--pearl); margin-bottom: 48px; max-width: 1200px; margin-left: auto; margin-right: auto; }
+  .tiers-section h2 { font-family: var(--display); font-size: clamp(32px, 4.2vw, 50px); line-height: 1.2; color: var(--pearl); margin-bottom: 48px; max-width: 1200px; margin-left: auto; margin-right: auto; font-weight: 400; }
   .tiers-section h2 em { font-style: italic; color: var(--gold); }
 
   .tiers { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
@@ -127,7 +131,7 @@
   .pm-inner { max-width: 1100px; margin: 0 auto; }
   .pm-eyebrow { font-family: var(--body); font-size: 11px; letter-spacing: 0.42em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; display: flex; align-items: center; gap: 16px; }
   .pm-eyebrow::before { content: ''; width: 32px; height: 1px; background: var(--gold); opacity: 0.65; }
-  .pm-title { font-family: var(--display); font-size: clamp(28px, 3.8vw, 42px); line-height: 1.2; color: var(--pearl); margin-bottom: 48px; max-width: 800px; }
+  .pm-title { font-family: var(--display); font-size: clamp(28px, 3.8vw, 42px); line-height: 1.2; color: var(--pearl); margin-bottom: 48px; max-width: 800px; font-weight: 400; }
   .pm-title em { font-style: italic; color: var(--gold); }
 
   .pm-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
@@ -151,7 +155,7 @@
   .integrity-inner { max-width: 1100px; margin: 0 auto; }
   .integrity-eyebrow { font-family: var(--body); font-size: 11px; letter-spacing: 0.42em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; display: flex; align-items: center; gap: 16px; }
   .integrity-eyebrow::before { content: ''; width: 32px; height: 1px; background: var(--gold); opacity: 0.65; }
-  .integrity h2 { font-family: var(--display); font-size: clamp(32px, 4.2vw, 48px); line-height: 1.2; color: var(--pearl); margin-bottom: 56px; }
+  .integrity h2 { font-family: var(--display); font-size: clamp(32px, 4.2vw, 50px); line-height: 1.2; color: var(--pearl); margin-bottom: 56px; font-weight: 400; }
   .integrity h2 em { font-style: italic; color: var(--gold); }
 
   .integrity-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 48px; }
@@ -164,7 +168,7 @@
   .terms-policy-inner { max-width: 1100px; margin: 0 auto; }
   .terms-policy-eyebrow { font-family: var(--body); font-size: 11px; letter-spacing: 0.42em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; display: flex; align-items: center; gap: 16px; }
   .terms-policy-eyebrow::before { content: ''; width: 32px; height: 1px; background: var(--gold); opacity: 0.65; }
-  .terms-policy h2 { font-family: var(--display); font-size: clamp(32px, 4.2vw, 48px); line-height: 1.2; color: var(--pearl); margin-bottom: 56px; }
+  .terms-policy h2 { font-family: var(--display); font-size: clamp(32px, 4.2vw, 50px); line-height: 1.2; color: var(--pearl); margin-bottom: 56px; font-weight: 400; }
   .terms-policy h2 em { font-style: italic; color: var(--gold); }
 
   .refund-table { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); margin-bottom: 56px; }
@@ -184,7 +188,7 @@
   .cta-final { padding: 140px 48px; background: linear-gradient(180deg, var(--black) 0%, var(--burgundy-deep) 100%); text-align: center; }
   .cta-final-inner { max-width: 720px; margin: 0 auto; }
   .cta-final-eyebrow { font-family: var(--body); font-size: 11px; letter-spacing: 0.42em; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; }
-  .cta-final h2 { font-family: var(--display); font-size: clamp(32px, 4.5vw, 52px); line-height: 1.2; color: var(--pearl); margin-bottom: 32px; }
+  .cta-final h2 { font-family: var(--display); font-size: clamp(32px, 4.2vw, 50px); line-height: 1.2; color: var(--pearl); margin-bottom: 32px; font-weight: 400; }
   .cta-final p { font-family: var(--serif); font-size: 18px; line-height: 1.75; color: var(--pearl); opacity: 0.9; margin-bottom: 40px; }
   .cta-final-button { display: inline-block; padding: 14px 32px; background: rgba(201, 169, 97, 0.06); color: var(--gold); font-family: var(--body); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; transition: all 0.4s; border: 1px solid rgba(201, 169, 97, 0.45); }
   .cta-final-button:hover { background: rgba(201, 169, 97, 0.14); color: var(--pearl); border-color: rgba(201, 169, 97, 0.75); }
@@ -267,8 +271,10 @@
 
   /* RESPONSIVE */
   @media (max-width: 900px) {
-    nav { padding: 18px 24px; }
-    nav.scrolled { padding: 14px 24px; }
+    nav { padding: 16px 22px; }
+    nav.scrolled { padding: 14px 22px; }
+    .logo { font-size: 13px; letter-spacing: 0.26em; }
+    .logo-sub { font-size: 10px; }
     .hero { min-height: auto; align-items: flex-start; padding: 92px 24px 52px; }
     .hero-inner { margin-top: 8px; }
     .hero-eyebrow::before, .hero-eyebrow::after { display: none; }
@@ -293,9 +299,9 @@
 <body>
 
 <nav id="nav">
-  <div class="logo">
-    TRIIN LELLEP
-    <span>The Écoute Circle</span>
+  <div class="logo-block">
+    <a href="index.html" class="logo-link"><div class="logo">TRIIN LELLEP</div></a>
+    <a href="support.html" class="logo-sub-link"><div class="logo-sub">The Écoute Circle</div></a>
   </div>
   <div style="display: flex; gap: 24px; align-items: center;">
     <a href="commissions.html" style="font-family: var(--body); font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--pearl); opacity: 0.75; transition: opacity 0.3s; white-space: nowrap;" onmouseover="this.style.color='var(--gold)'; this.style.opacity='1';" onmouseout="this.style.color='var(--pearl)'; this.style.opacity='0.75';">Commissions</a>
@@ -483,7 +489,7 @@
           <strong>Reference</strong>
           The Écoute Circle — [your tier] — [your name]
         </div>
-        <a href="mailto:triinlellep@gmail.com?subject=The%20%C3%89coute%20Circle%20%E2%80%94%20Bank%20Transfer%20Confirmation" class="pm-copy">Confirm by Email</a>
+        <a href="mailto:inquiries@triinlellep.studio?subject=The%20%C3%89coute%20Circle%20%E2%80%94%20Bank%20Transfer%20Confirmation" class="pm-copy">Confirm by Email</a>
       </div>
 
       <!-- CARD 3: CRYPTO -->
@@ -504,7 +510,7 @@
           <strong>ETH / USDC (ERC-20)</strong>
           <span id="eth-addr">0x__provided_on_request__</span>
         </div>
-        <a href="mailto:triinlellep@gmail.com?subject=The%20%C3%89coute%20Circle%20%E2%80%94%20Crypto%20Contribution" class="pm-copy">Request Addresses</a>
+        <a href="mailto:inquiries@triinlellep.studio?subject=The%20%C3%89coute%20Circle%20%E2%80%94%20Crypto%20Contribution" class="pm-copy">Request Addresses</a>
       </div>
 
     </div>
@@ -676,7 +682,7 @@
       to begin with the Stripe checkout, a bank transfer, or a conversation first —
       the door is the same.
     </p>
-    <a href="mailto:triinlellep@gmail.com?subject=The%20%C3%89coute%20Circle%20%E2%80%94%20Inquiry" class="cta-final-button">Write to Triin</a>
+    <a href="mailto:inquiries@triinlellep.studio?subject=The%20%C3%89coute%20Circle%20%E2%80%94%20Inquiry" class="cta-final-button">Write to the Studio</a>
     <div class="cta-deadline">The Circle closes on 31 May 2026 — or when full</div>
   </div>
 </section>
@@ -686,8 +692,8 @@
     <div class="footer-left">© 2026 Triin Lellep · The Écoute Circle · All rights reserved</div>
     <div class="footer-right">
       <a href="index.html">The Work</a>
-      <a href="mailto:triinlellep@gmail.com">Contact</a>
-      <a href="https://wa.me/37255575590">WhatsApp</a>
+      <a href="support.html">Support</a>
+      <a href="mailto:inquiries@triinlellep.studio">The Studio</a>
     </div>
   </div>
 </footer>
@@ -780,7 +786,7 @@
             1. Make the SEPA / SWIFT transfer from your bank using the details above.<br/>
             2. Send a short confirmation email so we can record your patronage and send your benefits.
           </div>
-          <a href="mailto:triinlellep@gmail.com" class="modal-panel-cta" id="bank-confirm-mail">
+          <a href="mailto:inquiries@triinlellep.studio" class="modal-panel-cta" id="bank-confirm-mail">
             Send Confirmation Email →
           </a>
         </div>
@@ -792,7 +798,7 @@
 
         <div class="modal-panel" id="crypto-panel">
           <p class="modal-panel-intro">For patrons who prefer to contribute in digital assets. Please email first so we can confirm receipt and attach your contribution to the patron record.</p>
-          <a href="mailto:triinlellep@gmail.com" class="modal-panel-cta" id="crypto-request-mail">
+          <a href="mailto:inquiries@triinlellep.studio" class="modal-panel-cta" id="crypto-request-mail">
             Request Wallet Addresses →
           </a>
         </div>
@@ -805,11 +811,10 @@
 
 <script>
   // Stripe Payment Links — REPLACE THESE WITH ACTUAL LINKS WHEN STRIPE ACCOUNT IS LIVE
-  // Generate at: https://dashboard.stripe.com/payment-links
   const STRIPE_LINKS = {
-    friend:  'https://buy.stripe.com/REPLACE_WITH_FRIEND_LINK',   // €500 · Founding Friend
-    member:  'https://buy.stripe.com/REPLACE_WITH_MEMBER_LINK',   // €2,500 · Founding Member
-    patron:  'https://buy.stripe.com/REPLACE_WITH_PATRON_LINK'    // €7,500 · Founding Patron
+    friend:  'https://buy.stripe.com/REPLACE_WITH_FRIEND_LINK',
+    member:  'https://buy.stripe.com/REPLACE_WITH_MEMBER_LINK',
+    patron:  'https://buy.stripe.com/REPLACE_WITH_PATRON_LINK'
   };
 
   const TIER_DATA = {
@@ -834,21 +839,18 @@
     if (!data) return;
     currentTier = tier;
 
-    // Step 1 — terms
     document.getElementById('terms-tier-name').textContent = data.name;
     document.getElementById('terms-tier-amount').textContent = data.amount;
     document.getElementById('terms-receive').textContent = data.receive;
 
-    // Step 2 — payment
     document.getElementById('modal-title').textContent = data.name;
     document.getElementById('modal-amount').textContent = data.amount;
     document.getElementById('modal-stripe').href = STRIPE_LINKS[tier];
 
-    // Bank: pre-fill reference and confirmation mail
     document.getElementById('bank-reference').textContent = `The Écoute Circle — ${data.name}`;
     const bankSubject = encodeURIComponent(`The Écoute Circle — ${data.name} (${data.amount}) — Bank Transfer Confirmation`);
     const bankBody = encodeURIComponent(
-`Dear Triin,
+`Dear Studio,
 
 I have made a SEPA / SWIFT transfer for ${data.amount} as a ${data.name} contribution to The Écoute Circle.
 
@@ -862,12 +864,11 @@ With kindest regards,
 [your full name]
 [your country]`
     );
-    document.getElementById('bank-confirm-mail').href = `mailto:triinlellep@gmail.com?subject=${bankSubject}&body=${bankBody}`;
+    document.getElementById('bank-confirm-mail').href = `mailto:inquiries@triinlellep.studio?subject=${bankSubject}&body=${bankBody}`;
 
-    // Crypto: request wallet addresses
     const cryptoSubject = encodeURIComponent(`The Écoute Circle — ${data.name} (${data.amount}) — Cryptocurrency`);
     const cryptoBody = encodeURIComponent(
-`Dear Triin,
+`Dear Studio,
 
 I would like to contribute ${data.amount} to The Écoute Circle as a ${data.name}, in cryptocurrency.
 
@@ -879,9 +880,8 @@ With kindest regards,
 [your full name]
 [your country]`
     );
-    document.getElementById('crypto-request-mail').href = `mailto:triinlellep@gmail.com?subject=${cryptoSubject}&body=${cryptoBody}`;
+    document.getElementById('crypto-request-mail').href = `mailto:inquiries@triinlellep.studio?subject=${cryptoSubject}&body=${cryptoBody}`;
 
-    // Reset to step 1
     document.getElementById('terms-accept').checked = false;
     document.getElementById('btn-proceed').disabled = true;
     closePanel('bank');
@@ -926,7 +926,6 @@ With kindest regards,
     const chevron = document.getElementById(`${which}-chevron`);
     const isOpen = panel.classList.contains('open');
 
-    // Close other panel
     const other = which === 'bank' ? 'crypto' : 'bank';
     closePanel(other);
 
@@ -948,17 +947,14 @@ With kindest regards,
     if (chevron) chevron.textContent = '+';
   }
 
-  // Close on backdrop click
   document.getElementById('modal').addEventListener('click', (e) => {
     if (e.target.id === 'modal') closeModal();
   });
 
-  // Close on ESC
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeModal();
   });
 
-  // Nav scroll effect
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => {
     if (window.scrollY > 40) nav.classList.add('scrolled');

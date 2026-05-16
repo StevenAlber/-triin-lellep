@@ -63,8 +63,12 @@
 
   nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 24px 48px; background: linear-gradient(180deg, rgba(15, 11, 9, 0.92) 0%, rgba(15, 11, 9, 0) 100%); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid transparent; transition: all 0.4s ease; }
   nav.scrolled { background: rgba(15, 11, 9, 0.96); border-bottom-color: var(--line); padding: 18px 48px; }
-  .logo { font-family: var(--display); font-size: 16px; letter-spacing: 0.32em; color: var(--pearl); display: flex; flex-direction: column; gap: 2px; }
-  .logo span { font-size: 9px; letter-spacing: 0.36em; color: var(--gold); }
+  .logo-block { display: flex; flex-direction: column; gap: 4px; }
+  .logo-link, .logo-sub-link { display: block; text-decoration: none; transition: opacity 0.3s; }
+  .logo-link:hover .logo { color: var(--gold); }
+  .logo-sub-link:hover .logo-sub { opacity: 1; color: var(--pearl); }
+  .logo { font-family: var(--display); font-size: 15px; letter-spacing: 0.32em; color: var(--pearl); font-weight: 400; transition: color 0.3s; }
+  .logo-sub { font-family: var(--serif); font-style: italic; font-size: 12px; color: var(--gold); opacity: 0.85; letter-spacing: 0.06em; transition: color 0.3s, opacity 0.3s; }
   .nav-back { font-family: var(--body); font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--pearl); opacity: 0.78; transition: all 0.3s; }
   .nav-back:hover { opacity: 1; color: var(--gold); }
   .lang-switch { display: flex; gap: 14px; padding-left: 24px; margin-left: 18px; border-left: 1px solid var(--line); align-items: center; }
@@ -172,7 +176,8 @@
   @media (max-width: 900px) {
     nav { padding: 16px 22px; }
     nav.scrolled { padding: 14px 22px; }
-    .logo { font-size: 14px; letter-spacing: 0.28em; }
+    .logo { font-size: 13px; letter-spacing: 0.26em; }
+    .logo-sub { font-size: 10px; }
     .lang-switch { padding-left: 14px; margin-left: 10px; gap: 9px; }
     .lang-switch a { font-size: 11px; letter-spacing: 0.16em; }
     .hero { padding: 120px 24px 70px; min-height: auto; }
@@ -197,10 +202,10 @@
 <body>
 
 <nav id="nav">
-  <a href="fr.html" class="logo">
-    TRIIN LELLEP
-    <span>Soutenir l'Œuvre</span>
-  </a>
+  <div class="logo-block">
+    <a href="fr.html" class="logo-link"><div class="logo">TRIIN LELLEP</div></a>
+    <a href="support-fr.html" class="logo-sub-link"><div class="logo-sub">Soutenir l'œuvre</div></a>
+  </div>
   <div class="nav-right">
     <a href="fr.html" class="nav-back">← L'Œuvre</a>
     <div class="lang-switch">

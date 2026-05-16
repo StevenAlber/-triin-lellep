@@ -173,7 +173,8 @@
   @media (max-width: 900px) {
     nav { padding: 16px 22px; }
     nav.scrolled { padding: 14px 22px; }
-    .logo { font-size: 14px; letter-spacing: 0.28em; }
+    .logo { font-size: 13px; letter-spacing: 0.26em; }
+    .logo-sub { font-size: 10px; }
     .lang-switch { padding-left: 14px; margin-left: 10px; gap: 9px; }
     .lang-switch a { font-size: 11px; letter-spacing: 0.16em; }
     .hero { padding: 120px 24px 70px; min-height: auto; }
@@ -198,10 +199,10 @@
 <body>
 
 <nav id="nav">
-  <a href="zh.html" class="logo">
-    TRIIN LELLEP
-    <span>支持作品</span>
-  </a>
+  <div class="logo-block">
+    <a href="zh.html" class="logo-link"><div class="logo">TRIIN LELLEP</div></a>
+    <a href="support-zh.html" class="logo-sub-link"><div class="logo-sub">支持作品</div></a>
+  </div>
   <div class="nav-right">
     <a href="zh.html" class="nav-back">← 作品</a>
     <div class="lang-switch">
